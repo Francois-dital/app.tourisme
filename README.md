@@ -38,6 +38,14 @@ app.tourisme/
 │   └── tours.service.ts         # Service pour les données tours
 ├── types/                       # Types TypeScript
 │   └── tour.types.ts            # Types pour les tours et véhicules
+├── utils/                       # Utilitaires
+│   └── image.utils.ts           # Utilitaires pour les images
+├── public/images/               # Images locales
+│   ├── hero-background.jpg      # Image de fond héro
+│   ├── about-image.jpg          # Image section à propos
+│   ├── tour-baobab.jpg          # Circuit Baobab
+│   ├── tour-nosy-be.jpg         # Circuit Nosy Be
+│   └── tour-isalo.jpg           # Circuit Isalo
 └── tailwind.config.ts           # Configuration Tailwind
 ```
 
@@ -49,6 +57,22 @@ Le projet suit une nomenclature stricte en minuscules :
 - **Hooks** : `use.nom.ts` (ex: `use.calendar.ts`)
 - **Services** : `nom.service.ts` (ex: `tours.service.ts`)
 - **Types** : `nom.types.ts` (ex: `tour.types.ts`)
+- **Utilitaires** : `nom.utils.ts` (ex: `image.utils.ts`)
+
+## 🖼️ Images
+
+Toutes les images sont stockées localement dans `public/images/` pour de meilleures performances :
+
+- `hero-background.jpg` - Image de fond de la section héro
+- `about-image.jpg` - Image de la section à propos
+- `tour-baobab.jpg` - Circuit Baobab Quest
+- `tour-nosy-be.jpg` - Circuit Turquoise Waters
+- `tour-isalo.jpg` - Circuit Great South
+
+### Optimisation des Images
+- Utilisation du composant `next/image` pour l'optimisation automatique
+- Images responsive avec `sizes` appropriées
+- Lazy loading par défaut (sauf image héro avec `priority`)
 
 ## 🌟 Fonctionnalités
 

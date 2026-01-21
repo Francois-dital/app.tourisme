@@ -35,7 +35,7 @@ export default function AboutSection() {
           <div 
             className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl bg-cover bg-center"
             style={{
-              backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuBngE__fhx7sk9xmejKdNgFo6HibXxlXolo1z0CsYn9FRPF-P4F0FRpiU3dL6SGXBHzPpOQy1xbMLvyXCMTRjp4TM-oNQTjyrOTqx3lqMg2b0bSq3b-Xosqkx9UGJsV-2bBoga0NL8mwRhQxCwfzzg6J7lGftbN79pG4bgKZudTvYyttgmf-Zte4VqQ2BK0I8SckVimM53QtIYNYEicPz-4d46V10LhjQ41Ewa5pgPMJQrL6OGsYgvla4JTjWCCAaqa9yzFk7b7eg")`
+              backgroundImage: `url("/images/about-image.jpg")`
             }}
           />
         </div>

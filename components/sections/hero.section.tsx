@@ -6,7 +6,7 @@ export default function HeroSection() {
       <div 
         className="absolute inset-0 bg-cover bg-center" 
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKeqdvq3uvFaOmbI17dnFmOQgINV1gmzkfPzJ7lpvsMjFIQSWowUWtxUNS19AJqZZI3xeVVhZEqwW4KIeuMPjNyNMSbqmFbVwQV9SRMymb65MWYUPfqb-anfI5HlhfxV5N-qMae8u4xLBktZH06n9qr7nTWoqj1toKBuVvcEwaLXIeJ9KpVajWXjaLSPAz81WQLHPOWHeLl7kBDAalukzDbuNdisDEmD5c_pF36koY5TInd93zvbHW2CXzd8-_szS1qq9P7bAm6Q")`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("/images/hero-background.jpg")`
         }}
       />
       <div className="relative h-full flex flex-col items-center justify-center text-center px-4">

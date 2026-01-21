@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { generateMetadata } from "@/utils/metadata.utils";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -8,10 +9,10 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-export const metadata: Metadata = {
-  title: "MadaTours | Discover Madagascar",
-  description: "Experience the Magic of Madagascar with expert local guides. From the Avenue of Baobabs to unique lemurs, explore the world's eighth continent.",
-};
+export const metadata: Metadata = generateMetadata(
+  "Discover Madagascar",
+  "Experience the Magic of Madagascar with expert local guides. From the Avenue of Baobabs to unique lemurs, explore the world's eighth continent."
+);
 
 export default function RootLayout({
   children,
