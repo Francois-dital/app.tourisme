@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MadaTours - Madagascar Tourism Landing Page
 
-## Getting Started
+Une landing page moderne et responsive pour une agence de tourisme à Madagascar, construite avec Next.js 14, TypeScript et Tailwind CSS.
 
-First, run the development server:
+## 🚀 Technologies Utilisées
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 14** - Framework React avec App Router
+- **TypeScript** - Typage statique
+- **Tailwind CSS v4** - Framework CSS utilitaire
+- **Material Icons** - Icônes Google Material
+- **Plus Jakarta Sans** - Police Google Fonts
+
+## 📁 Architecture du Projet
+
+```
+app.tourisme/
+├── app/                          # App Router de Next.js
+│   ├── layout.tsx               # Layout principal
+│   ├── page.tsx                 # Page d'accueil
+│   └── globals.css              # Styles globaux
+├── components/                   # Composants réutilisables
+│   ├── layout/                  # Composants de layout
+│   │   ├── header.app.tsx       # En-tête de navigation
+│   │   └── footer.app.tsx       # Pied de page
+│   ├── sections/                # Sections de la page
+│   │   ├── hero.section.tsx     # Section héro
+│   │   ├── about.section.tsx    # Section à propos
+│   │   ├── tours.section.tsx    # Section circuits
+│   │   ├── booking.section.tsx  # Section réservation
+│   │   ├── fleet.section.tsx    # Section flotte
+│   │   └── contact.section.tsx  # Section contact
+│   └── ui/                      # Composants UI
+│       ├── material.icon.tsx    # Composant icône Material
+│       └── whatsapp.button.tsx  # Bouton WhatsApp flottant
+├── hooks/                       # Hooks personnalisés
+│   └── use.calendar.ts          # Hook pour le calendrier
+├── services/                    # Services et logique métier
+│   └── tours.service.ts         # Service pour les données tours
+├── types/                       # Types TypeScript
+│   └── tour.types.ts            # Types pour les tours et véhicules
+└── tailwind.config.ts           # Configuration Tailwind
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Nomenclature des Fichiers
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Le projet suit une nomenclature stricte en minuscules :
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Composants** : `nom.type.tsx` (ex: `header.app.tsx`, `hero.section.tsx`)
+- **Hooks** : `use.nom.ts` (ex: `use.calendar.ts`)
+- **Services** : `nom.service.ts` (ex: `tours.service.ts`)
+- **Types** : `nom.types.ts` (ex: `tour.types.ts`)
 
-## Learn More
+## 🌟 Fonctionnalités
 
-To learn more about Next.js, take a look at the following resources:
+### Sections Principales
+- **Hero** - Image de fond avec call-to-action
+- **About** - Présentation de l'agence avec avantages
+- **Tours** - Circuits touristiques avec prix et détails
+- **Booking** - Calendrier interactif et formulaire de réservation
+- **Fleet** - Présentation de la flotte de véhicules 4x4
+- **Contact** - Informations de contact avec carte intégrée
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Fonctionnalités Techniques
+- **Responsive Design** - Optimisé pour mobile, tablette et desktop
+- **Dark Mode** - Support du mode sombre
+- **Animations** - Transitions fluides et effets hover
+- **SEO Optimized** - Métadonnées et structure sémantique
+- **Performance** - Images optimisées avec Next.js Image
+- **Accessibilité** - Respect des standards WCAG
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Installation et Démarrage
 
-## Deploy on Vercel
+```bash
+# Installation des dépendances
+npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Démarrage en mode développement
+npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Build de production
+npm run build
+
+# Démarrage en production
+npm start
+```
+
+## 🎨 Personnalisation
+
+### Couleurs
+Les couleurs sont définies dans `tailwind.config.ts` et `globals.css` :
+
+```css
+:root {
+  --primary: #0df259;      /* Vert principal */
+  --secondary: #ff9800;    /* Orange secondaire */
+  --accent: #f5f5dc;       /* Beige accent */
+  --background-light: #f5f8f6;  /* Fond clair */
+  --background-dark: #102216;   /* Fond sombre */
+}
+```
+
+### Données
+Les données des tours et véhicules sont centralisées dans `services/tours.service.ts` pour faciliter la maintenance.
+
+## 📱 Responsive Breakpoints
+
+- **Mobile** : < 768px
+- **Tablet** : 768px - 1024px
+- **Desktop** : > 1024px
+
+## 🔧 Scripts Disponibles
+
+- `npm run dev` - Démarrage en mode développement
+- `npm run build` - Build de production
+- `npm run start` - Démarrage du serveur de production
+- `npm run lint` - Vérification du code avec ESLint
+
+## 📄 Licence
+
+Ce projet est développé pour MadaTours Madagascar.
