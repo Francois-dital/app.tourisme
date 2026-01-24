@@ -1,24 +1,24 @@
-import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
-import { generateMetadata } from "@/utils/metadata.utils";
-import "./globals.css";
+import type { Metadata } from 'next'
+import { Plus_Jakarta_Sans } from 'next/font/google'
+import { generateMetadata } from '@/utils/metadata.utils'
+import './globals.css'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
+  variable: '--font-plus-jakarta-sans',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+})
 
 export const metadata: Metadata = generateMetadata(
-  "Discover Madagascar",
-  "Experience the Magic of Madagascar with expert local guides. From the Avenue of Baobabs to unique lemurs, explore the world's eighth continent."
-);
+  'Discover Madagascar',
+  'Experience the Magic of Madagascar with expert local guides. From the Avenue of Baobabs to unique lemurs, explore the world\'s eighth continent.'
+)
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+interface RootLayoutProps {
+  children: React.ReactNode
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className="light">
       <head>
@@ -31,5 +31,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  );
+  )
 }
