@@ -10,7 +10,7 @@ interface ToursGridProps {
 
 export default function ToursGrid({ tours }: ToursGridProps) {
   return (
-    <section className="w-full">
+    <section className="py-8 px-6 md:px-20 lg:px-24 xl:px-32">
       {/* Section Header */}
       <div className="w-full text-center mb-12">
         <ScrollAnimation animation="fade" delay={100}>

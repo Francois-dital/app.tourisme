@@ -17,7 +17,7 @@ export default function DestinationDetailPage() {
     return (
       <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300">
         <HeaderApp />
-        <main className="max-w-7xl mx-auto py-20 px-6 text-center">
+        <main className="w-full py-20 px-6 md:px-20 lg:px-24 xl:px-32 text-center">
           <h1 className="text-2xl font-bold mb-4">Destination Not Found</h1>
           <p className="text-gray-600 dark:text-gray-400 mb-8">
             The destination you're looking for doesn't exist.
@@ -53,7 +53,7 @@ export default function DestinationDetailPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${destination.image}')` }}
         ></div>
-        <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-20 h-full flex flex-col justify-center">
+        <div className="relative z-20 w-full px-6 md:px-20 lg:px-24 xl:px-32 h-full flex flex-col justify-center">
           <ScrollAnimation animation="fade" delay={100}>
             <div className="flex items-center gap-4 mb-4">
               <span className="bg-primary px-4 py-2 rounded-full text-sm font-bold text-white">
@@ -96,7 +96,7 @@ export default function DestinationDetailPage() {
         </div>
       </section>
 
-      <main className="max-w-7xl mx-auto py-20 px-6 md:px-20">
+      <main className="w-full py-20 px-6 md:px-20 lg:px-24 xl:px-32">
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Main Content */}
           <div className="lg:col-span-2">

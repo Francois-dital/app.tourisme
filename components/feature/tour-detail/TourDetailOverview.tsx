@@ -9,7 +9,7 @@ interface TourDetailOverviewProps {
 
 export default function TourDetailOverview({ tour }: TourDetailOverviewProps) {
   return (
-    <div className="flex flex-wrap justify-between items-end gap-6 px-6 md:px-20 py-10">
+    <div className="flex flex-wrap justify-between items-end gap-6 px-6 md:px-20 lg:px-24 xl:px-32 py-10">
       <div className="flex flex-col gap-3">
         <ScrollAnimation animation="fade" delay={100}>
           <h2 className="text-[#111811] dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]">
