@@ -1,25 +1,30 @@
-import type { Metadata } from 'next'
+'use client'
+
+import { useState } from 'react'
 import HeaderApp from '@/components/layout/HeaderApp'
 import FooterApp from '@/components/layout/FooterApp'
-import ToursHeader from '@/components/feature/tours/ToursHeader'
 import ToursFilters from '@/components/feature/tours/ToursFilters'
 import ToursGrid from '@/components/feature/tours/ToursGrid'
 import ToursPagination from '@/components/feature/tours/ToursPagination'
-
-export const metadata: Metadata = {
-  title: 'Tours & Circuits Overview | ELMADAGASCAR Tours',
-  description: 'Discover Madagascar through our curated tours and expertly led circuits. From rainforests to beaches, explore the island\'s unique biodiversity.',
-}
+import { toursData, TourData } from '@/data/tours'
 
 export default function ToursPage() {
+  const [filteredTours, setFilteredTours] = useState<TourData[]>(toursData)
+
+  const handleFilterChange = (tours: TourData[]) => {
+    setFilteredTours(tours)
+  }
+
+  // Only show pagination if there are more than 6 tours
+  const showPagination = filteredTours.length > 6
+
   return (
     <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300">
       <HeaderApp />
       <main className="max-w-7xl mx-auto pb-20">
-        <ToursHeader />
-        <ToursFilters />
-        <ToursGrid />
-        <ToursPagination />
+        <ToursFilters onFilterChange={handleFilterChange} />
+        <ToursGrid tours={filteredTours} />
+        {showPagination && <ToursPagination />}
       </main>
       <FooterApp />
     </div>

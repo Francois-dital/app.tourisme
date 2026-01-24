@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
@@ -11,9 +12,10 @@ interface TourCardProps {
   image: string
   label?: string
   labelColor?: 'primary' | 'secondary' | 'success'
+  slug?: string
 }
 
-export default function TourCard({ title, days, region, price, description, image, label, labelColor = 'primary' }: TourCardProps) {
+export default function TourCard({ title, days, region, price, description, image, label, labelColor = 'primary', slug }: TourCardProps) {
   const getLabelStyles = () => {
     switch (labelColor) {
       case 'secondary':
@@ -24,6 +26,9 @@ export default function TourCard({ title, days, region, price, description, imag
         return 'bg-primary text-[#111811]'
     }
   }
+
+  // Generate slug from title if not provided
+  const tourSlug = slug || title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 
   return (
     <Card padding="none" className="group bg-white dark:bg-background-dark overflow-hidden shadow-lg border-transparent hover:border-primary flex flex-col">
@@ -69,9 +74,11 @@ export default function TourCard({ title, days, region, price, description, imag
             <span className="text-xs text-gray-500 block uppercase font-bold">From</span>
             <span className="text-2xl font-black text-primary">{price}</span>
           </div>
-          <Button variant="ghost" size="sm" className="bg-[#f0f4f0] dark:bg-white/10 hover:bg-primary hover:text-[#111811]">
-            View Details
-          </Button>
+          <Link href={`/tours/${tourSlug}`}>
+            <Button variant="ghost" size="sm" className="bg-[#f0f4f0] dark:bg-white/10 hover:bg-primary hover:text-[#111811]">
+              View Details
+            </Button>
+          </Link>
         </div>
       </div>
     </Card>

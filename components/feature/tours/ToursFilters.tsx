@@ -1,22 +1,48 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/Button'
-import { Icon } from '@/components/ui/Icon'
+import { toursData, getToursByRegion, getToursByDuration } from '@/data/tours'
 
 const regions = [
   { name: 'All Regions', active: true },
   { name: 'East Coast', active: false },
   { name: 'Southern Highlands', active: false },
   { name: 'West & Tsingy', active: false },
+  { name: 'North Coast', active: false },
 ]
 
-export default function ToursFilters() {
+interface ToursFiltersProps {
+  onFilterChange?: (filteredTours: any[]) => void
+}
+
+export default function ToursFilters({ onFilterChange }: ToursFiltersProps) {
   const [selectedRegion, setSelectedRegion] = useState('All Regions')
   const [duration, setDuration] = useState(11)
 
+  const handleDurationChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDuration(parseInt(e.target.value))
+  }
+
+  const handleRegionChange = (region: string) => {
+    setSelectedRegion(region)
+  }
+
+  // Apply filters whenever region or duration changes
+  useEffect(() => {
+    let filteredTours = getToursByRegion(selectedRegion)
+    filteredTours = filteredTours.filter(tour => {
+      const tourDuration = parseInt(tour.duration.split(' ')[0])
+      return tourDuration <= duration
+    })
+    
+    if (onFilterChange) {
+      onFilterChange(filteredTours)
+    }
+  }, [selectedRegion, duration, onFilterChange])
+
   return (
-    <section className="py-8 px-6 md:px-20">
+    <section className="py-24 px-6 md:px-20">
       <h2 className="text-3xl font-bold mb-6 text-center lg:text-left">
         Tours & Circuits Catalog
       </h2>
@@ -29,7 +55,7 @@ export default function ToursFilters() {
               key={region.name}
               variant={selectedRegion === region.name ? 'primary' : 'ghost'}
               size="sm"
-              onClick={() => setSelectedRegion(region.name)}
+              onClick={() => handleRegionChange(region.name)}
               className={`h-10 px-4 ${
                 selectedRegion === region.name 
                   ? 'bg-primary text-[#111811]' 
@@ -37,9 +63,6 @@ export default function ToursFilters() {
               }`}
             >
               {region.name}
-              {region.name !== 'All Regions' && (
-                <Icon name="expand_more" className="ml-2" size="sm" />
-              )}
             </Button>
           ))}
         </div>
@@ -47,14 +70,17 @@ export default function ToursFilters() {
         {/* Duration Slider */}
         <div className="w-full lg:max-w-xs flex items-center gap-4 bg-white dark:bg-background-dark p-3 rounded-xl border border-[#e0e7e0] dark:border-white/10">
           <span className="text-sm font-semibold whitespace-nowrap">Duration</span>
-          <div className="flex-1 h-1 bg-[#dbe6db] dark:bg-white/10 rounded-full relative">
-            <div 
-              className="absolute inset-y-0 left-0 bg-primary rounded-full"
-              style={{ width: `${(duration / 20) * 100}%` }}
-            />
-            <div 
-              className="absolute top-1/2 -translate-y-1/2 size-4 rounded-full bg-primary ring-4 ring-primary/20 cursor-pointer"
-              style={{ left: `${(duration / 20) * 100}%` }}
+          <div className="flex-1 relative">
+            <input
+              type="range"
+              min="1"
+              max="20"
+              value={duration}
+              onChange={handleDurationChange}
+              className="w-full h-1 bg-[#dbe6db] dark:bg-white/10 rounded-full appearance-none cursor-pointer slider"
+              style={{
+                background: `linear-gradient(to right, #0df259 0%, #0df259 ${(duration / 20) * 100}%, #dbe6db ${(duration / 20) * 100}%, #dbe6db 100%)`
+              }}
             />
           </div>
           <span className="text-xs font-bold bg-primary/20 text-primary px-2 py-1 rounded">
@@ -62,6 +88,28 @@ export default function ToursFilters() {
           </span>
         </div>
       </div>
+      
+      <style jsx>{`
+        .slider::-webkit-slider-thumb {
+          appearance: none;
+          height: 16px;
+          width: 16px;
+          border-radius: 50%;
+          background: #0df259;
+          cursor: pointer;
+          box-shadow: 0 0 0 4px rgba(13, 242, 89, 0.2);
+        }
+        
+        .slider::-moz-range-thumb {
+          height: 16px;
+          width: 16px;
+          border-radius: 50%;
+          background: #0df259;
+          cursor: pointer;
+          border: none;
+          box-shadow: 0 0 0 4px rgba(13, 242, 89, 0.2);
+        }
+      `}</style>
     </section>
   )
 }

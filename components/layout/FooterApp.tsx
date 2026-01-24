@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/Button'
 
 const quickLinks = [
   { name: 'About ELMADAGASCAR', href: '/about' },
-  { name: 'Our Tours', href: '#' },
+  { name: 'Our Tours', href: '/tours' },
   { name: 'Travel Tips', href: '#' },
   { name: 'Eco-responsibility', href: '#' },
   { name: 'Contact Us', href: '#' },
