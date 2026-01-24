@@ -38,9 +38,11 @@ export default function FooterApp() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div>
             <Link href="/home" className="flex items-center gap-3 mb-6">
-              <div className="size-8 bg-primary rounded flex items-center justify-center text-background-dark">
-                <Icon name="terrain" className="font-bold" />
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="ELMADAGASCAR Tours Logo" 
+                className="h-8 w-auto"
+              />
               <h2 className="text-lg font-extrabold tracking-tighter uppercase">ELMADAGASCAR</h2>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">

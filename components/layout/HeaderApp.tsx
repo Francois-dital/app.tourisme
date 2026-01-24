@@ -40,9 +40,11 @@ export default function HeaderApp() {
       <header className="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-[#dbe6db] dark:border-white/10 px-6 md:px-20 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link href="/home" className="flex items-center gap-3">
-            <div className="size-10 bg-primary rounded-lg flex items-center justify-center text-background-dark">
-              <Icon name="terrain" size="xl" className="font-bold" />
-            </div>
+            <img 
+              src="/logo.png" 
+              alt="ELMADAGASCAR Tours Logo" 
+              className="h-10 w-auto"
+            />
             <h2 className="text-xl font-extrabold tracking-tighter uppercase">
               ELMADAGASCAR <span className="text-primary">Tours</span>
             </h2>
