@@ -145,10 +145,6 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
                       View All Tours
                     </button>
                   </Link>
-                  <button className="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-bold transition-all flex items-center gap-2">
-                    <Icon name="email" size="sm" />
-                    Custom Itinerary
-                  </button>
                 </div>
               </div>
             </div>

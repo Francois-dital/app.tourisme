@@ -165,6 +165,367 @@ export const destinationsData: Destination[] = [
     bestTime: 'Year-round',
     difficulty: 'Easy',
     duration: '1-2 Days'
+  },
+  {
+    id: 9,
+    slug: 'sainte-marie-island',
+    name: 'Sainte-Marie Island',
+    subtitle: 'Pirate history & whale watching',
+    description: 'Tropical island paradise with pirate history, pristine beaches, and spectacular humpback whale watching from July to September.',
+    region: 'East Coast',
+    category: 'Coastal',
+    image: '/images/destinations/nosy-be.jpg', // Utilise la même image que Nosy Be (archipel côtier similaire)
+    highlights: [
+      'Humpback whale watching (July-September)',
+      'World\'s only official pirate cemetery',
+      'Île aux Nattes car-free island',
+      'Pristine beaches and lagoons'
+    ],
+    bestTime: 'May - October (Whales: July-September)',
+    difficulty: 'Easy',
+    duration: '2-4 Days'
+  },
+  {
+    id: 10,
+    slug: 'pangalanes-canal',
+    name: 'Pangalanes Canal',
+    subtitle: 'Waterway journey through villages',
+    description: 'A network of natural and man-made waterways connecting lakes, rivers, and coastal lagoons along Madagascar\'s east coast.',
+    region: 'East Coast',
+    category: 'Cultural',
+    image: '/images/destinations/andasibe.jpg', // Utilise la même image que Andasibe (région Est similaire)
+    highlights: [
+      'Boat journeys through traditional villages',
+      'Ankanin\'ny Nofy peninsula',
+      'Local fishing communities',
+      'Lush tropical scenery'
+    ],
+    bestTime: 'April - November',
+    difficulty: 'Easy',
+    duration: '1-3 Days'
+  },
+  {
+    id: 11,
+    slug: 'antsirabe',
+    name: 'Antsirabe',
+    subtitle: 'Thermal city & rickshaw capital',
+    description: 'Madagascar\'s thermal city known for its volcanic crater lakes, "Pousse-Pousse" rickshaws, and gemstone markets.',
+    region: 'Central Highlands',
+    category: 'Cultural',
+    image: '/images/destinations/tana.jpg', // Utilise la même image que Tana (hautes terres centrales)
+    highlights: [
+      'Pousse-pousse (rickshaw) rides',
+      'Thermal springs and crater lakes',
+      'Gemstone and craft markets',
+      'Horseback riding at Ranch du Bonheur'
+    ],
+    bestTime: 'Year-round',
+    difficulty: 'Easy',
+    duration: '1-2 Days'
+  },
+  {
+    id: 12,
+    slug: 'morondava-coast',
+    name: 'Morondava Coast',
+    subtitle: 'Gateway to baobabs & tsingy',
+    description: 'Coastal town serving as the gateway to the Avenue of Baobabs and Tsingy de Bemaraha, with beautiful beaches and Vezo culture.',
+    region: 'West Coast',
+    category: 'Coastal',
+    image: '/images/destinations/baobabs.jpg', // Utilise la même image que Baobabs (même région Ouest)
+    highlights: [
+      'Gateway to Avenue of Baobabs',
+      'Betania Fishing Village visits',
+      'Beautiful coastal beaches',
+      'Vezo fishing culture'
+    ],
+    bestTime: 'April - November',
+    difficulty: 'Easy',
+    duration: '1-2 Days'
+  },
+  {
+    id: 13,
+    slug: 'tamatave-toamasina',
+    name: 'Tamatave (Toamasina)',
+    subtitle: 'Major port & spice markets',
+    description: 'Madagascar\'s main seaport with vibrant markets, colonial architecture, and access to the Pangalanes Canal.',
+    region: 'East Coast',
+    category: 'Cultural',
+    image: '/images/destinations/andasibe.jpg', // Utilise la même image que Andasibe (région Est similaire)
+    highlights: [
+      'Bazar Be market for spices and vanilla',
+      'Colonial architecture',
+      'Pousse-pousse city tours',
+      'Access to Pangalanes Canal'
+    ],
+    bestTime: 'April - November',
+    difficulty: 'Easy',
+    duration: '1-2 Days'
+  },
+  {
+    id: 14,
+    slug: 'manambato-lake',
+    name: 'Manambato & Lake Rasoabe',
+    subtitle: 'Lakeside tranquility',
+    description: 'Peaceful lakeside village on the shores of Lake Rasoabe, serving as a departure point for Pangalanes Canal journeys.',
+    region: 'East Coast',
+    category: 'Nature',
+    image: '/images/destinations/andasibe.jpg', // Utilise la même image que Andasibe (région Est similaire)
+    highlights: [
+      'Tranquil lakeside setting',
+      'Gateway to Pangalanes Canal',
+      'Bird watching opportunities',
+      'Relaxed atmosphere'
+    ],
+    bestTime: 'April - November',
+    difficulty: 'Easy',
+    duration: '1-2 Days'
+  },
+  {
+    id: 15,
+    slug: 'ankarinny-nofy',
+    name: 'Ankanin\'ny Nofy',
+    subtitle: 'The "Nest of Dreams"',
+    description: 'Peninsula in the Pangalanes Canal known as the "Nest of Dreams," home to the Palmarium Private Park and rare wildlife.',
+    region: 'East Coast',
+    category: 'Nature & Wildlife',
+    image: '/images/destinations/andasibe.jpg', // Utilise la même image que Andasibe (région Est similaire)
+    highlights: [
+      'Palmarium Private Park with close lemur encounters',
+      'Aye-Aye nocturnal lemur sightings',
+      'White sand lake beaches',
+      'Carnivorous Pitcher plants and rare orchids'
+    ],
+    bestTime: 'April - November',
+    difficulty: 'Easy',
+    duration: '2-3 Days'
+  },
+  {
+    id: 16,
+    slug: 'miandrivazo',
+    name: 'Miandrivazo',
+    subtitle: 'Gateway to Tsiribihina River',
+    description: 'Hot, lively town on the banks of the Tsiribihina River, known as a starting point for river expeditions.',
+    region: 'West Coast',
+    category: 'Adventure',
+    image: '/images/destinations/tsingy.jpg', // Utilise la même image que Tsingy (région Ouest similaire)
+    highlights: [
+      'Tsiribihina River access',
+      'Local cuisine at Princesse de la Tsiribihina',
+      'Traditional Malagasy town life',
+      'Gateway to western adventures'
+    ],
+    bestTime: 'April - November',
+    difficulty: 'Easy',
+    duration: '1 Day'
+  },
+  {
+    id: 17,
+    slug: 'bekopaka-tsingy',
+    name: 'Bekopaka (Tsingy Base)',
+    subtitle: 'Base for Tsingy exploration',
+    description: 'Small village serving as the base camp for exploring both the Grand and Petit Tsingy de Bemaraha.',
+    region: 'West Coast',
+    category: 'Adventure',
+    image: '/images/destinations/tsingy.jpg', // Utilise la même image que Tsingy (même région)
+    highlights: [
+      'Access to Grand and Petit Tsingy',
+      'Manambolo River pirogue trips',
+      'Traditional village life',
+      'Stargazing opportunities'
+    ],
+    bestTime: 'April - November',
+    difficulty: 'Moderate',
+    duration: '2-3 Days'
+  },
+  {
+    id: 18,
+    slug: 'ambatolampy',
+    name: 'Ambatolampy',
+    subtitle: 'Aluminum craftsmanship',
+    description: 'Town famous for its traditional aluminum pot craftsmanship, where artisans forge pots by hand using recycled materials.',
+    region: 'Central Highlands',
+    category: 'Cultural',
+    image: '/images/destinations/tana.jpg', // Utilise la même image que Tana (hautes terres centrales)
+    highlights: [
+      'Traditional aluminum pot workshops',
+      'Handcraft demonstrations',
+      'Local artisan culture',
+      'Highland scenery'
+    ],
+    bestTime: 'Year-round',
+    difficulty: 'Easy',
+    duration: 'Half Day'
+  },
+  {
+    id: 19,
+    slug: 'ambositra',
+    name: 'Ambositra',
+    subtitle: 'Woodcraft capital',
+    description: 'Heart of Madagascar\'s woodcraft industry, home to the Zafimaniry people and their UNESCO-recognized woodcarving traditions.',
+    region: 'Central Highlands',
+    category: 'Cultural',
+    image: '/images/destinations/tana.jpg', // Utilise la même image que Tana (hautes terres centrales)
+    highlights: [
+      'Zafimaniry woodcraft workshops',
+      'UNESCO intangible cultural heritage',
+      'Intricate wooden sculptures',
+      'Highland architecture'
+    ],
+    bestTime: 'Year-round',
+    difficulty: 'Easy',
+    duration: '1-2 Days'
+  },
+  {
+    id: 20,
+    slug: 'tulear-toliara',
+    name: 'Tuléar (Toliara)',
+    subtitle: 'Southern coastal city',
+    description: 'Vibrant coastal city in southern Madagascar, gateway to Anakao beach and the spiny desert region.',
+    region: 'Southern Highlands',
+    category: 'Coastal',
+    image: '/images/destinations/anakao.jpg', // Utilise la même image que Anakao (région Sud similaire)
+    highlights: [
+      'Gateway to Anakao and southern beaches',
+      'Local markets and culture',
+      'Arboretum d\'Antsokay botanical garden',
+      'Coastal seafood cuisine'
+    ],
+    bestTime: 'March - November',
+    difficulty: 'Easy',
+    duration: '1-2 Days'
+  },
+  {
+    id: 21,
+    slug: 'anja-reserve',
+    name: 'Anja Community Reserve',
+    subtitle: 'Ring-tailed lemur haven',
+    description: 'Community-run reserve where ring-tailed lemurs are easily spotted among impressive granite rock formations.',
+    region: 'Southern Highlands',
+    category: 'Nature & Wildlife',
+    image: '/images/destinations/isalo.jpg', // Utilise la même image que Isalo (région Sud similaire)
+    highlights: [
+      'Close encounters with ring-tailed lemurs',
+      'Community-run conservation project',
+      'Granite rock formations',
+      'Local guide experiences'
+    ],
+    bestTime: 'March - November',
+    difficulty: 'Moderate',
+    duration: 'Half Day'
+  },
+  {
+    id: 22,
+    slug: 'nosy-iranja',
+    name: 'Nosy Iranja',
+    subtitle: 'Turtle Island & sandbank',
+    description: 'Two small islands connected by a spectacular white sandbank that appears at low tide, known as "Turtle Island".',
+    region: 'Northern Madagascar',
+    category: 'Coastal',
+    image: '/images/destinations/nosy-be.jpg', // Utilise la même image que Nosy Be (même région Nord)
+    highlights: [
+      'Iconic white sandbank walk',
+      'Sea turtle nesting sites',
+      'Crystal clear snorkeling waters',
+      'Most photographed spot in Madagascar'
+    ],
+    bestTime: 'May - October',
+    difficulty: 'Easy',
+    duration: 'Day Trip'
+  },
+  {
+    id: 23,
+    slug: 'nosy-tanikely',
+    name: 'Nosy Tanikely',
+    subtitle: 'Marine reserve snorkeling',
+    description: 'Protected marine reserve with exceptional snorkeling opportunities among coral reefs, sea turtles, and tropical fish.',
+    region: 'Northern Madagascar',
+    category: 'Coastal',
+    image: '/images/destinations/nosy-be.jpg', // Utilise la même image que Nosy Be (même région Nord)
+    highlights: [
+      'World-class snorkeling and diving',
+      'Sea turtle encounters',
+      'Protected coral reefs',
+      'Lighthouse and island walk'
+    ],
+    bestTime: 'May - October',
+    difficulty: 'Easy',
+    duration: 'Day Trip'
+  },
+  {
+    id: 24,
+    slug: 'nosy-komba',
+    name: 'Nosy Komba',
+    subtitle: 'Island of Lemurs',
+    description: 'Volcanic island known for its black lemurs, traditional woodcarving villages, and relaxed atmosphere.',
+    region: 'Northern Madagascar',
+    category: 'Nature & Cultural',
+    image: '/images/destinations/nosy-be.jpg', // Utilise la même image que Nosy Be (même région Nord)
+    highlights: [
+      'Black lemur encounters',
+      'Traditional woodcarving villages',
+      'Volcanic island scenery',
+      'Local handicraft markets'
+    ],
+    bestTime: 'May - October',
+    difficulty: 'Easy',
+    duration: 'Day Trip'
+  },
+  {
+    id: 25,
+    slug: 'nosy-sakatia',
+    name: 'Nosy Sakatia',
+    subtitle: 'Orchid Island',
+    description: 'Peaceful island known as the "Orchid Island" for its rich flora, with opportunities to snorkel with giant green sea turtles.',
+    region: 'Northern Madagascar',
+    category: 'Nature & Coastal',
+    image: '/images/destinations/nosy-be.jpg', // Utilise la même image que Nosy Be (même région Nord)
+    highlights: [
+      'Snorkeling with giant green sea turtles',
+      'Orchid and botanical trails',
+      'Peaceful, less-crowded beaches',
+      'Rich marine biodiversity'
+    ],
+    bestTime: 'May - October',
+    difficulty: 'Easy',
+    duration: 'Day Trip'
+  },
+  {
+    id: 26,
+    slug: 'mont-passot',
+    name: 'Mont Passot',
+    subtitle: 'Sunset over crater lakes',
+    description: 'Highest point on Nosy Be offering 360-degree panoramic views of the island\'s volcanic crater lakes and the Mozambique Channel.',
+    region: 'Northern Madagascar',
+    category: 'Nature',
+    image: '/images/destinations/nosy-be.jpg', // Utilise la même image que Nosy Be (même région Nord)
+    highlights: [
+      'Spectacular sunset viewpoints',
+      '360-degree island panoramas',
+      'Volcanic crater lakes',
+      'Photography opportunities'
+    ],
+    bestTime: 'Year-round',
+    difficulty: 'Easy',
+    duration: 'Half Day'
+  },
+  {
+    id: 27,
+    slug: 'hell-ville',
+    name: 'Hell-Ville (Andoany)',
+    subtitle: 'Nosy Be main town',
+    description: 'Main town of Nosy Be, known for its vibrant market selling spices, vanilla, and ylang-ylang essential oils.',
+    region: 'Northern Madagascar',
+    category: 'Cultural',
+    image: '/images/destinations/nosy-be.jpg', // Utilise la même image que Nosy Be (même région Nord)
+    highlights: [
+      'Spice and vanilla markets',
+      'Ylang-ylang essential oil',
+      'Colonial architecture',
+      'Local restaurants and cafes'
+    ],
+    bestTime: 'Year-round',
+    difficulty: 'Easy',
+    duration: 'Half Day'
   }
 ]
 

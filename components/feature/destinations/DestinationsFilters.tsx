@@ -19,6 +19,10 @@ const categories = [
   'Coastal',
   'Adventure',
   'Cultural',
+  'Nature',
+  'Nature & Wildlife',
+  'Nature & Cultural',
+  'Nature & Coastal',
 ]
 
 interface DestinationsFiltersProps {
