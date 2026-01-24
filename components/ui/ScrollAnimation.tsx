@@ -22,8 +22,7 @@ export default function ScrollAnimation({
   const elementRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
-  
-  // Éviter les problèmes d'hydratation
+
   useEffect(() => {
     setIsMounted(true)
   }, [])
@@ -67,7 +66,6 @@ export default function ScrollAnimation({
     }
   }
 
-  // Ne pas appliquer les classes d'animation avant le montage côté client
   if (!isMounted) {
     return (
       <div ref={elementRef} className={className}>

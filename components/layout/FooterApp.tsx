@@ -38,7 +38,6 @@ export default function FooterApp() {
     <>
       <footer className="bg-[#111811] text-white pt-20 pb-10 px-6 md:px-20 lg:px-24 xl:px-32">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-          {/* Colonne 1 - Logo, QR Code et social */}
           <ScrollAnimation animation="fade" delay={100}>
             <div>
               <Link href="/home" className="flex items-center mb-6 hover:scale-105 transition-transform inline-block">
@@ -51,8 +50,7 @@ export default function FooterApp() {
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
                 Specialized in high-end, adventure, and educational tours across Madagascar. We are your local partners for an unforgettable journey.
               </p>
-              
-              {/* QR Code Section */}
+
               <div className="flex items-center gap-4 mb-6">
                 <div className="text-center">
                   <img 
@@ -84,7 +82,6 @@ export default function FooterApp() {
             </div>
           </ScrollAnimation>
 
-          {/* Colonne 2 - Quick Links */}
           <ScrollAnimation animation="fade" delay={150}>
             <div>
               <h5 className="text-lg font-bold mb-6">Quick Links</h5>
@@ -102,7 +99,6 @@ export default function FooterApp() {
             </div>
           </ScrollAnimation>
 
-          {/* Colonne 3 - Contact Info */}
           <ScrollAnimation animation="fade" delay={200}>
             <div>
               <h5 className="text-lg font-bold mb-6">Contact Info</h5>
@@ -121,7 +117,6 @@ export default function FooterApp() {
             </div>
           </ScrollAnimation>
 
-          {/* Colonne 4 - Newsletter */}
           <ScrollAnimation animation="fade" delay={250}>
             <div>
               <h5 className="text-lg font-bold mb-6">Newsletter</h5>
@@ -154,7 +149,6 @@ export default function FooterApp() {
         </ScrollAnimation>
       </footer>
 
-      {/* WhatsApp Button aligné avec le header */}
       <div className="fixed bottom-6 right-0 z-[60] px-6 md:px-20 lg:px-24 xl:px-32">
         <div className="w-full flex justify-end">
           <Link

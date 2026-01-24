@@ -61,7 +61,6 @@ export default function ToursIntro() {
         </ScrollAnimation>
       </div>
 
-      {/* Stats Grid */}
       <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
         {stats.map((stat, index) => (
           <ScrollAnimation 
@@ -87,7 +86,6 @@ export default function ToursIntro() {
         ))}
       </div>
 
-      {/* Features */}
       <ScrollAnimation animation="fade" delay={800}>
         <div className="w-full grid md:grid-cols-3 gap-6">
           <div className="flex items-start gap-4 p-6 bg-green-50 dark:bg-green-900/20 rounded-2xl">

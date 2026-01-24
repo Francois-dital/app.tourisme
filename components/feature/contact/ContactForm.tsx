@@ -104,7 +104,6 @@ export default function ContactForm() {
           </ScrollAnimation>
         </div>
 
-        {/* Trip Details Group */}
         <div className="border-t border-gray-100 dark:border-white/10 pt-6 space-y-6">
           <ScrollAnimation animation="slide-right" delay={350}>
             <label className="flex flex-col gap-2">

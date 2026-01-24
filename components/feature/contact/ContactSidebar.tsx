@@ -23,7 +23,6 @@ const contactInfo = [
 export default function ContactSidebar() {
   return (
     <div className="space-y-8">
-      {/* Contact Card */}
       <ScrollAnimation animation="card" delay={200}>
         <div className="bg-white dark:bg-background-dark rounded-xl shadow-sm border border-gray-100 dark:border-white/10 p-8">
           <h3 className="text-xl font-bold mb-6">Contact Information</h3>
@@ -45,7 +44,6 @@ export default function ContactSidebar() {
             ))}
           </div>
 
-          {/* Action Buttons */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <ScrollAnimation animation="scale" delay={550}>
               <Link
@@ -73,11 +71,9 @@ export default function ContactSidebar() {
         </div>
       </ScrollAnimation>
 
-      {/* Map Section */}
       <ScrollAnimation animation="card" delay={300}>
         <div className="bg-white dark:bg-background-dark rounded-xl shadow-sm border border-gray-100 dark:border-white/10 p-2 overflow-hidden">
           <div className="h-[300px] w-full rounded-lg overflow-hidden relative">
-            {/* Google Maps Embed */}
             <iframe
               className="w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
               loading="lazy"
@@ -92,7 +88,6 @@ export default function ContactSidebar() {
         </div>
       </ScrollAnimation>
 
-      {/* Trust Badge */}
       <ScrollAnimation animation="scale" delay={400}>
         <div className="bg-primary/5 rounded-xl p-6 border border-primary/20">
           <div className="flex items-center gap-4">

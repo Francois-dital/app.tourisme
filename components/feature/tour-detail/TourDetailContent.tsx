@@ -10,14 +10,12 @@ interface TourDetailContentProps {
 export default function TourDetailContent({ tour }: TourDetailContentProps) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-6 md:px-20 mt-6">
-      {/* Left Side: Itinerary Timeline */}
       <div className="lg:col-span-2 flex flex-col">
         <ScrollAnimation animation="fade" delay={100}>
           <h3 className="text-[#111811] dark:text-white text-2xl font-bold mb-8">Detailed Itinerary</h3>
         </ScrollAnimation>
         
         <div className="relative space-y-12">
-          {/* Vertical Line */}
           <div className="absolute left-[19px] top-4 bottom-4 w-0.5 bg-primary/20" />
           
           {tour.itinerary.map((item, index) => (
@@ -54,7 +52,6 @@ export default function TourDetailContent({ tour }: TourDetailContentProps) {
           ))}
         </div>
 
-        {/* Customization Note */}
         <ScrollAnimation animation="scale" delay={200 + (tour.itinerary.length * 100)}>
           <div className="mt-12 p-6 bg-primary/10 rounded-xl border border-primary/30 flex gap-4 hover:shadow-lg transition-all">
             <Icon name="magic_button" className="text-primary text-3xl" />
@@ -68,10 +65,8 @@ export default function TourDetailContent({ tour }: TourDetailContentProps) {
         </ScrollAnimation>
       </div>
 
-      {/* Right Side: Sidebar Price & Booking */}
       <div className="lg:col-span-1">
         <div className="sticky top-24 space-y-6">
-          {/* Price Card */}
           <ScrollAnimation animation="scale" delay={150}>
             <div className="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#f0f4f0] dark:border-white/10 shadow-sm hover:shadow-xl transition-all">
               <div className="flex flex-col gap-1 mb-6">
@@ -105,7 +100,6 @@ export default function TourDetailContent({ tour }: TourDetailContentProps) {
             </div>
           </ScrollAnimation>
 
-          {/* Checklist Card */}
           <ScrollAnimation animation="scale" delay={350}>
             <div className="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#f0f4f0] dark:border-white/10 shadow-sm hover:shadow-xl transition-all">
               <h5 className="font-bold mb-4 flex items-center gap-2">
@@ -140,7 +134,6 @@ export default function TourDetailContent({ tour }: TourDetailContentProps) {
             </div>
           </ScrollAnimation>
 
-          {/* Contact/Help */}
           <ScrollAnimation animation="scale" delay={500}>
             <div className="p-6 bg-[#111811] dark:bg-[#081108] text-white rounded-xl text-center hover:shadow-xl transition-all">
               <p className="text-sm mb-2 opacity-80">Need more info?</p>

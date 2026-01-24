@@ -18,7 +18,6 @@ export default function HeaderApp() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
 
-  // Function to check if a menu item should be active
   const isActive = (href: string) => {
     if (href === '/tours') {
       return pathname === '/tours' || pathname.startsWith('/tours/')

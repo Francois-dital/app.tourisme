@@ -46,7 +46,6 @@ export default function DestinationDetailPage() {
     <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300">
       <HeaderApp />
       
-      {/* Hero Section */}
       <section className="relative h-[60vh] overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div 
@@ -98,7 +97,6 @@ export default function DestinationDetailPage() {
 
       <main className="max-w-7xl mx-auto py-20 px-6 md:px-20">
         <div className="grid lg:grid-cols-3 gap-12">
-          {/* Main Content */}
           <div className="lg:col-span-2">
             <ScrollAnimation animation="fade" delay={100}>
               <h2 className="text-3xl font-bold mb-6">About {destination.name}</h2>
@@ -122,7 +120,6 @@ export default function DestinationDetailPage() {
             </ScrollAnimation>
           </div>
 
-          {/* Sidebar */}
           <div className="lg:col-span-1">
             <ScrollAnimation animation="scale" delay={300}>
               <div className="bg-white dark:bg-background-dark rounded-2xl p-6 border border-gray-100 dark:border-white/10 sticky top-24 hover:shadow-xl transition-all">
@@ -178,7 +175,6 @@ export default function DestinationDetailPage() {
           </div>
         </div>
 
-        {/* Back to Destinations */}
         <ScrollAnimation animation="fade" delay={400}>
           <div className="mt-16 text-center">
             <Link href="/destinations">

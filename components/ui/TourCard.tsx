@@ -27,7 +27,6 @@ export default function TourCard({ title, days, region, price, description, imag
     }
   }
 
-  // Generate slug from title if not provided
   const tourSlug = slug || title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 
   return (

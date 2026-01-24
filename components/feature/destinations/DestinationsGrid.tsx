@@ -45,22 +45,19 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
                       className="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
                       style={{ backgroundImage: `url('${destination.image}')` }}
                     ></div>
-                    
-                    {/* Category Badge */}
+
                     <div className="absolute top-4 left-4">
                       <span className="bg-primary px-3 py-1 rounded-full text-xs font-bold uppercase text-white">
                         {destination.category}
                       </span>
                     </div>
-                    
-                    {/* Difficulty Badge */}
+
                     <div className="absolute top-4 right-4">
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(destination.difficulty)}`}>
                         {destination.difficulty}
                       </span>
                     </div>
-                    
-                    {/* Content */}
+
                     <div className="absolute bottom-6 left-6 right-6 text-white">
                       <h3 className="text-xl font-bold mb-1">{destination.name}</h3>
                       <p className="text-sm text-gray-300 mb-3">{destination.subtitle}</p>
@@ -77,14 +74,12 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
                       </div>
                     </div>
                   </div>
-                  
-                  {/* Description */}
+
                   <div className="px-2">
                     <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
                       {destination.description}
                     </p>
-                    
-                    {/* Highlights */}
+
                     <div className="space-y-2">
                       <h4 className="text-sm font-semibold text-gray-900 dark:text-white">Highlights:</h4>
                       <ul className="space-y-1">
@@ -118,8 +113,7 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
           </div>
         </ScrollAnimation>
       )}
-      
-      {/* Call to Action */}
+
       {destinations.length > 0 && (
         <ScrollAnimation animation="scale" delay={300 + (destinations.length * 100)}>
           <div className="w-full mt-16 text-center">

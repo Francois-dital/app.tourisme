@@ -7,7 +7,6 @@ import { ToursService } from '@/services/tours.service'
 import { Tour } from '@/types/tour.types'
 
 export default function TopTours() {
-  // Récupérer les 3 premiers tours les plus populaires
   const tours: Tour[] = ToursService.getAllTours().slice(0, 3)
 
   return (

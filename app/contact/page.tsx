@@ -12,7 +12,6 @@ export default function ContactPage() {
       <HeaderApp />
       
       <main className="w-full py-12 px-6 md:px-20 lg:px-24 xl:px-32">
-        {/* Hero Heading Section */}
         <div className="w-full mb-12">
           <ScrollAnimation animation="fade" delay={100}>
             <h1 className="text-4xl md:text-5xl font-black leading-tight tracking-tight mb-4">
@@ -27,14 +26,12 @@ export default function ContactPage() {
         </div>
 
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Left: Booking Form */}
           <div className="lg:col-span-7">
             <ScrollAnimation animation="card" delay={300}>
               <ContactForm />
             </ScrollAnimation>
           </div>
 
-          {/* Right: Contact Sidebar */}
           <div className="lg:col-span-5">
             <ContactSidebar />
           </div>

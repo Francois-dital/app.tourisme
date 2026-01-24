@@ -41,7 +41,6 @@ export default function DestinationsFilters({ onFilterChange }: DestinationsFilt
     setSelectedCategory(e.target.value)
   }
 
-  // Apply filters whenever region or category changes
   useEffect(() => {
     let filteredDestinations = getDestinationsByRegion(selectedRegion)
     
@@ -73,7 +72,6 @@ export default function DestinationsFilters({ onFilterChange }: DestinationsFilt
       
       <ScrollAnimation animation="fade" delay={300}>
         <div className="w-full flex flex-col md:flex-row gap-6 items-center justify-center border-b border-[#e0e7e0] dark:border-white/10 pb-8">
-          {/* Region Filter */}
           <div className="w-full md:w-auto min-w-[200px]">
             <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
               Filter by Region
@@ -91,7 +89,6 @@ export default function DestinationsFilters({ onFilterChange }: DestinationsFilt
             </select>
           </div>
 
-          {/* Category Filter */}
           <div className="w-full md:w-auto min-w-[200px]">
             <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
               Filter by Type

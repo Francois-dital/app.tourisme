@@ -29,7 +29,6 @@ export default function ToursFilters({ onFilterChange }: ToursFiltersProps) {
     setSelectedRegion(region)
   }
 
-  // Apply filters whenever region or duration changes
   useEffect(() => {
     let filteredTours = getToursByRegion(selectedRegion)
     filteredTours = filteredTours.filter(tour => {
@@ -52,7 +51,6 @@ export default function ToursFilters({ onFilterChange }: ToursFiltersProps) {
       
       <ScrollAnimation animation="fade" delay={200}>
         <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between border-b border-[#e0e7e0] dark:border-white/10 pb-6">
-          {/* Region Filters */}
           <div className="flex gap-2 flex-wrap">
             {regions.map((region) => (
               <Button
@@ -71,7 +69,6 @@ export default function ToursFilters({ onFilterChange }: ToursFiltersProps) {
             ))}
           </div>
 
-          {/* Duration Slider */}
           <div className="w-full lg:max-w-xs flex items-center gap-4 bg-white dark:bg-background-dark p-3 rounded-xl border border-[#e0e7e0] dark:border-white/10">
             <span className="text-sm font-semibold whitespace-nowrap">Duration</span>
             <div className="flex-1 relative">

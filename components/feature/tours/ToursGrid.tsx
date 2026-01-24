@@ -11,7 +11,6 @@ interface ToursGridProps {
 export default function ToursGrid({ tours }: ToursGridProps) {
   return (
     <section className="w-full">
-      {/* Section Header */}
       <div className="w-full text-center mb-12">
         <ScrollAnimation animation="fade" delay={100}>
           <h2 className="text-2xl font-bold mb-4">Choose Your Adventure</h2>
@@ -24,7 +23,6 @@ export default function ToursGrid({ tours }: ToursGridProps) {
         </ScrollAnimation>
       </div>
 
-      {/* Tours Grid */}
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
         {tours.map((tour, index) => (
           <ScrollAnimation 
@@ -46,8 +44,7 @@ export default function ToursGrid({ tours }: ToursGridProps) {
           </ScrollAnimation>
         ))}
       </div>
-      
-      {/* Custom Itinerary Section */}
+
       <ScrollAnimation animation="scale" delay={300 + (tours.length * 150)}>
         <div className="w-full bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 md:p-12 text-center border border-primary/10">
           <div className="max-w-3xl mx-auto">
