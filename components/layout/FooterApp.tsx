@@ -36,8 +36,8 @@ const contactInfo = [
 export default function FooterApp() {
   return (
     <>
-      <footer className="bg-[#111811] text-white pt-20 pb-10 px-6 md:px-20">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+      <footer className="bg-[#111811] text-white pt-20 pb-10 px-6 md:px-20 lg:px-24 xl:px-32">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           {/* Colonne 1 - Logo, QR Code et social */}
           <ScrollAnimation animation="fade" delay={100}>
             <div>
@@ -155,8 +155,8 @@ export default function FooterApp() {
       </footer>
 
       {/* WhatsApp Button aligné avec le header */}
-      <div className="fixed bottom-6 right-0 z-[60] px-6 md:px-20">
-        <div className="max-w-7xl mx-auto flex justify-end">
+      <div className="fixed bottom-6 right-0 z-[60] px-6 md:px-20 lg:px-24 xl:px-32">
+        <div className="w-full flex justify-end">
           <Link
             href="https://wa.me/261343141649"
             target="_blank"

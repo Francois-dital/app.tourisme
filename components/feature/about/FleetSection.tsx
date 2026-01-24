@@ -44,8 +44,8 @@ const fleetItems: FleetItem[] = [
 
 export default function FleetSection() {
   return (
-    <section className="bg-background-dark text-white py-24 px-6 md:px-20 max-w-full">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-background-dark text-white py-24 px-6 md:px-20 lg:px-24 xl:px-32">
+      <div className="w-full">
         <ScrollAnimation animation="fade" delay={100}>
           <div className="mb-16">
             <h2 className="text-4xl font-black mb-4">Our Rugged Fleet</h2>

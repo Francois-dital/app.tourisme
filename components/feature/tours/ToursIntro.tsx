@@ -39,8 +39,8 @@ export default function ToursIntro() {
   ]
 
   return (
-    <section className="py-24 px-6 md:px-20">
-      <div className="max-w-4xl mx-auto text-center mb-16">
+    <section className="py-24 px-6 md:px-20 lg:px-24 xl:px-32">
+      <div className="w-full max-w-4xl mx-auto text-center mb-16">
         <ScrollAnimation animation="fade" delay={100}>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Tours & Circuits Catalog
@@ -62,7 +62,7 @@ export default function ToursIntro() {
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+      <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
         {stats.map((stat, index) => (
           <ScrollAnimation 
             key={stat.label}
@@ -89,7 +89,7 @@ export default function ToursIntro() {
 
       {/* Features */}
       <ScrollAnimation animation="fade" delay={800}>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="w-full grid md:grid-cols-3 gap-6">
           <div className="flex items-start gap-4 p-6 bg-green-50 dark:bg-green-900/20 rounded-2xl">
             <div className="flex-shrink-0 w-10 h-10 bg-green-100 dark:bg-green-800 text-green-600 dark:text-green-400 rounded-xl flex items-center justify-center">
               <Icon name="verified" size="sm" />

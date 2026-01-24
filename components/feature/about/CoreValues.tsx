@@ -21,7 +21,7 @@ const coreValues = [
 
 export default function CoreValues() {
   return (
-    <section className="py-24 px-6 md:px-20 max-w-7xl mx-auto">
+    <section className="py-24 px-6 md:px-20 lg:px-24 xl:px-32">
       <ScrollAnimation animation="fade" delay={100}>
         <div className="flex flex-col gap-4 text-center md:text-left mb-16">
           <h2 className="text-[#111811] dark:text-white tracking-light text-3xl font-bold leading-tight md:text-4xl md:font-black">

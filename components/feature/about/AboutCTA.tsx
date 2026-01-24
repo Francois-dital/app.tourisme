@@ -18,13 +18,6 @@ export default function AboutCTA() {
         <ScrollAnimation animation="scale" delay={300}>
           <div className="flex flex-wrap justify-center gap-4">
             <Button 
-              variant="primary" 
-              size="lg" 
-              className="bg-[#111811] text-white px-10 py-4 rounded-full hover:bg-[#111811]/90 shadow-xl"
-            >
-              Book a Tour
-            </Button>
-            <Button 
               variant="outline" 
               size="lg" 
               className="border-2 border-[#111811] text-[#111811] px-10 py-4 rounded-full hover:bg-[#111811] hover:text-white"
