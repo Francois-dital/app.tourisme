@@ -12,7 +12,6 @@ const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Tours', href: '/tours' },
   { name: 'Destinations', href: '/destinations' },
-  { name: 'Contact', href: '/contact' },
 ]
 
 export default function HeaderApp() {
@@ -26,9 +25,6 @@ export default function HeaderApp() {
     }
     if (href === '/destinations') {
       return pathname === '/destinations' || pathname.startsWith('/destinations/')
-    }
-    if (href === '/contact') {
-      return pathname === '/contact'
     }
     return pathname === href
   }
@@ -81,13 +77,19 @@ export default function HeaderApp() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="hidden md:flex hover:scale-105 transition-transform"
-            >
-              Inquire Now
-            </Button>
+            <Link href="/contact">
+              <Button 
+                variant={pathname === '/contact' ? 'primary' : 'outline'}
+                size="sm" 
+                className={`hidden md:flex hover:scale-105 transition-all ${
+                  pathname === '/contact' 
+                    ? 'bg-primary text-white hover:bg-primary/90' 
+                    : 'bg-transparent text-primary border-primary hover:bg-primary hover:text-white'
+                }`}
+              >
+                Inquire Now
+              </Button>
+            </Link>
             <button 
               className="lg:hidden hover:scale-110 transition-transform"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
