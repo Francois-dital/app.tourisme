@@ -12,7 +12,7 @@ const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Tours', href: '/tours' },
   { name: 'Destinations', href: '/destinations' },
-  { name: 'Contact', href: '#' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 export default function HeaderApp() {
@@ -26,6 +26,9 @@ export default function HeaderApp() {
     }
     if (href === '/destinations') {
       return pathname === '/destinations' || pathname.startsWith('/destinations/')
+    }
+    if (href === '/contact') {
+      return pathname === '/contact'
     }
     return pathname === href
   }
