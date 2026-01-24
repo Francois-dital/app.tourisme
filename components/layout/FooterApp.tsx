@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Icon } from '@/components/ui/Icon'
 import { Button } from '@/components/ui/Button'
+import ScrollAnimation from '@/components/ui/ScrollAnimation'
 
 const quickLinks = [
   { name: 'About ELMADAGASCAR', href: '/about' },
@@ -36,81 +37,104 @@ export default function FooterApp() {
     <>
       <footer className="bg-[#111811] text-white pt-20 pb-10 px-6 md:px-20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-          <div>
-            <Link href="/home" className="flex items-center gap-3 mb-6">
-              <img 
-                src="/logo.png" 
-                alt="ELMADAGASCAR Tours Logo" 
-                className="h-8 w-auto"
-              />
-              <h2 className="text-lg font-extrabold tracking-tighter uppercase">ELMADAGASCAR</h2>
-            </Link>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Specialized in high-end, adventure, and educational tours across Madagascar. We are your local partners for an unforgettable journey.
-            </p>
-            <div className="flex items-center gap-4">
-              {socialLinks.map((social) => (
-                <Link
-                  key={social.name}
-                  href={social.href}
-                  className="size-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all"
-                  aria-label={social.name}
-                >
-                  <Icon name={social.icon} />
-                </Link>
-              ))}
+          {/* Colonne 1 - Logo et social */}
+          <ScrollAnimation animation="fade" delay={100}>
+            <div>
+              <Link href="/home" className="flex items-center gap-3 mb-6 hover:scale-105 transition-transform inline-block">
+                <img 
+                  src="/logo.png" 
+                  alt="ELMADAGASCAR Tours Logo" 
+                  className="h-8 w-auto"
+                />
+                <h2 className="text-lg font-extrabold tracking-tighter uppercase">ELMADAGASCAR</h2>
+              </Link>
+              <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                Specialized in high-end, adventure, and educational tours across Madagascar. We are your local partners for an unforgettable journey.
+              </p>
+              <div className="flex items-center gap-4">
+                {socialLinks.map((social, index) => (
+                  <ScrollAnimation key={social.name} animation="scale" delay={200 + (index * 100)}>
+                    <Link
+                      href={social.href}
+                      className="size-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-background-dark hover:scale-110 transition-all"
+                      aria-label={social.name}
+                    >
+                      <Icon name={social.icon} />
+                    </Link>
+                  </ScrollAnimation>
+                ))}
+              </div>
             </div>
-          </div>
+          </ScrollAnimation>
 
-          <div>
-            <h5 className="text-lg font-bold mb-6">Quick Links</h5>
-            <ul className="flex flex-col gap-4 text-gray-400 text-sm">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link href={link.href} className="hover:text-primary transition-colors">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="text-lg font-bold mb-6">Contact Info</h5>
-            <ul className="flex flex-col gap-4 text-gray-400 text-sm">
-              {contactInfo.map((info, index) => (
-                <li key={index} className="flex items-center gap-3">
-                  <Icon name={info.icon} className="text-primary" />
-                  <span>{info.text}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="text-lg font-bold mb-6">Newsletter</h5>
-            <p className="text-gray-400 text-sm mb-4">
-              Subscribe to receive exclusive travel deals and nature news.
-            </p>
-            <div className="relative">
-              <input
-                className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 focus:ring-1 focus:ring-primary focus:outline-none text-white text-sm"
-                placeholder="Your email"
-                type="email"
-              />
-              <Button
-                size="sm"
-                className="absolute right-2 top-2 px-4 py-1 text-xs uppercase"
-              >
-                Join
-              </Button>
+          {/* Colonne 2 - Quick Links */}
+          <ScrollAnimation animation="fade" delay={150}>
+            <div>
+              <h5 className="text-lg font-bold mb-6">Quick Links</h5>
+              <ul className="flex flex-col gap-4 text-gray-400 text-sm">
+                {quickLinks.map((link, index) => (
+                  <li key={link.name}>
+                    <ScrollAnimation animation="slide-right" delay={200 + (index * 50)}>
+                      <Link href={link.href} className="hover:text-primary hover:translate-x-2 transition-all inline-block">
+                        {link.name}
+                      </Link>
+                    </ScrollAnimation>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          </ScrollAnimation>
+
+          {/* Colonne 3 - Contact Info */}
+          <ScrollAnimation animation="fade" delay={200}>
+            <div>
+              <h5 className="text-lg font-bold mb-6">Contact Info</h5>
+              <ul className="flex flex-col gap-4 text-gray-400 text-sm">
+                {contactInfo.map((info, index) => (
+                  <li key={index}>
+                    <ScrollAnimation animation="slide-right" delay={250 + (index * 50)}>
+                      <div className="flex items-center gap-3">
+                        <Icon name={info.icon} className="text-primary" />
+                        <span>{info.text}</span>
+                      </div>
+                    </ScrollAnimation>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </ScrollAnimation>
+
+          {/* Colonne 4 - Newsletter */}
+          <ScrollAnimation animation="fade" delay={250}>
+            <div>
+              <h5 className="text-lg font-bold mb-6">Newsletter</h5>
+              <p className="text-gray-400 text-sm mb-4">
+                Subscribe to receive exclusive travel deals and nature news.
+              </p>
+              <ScrollAnimation animation="fade" delay={300}>
+                <div className="relative hover:scale-105 transition-transform">
+                  <input
+                    className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 focus:ring-1 focus:ring-primary focus:outline-none text-white text-sm hover:border-primary transition-colors"
+                    placeholder="Your email"
+                    type="email"
+                  />
+                  <Button
+                    size="sm"
+                    className="absolute right-2 top-2 px-4 py-1 text-xs uppercase hover:scale-105 transition-transform"
+                  >
+                    Join
+                  </Button>
+                </div>
+              </ScrollAnimation>
+            </div>
+          </ScrollAnimation>
         </div>
 
-        <div className="pt-10 border-t border-white/5 text-center text-gray-500 text-xs">
-          <p>© 2024 ELMADAGASCAR Tours. All Rights Reserved. Professional Tourism License No. 045-2015/MINTOUR.</p>
-        </div>
+        <ScrollAnimation animation="fade" delay={400}>
+          <div className="pt-10 border-t border-white/5 text-center text-gray-500 text-xs">
+            <p>© 2024 ELMADAGASCAR Tours. All Rights Reserved. Professional Tourism License No. 045-2015/MINTOUR.</p>
+          </div>
+        </ScrollAnimation>
       </footer>
 
       {/* WhatsApp Button aligné avec le header */}

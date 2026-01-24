@@ -1,4 +1,5 @@
 import { Badge } from '@/components/ui/Badge'
+import ScrollAnimation from '@/components/ui/ScrollAnimation'
 
 interface Guide {
   name: string
@@ -48,42 +49,50 @@ const guides: Guide[] = [
 export default function TeamGuides() {
   return (
     <section className="py-24 px-6 md:px-20 max-w-7xl mx-auto">
-      <div className="flex items-center justify-between mb-16">
-        <h2 className="text-[#111811] dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">
-          Meet Our Professional Guides
-        </h2>
-        <span className="hidden md:block text-primary font-medium">
-          Expert Bilingual Specialists
-        </span>
-      </div>
+      <ScrollAnimation animation="fade" delay={100}>
+        <div className="flex items-center justify-between mb-16">
+          <h2 className="text-[#111811] dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">
+            Meet Our Professional Guides
+          </h2>
+          <span className="hidden md:block text-primary font-medium">
+            Expert Bilingual Specialists
+          </span>
+        </div>
+      </ScrollAnimation>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {guides.map((guide, index) => (
-          <div key={index} className="flex flex-col gap-3 group">
-            <div className="aspect-[4/5] overflow-hidden rounded-xl bg-gray-200 shadow-sm relative">
-              <img
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                src={guide.image}
-                alt={`Portrait of ${guide.name}`}
-              />
-              <div className="absolute top-3 left-3 flex gap-1">
-                {guide.languages.map((lang, langIndex) => (
-                  <Badge
-                    key={langIndex}
-                    variant={lang.color}
-                    size="sm"
-                    className="text-[10px] px-2 py-0.5"
-                  >
-                    {lang.name}
-                  </Badge>
-                ))}
+          <ScrollAnimation 
+            key={index}
+            animation="card" 
+            delay={200 + (index * 100)}
+          >
+            <div className="flex flex-col gap-3 group">
+              <div className="aspect-[4/5] overflow-hidden rounded-xl bg-gray-200 shadow-sm relative">
+                <img
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  src={guide.image}
+                  alt={`Portrait of ${guide.name}`}
+                />
+                <div className="absolute top-3 left-3 flex gap-1">
+                  {guide.languages.map((lang, langIndex) => (
+                    <Badge
+                      key={langIndex}
+                      variant={lang.color}
+                      size="sm"
+                      className="text-[10px] px-2 py-0.5"
+                    >
+                      {lang.name}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold">{guide.name}</h4>
+                <p className="text-sm text-[#618961] dark:text-white/60">{guide.role}</p>
               </div>
             </div>
-            <div>
-              <h4 className="text-lg font-bold">{guide.name}</h4>
-              <p className="text-sm text-[#618961] dark:text-white/60">{guide.role}</p>
-            </div>
-          </div>
+          </ScrollAnimation>
         ))}
       </div>
     </section>

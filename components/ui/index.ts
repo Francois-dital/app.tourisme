@@ -5,3 +5,4 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 export { FeatureCard } from './FeatureCard'
 export { default as TourCard } from './TourCard'
 export { default as LanguageSelector } from './LanguageSelector'
+export { default as ScrollAnimation } from './ScrollAnimation'
