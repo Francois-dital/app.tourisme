@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import HeaderApp from '@/components/layout/HeaderApp'
 import FooterApp from '@/components/layout/FooterApp'
 import ToursFilters from '@/components/feature/tours/ToursFilters'
@@ -11,9 +11,9 @@ import { toursData, TourData } from '@/data/tours'
 export default function ToursPage() {
   const [filteredTours, setFilteredTours] = useState<TourData[]>(toursData)
 
-  const handleFilterChange = (tours: TourData[]) => {
+  const handleFilterChange = useCallback((tours: TourData[]) => {
     setFilteredTours(tours)
-  }
+  }, [])
 
   // Only show pagination if there are more than 6 tours
   const showPagination = filteredTours.length > 6
