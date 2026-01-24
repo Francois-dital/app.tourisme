@@ -11,12 +11,26 @@ interface ToursGridProps {
 export default function ToursGrid({ tours }: ToursGridProps) {
   return (
     <section className="py-8 px-6 md:px-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Section Header */}
+      <div className="text-center mb-12">
+        <ScrollAnimation animation="fade" delay={100}>
+          <h2 className="text-2xl font-bold mb-4">Choose Your Adventure</h2>
+        </ScrollAnimation>
+        <ScrollAnimation animation="fade" delay={200}>
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            From the lush rainforests of the east to the dramatic landscapes of the west, 
+            each tour offers a unique perspective of Madagascar's incredible diversity.
+          </p>
+        </ScrollAnimation>
+      </div>
+
+      {/* Tours Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
         {tours.map((tour, index) => (
           <ScrollAnimation 
             key={tour.id}
             animation="card" 
-            delay={100 + (index * 100)}
+            delay={300 + (index * 150)}
           >
             <TourCard
               title={tour.title}
@@ -31,31 +45,53 @@ export default function ToursGrid({ tours }: ToursGridProps) {
             />
           </ScrollAnimation>
         ))}
-        
-        {/* Custom Itinerary Card */}
-        <ScrollAnimation animation="card" delay={100 + (tours.length * 100)}>
-          <div className="group flex flex-col bg-white dark:bg-background-dark rounded-2xl overflow-hidden shadow-lg border border-transparent hover:border-primary transition-all">
-            <div className="relative h-64 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-green-800/80 flex items-center justify-center p-6 text-center">
-                <div>
-                  <Icon name="map" size="xl" className="text-white text-5xl mb-2" />
-                  <p className="text-white font-bold text-lg">More Circuits Coming Soon</p>
-                </div>
+      </div>
+      
+      {/* Custom Itinerary Section */}
+      <ScrollAnimation animation="scale" delay={300 + (tours.length * 150)}>
+        <div className="bg-gradient-to-r from-primary/5 to-green-600/5 dark:from-primary/10 dark:to-green-600/10 rounded-3xl p-8 md:p-12 text-center border border-primary/10">
+          <div className="max-w-3xl mx-auto">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 text-primary rounded-2xl mb-6">
+              <Icon name="map" size="lg" />
+            </div>
+            
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Need Something Different?
+            </h3>
+            
+            <p className="text-gray-600 dark:text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
+              Can't find the perfect tour? Let our experts design a completely customized Madagascar experience 
+              tailored to your interests, budget, and schedule.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                <Icon name="check_circle" size="sm" className="text-primary" />
+                Personalized itineraries
+              </div>
+              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                <Icon name="check_circle" size="sm" className="text-primary" />
+                Flexible dates & duration
+              </div>
+              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                <Icon name="check_circle" size="sm" className="text-primary" />
+                Special interests welcome
               </div>
             </div>
             
-            <div className="p-6 flex flex-col flex-1 items-center justify-center text-center">
-              <h4 className="text-xl font-bold mb-2">Custom Itinerary</h4>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-6">
-                Can't find what you're looking for? Let us design a tailor-made Madagascar experience just for you.
-              </p>
-              <Button variant="primary" className="w-full">
-                Request a Quote
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="primary" size="lg" className="px-8 pulse-primary">
+                <Icon name="email" size="sm" className="mr-2" />
+                Request Custom Quote
+              </Button>
+              <Button variant="outline" size="lg" className="px-8">
+                <Icon name="phone" size="sm" className="mr-2" />
+                Speak with Expert
               </Button>
             </div>
           </div>
-        </ScrollAnimation>
-      </div>
+        </div>
+      </ScrollAnimation>
       
       {tours.length === 0 && (
         <ScrollAnimation animation="fade" delay={200}>
@@ -63,7 +99,7 @@ export default function ToursGrid({ tours }: ToursGridProps) {
             <Icon name="search_off" size="xl" className="text-gray-400 mb-4" />
             <h3 className="text-xl font-bold mb-2">No tours found</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Try adjusting your filters to see more results.
+              Please contact us for custom tour options.
             </p>
           </div>
         </ScrollAnimation>
