@@ -90,7 +90,7 @@ export default function ToursIntro() {
       {/* Features */}
       <ScrollAnimation animation="fade" delay={800}>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl">
+          <div className="flex items-start gap-4 p-6 bg-green-50 dark:bg-green-900/20 rounded-2xl">
             <div className="flex-shrink-0 w-10 h-10 bg-green-100 dark:bg-green-800 text-green-600 dark:text-green-400 rounded-xl flex items-center justify-center">
               <Icon name="verified" size="sm" />
             </div>
@@ -102,7 +102,7 @@ export default function ToursIntro() {
             </div>
           </div>
 
-          <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-2xl">
+          <div className="flex items-start gap-4 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-2xl">
             <div className="flex-shrink-0 w-10 h-10 bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-400 rounded-xl flex items-center justify-center">
               <Icon name="settings" size="sm" />
             </div>
@@ -114,7 +114,7 @@ export default function ToursIntro() {
             </div>
           </div>
 
-          <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl">
+          <div className="flex items-start gap-4 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-2xl">
             <div className="flex-shrink-0 w-10 h-10 bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-400 rounded-xl flex items-center justify-center">
               <Icon name="support_agent" size="sm" />
             </div>

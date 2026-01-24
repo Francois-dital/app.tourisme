@@ -8,10 +8,11 @@ const HERO_IMAGE = 'https://lh3.googleusercontent.com/aida-public/AB6AXuC8VHBkgz
 export default function HeroSection() {
   return (
     <section className="relative w-full h-[600px] md:h-[750px] flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 bg-black/50 z-5"></div>
       <div 
         className="absolute inset-0 bg-cover bg-center transition-transform duration-[10000ms] hover:scale-110" 
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('${HERO_IMAGE}')`,
+          backgroundImage: `url('${HERO_IMAGE}')`,
         }}
         aria-label="Beautiful baobab trees landscape at sunset in Madagascar"
       />

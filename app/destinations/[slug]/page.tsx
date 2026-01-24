@@ -48,12 +48,12 @@ export default function DestinationDetailPage() {
       
       {/* Hero Section */}
       <section className="relative h-[60vh] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${destination.image}')` }}
         ></div>
-        <div className="relative z-20 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
+        <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-20 h-full flex flex-col justify-center">
           <ScrollAnimation animation="fade" delay={100}>
             <div className="flex items-center gap-4 mb-4">
               <span className="bg-primary px-4 py-2 rounded-full text-sm font-bold text-white">
@@ -96,7 +96,7 @@ export default function DestinationDetailPage() {
         </div>
       </section>
 
-      <main className="max-w-7xl mx-auto py-20 px-6">
+      <main className="max-w-7xl mx-auto py-20 px-6 md:px-20">
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Main Content */}
           <div className="lg:col-span-2">
@@ -111,10 +111,12 @@ export default function DestinationDetailPage() {
               <h3 className="text-2xl font-bold mb-6">Highlights & Experiences</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {destination.highlights.map((highlight, index) => (
-                  <div key={index} className="flex items-start gap-3 p-4 bg-white dark:bg-background-dark rounded-lg border border-gray-100 dark:border-white/10">
-                    <Icon name="check_circle" size="sm" className="text-primary flex-shrink-0 mt-1" />
-                    <span className="text-gray-700 dark:text-gray-300">{highlight}</span>
-                  </div>
+                  <ScrollAnimation key={index} animation="card" delay={250 + (index * 100)}>
+                    <div className="flex items-start gap-3 p-4 bg-white dark:bg-background-dark rounded-lg border border-gray-100 dark:border-white/10 hover:border-primary/20 transition-all hover:shadow-lg">
+                      <Icon name="check_circle" size="sm" className="text-primary flex-shrink-0 mt-1" />
+                      <span className="text-gray-700 dark:text-gray-300">{highlight}</span>
+                    </div>
+                  </ScrollAnimation>
                 ))}
               </div>
             </ScrollAnimation>
@@ -123,39 +125,53 @@ export default function DestinationDetailPage() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <ScrollAnimation animation="scale" delay={300}>
-              <div className="bg-white dark:bg-background-dark rounded-2xl p-6 border border-gray-100 dark:border-white/10 sticky top-24">
-                <h3 className="text-xl font-bold mb-6">Plan Your Visit</h3>
+              <div className="bg-white dark:bg-background-dark rounded-2xl p-6 border border-gray-100 dark:border-white/10 sticky top-24 hover:shadow-xl transition-all">
+                <ScrollAnimation animation="fade" delay={350}>
+                  <h3 className="text-xl font-bold mb-6">Plan Your Visit</h3>
+                </ScrollAnimation>
                 
                 <div className="space-y-4 mb-6">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600 dark:text-gray-400">Duration</span>
-                    <span className="font-semibold">{destination.duration}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600 dark:text-gray-400">Best Time</span>
-                    <span className="font-semibold">{destination.bestTime}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600 dark:text-gray-400">Difficulty</span>
-                    <span className={`px-2 py-1 rounded text-sm font-medium ${getDifficultyColor(destination.difficulty)}`}>
-                      {destination.difficulty}
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600 dark:text-gray-400">Region</span>
-                    <span className="font-semibold">{destination.region}</span>
-                  </div>
+                  <ScrollAnimation animation="slide-right" delay={400}>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600 dark:text-gray-400">Duration</span>
+                      <span className="font-semibold">{destination.duration}</span>
+                    </div>
+                  </ScrollAnimation>
+                  <ScrollAnimation animation="slide-right" delay={450}>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600 dark:text-gray-400">Best Time</span>
+                      <span className="font-semibold">{destination.bestTime}</span>
+                    </div>
+                  </ScrollAnimation>
+                  <ScrollAnimation animation="slide-right" delay={500}>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600 dark:text-gray-400">Difficulty</span>
+                      <span className={`px-2 py-1 rounded text-sm font-medium ${getDifficultyColor(destination.difficulty)}`}>
+                        {destination.difficulty}
+                      </span>
+                    </div>
+                  </ScrollAnimation>
+                  <ScrollAnimation animation="slide-right" delay={550}>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600 dark:text-gray-400">Region</span>
+                      <span className="font-semibold">{destination.region}</span>
+                    </div>
+                  </ScrollAnimation>
                 </div>
 
                 <div className="space-y-3">
-                  <Link href="/tours">
-                    <button className="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-lg font-bold transition-all">
-                      View Related Tours
+                  <ScrollAnimation animation="scale" delay={600}>
+                    <Link href="/tours">
+                      <button className="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-lg font-bold transition-all hover:scale-105">
+                        View Related Tours
+                      </button>
+                    </Link>
+                  </ScrollAnimation>
+                  <ScrollAnimation animation="scale" delay={650}>
+                    <button className="w-full border border-primary text-primary hover:bg-primary hover:text-white py-3 rounded-lg font-bold transition-all hover:scale-105">
+                      Custom Itinerary
                     </button>
-                  </Link>
-                  <button className="w-full border border-primary text-primary hover:bg-primary hover:text-white py-3 rounded-lg font-bold transition-all">
-                    Custom Itinerary
-                  </button>
+                  </ScrollAnimation>
                 </div>
               </div>
             </ScrollAnimation>

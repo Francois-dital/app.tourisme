@@ -9,10 +9,11 @@ export default function TourDetailHero({ tour }: TourDetailHeroProps) {
   return (
     <div className="px-6 md:px-20">
       <div className="relative overflow-hidden rounded-xl">
+        <div className="absolute inset-0 bg-black/50"></div>
         <div 
-          className="flex min-h-[420px] flex-col gap-6 bg-cover bg-center bg-no-repeat items-start justify-end px-6 pb-12 lg:px-12"
+          className="flex min-h-[420px] flex-col gap-6 bg-cover bg-center bg-no-repeat items-start justify-end px-6 pb-12 lg:px-12 relative z-10"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%), url("${tour.image}")`
+            backgroundImage: `url("${tour.image}")`
           }}
           aria-label={`${tour.title} landscape`}
         >

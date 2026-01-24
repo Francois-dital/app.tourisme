@@ -40,7 +40,7 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
               <Link href={`/destinations/${destination.slug}`}>
                 <div className="group cursor-pointer h-full">
                   <div className="relative aspect-[4/5] rounded-xl overflow-hidden mb-4 shadow-md">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                    <div className="absolute inset-0 bg-black/60 opacity-60 group-hover:opacity-80 transition-opacity"></div>
                     <div 
                       className="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
                       style={{ backgroundImage: `url('${destination.image}')` }}
@@ -123,7 +123,7 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
       {destinations.length > 0 && (
         <ScrollAnimation animation="scale" delay={300 + (destinations.length * 100)}>
           <div className="mt-16 text-center">
-            <div className="bg-gradient-to-r from-primary/5 to-green-600/5 dark:from-primary/10 dark:to-green-600/10 rounded-3xl p-8 md:p-12 border border-primary/10">
+            <div className="bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 md:p-12 border border-primary/10">
               <div className="max-w-2xl mx-auto">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 text-primary rounded-2xl mb-6">
                   <Icon name="explore" size="lg" />

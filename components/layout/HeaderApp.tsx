@@ -11,13 +11,24 @@ const navigation = [
   { name: 'Home', href: '/home' },
   { name: 'About', href: '/about' },
   { name: 'Tours', href: '/tours' },
-  { name: 'Destinations', href: '#' },
+  { name: 'Destinations', href: '/destinations' },
   { name: 'Contact', href: '#' },
 ]
 
 export default function HeaderApp() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
+
+  // Function to check if a menu item should be active
+  const isActive = (href: string) => {
+    if (href === '/tours') {
+      return pathname === '/tours' || pathname.startsWith('/tours/')
+    }
+    if (href === '/destinations') {
+      return pathname === '/destinations' || pathname.startsWith('/destinations/')
+    }
+    return pathname === href
+  }
 
   return (
     <>
@@ -56,7 +67,7 @@ export default function HeaderApp() {
                 key={item.name}
                 href={item.href}
                 className={`font-semibold text-sm transition-all hover:scale-105 ${
-                  pathname === item.href 
+                  isActive(item.href) 
                     ? 'text-primary border-b-2 border-primary pb-1' 
                     : 'hover:text-primary'
                 }`}

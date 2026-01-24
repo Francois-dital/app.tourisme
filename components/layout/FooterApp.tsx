@@ -6,6 +6,7 @@ import ScrollAnimation from '@/components/ui/ScrollAnimation'
 const quickLinks = [
   { name: 'About ELMADAGASCAR', href: '/about' },
   { name: 'Our Tours', href: '/tours' },
+  { name: 'Destinations', href: '/destinations' },
   { name: 'Travel Tips', href: '#' },
   { name: 'Eco-responsibility', href: '#' },
   { name: 'Contact Us', href: '#' },
@@ -37,20 +38,36 @@ export default function FooterApp() {
     <>
       <footer className="bg-[#111811] text-white pt-20 pb-10 px-6 md:px-20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-          {/* Colonne 1 - Logo et social */}
+          {/* Colonne 1 - Logo, QR Code et social */}
           <ScrollAnimation animation="fade" delay={100}>
             <div>
-              <Link href="/home" className="flex items-center gap-3 mb-6 hover:scale-105 transition-transform inline-block">
+              <Link href="/home" className="flex items-center mb-6 hover:scale-105 transition-transform inline-block">
                 <img 
                   src="/logo.png" 
                   alt="ELMADAGASCAR Tours Logo" 
                   className="h-8 w-auto"
                 />
-                <h2 className="text-lg font-extrabold tracking-tighter uppercase">ELMADAGASCAR</h2>
               </Link>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
                 Specialized in high-end, adventure, and educational tours across Madagascar. We are your local partners for an unforgettable journey.
               </p>
+              
+              {/* QR Code Section */}
+              <div className="flex items-center gap-4 mb-6">
+                <div className="text-center">
+                  <img 
+                    src="/images/qr-code.jpeg" 
+                    alt="QR Code - Contact ELMADAGASCAR" 
+                    className="w-12 h-12 rounded border border-white/20"
+                  />
+                  <p className="text-xs text-gray-500 mt-1">Scan to contact</p>
+                </div>
+                <div className="text-xs text-gray-400">
+                  <p>Quick contact via</p>
+                  <p>QR code scan</p>
+                </div>
+              </div>
+              
               <div className="flex items-center gap-4">
                 {socialLinks.map((social, index) => (
                   <ScrollAnimation key={social.name} animation="scale" delay={200 + (index * 100)}>

@@ -49,7 +49,7 @@ export default function ToursGrid({ tours }: ToursGridProps) {
       
       {/* Custom Itinerary Section */}
       <ScrollAnimation animation="scale" delay={300 + (tours.length * 150)}>
-        <div className="bg-gradient-to-r from-primary/5 to-green-600/5 dark:from-primary/10 dark:to-green-600/10 rounded-3xl p-8 md:p-12 text-center border border-primary/10">
+        <div className="bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 md:p-12 text-center border border-primary/10">
           <div className="max-w-3xl mx-auto">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 text-primary rounded-2xl mb-6">
               <Icon name="map" size="lg" />
@@ -80,13 +80,9 @@ export default function ToursGrid({ tours }: ToursGridProps) {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="primary" size="lg" className="px-8 pulse-primary">
-                <Icon name="email" size="sm" className="mr-2" />
-                Request Custom Quote
-              </Button>
               <Button variant="outline" size="lg" className="px-8">
                 <Icon name="phone" size="sm" className="mr-2" />
-                Speak with Expert
+                Contact
               </Button>
             </div>
           </div>

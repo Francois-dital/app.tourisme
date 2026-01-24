@@ -83,7 +83,7 @@ export default function ToursFilters({ onFilterChange }: ToursFiltersProps) {
                 onChange={handleDurationChange}
                 className="w-full h-1 bg-[#dbe6db] dark:bg-white/10 rounded-full appearance-none cursor-pointer slider"
                 style={{
-                  background: `linear-gradient(to right, #0df259 0%, #0df259 ${(duration / 20) * 100}%, #dbe6db ${(duration / 20) * 100}%, #dbe6db 100%)`
+                  background: `#0df259`
                 }}
               />
             </div>

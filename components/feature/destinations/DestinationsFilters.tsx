@@ -1,25 +1,24 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Button } from '@/components/ui/Button'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
 import { destinationsData, getDestinationsByRegion } from '@/data/destinations'
 
 const regions = [
-  { name: 'All Regions', active: true },
-  { name: 'Northern Madagascar', active: false },
-  { name: 'East Coast', active: false },
-  { name: 'West Coast', active: false },
-  { name: 'Southern Highlands', active: false },
-  { name: 'Central Highlands', active: false },
+  'All Regions',
+  'Northern Madagascar',
+  'East Coast',
+  'West Coast',
+  'Southern Highlands',
+  'Central Highlands',
 ]
 
 const categories = [
-  { name: 'All Categories', active: true },
-  { name: 'Rainforest', active: false },
-  { name: 'Coastal', active: false },
-  { name: 'Adventure', active: false },
-  { name: 'Cultural', active: false },
+  'All Categories',
+  'Rainforest',
+  'Coastal',
+  'Adventure',
+  'Cultural',
 ]
 
 interface DestinationsFiltersProps {
@@ -30,12 +29,12 @@ export default function DestinationsFilters({ onFilterChange }: DestinationsFilt
   const [selectedRegion, setSelectedRegion] = useState('All Regions')
   const [selectedCategory, setSelectedCategory] = useState('All Categories')
 
-  const handleRegionChange = (region: string) => {
-    setSelectedRegion(region)
+  const handleRegionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedRegion(e.target.value)
   }
 
-  const handleCategoryChange = (category: string) => {
-    setSelectedCategory(category)
+  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCategory(e.target.value)
   }
 
   // Apply filters whenever region or category changes
@@ -69,49 +68,41 @@ export default function DestinationsFilters({ onFilterChange }: DestinationsFilt
       </ScrollAnimation>
       
       <ScrollAnimation animation="fade" delay={300}>
-        <div className="flex flex-col lg:flex-row gap-8 items-start lg:items-center justify-between border-b border-[#e0e7e0] dark:border-white/10 pb-8">
-          {/* Region Filters */}
-          <div className="w-full lg:w-auto">
-            <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Filter by Region</h3>
-            <div className="flex gap-2 flex-wrap">
+        <div className="flex flex-col md:flex-row gap-6 items-center justify-center border-b border-[#e0e7e0] dark:border-white/10 pb-8 max-w-2xl mx-auto">
+          {/* Region Filter */}
+          <div className="w-full md:w-auto min-w-[200px]">
+            <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+              Filter by Region
+            </label>
+            <select
+              value={selectedRegion}
+              onChange={handleRegionChange}
+              className="w-full px-4 py-3 bg-white dark:bg-background-dark border border-gray-200 dark:border-white/20 rounded-lg text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+            >
               {regions.map((region) => (
-                <Button
-                  key={region.name}
-                  variant={selectedRegion === region.name ? 'primary' : 'ghost'}
-                  size="sm"
-                  onClick={() => handleRegionChange(region.name)}
-                  className={`h-10 px-4 ${
-                    selectedRegion === region.name 
-                      ? 'bg-primary text-white' 
-                      : 'bg-[#f0f4f0] dark:bg-white/10 hover:bg-[#e2e8e2] dark:hover:bg-white/20'
-                  }`}
-                >
-                  {region.name}
-                </Button>
+                <option key={region} value={region}>
+                  {region}
+                </option>
               ))}
-            </div>
+            </select>
           </div>
 
-          {/* Category Filters */}
-          <div className="w-full lg:w-auto">
-            <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Filter by Type</h3>
-            <div className="flex gap-2 flex-wrap">
+          {/* Category Filter */}
+          <div className="w-full md:w-auto min-w-[200px]">
+            <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+              Filter by Type
+            </label>
+            <select
+              value={selectedCategory}
+              onChange={handleCategoryChange}
+              className="w-full px-4 py-3 bg-white dark:bg-background-dark border border-gray-200 dark:border-white/20 rounded-lg text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+            >
               {categories.map((category) => (
-                <Button
-                  key={category.name}
-                  variant={selectedCategory === category.name ? 'primary' : 'ghost'}
-                  size="sm"
-                  onClick={() => handleCategoryChange(category.name)}
-                  className={`h-10 px-4 ${
-                    selectedCategory === category.name 
-                      ? 'bg-primary text-white' 
-                      : 'bg-[#f0f4f0] dark:bg-white/10 hover:bg-[#e2e8e2] dark:hover:bg-white/20'
-                  }`}
-                >
-                  {category.name}
-                </Button>
+                <option key={category} value={category}>
+                  {category}
+                </option>
               ))}
-            </div>
+            </select>
           </div>
         </div>
       </ScrollAnimation>
