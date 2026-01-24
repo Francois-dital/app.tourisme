@@ -9,12 +9,7 @@ interface TourDetailContentProps {
 
 export default function TourDetailContent({ tour }: TourDetailContentProps) {
   return (
-<<<<<<< HEAD
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-6 md:px-20 mt-6">
-=======
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-6 md:px-20 lg:px-24 xl:px-32 mt-6">
-      {/* Left Side: Itinerary Timeline */}
->>>>>>> fix/ajustement
       <div className="lg:col-span-2 flex flex-col">
         <ScrollAnimation animation="fade" delay={100}>
           <h3 className="text-[#111811] dark:text-white text-2xl font-bold mb-8">Detailed Itinerary</h3>
