@@ -7,7 +7,7 @@ interface TourDetailHeroProps {
 
 export default function TourDetailHero({ tour }: TourDetailHeroProps) {
   return (
-    <div className="px-6 md:px-20">
+    <div className="px-6 md:px-20 lg:px-24 xl:px-32">
       <div className="relative overflow-hidden rounded-xl">
         <div className="absolute inset-0 bg-black/50"></div>
         <div 
