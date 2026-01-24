@@ -57,7 +57,7 @@ export default function DestinationsFilters({ onFilterChange }: DestinationsFilt
   }, [selectedRegion, selectedCategory, onFilterChange])
 
   return (
-    <section className="py-24 px-6 md:px-20">
+    <section className="py-24 px-6 md:px-20 lg:px-24 xl:px-32">
       <ScrollAnimation animation="fade" delay={100}>
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
           Discover Madagascar's Destinations
@@ -72,7 +72,7 @@ export default function DestinationsFilters({ onFilterChange }: DestinationsFilt
       </ScrollAnimation>
       
       <ScrollAnimation animation="fade" delay={300}>
-        <div className="flex flex-col md:flex-row gap-6 items-center justify-center border-b border-[#e0e7e0] dark:border-white/10 pb-8 max-w-2xl mx-auto">
+        <div className="w-full flex flex-col md:flex-row gap-6 items-center justify-center border-b border-[#e0e7e0] dark:border-white/10 pb-8">
           {/* Region Filter */}
           <div className="w-full md:w-auto min-w-[200px]">
             <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">

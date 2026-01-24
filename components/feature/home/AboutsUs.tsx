@@ -21,7 +21,7 @@ const features = [
 
 export default function AboutsUs() {
   return (
-    <section className="py-24 px-6 md:px-20 max-w-7xl mx-auto">
+    <section className="py-24 px-6 md:px-20 lg:px-24 xl:px-32">
       <ScrollAnimation animation="fade" delay={100}>
         <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
           <div className="max-w-2xl">

@@ -48,7 +48,7 @@ const guides: Guide[] = [
 
 export default function TeamGuides() {
   return (
-    <section className="py-24 px-6 md:px-20 max-w-7xl mx-auto">
+    <section className="py-24 px-6 md:px-20 lg:px-24 xl:px-32">
       <ScrollAnimation animation="fade" delay={100}>
         <div className="flex items-center justify-between mb-16">
           <h2 className="text-[#111811] dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">

@@ -10,9 +10,9 @@ interface ToursGridProps {
 
 export default function ToursGrid({ tours }: ToursGridProps) {
   return (
-    <section className="py-8 px-6 md:px-20">
+    <section className="w-full">
       {/* Section Header */}
-      <div className="text-center mb-12">
+      <div className="w-full text-center mb-12">
         <ScrollAnimation animation="fade" delay={100}>
           <h2 className="text-2xl font-bold mb-4">Choose Your Adventure</h2>
         </ScrollAnimation>
@@ -25,7 +25,7 @@ export default function ToursGrid({ tours }: ToursGridProps) {
       </div>
 
       {/* Tours Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
         {tours.map((tour, index) => (
           <ScrollAnimation 
             key={tour.id}
@@ -49,7 +49,7 @@ export default function ToursGrid({ tours }: ToursGridProps) {
       
       {/* Custom Itinerary Section */}
       <ScrollAnimation animation="scale" delay={300 + (tours.length * 150)}>
-        <div className="bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 md:p-12 text-center border border-primary/10">
+        <div className="w-full bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 md:p-12 text-center border border-primary/10">
           <div className="max-w-3xl mx-auto">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 text-primary rounded-2xl mb-6">
               <Icon name="map" size="lg" />
@@ -91,7 +91,7 @@ export default function ToursGrid({ tours }: ToursGridProps) {
       
       {tours.length === 0 && (
         <ScrollAnimation animation="fade" delay={200}>
-          <div className="text-center py-12">
+          <div className="w-full text-center py-12">
             <Icon name="search_off" size="xl" className="text-gray-400 mb-4" />
             <h3 className="text-xl font-bold mb-2">No tours found</h3>
             <p className="text-gray-600 dark:text-gray-400">

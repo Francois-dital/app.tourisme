@@ -35,7 +35,7 @@ export default function HeaderApp() {
 
   return (
     <>
-      <div className="w-full bg-[#111811] text-white py-2 px-6 md:px-20 flex justify-between items-center text-xs md:text-sm">
+      <div className="w-full bg-[#111811] text-white py-2 px-6 md:px-20 lg:px-24 xl:px-32 flex justify-between items-center text-xs md:text-sm">
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2 hover:scale-105 transition-transform">
             <Icon name="call" className="text-primary" />
@@ -51,8 +51,8 @@ export default function HeaderApp() {
         </div>
       </div>
 
-      <header className="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-[#dbe6db] dark:border-white/10 px-6 md:px-20 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <header className="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-[#dbe6db] dark:border-white/10 px-6 md:px-20 lg:px-24 xl:px-32 py-4">
+        <div className="w-full flex items-center justify-between">
           <Link href="/home" className="flex items-center gap-3 hover:scale-105 transition-transform">
             <img 
               src="/logo.png" 

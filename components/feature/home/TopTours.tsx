@@ -11,8 +11,8 @@ export default function TopTours() {
   const tours: Tour[] = ToursService.getAllTours().slice(0, 3)
 
   return (
-    <section className="bg-background-light dark:bg-white/5 py-24 px-6 md:px-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-background-light dark:bg-white/5 py-24 px-6 md:px-20 lg:px-24 xl:px-32 overflow-hidden">
+      <div className="w-full">
         <ScrollAnimation animation="fade" delay={100}>
           <div className="text-center mb-16">
             <h3 className="text-primary font-bold tracking-widest uppercase text-sm mb-3">

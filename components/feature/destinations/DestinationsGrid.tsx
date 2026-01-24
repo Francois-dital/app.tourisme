@@ -28,9 +28,9 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
   }
 
   return (
-    <section className="py-8 px-6 md:px-20">
+    <section className="py-8 px-6 md:px-20 lg:px-24 xl:px-32">
       {destinations.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {destinations.map((destination, index) => (
             <ScrollAnimation 
               key={destination.id}
@@ -109,7 +109,7 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
         </div>
       ) : (
         <ScrollAnimation animation="fade" delay={200}>
-          <div className="text-center py-12">
+          <div className="w-full text-center py-12">
             <Icon name="search_off" size="xl" className="text-gray-400 mb-4" />
             <h3 className="text-xl font-bold mb-2">No destinations found</h3>
             <p className="text-gray-600 dark:text-gray-400">
@@ -122,7 +122,7 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
       {/* Call to Action */}
       {destinations.length > 0 && (
         <ScrollAnimation animation="scale" delay={300 + (destinations.length * 100)}>
-          <div className="mt-16 text-center">
+          <div className="w-full mt-16 text-center">
             <div className="bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 md:p-12 border border-primary/10">
               <div className="max-w-2xl mx-auto">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 text-primary rounded-2xl mb-6">
