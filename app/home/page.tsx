@@ -8,9 +8,9 @@ import FooterApp from '@/components/layout/FooterApp'
 
 export default function HomePage() {
   return (
-    <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300">
+    <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
       <HeaderApp />
-      <main className="w-full">
+      <main className="w-full flex-grow">
         <HeroSection />
         <AboutsUs />
         <TopDestinations />
