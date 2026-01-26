@@ -1,3 +1,6 @@
+'use client'
+
+import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/Button'
 import { Icon } from '@/components/ui/Icon'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
@@ -8,11 +11,13 @@ interface TourDetailContentProps {
 }
 
 export default function TourDetailContent({ tour }: TourDetailContentProps) {
+  const { t } = useTranslation()
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-6 md:px-20 lg:px-24 xl:px-32 mt-6">
       <div className="lg:col-span-2 flex flex-col">
         <ScrollAnimation animation="fade" delay={100}>
-          <h3 className="text-[#111811] dark:text-white text-2xl font-bold mb-8">Detailed Itinerary</h3>
+          <h3 className="text-[#111811] dark:text-white text-2xl font-bold mb-8">{t('tourDetail.detailedItinerary')}</h3>
         </ScrollAnimation>
         
         <div className="relative space-y-12">
@@ -27,7 +32,7 @@ export default function TourDetailContent({ tour }: TourDetailContentProps) {
                 
                 <div className="flex flex-col gap-2">
                   <h4 className="text-xl font-bold text-primary">
-                    Day {item.dayRange || `0${item.day}`}: {item.title}
+                    {t('tourDetail.day')} {item.dayRange || `0${item.day}`}: {item.title}
                   </h4>
                   <p className="text-[#4b634b] dark:text-[#c0d0c0] leading-relaxed">
                     {item.description}
@@ -41,7 +46,7 @@ export default function TourDetailContent({ tour }: TourDetailContentProps) {
                         alt={item.accommodation.name}
                       />
                       <div>
-                        <p className="text-xs uppercase text-primary font-bold">Overnight</p>
+                        <p className="text-xs uppercase text-primary font-bold">{t('tourDetail.overnight')}</p>
                         <p className="font-bold">{item.accommodation.name}</p>
                       </div>
                     </div>
@@ -56,9 +61,9 @@ export default function TourDetailContent({ tour }: TourDetailContentProps) {
           <div className="mt-12 p-6 bg-primary/10 rounded-xl border border-primary/30 flex gap-4 hover:shadow-lg transition-all">
             <Icon name="magic_button" className="text-primary text-3xl" />
             <div>
-              <h4 className="text-lg font-bold mb-1">Make it yours</h4>
+              <h4 className="text-lg font-bold mb-1">{t('tourDetail.makeItYours')}</h4>
               <p className="text-sm opacity-90">
-                Please note that the itinerary can be fully customized according to your needs. Want to spend more time at specific locations? Prefer luxury over mid-range lodges? Just let us know and we'll tailor the journey to your exact preferences.
+                {t('tourDetail.customizationNote')}
               </p>
             </div>
           </div>
@@ -70,23 +75,23 @@ export default function TourDetailContent({ tour }: TourDetailContentProps) {
           <ScrollAnimation animation="scale" delay={150}>
             <div className="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#f0f4f0] dark:border-white/10 shadow-sm hover:shadow-xl transition-all">
               <div className="flex flex-col gap-1 mb-6">
-                <p className="text-sm text-[#618961] dark:text-[#a0c0a0] font-medium">Starting from</p>
+                <p className="text-sm text-[#618961] dark:text-[#a0c0a0] font-medium">{t('tourDetail.startingFrom')}</p>
                 <div className="flex items-baseline gap-2">
                   <span className="text-3xl font-black">{tour.price.group}</span>
-                  <span className="text-sm opacity-70">per person</span>
+                  <span className="text-sm opacity-70">{t('tourDetail.perPerson')}</span>
                 </div>
               </div>
               
               <div className="space-y-3 mb-8">
                 <ScrollAnimation animation="slide-right" delay={200}>
                   <div className="flex justify-between items-center py-2 border-b border-[#f0f4f0] dark:border-white/10">
-                    <span className="text-sm">Solo Traveler</span>
+                    <span className="text-sm">{t('tourDetail.soloTraveler')}</span>
                     <span className="font-bold">{tour.price.solo}</span>
                   </div>
                 </ScrollAnimation>
                 <ScrollAnimation animation="slide-right" delay={250}>
                   <div className="flex justify-between items-center py-2 border-b border-[#f0f4f0] dark:border-white/10">
-                    <span className="text-sm">Group (2+ people)</span>
+                    <span className="text-sm">{t('tourDetail.group')}</span>
                     <span className="font-bold text-primary">{tour.price.group}</span>
                   </div>
                 </ScrollAnimation>
@@ -94,7 +99,7 @@ export default function TourDetailContent({ tour }: TourDetailContentProps) {
               
               <ScrollAnimation animation="scale" delay={300}>
                 <p className="text-center text-xs text-[#618961] dark:text-[#a0c0a0] mt-4">
-                  Secure your spot with 20% deposit
+                  {t('tourDetail.secureSpot')}
                 </p>
               </ScrollAnimation>
             </div>
@@ -104,7 +109,7 @@ export default function TourDetailContent({ tour }: TourDetailContentProps) {
             <div className="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#f0f4f0] dark:border-white/10 shadow-sm hover:shadow-xl transition-all">
               <h5 className="font-bold mb-4 flex items-center gap-2">
                 <Icon name="check_circle" className="text-primary" />
-                Included
+                {t('tourDetail.included')}
               </h5>
               <ul className="space-y-3 mb-8">
                 {tour.included.map((item, index) => (
@@ -119,7 +124,7 @@ export default function TourDetailContent({ tour }: TourDetailContentProps) {
 
               <h5 className="font-bold mb-4 flex items-center gap-2">
                 <Icon name="cancel" className="text-red-400" />
-                Not Included
+                {t('tourDetail.notIncluded')}
               </h5>
               <ul className="space-y-3">
                 {tour.excluded.map((item, index) => (
@@ -136,10 +141,10 @@ export default function TourDetailContent({ tour }: TourDetailContentProps) {
 
           <ScrollAnimation animation="scale" delay={500}>
             <div className="p-6 bg-[#111811] dark:bg-[#081108] text-white rounded-xl text-center hover:shadow-xl transition-all">
-              <p className="text-sm mb-2 opacity-80">Need more info?</p>
+              <p className="text-sm mb-2 opacity-80">{t('tourDetail.needMoreInfo')}</p>
               <p className="font-bold text-lg mb-4">+261 34 31 416 49</p>
               <Button variant="outline" size="sm" className="border-white/20 hover:bg-white/10 hover:scale-105 transition-all">
-                Speak to an expert
+                {t('tourDetail.speakToExpert')}
               </Button>
             </div>
           </ScrollAnimation>

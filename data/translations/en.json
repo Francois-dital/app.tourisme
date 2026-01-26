@@ -537,7 +537,10 @@
     "included": "Included",
     "notIncluded": "Not Included",
     "needMoreInfo": "Need more info?",
-    "speakToExpert": "Speak to an expert"
+    "speakToExpert": "Speak to an expert",
+    "breadcrumb": {
+      "tours": "Tours"
+    }
   },
   "destinationDetail": {
     "about": "About",
@@ -607,14 +610,116 @@
       "description": "Please note that the itinerary can be fully customized according to your needs. A legendary 11-day journey through the verdant rainforests of Andasibe, discovering rare orchid species and spotting the iconic Indri lemurs in their natural habitat.",
       "region": "East Coast",
       "category": "Nature & Wildlife",
-      "label": "Best Seller"
+      "label": "Best Seller",
+      "itinerary": {
+        "day1": {
+          "title": "Arrival in Antananarivo (Tana)",
+          "description": "Land at Ivato International Airport, Tana. We will greet you at Ivato Airport and transfer you to your hotel. Meet your guide and transfer to hotel. Optional city tour: Independence Avenue, Rova Palace, lemur's park, the Queen's staircase and d'Andohalo Cathedrale. Dinner at a local restaurant.",
+          "accommodation": "Hotel in Tana"
+        },
+        "day2": {
+          "title": "Antananarivo – Andasibe",
+          "description": "Depart from the capital city, Antananarivo, heading east along the winding National Road 2. Stop at the Peyrieras Reptile Reserve in Marozevo to observe dozens of species of chameleons, leaf-tailed geckos, and butterflies. Upon reaching Andasibe, you will head out for a guided night walk to catch the reflective eyes of tiny mouse lemurs, sleeping chameleons, and endemic frogs.",
+          "accommodation": "Hotel in Andasibe"
+        },
+        "day3": {
+          "title": "Andasibe (Analamazaotra) – Manambato",
+          "description": "Morning: Hike in the Analamazaotra National Park to find the Indri-Indri, the largest living lemur, known for its haunting, whale-like song. Afternoon: Drive further east to Manambato, located on the shores of Lake Rasoabe.",
+          "accommodation": "Lakeside hotel at Manambato"
+        },
+        "day4": {
+          "title": "Crossing to Ankanin'ny Nofy",
+          "description": "Morning: Board a boat for a scenic transfer on the Pangalanes Canal to the Ankanin'ny Nofy peninsula (the \"Nest of Dreams\"). Afternoon: Relax by the white sand lake beaches or walk through local fishing villages. Evening: Night boat excursion to see the Aye-Aye, Madagascar's rarest and most bizarre nocturnal primate.",
+          "accommodation": "Palmarium Hotel"
+        },
+        "day5": {
+          "title": "Palmarium Reserve Exploration",
+          "description": "Morning: Visit the Palmarium Private Park. This is one of the few places where you can get very close to various lemur species (Macacos, Coronatus, Indri). Afternoon: Discover the local flora, including carnivorous Pitcher plants and rare orchids.",
+          "accommodation": "Palmarium Hotel"
+        },
+        "day6": {
+          "title": "Ankanin'ny Nofy – Tamatave (Toamasina)",
+          "description": "Morning: A long, peaceful boat ride north along the Pangalanes Canal. Observe life along the riverbanks: bamboo rafts, local commuters, and washing stations. Afternoon: Arrival at the river port of Tamatave. Take a Pousse-Pousse (rickshaw) tour of the city and visit the \"Bazar Be\" market for spices and vanilla.",
+          "accommodation": "Hotel in Tamatave"
+        },
+        "day7": {
+          "title": "Tamatave – Mahambo – Sainte-Marie",
+          "description": "Morning: Drive north along the coast to the village of Mahambo. Midday: Board the ferry (e.g., El Condor) for a 2.5-hour crossing to the island of Sainte-Marie (Nosy Boraha). Evening: Arrival on the island and transfer to your beachfront bungalow.",
+          "accommodation": "Hotel in Sainte Marie"
+        },
+        "day8": {
+          "title": "Sainte-Marie (Island Paradise) - Day 1",
+          "description": "Activities to choose from: Île aux Nattes (take a traditional pirogue to this tiny, car-free island), Pirate Cemetery (visit the world's only official pirate cemetery), Whale Watching (if traveling between July and September), Exploration (rent a scooter or bicycle to explore the lush interior and hidden coves).",
+          "accommodation": "Hotel in Sainte Marie"
+        },
+        "day9": {
+          "title": "Sainte-Marie (Island Paradise) - Day 2",
+          "description": "Continue exploring Sainte-Marie with more activities: snorkeling, beach relaxation, cultural visits, or adventure excursions around the island.",
+          "accommodation": "Hotel in Sainte Marie"
+        },
+        "day10": {
+          "title": "Sainte-Marie – Antananarivo (Flight)",
+          "description": "Morning: Enjoy a final tropical breakfast or a swim in the lagoon. Afternoon: Transfer to the airport for your domestic flight (Tsaradia) back to Antananarivo. Evening: Farewell dinner at a restaurant in the upper city of Tana.",
+          "accommodation": "Hotel in Tana"
+        },
+        "day11": {
+          "title": "Antananarivo – Departure",
+          "description": "Morning: Visit the Queen's Palace (Rova) for a lesson in Malagasy history and a 360-degree view of the city. Afternoon: Last-minute souvenir shopping at the Digue Market (artisanal crafts) before your transfer to Ivato International Airport."
+        }
+      }
     },
     "southMadagascar": {
       "title": "South Madagascar Tour",
       "subtitle": "The RN7 Route",
       "description": "Please note that the itinerary can be fully customized according to your needs. A legendary 9-day journey from the bustling capital to the white sands of the Mozambique Channel, crossing the soul of the Red Island.",
       "region": "Southern Highlands",
-      "category": "Nature & Adventure"
+      "category": "Nature & Adventure",
+      "itinerary": {
+        "day1": {
+          "title": "Arrival in Antananarivo (Tana)",
+          "description": "Land at Ivato International Airport, Tana. We will greet you at Ivato Airport and transfer you to your hotel. Meet your guide and transfer to hotel. Optional city tour: Independence Avenue, Rova Palace, lemur's park, the Queen's staircase and d'Andohalo Cathedrale. Dinner at a local restaurant.",
+          "accommodation": "Hotel in Tana"
+        },
+        "day2": {
+          "title": "Tana to Antsirabe",
+          "description": "Leave the capital early in the morning and head south. Stop at Ambatolampy to see local artisans forge aluminum pots by hand. Continue to Antsirabe, a city known for its \"Pousse-Pousse\" (rickshaws) and gemstones. We can accompany you to the Ranch du Bonheur in Antsirabe for a horseback ride if you are interested. Visit local crafts markets (miniatures, gemstones). Optional pousse-pousse (rickshaw) tour in the city.",
+          "accommodation": "Hotel in Antsirabe"
+        },
+        "day3": {
+          "title": "Antsirabe to Ranomafana",
+          "description": "Leave Antsirabe in the morning and go to Ranomafana. Transition from the red-clay houses of the highlands to the dense tropical rainforest of Ranomafana. Stop in Ambositra for Zafimaniry woodcraft visit. Evening relaxation at lodge.",
+          "accommodation": "Lodge near Ranomafana National Park"
+        },
+        "day4": {
+          "title": "Ranomafana Exploration",
+          "description": "Guided hike in Ranomafana National Park. Spot endemic wildlife: golden bamboo lemurs, sifakas, and exotic birds. Visit natural hot springs after hiking.",
+          "accommodation": "Same lodge near Ranomafana"
+        },
+        "day5": {
+          "title": "Ranomafana to Isalo",
+          "description": "Leave Ranomafana and go to Isalo. Anja Reserve: A community-run park where Ring-tailed lemurs (King Julien!) are extremely easy to spot. Scenic drive through the highlands and small villages. Evening: Sunset over Isalo's sandstone formations.",
+          "accommodation": "Lodge near Isalo"
+        },
+        "day6": {
+          "title": "Isalo to Tuléar",
+          "description": "Morning visit at Isalo National Park which is a majestic landscape of eroded Jurassic sandstone, deep canyons, and hidden oases. Morning hike in Isalo (optional: Canyon des Singes & Natural Pools). Then Drive to Tuléar.",
+          "accommodation": "Hotel in Tuléar"
+        },
+        "day7": {
+          "title": "Tuléar – Anakao",
+          "description": "Breakfast in hotel; transfer to the port and boarding on a moto-boat and navigation to Anakao for about 1h30; at the arrival set up in hotel (standard room) or similar; rest of the day at your disposal for swimming in the reef clear water and individual visits; full-board in hotel.",
+          "accommodation": "Lodge in Anakao"
+        },
+        "day8": {
+          "title": "Anakao Exploration",
+          "description": "Snorkeling or diving in coral reefs. Visit local Vezo fishing village. Optional boat trip to Nosy Ve for birdwatching. Sunset on the beach.",
+          "accommodation": "Same lodge in Anakao"
+        },
+        "day9": {
+          "title": "Anakao to Tuléar then back to Tana",
+          "description": "Morning boat back to Tuléar. Fly from Tuléar to Antananarivo (~1.5 hours). Optional last-minute souvenir shopping. Transfer to Ivato Airport for departure."
+        }
+      }
     },
     "westMadagascar": {
       "title": "West Madagascar Tour",
@@ -622,7 +727,53 @@
       "description": "Please note that the itinerary can be fully customized according to your needs. A photographer's dream. Witness the Avenue of Baobabs at sunset and hike the surreal limestone labyrinths of Tsingy de Bemaraha.",
       "region": "West Coast",
       "category": "Adventure & Photography",
-      "label": "Adventure"
+      "label": "Adventure",
+      "itinerary": {
+        "day1": {
+          "title": "Arrival in Antananarivo (Tana)",
+          "description": "Land at Ivato International Airport, Tana. We will greet you at Ivato Airport and transfer you to your hotel. Meet your guide and transfer to hotel. Optional city tour: Independence Avenue, Rova Palace, lemur's park, the Queen's staircase and d'Andohalo Cathedrale. Dinner at a local restaurant.",
+          "accommodation": "Hotel in Tana"
+        },
+        "day2": {
+          "title": "Tana - Antsirabe",
+          "description": "Leave the capital early in the morning and head south. Stop at Ambatolampy to see local artisans forge aluminum pots by hand. Continue to Antsirabe, a city known for its \"Pousse-Pousse\" (rickshaws) and gemstones. We can accompany you to the Ranch du Bonheur in Antsirabe for a horseback ride if you are interested. Visit local crafts markets (miniatures, gemstones). Optional pousse-pousse (rickshaw) tour in the city.",
+          "accommodation": "Hotel in Antsirabe"
+        },
+        "day3": {
+          "title": "Antsirabe - Morondava",
+          "description": "After breakfast, drive to Morondava. A long but scenic transition from the green highlands to the dry western plains. Stop 1: Miandrivazo: A hot, lively town perfect for a lunch break at Princesse de la Tsiribihina. Evening: Arrival in Morondava. Enjoy the sea breeze.",
+          "accommodation": "Hotel in Morondava"
+        },
+        "day4": {
+          "title": "Morondava - Bekopaka",
+          "description": "Take breakfast and then go to the Tsingy. Stop 1: Belo-sur-Tsiribihina: After crossing the river by ferry, stop for lunch at the famous Mad Zebu—unexpected high-end cuisine in a remote village. Stop 2: Manambolo River Crossing: The second ferry crossing as you approach the village of Bekopaka.",
+          "accommodation": "Hotel at Tsingy de Bemaraha"
+        },
+        "day5": {
+          "title": "The Big Tsingy",
+          "description": "Main Activity: 1-hour drive to the Grand Tsingy. You will wear a climbing harness to navigate limestone needles, narrow canyons, and the famous suspension bridge over the razor-sharp rocks. Wildlife: Look for the Decken's Sifaka (white lemur) and the Giant Coua bird.",
+          "accommodation": "Same hotel at Tsingy de Bemaraha"
+        },
+        "day6": {
+          "title": "Petit Tsingy & Manambolo Gorge",
+          "description": "Morning: A traditional pirogue (dugout canoe) trip on the Manambolo River to see ancient Vazimba tombs and river caves. Afternoon: Explore the Petit Tsingy, which offers a different perspective on the rock formations with less intense climbing.",
+          "accommodation": "Same hotel at Tsingy de Bemaraha"
+        },
+        "day7": {
+          "title": "Bekopaka - Morondava",
+          "description": "Stop 1: Baobab Amoureux: Two ancient baobabs twisted together in a permanent \"hug.\" Stop 2: Kirindy Forest (Optional): If you leave Bekopaka very early, you can squeeze in a quick walk here to look for the Fossa (Madagascar's top predator).",
+          "accommodation": "Hotel in Morondava"
+        },
+        "day8": {
+          "title": "Morondava – Tana",
+          "description": "Morning: Visit the Betania Fishing Village by pirogue to see the traditional Vezo way of life. Then, leave Morondava and go to the airport of Morondava to take the domestic flight back to Tana.",
+          "accommodation": "Hotel in Morondava"
+        },
+        "day9": {
+          "title": "Morondava - Tana",
+          "description": "After breakfast, go to the airport to take your international flight back."
+        }
+      }
     },
     "northMadagascar": {
       "title": "North Madagascar Tour",
@@ -630,7 +781,58 @@
       "description": "Please note that the itinerary can be fully customized according to your needs. Discover the call of the Indri in Andasibe rainforest, then escape to the tropical paradise of Nosy Be with its pristine beaches and marine reserves.",
       "region": "Northern Madagascar",
       "category": "Nature & Beach",
-      "label": "Popular"
+      "label": "Popular",
+      "itinerary": {
+        "day1": {
+          "title": "Arrival in Antananarivo",
+          "description": "Meet at the airport and transfer to your hotel. Relax or take a short walk in the capital to adjust to the local rhythm.",
+          "accommodation": "Hotel in Antananarivo"
+        },
+        "day2": {
+          "title": "Tana to Andasibe-Mantadia (The Rainforest)",
+          "description": "Morning: Drive East (approx. 4 hours) through highland scenery and local villages. Afternoon: Visit the Vakona Private Reserve (Lemur Island) where you can interact closely with several lemur species. Evening: Enjoy a night walk along the park boundaries to spot nocturnal lemurs (mouse lemurs) and sleeping chameleons.",
+          "accommodation": "Hotel in Andasibe"
+        },
+        "day3": {
+          "title": "The Call of the Indri & Return to Tana",
+          "description": "Morning: Guided hike in Analamazaotra National Park to find the Indri-Indri, the largest lemur in the world, known for its haunting whale-like song. Afternoon: Drive back to Antananarivo (approx. 4 hours).",
+          "accommodation": "Hotel in Antananarivo"
+        },
+        "day4": {
+          "title": "Flight to Nosy Be",
+          "description": "Morning: Domestic flight from Tana to Nosy Be. Afternoon: Transfer to your hotel. Visit the local market in Hell-Ville for spices and ylang-ylang oil.",
+          "accommodation": "Hotel in Nosy Be"
+        },
+        "day5": {
+          "title": "Nosy Komba & Nosy Tanikely",
+          "description": "Nosy Komba: Visit the \"Island of Lemurs\" to see the black lemurs and local woodcarvings. Nosy Tanikely: Head to this marine reserve for world-class snorkeling. The water is crystal clear with turtles and coral reefs.",
+          "accommodation": "Hotel in Nosy Be"
+        },
+        "day6": {
+          "title": "The Paradise of Nosy Iranja",
+          "description": "Day Trip: A scenic boat ride to the \"Turtle Island.\" Highlight: Walk the famous white sandbank connecting the two islets. It is the most photographed spot in Madagascar.",
+          "accommodation": "Hotel in Nosy Be"
+        },
+        "day7": {
+          "title": "Nosy Sakatia (The Orchid Island)",
+          "description": "Activity: A peaceful day on Sakatia. Explore the botanical trails and snorkel with giant green sea turtles in their natural feeding grounds.",
+          "accommodation": "Hotel in Nosy Be"
+        },
+        "day8": {
+          "title": "Mont Passot & Crater Lakes",
+          "description": "Morning: Leisure time on the beach. Late Afternoon: Drive to Mont Passot, the island's highest point. The View: Enjoy a 360-degree sunset over the volcanic lakes and the Mozambique Channel.",
+          "accommodation": "Hotel in Nosy Be"
+        },
+        "day9": {
+          "title": "Return to the Capital",
+          "description": "Morning: Last swim or souvenir shopping. Afternoon: Flight back to Antananarivo. Evening: Farewell dinner at a local restaurant like Le Carré or La Varangue.",
+          "accommodation": "Hotel in Antananarivo"
+        },
+        "day10": {
+          "title": "Final Departure",
+          "description": "Activity: Transfer to Ivato International Airport for your flight home."
+        }
+      }
     }
   },
   "common": {

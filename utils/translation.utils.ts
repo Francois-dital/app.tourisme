@@ -6,6 +6,29 @@ export function translateTourData(tour: TourData, t: (key: string) => string): T
   
   if (!tourKey) return tour // Return original if no translation key found
   
+  // Translate itinerary if translations exist
+  const translatedItinerary = tour.itinerary.map((item, index) => {
+    const dayKey = `day${index + 1}`
+    const titleKey = `toursData.${tourKey}.itinerary.${dayKey}.title`
+    const descriptionKey = `toursData.${tourKey}.itinerary.${dayKey}.description`
+    const accommodationKey = `toursData.${tourKey}.itinerary.${dayKey}.accommodation`
+    
+    // Check if translation exists, otherwise use original
+    const translatedTitle = t(titleKey)
+    const translatedDescription = t(descriptionKey)
+    const translatedAccommodation = t(accommodationKey)
+    
+    return {
+      ...item,
+      title: translatedTitle !== titleKey ? translatedTitle : item.title,
+      description: translatedDescription !== descriptionKey ? translatedDescription : item.description,
+      accommodation: item.accommodation ? {
+        ...item.accommodation,
+        name: translatedAccommodation !== accommodationKey ? translatedAccommodation : item.accommodation.name
+      } : item.accommodation
+    }
+  })
+  
   return {
     ...tour,
     title: t(`toursData.${tourKey}.title`),
@@ -13,7 +36,8 @@ export function translateTourData(tour: TourData, t: (key: string) => string): T
     description: t(`toursData.${tourKey}.description`),
     region: t(`toursData.${tourKey}.region`),
     category: t(`toursData.${tourKey}.category`),
-    label: tour.label ? t(`toursData.${tourKey}.label`) : tour.label
+    label: tour.label ? t(`toursData.${tourKey}.label`) : tour.label,
+    itinerary: translatedItinerary
   }
 }
 
