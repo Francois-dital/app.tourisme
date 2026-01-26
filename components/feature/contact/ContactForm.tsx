@@ -1,11 +1,13 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/Button'
 import { Icon } from '@/components/ui/Icon'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
 
 export default function ContactForm() {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -36,7 +38,7 @@ export default function ContactForm() {
       <ScrollAnimation animation="fade" delay={100}>
         <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
           <Icon name="edit_document" className="text-primary" />
-          Booking Inquiry
+          {t('contact.form.title')}
         </h2>
       </ScrollAnimation>
 
@@ -45,13 +47,13 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ScrollAnimation animation="slide-right" delay={150}>
             <label className="flex flex-col gap-2">
-              <span className="text-sm font-bold">Full Name</span>
+              <span className="text-sm font-bold">{t('contact.form.name')}</span>
               <input
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleInputChange}
                 className="rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                placeholder="John Doe"
+                placeholder={t('contact.form.namePlaceholder')}
                 type="text"
                 required
               />
@@ -60,13 +62,13 @@ export default function ContactForm() {
           
           <ScrollAnimation animation="slide-right" delay={200}>
             <label className="flex flex-col gap-2">
-              <span className="text-sm font-bold">Email Address</span>
+              <span className="text-sm font-bold">{t('contact.form.email')}</span>
               <input
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
                 className="rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                placeholder="john@example.com"
+                placeholder={t('contact.form.emailPlaceholder')}
                 type="email"
                 required
               />
@@ -77,13 +79,13 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ScrollAnimation animation="slide-right" delay={250}>
             <label className="flex flex-col gap-2">
-              <span className="text-sm font-bold">Phone Number</span>
+              <span className="text-sm font-bold">{t('contact.form.phone')}</span>
               <input
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
                 className="rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                placeholder="+261 34 00 000 00"
+                placeholder={t('contact.form.phonePlaceholder')}
                 type="tel"
               />
             </label>
@@ -91,13 +93,13 @@ export default function ContactForm() {
           
           <ScrollAnimation animation="slide-right" delay={300}>
             <label className="flex flex-col gap-2">
-              <span className="text-sm font-bold">Nationality</span>
+              <span className="text-sm font-bold">{t('contact.form.nationality')}</span>
               <input
                 name="nationality"
                 value={formData.nationality}
                 onChange={handleInputChange}
                 className="rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                placeholder="e.g. French"
+                placeholder={t('contact.form.nationalityPlaceholder')}
                 type="text"
               />
             </label>
@@ -107,19 +109,19 @@ export default function ContactForm() {
         <div className="border-t border-gray-100 dark:border-white/10 pt-6 space-y-6">
           <ScrollAnimation animation="slide-right" delay={350}>
             <label className="flex flex-col gap-2">
-              <span className="text-sm font-bold">Selected Circuit</span>
+              <span className="text-sm font-bold">{t('contact.form.selectedCircuit')}</span>
               <select
                 name="selectedCircuit"
                 value={formData.selectedCircuit}
                 onChange={handleInputChange}
                 className="rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
               >
-                <option value="">Choose a tour package</option>
-                <option value="east">East Madagascar Tour</option>
-                <option value="south">South Madagascar Tour</option>
-                <option value="west">West Madagascar Tour</option>
-                <option value="north">North Madagascar Tour</option>
-                <option value="custom">Custom Tailor-made Adventure</option>
+                <option value="">{t('contact.form.circuitPlaceholder')}</option>
+                <option value="east">{t('contact.form.circuitOptions.east')}</option>
+                <option value="south">{t('contact.form.circuitOptions.south')}</option>
+                <option value="west">{t('contact.form.circuitOptions.west')}</option>
+                <option value="north">{t('contact.form.circuitOptions.north')}</option>
+                <option value="custom">{t('contact.form.circuitOptions.custom')}</option>
               </select>
             </label>
           </ScrollAnimation>
@@ -127,14 +129,14 @@ export default function ContactForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <ScrollAnimation animation="slide-right" delay={400}>
               <label className="flex flex-col gap-2">
-                <span className="text-sm font-bold">Travel Dates</span>
+                <span className="text-sm font-bold">{t('contact.form.travelDates')}</span>
                 <div className="relative">
                   <input
                     name="travelDates"
                     value={formData.travelDates}
                     onChange={handleInputChange}
                     className="w-full rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 pl-10 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                    placeholder="Check-in - Check-out"
+                    placeholder={t('contact.form.travelDatesPlaceholder')}
                     type="text"
                   />
                   <Icon name="calendar_month" className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" size="sm" />
@@ -144,14 +146,14 @@ export default function ContactForm() {
             
             <ScrollAnimation animation="slide-right" delay={450}>
               <label className="flex flex-col gap-2">
-                <span className="text-sm font-bold">Number of Travelers</span>
+                <span className="text-sm font-bold">{t('contact.form.numberOfTravelers')}</span>
                 <input
                   name="numberOfTravelers"
                   value={formData.numberOfTravelers}
                   onChange={handleInputChange}
                   className="rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                   min="1"
-                  placeholder="2"
+                  placeholder={t('contact.form.numberOfTravelersPlaceholder')}
                   type="number"
                 />
               </label>
@@ -160,13 +162,13 @@ export default function ContactForm() {
 
           <ScrollAnimation animation="slide-right" delay={500}>
             <label className="flex flex-col gap-2">
-              <span className="text-sm font-bold">Your Message & Requirements</span>
+              <span className="text-sm font-bold">{t('contact.form.message')}</span>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
                 className="rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark p-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
-                placeholder="Tell us more about your interests, preferred activities, or any special needs..."
+                placeholder={t('contact.form.messagePlaceholder')}
                 rows={4}
               />
             </label>
@@ -177,7 +179,7 @@ export default function ContactForm() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4">
             <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
               <Icon name="verified_user" className="text-primary" />
-              <span>Response guaranteed within 24 hours</span>
+              <span>{t('contact.form.guarantee')}</span>
             </div>
             <Button
               type="submit"
@@ -185,7 +187,7 @@ export default function ContactForm() {
               size="lg"
               className="w-full sm:w-auto min-w-[200px] py-4 px-8 text-lg shadow-lg hover:shadow-primary/20 transition-all flex items-center justify-center gap-2"
             >
-              Send Inquiry
+              {t('contact.form.send')}
               <Icon name="send" size="sm" />
             </Button>
           </div>

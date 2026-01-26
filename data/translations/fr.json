@@ -93,7 +93,85 @@
     "title": "Explorez Madagascar",
     "subtitle": "Découvrez les paysages diversifiés et les écosystèmes uniques de la quatrième plus grande île du monde",
     "viewTours": "Voir les Circuits",
-    "customItinerary": "Itinéraire Personnalisé"
+    "customItinerary": "Itinéraire Personnalisé",
+    "filters": {
+      "title": "Découvrez les Destinations de Madagascar",
+      "subtitle": "Des forêts tropicales immaculées aux paysages dramatiques, explorez la biodiversité unique et les espèces endémiques qui font de Madagascar le huitième continent du monde.",
+      "filterByRegion": "Filtrer par Région",
+      "filterByType": "Filtrer par Type",
+      "regions": {
+        "all": "Toutes les Régions",
+        "northern": "Madagascar Nord",
+        "east": "Côte Est",
+        "west": "Côte Ouest",
+        "southern": "Hautes Terres du Sud",
+        "central": "Hautes Terres Centrales"
+      },
+      "categories": {
+        "all": "Toutes les Catégories",
+        "rainforest": "Forêt Tropicale",
+        "coastal": "Côtier",
+        "adventure": "Aventure",
+        "cultural": "Culturel",
+        "nature": "Nature",
+        "natureWildlife": "Nature & Faune",
+        "natureCultural": "Nature & Culturel",
+        "natureCoastal": "Nature & Côtier"
+      }
+    },
+    "grid": {
+      "noResults": {
+        "title": "Aucune destination trouvée",
+        "description": "Essayez d'ajuster vos filtres pour voir plus de résultats."
+      },
+      "cta": {
+        "title": "Prêt à Explorer Madagascar ?",
+        "description": "Laissez nos experts locaux créer l'itinéraire parfait combinant plusieurs destinations pour votre aventure ultime à Madagascar.",
+        "viewTours": "Voir Tous les Circuits"
+      },
+      "highlights": "Points Forts :",
+      "moreHighlights": "points forts supplémentaires",
+      "difficulty": {
+        "easy": "Facile",
+        "moderate": "Modéré",
+        "challenging": "Difficile"
+      }
+    },
+    "data": {
+      "andasibe-mantadia": {
+        "name": "Andasibe-Mantadia",
+        "subtitle": "Foyer de l'Indri Indri",
+        "description": "Vivez les appels envoûtants du plus grand lémurien de Madagascar dans cette réserve de forêt tropicale immaculée, à seulement 3 heures d'Antananarivo.",
+        "highlights": [
+          "Rencontres avec les lémuriens Indri Indri",
+          "Promenades nocturnes avec espèces nocturnes",
+          "Île aux lémuriens du Vakona Forest Lodge",
+          "Orchidées et plantes endémiques"
+        ]
+      },
+      "nosy-be-archipelago": {
+        "name": "Archipel de Nosy Be",
+        "subtitle": "Eaux cristallines et récifs",
+        "description": "L'île parfumée paradisiaque avec des plages immaculées, des récifs coralliens et les célèbres plantations d'ylang-ylang.",
+        "highlights": [
+          "Banc de sable blanc de Nosy Iranja",
+          "Plongée avec tuba à Nosy Tanikely",
+          "Plantations d'ylang-ylang",
+          "Lémuriens noirs de Nosy Komba"
+        ]
+      },
+      "avenue-baobabs": {
+        "name": "Avenue des Baobabs",
+        "subtitle": "Paysages iconiques au coucher du soleil",
+        "description": "L'endroit le plus photographié de Madagascar avec d'anciens baobabs créant des silhouettes magiques au coucher du soleil.",
+        "highlights": [
+          "Photographie du coucher de soleil à l'Allée des Baobabs",
+          "Baobabs anciens de plus de 800 ans",
+          "Faune de la forêt de Kirindy",
+          "Culture traditionnelle Sakalava"
+        ]
+      }
+    }
   },
   "toursIntro": {
     "title": "Catalogue Circuits & Tours",
@@ -136,18 +214,45 @@
     "title": "Contactez-nous",
     "subtitle": "Prêt à commencer votre aventure à Madagascar ? Contactez notre équipe d'experts pour une assistance personnalisée.",
     "form": {
+      "title": "Demande de Réservation",
       "name": "Nom Complet",
+      "namePlaceholder": "Jean Dupont",
       "email": "Adresse Email",
+      "emailPlaceholder": "jean@exemple.com",
       "phone": "Numéro de Téléphone",
-      "subject": "Sujet",
-      "message": "Message",
-      "send": "Envoyer le Message"
+      "phonePlaceholder": "+261 34 00 000 00",
+      "nationality": "Nationalité",
+      "nationalityPlaceholder": "ex. Française",
+      "selectedCircuit": "Circuit Sélectionné",
+      "circuitPlaceholder": "Choisissez un forfait circuit",
+      "circuitOptions": {
+        "east": "Circuit Madagascar Est",
+        "south": "Circuit Madagascar Sud",
+        "west": "Circuit Madagascar Ouest",
+        "north": "Circuit Madagascar Nord",
+        "custom": "Aventure Sur Mesure Personnalisée"
+      },
+      "travelDates": "Dates de Voyage",
+      "travelDatesPlaceholder": "Arrivée - Départ",
+      "numberOfTravelers": "Nombre de Voyageurs",
+      "numberOfTravelersPlaceholder": "2",
+      "message": "Votre Message & Exigences",
+      "messagePlaceholder": "Parlez-nous de vos intérêts, activités préférées ou besoins spéciaux...",
+      "guarantee": "Réponse garantie sous 24 heures",
+      "send": "Envoyer la Demande"
     },
     "info": {
-      "phone": "Téléphone",
-      "email": "Email",
-      "address": "Adresse",
-      "hours": "Heures d'Ouverture"
+      "title": "Informations de Contact",
+      "office": "Bureau d'Antsirabe",
+      "officeAddress": "IVH 45 Bis Ankorondrano,\nAntananarivo, Madagascar",
+      "callUs": "Appelez-nous Directement",
+      "callNumbers": "+261 34 31 416 49\n+261 20 44 555 66",
+      "emailSupport": "Support Email",
+      "emailAddress": "contact@elmadagascar-tours.mg",
+      "whatsapp": "WhatsApp",
+      "callAgent": "Appeler l'Agent",
+      "certified": "Guide Local Certifié",
+      "certifiedDescription": "Licence officielle délivrée par le Ministère du Tourisme de Madagascar. Votre sécurité et satisfaction sont nos priorités."
     }
   },
   "tourDetail": {

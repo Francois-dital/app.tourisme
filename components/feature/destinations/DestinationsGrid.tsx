@@ -1,6 +1,10 @@
+'use client'
+
+import { useTranslation } from 'react-i18next'
 import { Icon } from '@/components/ui/Icon'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
 import { Destination } from '@/data/destinations'
+import { useTranslatedDestinations } from '@/hooks/useTranslatedDestinations'
 import Link from 'next/link'
 
 interface DestinationsGridProps {
@@ -8,12 +12,24 @@ interface DestinationsGridProps {
 }
 
 export default function DestinationsGrid({ destinations }: DestinationsGridProps) {
+  const { t } = useTranslation()
+  const translatedDestinations = useTranslatedDestinations(destinations)
+
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Easy': return 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400'
       case 'Moderate': return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400'
       case 'Challenging': return 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400'
       default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400'
+    }
+  }
+
+  const getDifficultyTranslation = (difficulty: string) => {
+    switch (difficulty) {
+      case 'Easy': return t('destinations.grid.difficulty.easy')
+      case 'Moderate': return t('destinations.grid.difficulty.moderate')
+      case 'Challenging': return t('destinations.grid.difficulty.challenging')
+      default: return difficulty
     }
   }
 
@@ -29,9 +45,9 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
 
   return (
     <section className="py-8 px-6 md:px-20 lg:px-24 xl:px-32">
-      {destinations.length > 0 ? (
+      {translatedDestinations.length > 0 ? (
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {destinations.map((destination, index) => (
+          {translatedDestinations.map((destination, index) => (
             <ScrollAnimation 
               key={destination.id}
               animation="card" 
@@ -54,7 +70,7 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
 
                     <div className="absolute top-4 right-4">
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(destination.difficulty)}`}>
-                        {destination.difficulty}
+                        {getDifficultyTranslation(destination.difficulty)}
                       </span>
                     </div>
 
@@ -81,7 +97,9 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
                     </p>
 
                     <div className="space-y-2">
-                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white">Highlights:</h4>
+                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white">
+                        {t('destinations.grid.highlights')}
+                      </h4>
                       <ul className="space-y-1">
                         {destination.highlights.slice(0, 2).map((highlight, idx) => (
                           <li key={idx} className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
@@ -91,7 +109,7 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
                         ))}
                         {destination.highlights.length > 2 && (
                           <li className="text-xs text-primary font-medium">
-                            +{destination.highlights.length - 2} more highlights
+                            +{destination.highlights.length - 2} {t('destinations.grid.moreHighlights')}
                           </li>
                         )}
                       </ul>
@@ -106,16 +124,16 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
         <ScrollAnimation animation="fade" delay={200}>
           <div className="w-full text-center py-12">
             <Icon name="search_off" size="xl" className="text-gray-400 mb-4" />
-            <h3 className="text-xl font-bold mb-2">No destinations found</h3>
+            <h3 className="text-xl font-bold mb-2">{t('destinations.grid.noResults.title')}</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Try adjusting your filters to see more results.
+              {t('destinations.grid.noResults.description')}
             </p>
           </div>
         </ScrollAnimation>
       )}
 
-      {destinations.length > 0 && (
-        <ScrollAnimation animation="scale" delay={300 + (destinations.length * 100)}>
+      {translatedDestinations.length > 0 && (
+        <ScrollAnimation animation="scale" delay={300 + (translatedDestinations.length * 100)}>
           <div className="w-full mt-16 text-center">
             <div className="bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 md:p-12 border border-primary/10">
               <div className="max-w-2xl mx-auto">
@@ -124,19 +142,18 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
                 </div>
                 
                 <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                  Ready to Explore Madagascar?
+                  {t('destinations.grid.cta.title')}
                 </h3>
                 
                 <p className="text-gray-600 dark:text-gray-400 text-lg mb-8">
-                  Let our local experts create the perfect itinerary combining multiple destinations 
-                  for your ultimate Madagascar adventure.
+                  {t('destinations.grid.cta.description')}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/tours">
                     <button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-bold transition-all flex items-center gap-2">
                       <Icon name="map" size="sm" />
-                      View All Tours
+                      {t('destinations.grid.cta.viewTours')}
                     </button>
                   </Link>
                 </div>

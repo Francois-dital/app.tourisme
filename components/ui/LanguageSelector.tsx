@@ -58,15 +58,10 @@ export default function LanguageSelector() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-1 rounded-md hover:bg-white/10 transition-colors"
+        className="flex items-center gap-2 px-3 py-1 rounded-md border border-white/20 hover:bg-white/10 hover:border-white/40 transition-colors"
       >
         <FlagIcon country={currentLang.country} />
         <span className="text-sm font-medium">{currentLang.code.toUpperCase()}</span>
-        <Icon 
-          name={isOpen ? "expand_less" : "expand_more"} 
-          size="sm" 
-          className="transition-transform"
-        />
       </button>
 
       {isOpen && (
