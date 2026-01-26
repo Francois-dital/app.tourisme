@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
+import { useTranslation } from 'react-i18next'
 
 interface TourCardProps {
   title: string
@@ -16,6 +17,8 @@ interface TourCardProps {
 }
 
 export default function TourCard({ title, days, region, price, description, image, label, labelColor = 'primary', slug }: TourCardProps) {
+  const { t } = useTranslation()
+  
   const getLabelStyles = () => {
     switch (labelColor) {
       case 'secondary':
@@ -70,12 +73,12 @@ export default function TourCard({ title, days, region, price, description, imag
 
         <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-white/10 mt-auto">
           <div>
-            <span className="text-xs text-gray-500 block uppercase font-bold">From</span>
+            <span className="text-xs text-gray-500 block uppercase font-bold">{t('common.from')}</span>
             <span className="text-2xl font-black text-primary">{price}</span>
           </div>
           <Link href={`/tours/${tourSlug}`}>
             <Button variant="ghost" size="sm" className="bg-[#f0f4f0] dark:bg-white/10 hover:bg-primary hover:text-[#111811]">
-              View Details
+              {t('common.viewDetails')}
             </Button>
           </Link>
         </div>

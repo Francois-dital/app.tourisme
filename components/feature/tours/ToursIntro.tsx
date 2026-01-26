@@ -41,7 +41,7 @@ export default function ToursIntro() {
   ]
 
   return (
-    <section className="py-24 px-6 md:px-20 lg:px-24 xl:px-32">
+    <section className="py-24">
       <div className="w-full max-w-4xl mx-auto text-center mb-16">
         <ScrollAnimation animation="fade" delay={100}>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
