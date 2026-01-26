@@ -40,13 +40,15 @@ export default function TourDetailPage({ params }: TourDetailPageProps) {
   }
 
   return (
-    <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300">
+    <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
       <HeaderApp />
-      <main className="w-full pb-20">
-        <TourDetailBreadcrumb tourTitle={tour.title} />
-        <TourDetailHero tour={tour} />
-        <TourDetailOverview tour={tour} />
-        <TourDetailContent tour={tour} />
+      <main className="w-full pb-12 sm:pb-20 flex-grow container-padding">
+        <div className="max-w-7xl mx-auto">
+          <TourDetailBreadcrumb tourTitle={tour.title} />
+          <TourDetailHero tour={tour} />
+          <TourDetailOverview tour={tour} />
+          <TourDetailContent tour={tour} />
+        </div>
       </main>
       <FooterApp />
     </div>

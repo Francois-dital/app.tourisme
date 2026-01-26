@@ -8,20 +8,16 @@ import DestinationsFilters from '@/components/feature/destinations/DestinationsF
 import DestinationsGrid from '@/components/feature/destinations/DestinationsGrid'
 import { destinationsData, Destination } from '@/data/destinations'
 
-// Hook personnalisé pour détecter si on est côté client
 function useIsClient() {
   const [isClient, setIsClient] = useState(false)
   
-  // Utiliser un effet vide pour déclencher le re-render côté client
   if (typeof window !== 'undefined' && !isClient) {
-    // Ce code s'exécute uniquement côté client
     setTimeout(() => setIsClient(true), 0)
   }
   
   return isClient
 }
 
-// Fonction pour mélanger un tableau de manière aléatoire (Fisher-Yates shuffle)
 function shuffleArray<T>(array: T[]): T[] {
   const shuffled = [...array]
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -35,15 +31,13 @@ export default function DestinationsPage() {
   const { t } = useTranslation()
   const isClient = useIsClient()
   
-  // Mélanger les destinations uniquement côté client
   const shuffledDestinations = useMemo(() => {
-    if (!isClient) return [] // Retourner vide côté serveur
+    if (!isClient) return []
     return shuffleArray(destinationsData)
   }, [isClient])
 
   const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>([])
 
-  // Mettre à jour les destinations filtrées quand les destinations mélangées changent
   const currentFilteredDestinations = useMemo(() => {
     if (!isClient) return []
     if (filteredDestinations.length === 0) return shuffledDestinations
@@ -55,28 +49,36 @@ export default function DestinationsPage() {
   }, [])
 
   return (
-    <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300">
+    <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
       <HeaderApp />
-      <main className="w-full pb-20">
+      <main className="w-full pb-12 sm:pb-20 flex-grow container-padding">
         {isClient ? (
-          <>
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-8 sm:mb-12 text-center">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-6">
+                {t('destinations.title')}
+              </h1>
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4">
+                {t('destinations.subtitle')}
+              </p>
+            </div>
             <DestinationsFilters 
               onFilterChange={handleFilterChange} 
               baseDestinations={shuffledDestinations}
             />
             <DestinationsGrid destinations={currentFilteredDestinations} />
-          </>
+          </div>
         ) : (
-          <div className="py-24 px-6 md:px-20 lg:px-24 xl:px-32">
+          <div className="py-12 sm:py-24 max-w-7xl mx-auto">
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
                 {t('destinations.title')}
               </h1>
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
                 {t('destinations.subtitle')}
               </p>
               <div className="flex justify-center">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+                <div className="animate-spin rounded-full h-10 w-10 sm:h-12 sm:w-12 border-b-2 border-primary"></div>
               </div>
             </div>
           </div>
