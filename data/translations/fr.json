@@ -170,6 +170,270 @@
           "Faune de la forêt de Kirindy",
           "Culture traditionnelle Sakalava"
         ]
+      },
+      "tsingy-bemaraha": {
+        "name": "Tsingy de Bemaraha",
+        "subtitle": "Aventure dans la forêt de pierre",
+        "description": "Naviguez à travers des pinacles calcaires tranchants comme des rasoirs dans ce site du patrimoine mondial de l'UNESCO, abritant des espèces endémiques uniques.",
+        "highlights": [
+          "Aventure d'escalade du Grand Tsingy",
+          "Ponts suspendus au-dessus de la forêt de pierre",
+          "Lémuriens Sifaka de Decken",
+          "Grottes de la rivière Manambolo"
+        ]
+      },
+      "isalo-national-park": {
+        "name": "Parc National d'Isalo",
+        "subtitle": "Le Grand Canyon de Madagascar",
+        "description": "Formations de grès dramatiques, oasis cachées et piscines naturelles dans le paysage le plus spectaculaire de Madagascar.",
+        "highlights": [
+          "Randonnée au Canyon des Singes",
+          "Piscines naturelles",
+          "Rencontres avec les lémuriens à queue annelée",
+          "Points de vue spectaculaires au coucher du soleil"
+        ]
+      },
+      "anakao-beach": {
+        "name": "Plage d'Anakao",
+        "subtitle": "Côte sud immaculée",
+        "description": "Plages de sable blanc intactes aux eaux cristallines, parfaites pour la plongée avec tuba et la découverte de la culture de pêche Vezo.",
+        "highlights": [
+          "Plages de sable blanc immaculées",
+          "Culture du village de pêcheurs Vezo",
+          "Plongée avec tuba sur récif corallien",
+          "Sanctuaire d'oiseaux de Nosy Ve"
+        ]
+      },
+      "ranomafana-national-park": {
+        "name": "Parc National de Ranomafana",
+        "subtitle": "Sources chaudes et lémuriens bambou dorés",
+        "description": "Sanctuaire de forêt tropicale luxuriante célèbre pour ses sources chaudes naturelles et la découverte du rare lémurien bambou doré.",
+        "highlights": [
+          "Observation des lémuriens bambou dorés",
+          "Sources chaudes naturelles",
+          "Espèces d'oiseaux diverses",
+          "Découvertes de plantes médicinales"
+        ]
+      },
+      "antananarivo-highlands": {
+        "name": "Antananarivo et Hautes Terres Centrales",
+        "subtitle": "Culture et rizières en terrasses",
+        "description": "Explorez le cœur culturel de Madagascar avec ses palais royaux, marchés traditionnels et paysages magnifiques des hautes terres.",
+        "highlights": [
+          "Complexe du Palais Rova",
+          "Colline sacrée d'Ambohimanga",
+          "Marchés traditionnels malgaches",
+          "Paysages de rizières en terrasses"
+        ]
+      },
+      "sainte-marie-island": {
+        "name": "Île Sainte-Marie",
+        "subtitle": "Histoire de pirates et observation des baleines",
+        "description": "Île paradisiaque tropicale avec une histoire de pirates, des plages immaculées et une observation spectaculaire des baleines à bosse de juillet à septembre.",
+        "highlights": [
+          "Observation des baleines à bosse (juillet-septembre)",
+          "Seul cimetière officiel de pirates au monde",
+          "Île aux Nattes sans voitures",
+          "Plages et lagons immaculés"
+        ]
+      },
+      "pangalanes-canal": {
+        "name": "Canal des Pangalanes",
+        "subtitle": "Voyage fluvial à travers les villages",
+        "description": "Un réseau de voies navigables naturelles et artificielles reliant lacs, rivières et lagons côtiers le long de la côte est de Madagascar.",
+        "highlights": [
+          "Voyages en bateau à travers les villages traditionnels",
+          "Péninsule d'Ankanin'ny Nofy",
+          "Communautés de pêcheurs locales",
+          "Paysages tropicaux luxuriants"
+        ]
+      },
+      "antsirabe": {
+        "name": "Antsirabe",
+        "subtitle": "Ville thermale et capitale des pousse-pousse",
+        "description": "Ville thermale de Madagascar connue pour ses lacs de cratère volcanique, ses pousse-pousse et ses marchés de pierres précieuses.",
+        "highlights": [
+          "Promenades en pousse-pousse",
+          "Sources thermales et lacs de cratère",
+          "Marchés de pierres précieuses et d'artisanat",
+          "Équitation au Ranch du Bonheur"
+        ]
+      },
+      "morondava-coast": {
+        "name": "Côte de Morondava",
+        "subtitle": "Porte d'entrée vers les baobabs et tsingy",
+        "description": "Ville côtière servant de porte d'entrée vers l'Avenue des Baobabs et les Tsingy de Bemaraha, avec de belles plages et la culture Vezo.",
+        "highlights": [
+          "Porte d'entrée vers l'Avenue des Baobabs",
+          "Visites du village de pêcheurs de Betania",
+          "Belles plages côtières",
+          "Culture de pêche Vezo"
+        ]
+      },
+      "tamatave-toamasina": {
+        "name": "Tamatave (Toamasina)",
+        "subtitle": "Port principal et marchés d'épices",
+        "description": "Principal port maritime de Madagascar avec des marchés animés, une architecture coloniale et un accès au Canal des Pangalanes.",
+        "highlights": [
+          "Marché Bazar Be pour épices et vanille",
+          "Architecture coloniale",
+          "Visites de la ville en pousse-pousse",
+          "Accès au Canal des Pangalanes"
+        ]
+      },
+      "manambato-lake": {
+        "name": "Manambato et Lac Rasoabe",
+        "subtitle": "Tranquillité au bord du lac",
+        "description": "Village paisible au bord du lac au bord du lac Rasoabe, servant de point de départ pour les voyages sur le Canal des Pangalanes.",
+        "highlights": [
+          "Cadre tranquille au bord du lac",
+          "Porte d'entrée vers le Canal des Pangalanes",
+          "Opportunités d'observation des oiseaux",
+          "Atmosphère détendue"
+        ]
+      },
+      "ankarinny-nofy": {
+        "name": "Ankanin'ny Nofy",
+        "subtitle": "Le \"Nid des Rêves\"",
+        "description": "Péninsule dans le Canal des Pangalanes connue sous le nom de \"Nid des Rêves\", abritant le Parc Privé Palmarium et une faune rare.",
+        "highlights": [
+          "Parc Privé Palmarium avec rencontres rapprochées de lémuriens",
+          "Observations d'Aye-Aye lémuriens nocturnes",
+          "Plages de sable blanc du lac",
+          "Plantes carnivores Pitcher et orchidées rares"
+        ]
+      },
+      "miandrivazo": {
+        "name": "Miandrivazo",
+        "subtitle": "Porte d'entrée vers la rivière Tsiribihina",
+        "description": "Ville chaude et animée sur les rives de la rivière Tsiribihina, connue comme point de départ pour les expéditions fluviales.",
+        "highlights": [
+          "Accès à la rivière Tsiribihina",
+          "Cuisine locale à la Princesse de la Tsiribihina",
+          "Vie traditionnelle malgache",
+          "Porte d'entrée vers les aventures de l'ouest"
+        ]
+      },
+      "bekopaka-tsingy": {
+        "name": "Bekopaka (Base Tsingy)",
+        "subtitle": "Base pour l'exploration des Tsingy",
+        "description": "Petit village servant de camp de base pour explorer les Grand et Petit Tsingy de Bemaraha.",
+        "highlights": [
+          "Accès aux Grand et Petit Tsingy",
+          "Excursions en pirogue sur la rivière Manambolo",
+          "Vie traditionnelle du village",
+          "Opportunités d'observation des étoiles"
+        ]
+      },
+      "ambatolampy": {
+        "name": "Ambatolampy",
+        "subtitle": "Artisanat de l'aluminium",
+        "description": "Ville célèbre pour son artisanat traditionnel de marmites en aluminium, où les artisans forgent des marmites à la main avec des matériaux recyclés.",
+        "highlights": [
+          "Ateliers traditionnels de marmites en aluminium",
+          "Démonstrations d'artisanat",
+          "Culture artisanale locale",
+          "Paysages des hautes terres"
+        ]
+      },
+      "ambositra": {
+        "name": "Ambositra",
+        "subtitle": "Capitale de l'artisanat du bois",
+        "description": "Cœur de l'industrie de l'artisanat du bois de Madagascar, foyer du peuple Zafimaniry et de leurs traditions de sculpture sur bois reconnues par l'UNESCO.",
+        "highlights": [
+          "Ateliers d'artisanat du bois Zafimaniry",
+          "Patrimoine culturel immatériel de l'UNESCO",
+          "Sculptures en bois complexes",
+          "Architecture des hautes terres"
+        ]
+      },
+      "tulear-toliara": {
+        "name": "Tuléar (Toliara)",
+        "subtitle": "Ville côtière du sud",
+        "description": "Ville côtière animée du sud de Madagascar, porte d'entrée vers la plage d'Anakao et la région du désert épineux.",
+        "highlights": [
+          "Porte d'entrée vers Anakao et les plages du sud",
+          "Marchés et culture locaux",
+          "Jardin botanique Arboretum d'Antsokay",
+          "Cuisine de fruits de mer côtiers"
+        ]
+      },
+      "anja-reserve": {
+        "name": "Réserve Communautaire d'Anja",
+        "subtitle": "Refuge des lémuriens à queue annelée",
+        "description": "Réserve gérée par la communauté où les lémuriens à queue annelée sont facilement observés parmi d'impressionnantes formations rocheuses de granit.",
+        "highlights": [
+          "Rencontres rapprochées avec les lémuriens à queue annelée",
+          "Projet de conservation géré par la communauté",
+          "Formations rocheuses de granit",
+          "Expériences avec guides locaux"
+        ]
+      },
+      "nosy-iranja": {
+        "name": "Nosy Iranja",
+        "subtitle": "Île aux Tortues et banc de sable",
+        "description": "Deux petites îles reliées par un banc de sable blanc spectaculaire qui apparaît à marée basse, connue sous le nom d'\"Île aux Tortues\".",
+        "highlights": [
+          "Promenade sur le banc de sable blanc iconique",
+          "Sites de nidification des tortues marines",
+          "Eaux cristallines pour la plongée avec tuba",
+          "Endroit le plus photographié de Madagascar"
+        ]
+      },
+      "nosy-tanikely": {
+        "name": "Nosy Tanikely",
+        "subtitle": "Plongée avec tuba dans la réserve marine",
+        "description": "Réserve marine protégée avec des opportunités exceptionnelles de plongée avec tuba parmi les récifs coralliens, tortues marines et poissons tropicaux.",
+        "highlights": [
+          "Plongée avec tuba et sous-marine de classe mondiale",
+          "Rencontres avec les tortues marines",
+          "Récifs coralliens protégés",
+          "Phare et promenade sur l'île"
+        ]
+      },
+      "nosy-komba": {
+        "name": "Nosy Komba",
+        "subtitle": "Île des Lémuriens",
+        "description": "Île volcanique connue pour ses lémuriens noirs, ses villages traditionnels de sculpture sur bois et son atmosphère détendue.",
+        "highlights": [
+          "Rencontres avec les lémuriens noirs",
+          "Villages traditionnels de sculpture sur bois",
+          "Paysage d'île volcanique",
+          "Marchés d'artisanat local"
+        ]
+      },
+      "nosy-sakatia": {
+        "name": "Nosy Sakatia",
+        "subtitle": "Île aux Orchidées",
+        "description": "Île paisible connue sous le nom d'\"Île aux Orchidées\" pour sa flore riche, avec des opportunités de plongée avec tuba avec des tortues vertes géantes.",
+        "highlights": [
+          "Plongée avec tuba avec des tortues vertes géantes",
+          "Sentiers d'orchidées et botaniques",
+          "Plages paisibles et moins fréquentées",
+          "Biodiversité marine riche"
+        ]
+      },
+      "mont-passot": {
+        "name": "Mont Passot",
+        "subtitle": "Coucher de soleil sur les lacs de cratère",
+        "description": "Point culminant de Nosy Be offrant des vues panoramiques à 360 degrés sur les lacs de cratère volcanique de l'île et le Canal du Mozambique.",
+        "highlights": [
+          "Points de vue spectaculaires au coucher du soleil",
+          "Panoramas à 360 degrés de l'île",
+          "Lacs de cratère volcanique",
+          "Opportunités de photographie"
+        ]
+      },
+      "hell-ville": {
+        "name": "Hell-Ville (Andoany)",
+        "subtitle": "Ville principale de Nosy Be",
+        "description": "Ville principale de Nosy Be, connue pour son marché animé vendant épices, vanille et huiles essentielles d'ylang-ylang.",
+        "highlights": [
+          "Marchés d'épices et de vanille",
+          "Huile essentielle d'ylang-ylang",
+          "Architecture coloniale",
+          "Restaurants et cafés locaux"
+        ]
       }
     }
   },
