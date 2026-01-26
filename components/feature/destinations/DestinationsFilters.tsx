@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
-import { destinationsData, getDestinationsByRegion } from '@/data/destinations'
+import { destinationsData, Destination } from '@/data/destinations'
 
 const regions = [
   'All Regions',
@@ -26,12 +26,16 @@ const categories = [
 ]
 
 interface DestinationsFiltersProps {
-  onFilterChange?: (filteredDestinations: any[]) => void
+  onFilterChange?: (filteredDestinations: Destination[]) => void
+  baseDestinations?: Destination[]
 }
 
-export default function DestinationsFilters({ onFilterChange }: DestinationsFiltersProps) {
+export default function DestinationsFilters({ onFilterChange, baseDestinations }: DestinationsFiltersProps) {
   const [selectedRegion, setSelectedRegion] = useState('All Regions')
   const [selectedCategory, setSelectedCategory] = useState('All Categories')
+
+  // Utiliser les destinations de base fournies ou les données par défaut
+  const sourceDestinations = baseDestinations || destinationsData
 
   const handleRegionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedRegion(e.target.value)
@@ -42,8 +46,16 @@ export default function DestinationsFilters({ onFilterChange }: DestinationsFilt
   }
 
   useEffect(() => {
-    let filteredDestinations = getDestinationsByRegion(selectedRegion)
+    let filteredDestinations = sourceDestinations
     
+    // Filtrer par région
+    if (selectedRegion !== 'All Regions') {
+      filteredDestinations = filteredDestinations.filter(destination => 
+        destination.region === selectedRegion
+      )
+    }
+    
+    // Filtrer par catégorie
     if (selectedCategory !== 'All Categories') {
       filteredDestinations = filteredDestinations.filter(destination => 
         destination.category === selectedCategory
@@ -53,20 +65,20 @@ export default function DestinationsFilters({ onFilterChange }: DestinationsFilt
     if (onFilterChange) {
       onFilterChange(filteredDestinations)
     }
-  }, [selectedRegion, selectedCategory, onFilterChange])
+  }, [selectedRegion, selectedCategory, onFilterChange, sourceDestinations])
 
   return (
     <section className="py-24 px-6 md:px-20 lg:px-24 xl:px-32">
       <ScrollAnimation animation="fade" delay={100}>
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-          Discover Madagascar's Destinations
+          Discover Madagascar&apos;s Destinations
         </h1>
       </ScrollAnimation>
       
       <ScrollAnimation animation="fade" delay={200}>
         <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto text-center">
-          From pristine rainforests to dramatic landscapes, explore the unique biodiversity and endemic species 
-          that make Madagascar the world's eighth continent.
+          From pristine rainforests to dramatic landscapes, explore the unique biodiversity and endemic species
+          that make Madagascar the world&apos;s eighth continent.
         </p>
       </ScrollAnimation>
       

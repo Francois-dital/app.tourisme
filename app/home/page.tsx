@@ -1,7 +1,7 @@
 import HeaderApp from '@/components/layout/HeaderApp'
 import HeroSection from '@/components/feature/home/HeroSection'
 import AboutsUs from '@/components/feature/home/AboutsUs'
-import TopTours from '@/components/feature/home/TopTours'
+import TopDestinations from '@/components/feature/home/TopDestinations'
 import FooterApp from '@/components/layout/FooterApp'
 
 export default function HomePage() {
@@ -11,7 +11,7 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <AboutsUs />
-        <TopTours />
+        <TopDestinations />
       </main>
       <FooterApp />
     </div>
