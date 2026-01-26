@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Icon } from '@/components/ui/Icon'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
 import { Destination } from '@/data/destinations'
-import { useTranslatedDestinations } from '@/hooks/useTranslatedDestinations'
+import { translateDestinationData } from '@/utils/translation.utils'
 import Link from 'next/link'
 
 interface DestinationsGridProps {
@@ -13,7 +13,9 @@ interface DestinationsGridProps {
 
 export default function DestinationsGrid({ destinations }: DestinationsGridProps) {
   const { t } = useTranslation()
-  const translatedDestinations = useTranslatedDestinations(destinations)
+
+  // Translate destination data using the same pattern as tours
+  const translatedDestinations = destinations.map(destination => translateDestinationData(destination, t))
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {

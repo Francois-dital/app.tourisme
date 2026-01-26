@@ -170,6 +170,270 @@
           "Kirindy Forest wildlife",
           "Traditional Sakalava culture"
         ]
+      },
+      "tsingy-bemaraha": {
+        "name": "Tsingy de Bemaraha",
+        "subtitle": "Stone forest adventure",
+        "description": "Navigate through razor-sharp limestone pinnacles in this UNESCO World Heritage site, home to unique endemic species.",
+        "highlights": [
+          "Grand Tsingy climbing adventure",
+          "Suspension bridges over stone forest",
+          "Decken's Sifaka lemurs",
+          "Manambolo River caves"
+        ]
+      },
+      "isalo-national-park": {
+        "name": "Isalo National Park",
+        "subtitle": "Madagascar's Grand Canyon",
+        "description": "Dramatic sandstone formations, hidden oases, and natural swimming pools in Madagascar's most spectacular landscape.",
+        "highlights": [
+          "Canyon des Singes hiking",
+          "Natural swimming pools",
+          "Ring-tailed lemur encounters",
+          "Spectacular sunset viewpoints"
+        ]
+      },
+      "anakao-beach": {
+        "name": "Anakao Beach",
+        "subtitle": "Pristine southern coast",
+        "description": "Untouched white sand beaches with crystal clear waters, perfect for snorkeling and experiencing Vezo fishing culture.",
+        "highlights": [
+          "Pristine white sand beaches",
+          "Vezo fishing village culture",
+          "Coral reef snorkeling",
+          "Nosy Ve bird sanctuary"
+        ]
+      },
+      "ranomafana-national-park": {
+        "name": "Ranomafana National Park",
+        "subtitle": "Hot springs & golden bamboo lemurs",
+        "description": "Lush rainforest sanctuary famous for its natural hot springs and the rare golden bamboo lemur discovery.",
+        "highlights": [
+          "Golden bamboo lemur spotting",
+          "Natural hot springs",
+          "Diverse bird species",
+          "Medicinal plant discoveries"
+        ]
+      },
+      "antananarivo-highlands": {
+        "name": "Antananarivo & Central Highlands",
+        "subtitle": "Culture & terraced rice fields",
+        "description": "Explore Madagascar's cultural heart with royal palaces, traditional markets, and stunning highland landscapes.",
+        "highlights": [
+          "Rova Palace complex",
+          "Ambohimanga sacred hill",
+          "Traditional Malagasy markets",
+          "Terraced rice field landscapes"
+        ]
+      },
+      "sainte-marie-island": {
+        "name": "Sainte-Marie Island",
+        "subtitle": "Pirate history & whale watching",
+        "description": "Tropical island paradise with pirate history, pristine beaches, and spectacular humpback whale watching from July to September.",
+        "highlights": [
+          "Humpback whale watching (July-September)",
+          "World's only official pirate cemetery",
+          "Île aux Nattes car-free island",
+          "Pristine beaches and lagoons"
+        ]
+      },
+      "pangalanes-canal": {
+        "name": "Pangalanes Canal",
+        "subtitle": "Waterway journey through villages",
+        "description": "A network of natural and man-made waterways connecting lakes, rivers, and coastal lagoons along Madagascar's east coast.",
+        "highlights": [
+          "Boat journeys through traditional villages",
+          "Ankanin'ny Nofy peninsula",
+          "Local fishing communities",
+          "Lush tropical scenery"
+        ]
+      },
+      "antsirabe": {
+        "name": "Antsirabe",
+        "subtitle": "Thermal city & rickshaw capital",
+        "description": "Madagascar's thermal city known for its volcanic crater lakes, \"Pousse-Pousse\" rickshaws, and gemstone markets.",
+        "highlights": [
+          "Pousse-pousse (rickshaw) rides",
+          "Thermal springs and crater lakes",
+          "Gemstone and craft markets",
+          "Horseback riding at Ranch du Bonheur"
+        ]
+      },
+      "morondava-coast": {
+        "name": "Morondava Coast",
+        "subtitle": "Gateway to baobabs & tsingy",
+        "description": "Coastal town serving as the gateway to the Avenue of Baobabs and Tsingy de Bemaraha, with beautiful beaches and Vezo culture.",
+        "highlights": [
+          "Gateway to Avenue of Baobabs",
+          "Betania Fishing Village visits",
+          "Beautiful coastal beaches",
+          "Vezo fishing culture"
+        ]
+      },
+      "tamatave-toamasina": {
+        "name": "Tamatave (Toamasina)",
+        "subtitle": "Major port & spice markets",
+        "description": "Madagascar's main seaport with vibrant markets, colonial architecture, and access to the Pangalanes Canal.",
+        "highlights": [
+          "Bazar Be market for spices and vanilla",
+          "Colonial architecture",
+          "Pousse-pousse city tours",
+          "Access to Pangalanes Canal"
+        ]
+      },
+      "manambato-lake": {
+        "name": "Manambato & Lake Rasoabe",
+        "subtitle": "Lakeside tranquility",
+        "description": "Peaceful lakeside village on the shores of Lake Rasoabe, serving as a departure point for Pangalanes Canal journeys.",
+        "highlights": [
+          "Tranquil lakeside setting",
+          "Gateway to Pangalanes Canal",
+          "Bird watching opportunities",
+          "Relaxed atmosphere"
+        ]
+      },
+      "ankarinny-nofy": {
+        "name": "Ankanin'ny Nofy",
+        "subtitle": "The \"Nest of Dreams\"",
+        "description": "Peninsula in the Pangalanes Canal known as the \"Nest of Dreams,\" home to the Palmarium Private Park and rare wildlife.",
+        "highlights": [
+          "Palmarium Private Park with close lemur encounters",
+          "Aye-Aye nocturnal lemur sightings",
+          "White sand lake beaches",
+          "Carnivorous Pitcher plants and rare orchids"
+        ]
+      },
+      "miandrivazo": {
+        "name": "Miandrivazo",
+        "subtitle": "Gateway to Tsiribihina River",
+        "description": "Hot, lively town on the banks of the Tsiribihina River, known as a starting point for river expeditions.",
+        "highlights": [
+          "Tsiribihina River access",
+          "Local cuisine at Princesse de la Tsiribihina",
+          "Traditional Malagasy town life",
+          "Gateway to western adventures"
+        ]
+      },
+      "bekopaka-tsingy": {
+        "name": "Bekopaka (Tsingy Base)",
+        "subtitle": "Base for Tsingy exploration",
+        "description": "Small village serving as the base camp for exploring both the Grand and Petit Tsingy de Bemaraha.",
+        "highlights": [
+          "Access to Grand and Petit Tsingy",
+          "Manambolo River pirogue trips",
+          "Traditional village life",
+          "Stargazing opportunities"
+        ]
+      },
+      "ambatolampy": {
+        "name": "Ambatolampy",
+        "subtitle": "Aluminum craftsmanship",
+        "description": "Town famous for its traditional aluminum pot craftsmanship, where artisans forge pots by hand using recycled materials.",
+        "highlights": [
+          "Traditional aluminum pot workshops",
+          "Handcraft demonstrations",
+          "Local artisan culture",
+          "Highland scenery"
+        ]
+      },
+      "ambositra": {
+        "name": "Ambositra",
+        "subtitle": "Woodcraft capital",
+        "description": "Heart of Madagascar's woodcraft industry, home to the Zafimaniry people and their UNESCO-recognized woodcarving traditions.",
+        "highlights": [
+          "Zafimaniry woodcraft workshops",
+          "UNESCO intangible cultural heritage",
+          "Intricate wooden sculptures",
+          "Highland architecture"
+        ]
+      },
+      "tulear-toliara": {
+        "name": "Tuléar (Toliara)",
+        "subtitle": "Southern coastal city",
+        "description": "Vibrant coastal city in southern Madagascar, gateway to Anakao beach and the spiny desert region.",
+        "highlights": [
+          "Gateway to Anakao and southern beaches",
+          "Local markets and culture",
+          "Arboretum d'Antsokay botanical garden",
+          "Coastal seafood cuisine"
+        ]
+      },
+      "anja-reserve": {
+        "name": "Anja Community Reserve",
+        "subtitle": "Ring-tailed lemur haven",
+        "description": "Community-run reserve where ring-tailed lemurs are easily spotted among impressive granite rock formations.",
+        "highlights": [
+          "Close encounters with ring-tailed lemurs",
+          "Community-run conservation project",
+          "Granite rock formations",
+          "Local guide experiences"
+        ]
+      },
+      "nosy-iranja": {
+        "name": "Nosy Iranja",
+        "subtitle": "Turtle Island & sandbank",
+        "description": "Two small islands connected by a spectacular white sandbank that appears at low tide, known as \"Turtle Island\".",
+        "highlights": [
+          "Iconic white sandbank walk",
+          "Sea turtle nesting sites",
+          "Crystal clear snorkeling waters",
+          "Most photographed spot in Madagascar"
+        ]
+      },
+      "nosy-tanikely": {
+        "name": "Nosy Tanikely",
+        "subtitle": "Marine reserve snorkeling",
+        "description": "Protected marine reserve with exceptional snorkeling opportunities among coral reefs, sea turtles, and tropical fish.",
+        "highlights": [
+          "World-class snorkeling and diving",
+          "Sea turtle encounters",
+          "Protected coral reefs",
+          "Lighthouse and island walk"
+        ]
+      },
+      "nosy-komba": {
+        "name": "Nosy Komba",
+        "subtitle": "Island of Lemurs",
+        "description": "Volcanic island known for its black lemurs, traditional woodcarving villages, and relaxed atmosphere.",
+        "highlights": [
+          "Black lemur encounters",
+          "Traditional woodcarving villages",
+          "Volcanic island scenery",
+          "Local handicraft markets"
+        ]
+      },
+      "nosy-sakatia": {
+        "name": "Nosy Sakatia",
+        "subtitle": "Orchid Island",
+        "description": "Peaceful island known as the \"Orchid Island\" for its rich flora, with opportunities to snorkel with giant green sea turtles.",
+        "highlights": [
+          "Snorkeling with giant green sea turtles",
+          "Orchid and botanical trails",
+          "Peaceful, less-crowded beaches",
+          "Rich marine biodiversity"
+        ]
+      },
+      "mont-passot": {
+        "name": "Mont Passot",
+        "subtitle": "Sunset over crater lakes",
+        "description": "Highest point on Nosy Be offering 360-degree panoramic views of the island's volcanic crater lakes and the Mozambique Channel.",
+        "highlights": [
+          "Spectacular sunset viewpoints",
+          "360-degree island panoramas",
+          "Volcanic crater lakes",
+          "Photography opportunities"
+        ]
+      },
+      "hell-ville": {
+        "name": "Hell-Ville (Andoany)",
+        "subtitle": "Nosy Be main town",
+        "description": "Main town of Nosy Be, known for its vibrant market selling spices, vanilla, and ylang-ylang essential oils.",
+        "highlights": [
+          "Spice and vanilla markets",
+          "Ylang-ylang essential oil",
+          "Colonial architecture",
+          "Local restaurants and cafes"
+        ]
       }
     }
   },

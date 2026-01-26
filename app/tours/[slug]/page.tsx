@@ -1,6 +1,7 @@
-import type { Metadata } from 'next'
+'use client'
+
+import { useParams } from 'next/navigation'
 import { notFound } from 'next/navigation'
-import { use } from 'react'
 import HeaderApp from '@/components/layout/HeaderApp'
 import FooterApp from '@/components/layout/FooterApp'
 import TourDetailHero from '@/components/feature/tour-detail/TourDetailHero'
@@ -9,30 +10,9 @@ import TourDetailOverview from '@/components/feature/tour-detail/TourDetailOverv
 import TourDetailContent from '@/components/feature/tour-detail/TourDetailContent'
 import { getTourBySlug } from '@/data/tours'
 
-interface TourDetailPageProps {
-  params: Promise<{
-    slug: string
-  }>
-}
-
-export async function generateMetadata({ params }: TourDetailPageProps): Promise<Metadata> {
-  const { slug } = await params
-  const tour = getTourBySlug(slug)
-  
-  if (!tour) {
-    return {
-      title: 'Tour Not Found | ELMADAGASCAR Tours'
-    }
-  }
-
-  return {
-    title: `${tour.title} | ELMADAGASCAR Tours`,
-    description: tour.description,
-  }
-}
-
-export default function TourDetailPage({ params }: TourDetailPageProps) {
-  const { slug } = use(params)
+export default function TourDetailPage() {
+  const params = useParams()
+  const slug = params.slug as string
   const tour = getTourBySlug(slug)
 
   if (!tour) {

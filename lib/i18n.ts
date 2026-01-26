@@ -1,9 +1,9 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
-// Import translation files
-import enTranslations from '@/data/translations/en.json'
-import frTranslations from '@/data/translations/fr.json'
+// Simple static imports
+const enTranslations = require('@/data/translations/en.json')
+const frTranslations = require('@/data/translations/fr.json')
 
 const resources = {
   en: {
@@ -18,15 +18,14 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en', // default language
+    lng: 'en',
     fallbackLng: 'en',
     interpolation: {
-      escapeValue: false // React already does escaping
+      escapeValue: false
     },
     react: {
       useSuspense: false
-    },
-    debug: false // Disable debug in production
+    }
   })
 
 export default i18n
