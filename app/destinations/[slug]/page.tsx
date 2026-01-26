@@ -17,7 +17,7 @@ export default function DestinationDetailPage() {
     return (
       <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
         <HeaderApp />
-        <main className="w-full py-12 sm:py-20 flex-grow container-padding">
+        <main className="w-full py-12 sm:py-20 flex-grow px-6 md:px-20 lg:px-24 xl:px-32">
           <div className="text-center max-w-2xl mx-auto">
             <h1 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Destination Not Found</h1>
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
@@ -54,7 +54,7 @@ export default function DestinationDetailPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${destination.image}')` }}
         ></div>
-        <div className="relative z-20 w-full container-padding h-full flex flex-col justify-center max-w-7xl mx-auto">
+        <div className="relative z-20 w-full h-full flex flex-col justify-center px-6 md:px-20 lg:px-24 xl:px-32">
           <ScrollAnimation animation="fade" delay={100}>
             <div className="flex flex-wrap items-center gap-2 sm:gap-4 mb-3 sm:mb-4">
               <span className="bg-primary px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold text-white">
@@ -97,8 +97,8 @@ export default function DestinationDetailPage() {
         </div>
       </section>
 
-      <main className="w-full py-8 sm:py-12 md:py-16 lg:py-20 flex-grow container-padding">
-        <div className="max-w-7xl mx-auto">
+      <main className="w-full py-8 sm:py-12 md:py-16 lg:py-20 flex-grow px-6 md:px-20 lg:px-24 xl:px-32">
+        <div className="w-full">
           <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
             <div className="lg:col-span-2">
               <ScrollAnimation animation="fade" delay={100}>
