@@ -51,17 +51,9 @@ export default function DestinationsPage() {
   return (
     <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
       <HeaderApp />
-      <main className="w-full pb-12 sm:pb-20 flex-grow container-padding">
+      <main className="w-full pb-12 sm:pb-20 flex-grow">
         {isClient ? (
-          <div className="max-w-7xl mx-auto">
-            <div className="mb-8 sm:mb-12 text-center">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-6">
-                {t('destinations.title')}
-              </h1>
-              <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4">
-                {t('destinations.subtitle')}
-              </p>
-            </div>
+          <div className="w-full">
             <DestinationsFilters 
               onFilterChange={handleFilterChange} 
               baseDestinations={shuffledDestinations}
@@ -69,14 +61,8 @@ export default function DestinationsPage() {
             <DestinationsGrid destinations={currentFilteredDestinations} />
           </div>
         ) : (
-          <div className="py-12 sm:py-24 max-w-7xl mx-auto">
+          <div className="py-12 sm:py-24 w-full">
             <div className="text-center">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-                {t('destinations.title')}
-              </h1>
-              <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
-                {t('destinations.subtitle')}
-              </p>
               <div className="flex justify-center">
                 <div className="animate-spin rounded-full h-10 w-10 sm:h-12 sm:w-12 border-b-2 border-primary"></div>
               </div>
