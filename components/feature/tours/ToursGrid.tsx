@@ -18,7 +18,7 @@ export default function ToursGrid({ tours }: ToursGridProps) {
   const translatedTours = tours.map(tour => translateTourData(tour, t))
 
   return (
-    <section className="py-8 px-6 md:px-20 lg:px-24 xl:px-32">
+    <section className="py-8">
       <div className="w-full text-center mb-12">
         <ScrollAnimation animation="fade" delay={100}>
           <h2 className="text-2xl font-bold mb-4">{t('tours.title')}</h2>

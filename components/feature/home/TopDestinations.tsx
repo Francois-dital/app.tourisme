@@ -7,12 +7,16 @@ import { Icon } from '@/components/ui/Icon'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
 import Link from 'next/link'
 import { destinationsData } from '@/data/destinations'
+import { translateDestinationData } from '@/utils/translation.utils'
 
 // Sélectionner les 3 destinations les plus populaires (premières de la liste)
 const featuredDestinations = destinationsData.slice(0, 3)
 
 export default function TopDestinations() {
   const { t } = useTranslation()
+
+  // Translate destination data
+  const translatedDestinations = featuredDestinations.map(destination => translateDestinationData(destination, t))
 
   return (
     <section className="bg-background-light dark:bg-white/5 py-24 px-6 md:px-20 lg:px-24 xl:px-32 overflow-hidden">
@@ -27,7 +31,7 @@ export default function TopDestinations() {
         </ScrollAnimation>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {featuredDestinations.map((destination, index) => (
+          {translatedDestinations.map((destination, index) => (
             <ScrollAnimation 
               key={destination.id}
               animation="scale" 

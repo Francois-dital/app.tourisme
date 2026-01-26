@@ -27,6 +27,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
+        <link rel="shortcut icon" href="/public/image/logo.png" type="image/x-icon" />
       </head>
       <body className={`${plusJakartaSans.variable} antialiased`}>
         <I18nProvider>

@@ -855,6 +855,8 @@
     "sort": "Trier",
     "clear": "Effacer",
     "apply": "Appliquer",
-    "reset": "Réinitialiser"
+    "reset": "Réinitialiser",
+    "from": "À partir de",
+    "viewDetails": "Voir les Détails"
   }
 }

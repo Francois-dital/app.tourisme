@@ -855,6 +855,8 @@
     "sort": "Sort",
     "clear": "Clear",
     "apply": "Apply",
-    "reset": "Reset"
+    "reset": "Reset",
+    "from": "From",
+    "viewDetails": "View Details"
   }
 }
