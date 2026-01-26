@@ -50,7 +50,7 @@ export const vehiclesData: Vehicle[] = [
     id: 2,
     title: "Hilux Double Cabin",
     category: "Rugged Performance",
-    image: "/images/hero-background.jpg",
+    image: "/images/hero-background-1.jpg",
     features: [
       { icon: "groups", text: "3 Passengers + Expert Driver" },
       { icon: "ac_unit", text: "Optimized Climate Control" },

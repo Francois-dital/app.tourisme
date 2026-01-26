@@ -15,7 +15,7 @@ export interface ImageConfig {
  */
 export const IMAGES = {
   hero: {
-    src: "/images/hero-background.jpg",
+    src: "/images/hero-background-1.jpg",
     alt: "Madagascar landscape with baobab trees",
     width: 1920,
     height: 1080,

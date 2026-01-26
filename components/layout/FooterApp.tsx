@@ -2,38 +2,26 @@ import Link from 'next/link'
 import { Icon } from '@/components/ui/Icon'
 import { Button } from '@/components/ui/Button'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
-
-const quickLinks = [
-  { name: 'About ELMADAGASCAR', href: '/about' },
-  { name: 'Our Tours', href: '/tours' },
-  { name: 'Destinations', href: '/destinations' },
-  { name: 'Travel Tips', href: '#' },
-  { name: 'Eco-responsibility', href: '#' },
-  { name: 'Contact Us', href: '#' },
-]
-
-const socialLinks = [
-  { name: 'Facebook', icon: 'social_leaderboard', href: '#' },
-  { name: 'Instagram', icon: 'photo_camera', href: '#' },
-  { name: 'YouTube', icon: 'smart_display', href: '#' },
-]
-
-const contactInfo = [
-  {
-    icon: 'location_on',
-    text: 'IVH 45 Bis Ankorondrano, Antananarivo, Madagascar'
-  },
-  {
-    icon: 'phone_iphone',
-    text: '+261 34 31 416 49'
-  },
-  {
-    icon: 'alternate_email',
-    text: 'contact@elmadagascar-tours.mg'
-  },
-]
+import { useTranslation } from 'react-i18next'
 
 export default function FooterApp() {
+  const { t } = useTranslation()
+
+  const quickLinks = [
+    { name: t('about.title'), href: '/about' },
+    { name: t('nav.tours'), href: '/tours' },
+    { name: t('nav.destinations'), href: '/destinations' },
+    { name: 'Travel Tips', href: '#' },
+    { name: 'Eco-responsibility', href: '#' },
+    { name: t('nav.contact'), href: '/contact' },
+  ]
+
+  const socialLinks = [
+    { name: 'Facebook', icon: 'social_leaderboard', href: '#' },
+    { name: 'Instagram', icon: 'photo_camera', href: '#' },
+    { name: 'YouTube', icon: 'smart_display', href: '#' },
+  ]
+
   return (
     <>
       <footer className="bg-[#111811] text-white pt-20 pb-10 px-6 md:px-20 lg:px-24 xl:px-32">
@@ -48,7 +36,7 @@ export default function FooterApp() {
                 />
               </Link>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                Specialized in high-end, adventure, and educational tours across Madagascar. We are your local partners for an unforgettable journey.
+                {t('footer.company.description')}
               </p>
 
               <div className="flex items-center gap-4 mb-6">
@@ -84,7 +72,7 @@ export default function FooterApp() {
 
           <ScrollAnimation animation="fade" delay={150}>
             <div>
-              <h5 className="text-lg font-bold mb-6">Quick Links</h5>
+              <h5 className="text-lg font-bold mb-6">{t('footer.quickLinks')}</h5>
               <ul className="flex flex-col gap-4 text-gray-400 text-sm">
                 {quickLinks.map((link, index) => (
                   <li key={link.name}>
@@ -101,40 +89,54 @@ export default function FooterApp() {
 
           <ScrollAnimation animation="fade" delay={200}>
             <div>
-              <h5 className="text-lg font-bold mb-6">Contact Info</h5>
+              <h5 className="text-lg font-bold mb-6">{t('contact.info.address')}</h5>
               <ul className="flex flex-col gap-4 text-gray-400 text-sm">
-                {contactInfo.map((info, index) => (
-                  <li key={index}>
-                    <ScrollAnimation animation="slide-right" delay={250 + (index * 50)}>
-                      <div className="flex items-center gap-3">
-                        <Icon name={info.icon} className="text-primary" />
-                        <span>{info.text}</span>
-                      </div>
-                    </ScrollAnimation>
-                  </li>
-                ))}
+                <li>
+                  <ScrollAnimation animation="slide-right" delay={250}>
+                    <div className="flex items-center gap-3">
+                      <Icon name="location_on" className="text-primary" />
+                      <span>IVH 45 Bis Ankorondrano, Antananarivo, Madagascar</span>
+                    </div>
+                  </ScrollAnimation>
+                </li>
+                <li>
+                  <ScrollAnimation animation="slide-right" delay={300}>
+                    <div className="flex items-center gap-3">
+                      <Icon name="phone_iphone" className="text-primary" />
+                      <span>+261 34 31 416 49</span>
+                    </div>
+                  </ScrollAnimation>
+                </li>
+                <li>
+                  <ScrollAnimation animation="slide-right" delay={350}>
+                    <div className="flex items-center gap-3">
+                      <Icon name="alternate_email" className="text-primary" />
+                      <span>contact@elmadagascar-tours.mg</span>
+                    </div>
+                  </ScrollAnimation>
+                </li>
               </ul>
             </div>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade" delay={250}>
             <div>
-              <h5 className="text-lg font-bold mb-6">Newsletter</h5>
+              <h5 className="text-lg font-bold mb-6">{t('footer.newsletter.title')}</h5>
               <p className="text-gray-400 text-sm mb-4">
-                Subscribe to receive exclusive travel deals and nature news.
+                {t('footer.newsletter.description')}
               </p>
               <ScrollAnimation animation="fade" delay={300}>
                 <div className="relative hover:scale-105 transition-transform">
                   <input
                     className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 focus:ring-1 focus:ring-primary focus:outline-none text-white text-sm hover:border-primary transition-colors"
-                    placeholder="Your email"
+                    placeholder={t('footer.newsletter.placeholder')}
                     type="email"
                   />
                   <Button
                     size="sm"
                     className="absolute right-2 top-2 px-4 py-1 text-xs uppercase hover:scale-105 transition-transform"
                   >
-                    Join
+                    {t('footer.newsletter.subscribe')}
                   </Button>
                 </div>
               </ScrollAnimation>
@@ -144,7 +146,7 @@ export default function FooterApp() {
 
         <ScrollAnimation animation="fade" delay={400}>
           <div className="pt-10 border-t border-white/5 text-center text-gray-500 text-xs">
-            <p>© 2024 ELMADAGASCAR Tours. All Rights Reserved. Professional Tourism License No. 045-2015/MINTOUR.</p>
+            <p>{t('footer.copyright')}</p>
           </div>
         </ScrollAnimation>
       </footer>

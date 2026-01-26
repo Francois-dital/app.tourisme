@@ -1,0 +1,289 @@
+{
+  "nav": {
+    "home": "Home",
+    "tours": "Tours",
+    "destinations": "Destinations",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Discover Madagascar",
+    "title": "Discover the Wonders of Madagascar",
+    "subtitle": "Embark on an unforgettable journey through the world's fourth-largest island",
+    "description": "From unique wildlife to pristine beaches, Madagascar offers experiences found nowhere else on Earth. Let us guide you through this extraordinary destination.",
+    "bookTrip": "Book Your Trip",
+    "exploreDestinations": "Explore Destinations",
+    "cta": "Explore Tours",
+    "watchVideo": "Watch Video",
+    "navigation": {
+      "previous": "Previous image",
+      "next": "Next image",
+      "goToSlide": "Go to image {{number}}"
+    }
+  },
+  "about": {
+    "title": "About Madagascar",
+    "subtitle": "The Eighth Continent",
+    "description": "Madagascar is a land of incredible biodiversity and unique culture. With over 90% of its wildlife found nowhere else on Earth, it's truly a naturalist's paradise.",
+    "coreValues": {
+      "title": "The ELMADAGASCAR Difference",
+      "subtitle": "We prioritize your experience through three main pillars that define every journey we curate.",
+      "authenticity": {
+        "title": "Authenticity",
+        "description": "Genuine connections with local communities and hidden gems that only locals know."
+      },
+      "safety": {
+        "title": "Safety First",
+        "description": "Rigorous vehicle maintenance and experienced drivers for absolute peace of mind on rough roads."
+      },
+      "expertise": {
+        "title": "Local Expertise",
+        "description": "Deep knowledge of Malagasy culture, flora, and endemic fauna from guides born on the island."
+      }
+    },
+    "teamGuides": {
+      "title": "Meet Our Professional Guides",
+      "subtitle": "Expert Bilingual Specialists",
+      "roles": {
+        "senior": "Senior Expedition Specialist",
+        "wildlife": "Wildlife & Botany Expert",
+        "driving": "4x4 Driving & Navigation Specialist",
+        "cultural": "Cultural & Historical Guide"
+      }
+    },
+    "fleet": {
+      "title": "Our Rugged Fleet",
+      "subtitle": "Specially selected and maintained to handle Madagascar's diverse terrains, from smooth paved routes to the most challenging off-road mud tracks.",
+      "landCruiser": {
+        "name": "Toyota Land Cruiser 4x4",
+        "description": "The king of Malagasy roads. Known for its unbreakable chassis and supreme comfort on long bumpy drives. Perfectly suited for groups of 4-5 adventurers.",
+        "badge": "Most Reliable"
+      },
+      "pajero": {
+        "name": "Mitsubishi Pajero",
+        "description": "Agile and comfortable, perfect for the highland routes and visiting National Parks. Offers excellent visibility for photography through large panoramic windows.",
+        "badge": "Premium Comfort"
+      }
+    },
+    "cta": {
+      "title": "Ready for your Malagasy journey?",
+      "subtitle": "Join us for an unforgettable experience with the best guides and vehicles on the island.",
+      "button": "Contact Us"
+    }
+  },
+  "tours": {
+    "title": "Choose Your Adventure",
+    "subtitle": "From the lush rainforests of the east to the dramatic landscapes of the west, each tour offers a unique perspective of Madagascar's incredible diversity.",
+    "customItinerary": {
+      "title": "Need Something Different?",
+      "description": "Can't find the perfect tour? Let our experts design a completely customized Madagascar experience tailored to your interests, budget, and schedule.",
+      "features": {
+        "personalized": "Personalized itineraries",
+        "flexible": "Flexible dates & duration",
+        "interests": "Special interests welcome"
+      },
+      "cta": "Contact"
+    },
+    "noToursFound": {
+      "title": "No tours found",
+      "description": "Please contact us for custom tour options."
+    }
+  },
+  "destinations": {
+    "title": "Explore Madagascar",
+    "subtitle": "Discover the diverse landscapes and unique ecosystems of the world's fourth-largest island",
+    "viewTours": "View Tours",
+    "customItinerary": "Custom Itinerary"
+  },
+  "toursIntro": {
+    "title": "Tours & Circuits Catalog",
+    "description": "Discover Madagascar through our expertly designed tours. Each itinerary can be fully customized according to your needs and preferences.",
+    "customizable": "All itineraries are fully customizable",
+    "stats": {
+      "tours": {
+        "label": "Unique Tours",
+        "description": "Carefully crafted itineraries"
+      },
+      "regions": {
+        "label": "Regions",
+        "description": "Across Madagascar"
+      },
+      "duration": {
+        "label": "Avg Duration",
+        "description": "Days of adventure"
+      },
+      "satisfaction": {
+        "label": "Satisfaction",
+        "description": "% customer rating"
+      }
+    },
+    "features": {
+      "guides": {
+        "title": "Expert Guides",
+        "description": "Professional English/French speaking guides with deep local knowledge"
+      },
+      "customizable": {
+        "title": "Fully Customizable",
+        "description": "Every itinerary can be adapted to your preferences and schedule"
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Complete assistance throughout your Madagascar adventure"
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Ready to start your Madagascar adventure? Contact our expert team for personalized assistance.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message"
+    },
+    "info": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "hours": "Business Hours"
+    }
+  },
+  "tourDetail": {
+    "overview": "Tour Overview",
+    "nights": "Nights",
+    "customizable": "100% Customizable",
+    "downloadPdf": "Download PDF Itinerary",
+    "detailedItinerary": "Detailed Itinerary",
+    "day": "Day",
+    "overnight": "Overnight",
+    "makeItYours": "Make it yours",
+    "customizationNote": "Please note that the itinerary can be fully customized according to your needs. Want to spend more time at specific locations? Prefer luxury over mid-range lodges? Just let us know and we'll tailor the journey to your exact preferences.",
+    "startingFrom": "Starting from",
+    "perPerson": "per person",
+    "soloTraveler": "Solo Traveler",
+    "group": "Group (2+ people)",
+    "secureSpot": "Secure your spot with 20% deposit",
+    "included": "Included",
+    "notIncluded": "Not Included",
+    "needMoreInfo": "Need more info?",
+    "speakToExpert": "Speak to an expert"
+  },
+  "destinationDetail": {
+    "about": "About",
+    "highlights": "Highlights & Experiences",
+    "planYourVisit": "Plan Your Visit",
+    "duration": "Duration",
+    "bestTime": "Best Time",
+    "difficulty": "Difficulty",
+    "region": "Region",
+    "viewRelatedTours": "View Related Tours",
+    "customItinerary": "Custom Itinerary",
+    "backToDestinations": "Back to All Destinations",
+    "notFound": {
+      "title": "Destination Not Found",
+      "description": "The destination you're looking for doesn't exist.",
+      "backButton": "Back to Destinations"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "ELMADAGASCAR",
+      "description": "Your gateway to discovering the wonders of Madagascar. Expert guides, authentic experiences, unforgettable memories."
+    },
+    "quickLinks": "Quick Links",
+    "destinations": "Destinations",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to get special offers, free giveaways, and updates.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    },
+    "copyright": "© 2024 ELMADAGASCAR. All rights reserved.",
+    "whatsapp": "Chat on WhatsApp"
+  },
+  "topDestinations": {
+    "title": "Top Destinations",
+    "subtitle": "Discover the most spectacular places in Madagascar, each offering unique experiences and unforgettable memories.",
+    "bestSeller": "Best Seller",
+    "seeAll": "See All Destinations",
+    "viewDetails": "View Details"
+  },
+  "aboutUs": {
+    "title": "Why Choose Our Agency?",
+    "subtitle": "Authentic Experiences",
+    "quote": "We don't just show you Madagascar; we let you live it through the eyes of those who call it home.",
+    "features": {
+      "guides": {
+        "title": "Expert Local Guides",
+        "description": "Our certified guides know every hidden trail, lemur habitat, and secret beach on the Big Island."
+      },
+      "tailored": {
+        "title": "Tailor-made Journeys",
+        "description": "Whether you're a photographer, trekker, or looking for luxury, we craft itineraries to your rhythm."
+      },
+      "sustainable": {
+        "title": "Sustainable Tourism",
+        "description": "We are committed to protecting our island's unique flora and fauna through responsible travel practices."
+      }
+    }
+  },
+  "toursData": {
+    "eastMadagascar": {
+      "title": "East Madagascar Tour",
+      "subtitle": "Rainforest & Wildlife Discovery",
+      "description": "Please note that the itinerary can be fully customized according to your needs. A legendary 11-day journey through the verdant rainforests of Andasibe, discovering rare orchid species and spotting the iconic Indri lemurs in their natural habitat.",
+      "region": "East Coast",
+      "category": "Nature & Wildlife",
+      "label": "Best Seller"
+    },
+    "southMadagascar": {
+      "title": "South Madagascar Tour",
+      "subtitle": "The RN7 Route",
+      "description": "Please note that the itinerary can be fully customized according to your needs. A legendary 9-day journey from the bustling capital to the white sands of the Mozambique Channel, crossing the soul of the Red Island.",
+      "region": "Southern Highlands",
+      "category": "Nature & Adventure"
+    },
+    "westMadagascar": {
+      "title": "West Madagascar Tour",
+      "subtitle": "Baobab & Tsingy Adventure",
+      "description": "Please note that the itinerary can be fully customized according to your needs. A photographer's dream. Witness the Avenue of Baobabs at sunset and hike the surreal limestone labyrinths of Tsingy de Bemaraha.",
+      "region": "West Coast",
+      "category": "Adventure & Photography",
+      "label": "Adventure"
+    },
+    "northMadagascar": {
+      "title": "North Madagascar Tour",
+      "subtitle": "Rainforest & Island Paradise",
+      "description": "Please note that the itinerary can be fully customized according to your needs. Discover the call of the Indri in Andasibe rainforest, then escape to the tropical paradise of Nosy Be with its pristine beaches and marine reserves.",
+      "region": "Northern Madagascar",
+      "category": "Nature & Beach",
+      "label": "Popular"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "tryAgain": "Try again",
+    "close": "Close",
+    "open": "Open",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "clear": "Clear",
+    "apply": "Apply",
+    "reset": "Reset"
+  }
+}

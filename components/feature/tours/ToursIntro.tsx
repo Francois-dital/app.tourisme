@@ -3,8 +3,10 @@
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
 import { Icon } from '@/components/ui/Icon'
 import { toursData } from '@/data/tours'
+import { useTranslation } from 'react-i18next'
 
 export default function ToursIntro() {
+  const { t } = useTranslation()
   const totalTours = toursData.length
   const regions = [...new Set(toursData.map(tour => tour.region))]
   const avgDuration = Math.round(
@@ -15,26 +17,26 @@ export default function ToursIntro() {
     {
       icon: 'explore',
       number: totalTours,
-      label: 'Unique Tours',
-      description: 'Carefully crafted itineraries'
+      label: t('toursIntro.stats.tours.label'),
+      description: t('toursIntro.stats.tours.description')
     },
     {
       icon: 'location_on',
       number: regions.length,
-      label: 'Regions',
-      description: 'Across Madagascar'
+      label: t('toursIntro.stats.regions.label'),
+      description: t('toursIntro.stats.regions.description')
     },
     {
       icon: 'schedule',
       number: avgDuration,
-      label: 'Avg Duration',
-      description: 'Days of adventure'
+      label: t('toursIntro.stats.duration.label'),
+      description: t('toursIntro.stats.duration.description')
     },
     {
       icon: 'star',
       number: 100,
-      label: 'Satisfaction',
-      description: '% customer rating'
+      label: t('toursIntro.stats.satisfaction.label'),
+      description: t('toursIntro.stats.satisfaction.description')
     }
   ]
 
@@ -43,20 +45,20 @@ export default function ToursIntro() {
       <div className="w-full max-w-4xl mx-auto text-center mb-16">
         <ScrollAnimation animation="fade" delay={100}>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Tours & Circuits Catalog
+            {t('toursIntro.title')}
           </h1>
         </ScrollAnimation>
         
         <ScrollAnimation animation="fade" delay={200}>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            Discover Madagascar through our expertly designed tours. Each itinerary can be fully customized according to your needs and preferences.
+            {t('toursIntro.description')}
           </p>
         </ScrollAnimation>
 
         <ScrollAnimation animation="fade" delay={300}>
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
             <Icon name="info" size="sm" />
-            All itineraries are fully customizable
+            {t('toursIntro.customizable')}
           </div>
         </ScrollAnimation>
       </div>
@@ -73,7 +75,7 @@ export default function ToursIntro() {
                 <Icon name={stat.icon} size="md" />
               </div>
               <div className="text-2xl font-bold text-primary mb-1 counter-animation">
-                {stat.number}{stat.label === 'Satisfaction' ? '%' : ''}
+                {stat.number}{stat.label === t('toursIntro.stats.satisfaction.label') ? '%' : ''}
               </div>
               <div className="font-semibold text-gray-900 dark:text-white mb-1">
                 {stat.label}
@@ -93,9 +95,9 @@ export default function ToursIntro() {
               <Icon name="verified" size="sm" />
             </div>
             <div>
-              <h3 className="font-semibold mb-2">Expert Guides</h3>
+              <h3 className="font-semibold mb-2">{t('toursIntro.features.guides.title')}</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Professional English/French speaking guides with deep local knowledge
+                {t('toursIntro.features.guides.description')}
               </p>
             </div>
           </div>
@@ -105,9 +107,9 @@ export default function ToursIntro() {
               <Icon name="settings" size="sm" />
             </div>
             <div>
-              <h3 className="font-semibold mb-2">Fully Customizable</h3>
+              <h3 className="font-semibold mb-2">{t('toursIntro.features.customizable.title')}</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Every itinerary can be adapted to your preferences and schedule
+                {t('toursIntro.features.customizable.description')}
               </p>
             </div>
           </div>
@@ -117,9 +119,9 @@ export default function ToursIntro() {
               <Icon name="support_agent" size="sm" />
             </div>
             <div>
-              <h3 className="font-semibold mb-2">24/7 Support</h3>
+              <h3 className="font-semibold mb-2">{t('toursIntro.features.support.title')}</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Complete assistance throughout your Madagascar adventure
+                {t('toursIntro.features.support.description')}
               </p>
             </div>
           </div>

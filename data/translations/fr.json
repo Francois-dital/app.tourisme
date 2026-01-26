@@ -1,0 +1,289 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "tours": "Circuits",
+    "destinations": "Destinations",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Découvrez Madagascar",
+    "title": "Découvrez les Merveilles de Madagascar",
+    "subtitle": "Embarquez pour un voyage inoubliable à travers la quatrième plus grande île du monde",
+    "description": "De la faune unique aux plages immaculées, Madagascar offre des expériences qu'on ne trouve nulle part ailleurs sur Terre. Laissez-nous vous guider à travers cette destination extraordinaire.",
+    "bookTrip": "Réservez Votre Voyage",
+    "exploreDestinations": "Explorer les Destinations",
+    "cta": "Explorer les Circuits",
+    "watchVideo": "Regarder la Vidéo",
+    "navigation": {
+      "previous": "Image précédente",
+      "next": "Image suivante",
+      "goToSlide": "Aller à l'image {{number}}"
+    }
+  },
+  "about": {
+    "title": "À propos de Madagascar",
+    "subtitle": "Le Huitième Continent",
+    "description": "Madagascar est une terre d'incroyable biodiversité et de culture unique. Avec plus de 90% de sa faune qu'on ne trouve nulle part ailleurs sur Terre, c'est vraiment un paradis pour les naturalistes.",
+    "coreValues": {
+      "title": "La Différence ELMADAGASCAR",
+      "subtitle": "Nous priorisons votre expérience à travers trois piliers principaux qui définissent chaque voyage que nous organisons.",
+      "authenticity": {
+        "title": "Authenticité",
+        "description": "Connexions authentiques avec les communautés locales et des joyaux cachés que seuls les locaux connaissent."
+      },
+      "safety": {
+        "title": "Sécurité d'Abord",
+        "description": "Maintenance rigoureuse des véhicules et conducteurs expérimentés pour une tranquillité d'esprit absolue sur les routes difficiles."
+      },
+      "expertise": {
+        "title": "Expertise Locale",
+        "description": "Connaissance approfondie de la culture malgache, de la flore et de la faune endémique par des guides nés sur l'île."
+      }
+    },
+    "teamGuides": {
+      "title": "Rencontrez Nos Guides Professionnels",
+      "subtitle": "Spécialistes Bilingues Experts",
+      "roles": {
+        "senior": "Spécialiste Expédition Senior",
+        "wildlife": "Expert Faune & Botanique",
+        "driving": "Spécialiste Conduite 4x4 & Navigation",
+        "cultural": "Guide Culturel & Historique"
+      }
+    },
+    "fleet": {
+      "title": "Notre Flotte Robuste",
+      "subtitle": "Spécialement sélectionnée et entretenue pour gérer les terrains diversifiés de Madagascar, des routes pavées lisses aux pistes boueuses les plus difficiles.",
+      "landCruiser": {
+        "name": "Toyota Land Cruiser 4x4",
+        "description": "Le roi des routes malgaches. Connu pour son châssis incassable et son confort suprême sur les longs trajets cahoteux. Parfaitement adapté aux groupes de 4-5 aventuriers.",
+        "badge": "Le Plus Fiable"
+      },
+      "pajero": {
+        "name": "Mitsubishi Pajero",
+        "description": "Agile et confortable, parfait pour les routes des hautes terres et la visite des Parcs Nationaux. Offre une excellente visibilité pour la photographie grâce à de grandes fenêtres panoramiques.",
+        "badge": "Confort Premium"
+      }
+    },
+    "cta": {
+      "title": "Prêt pour votre voyage malgache ?",
+      "subtitle": "Rejoignez-nous pour une expérience inoubliable avec les meilleurs guides et véhicules de l'île.",
+      "button": "Contactez-nous"
+    }
+  },
+  "tours": {
+    "title": "Choisissez Votre Aventure",
+    "subtitle": "Des forêts tropicales luxuriantes de l'est aux paysages dramatiques de l'ouest, chaque circuit offre une perspective unique sur l'incroyable diversité de Madagascar.",
+    "customItinerary": {
+      "title": "Besoin de Quelque Chose de Différent ?",
+      "description": "Vous ne trouvez pas le circuit parfait ? Laissez nos experts concevoir une expérience Madagascar entièrement personnalisée adaptée à vos intérêts, votre budget et votre emploi du temps.",
+      "features": {
+        "personalized": "Itinéraires personnalisés",
+        "flexible": "Dates et durée flexibles",
+        "interests": "Intérêts spéciaux bienvenus"
+      },
+      "cta": "Contact"
+    },
+    "noToursFound": {
+      "title": "Aucun circuit trouvé",
+      "description": "Veuillez nous contacter pour des options de circuits personnalisés."
+    }
+  },
+  "destinations": {
+    "title": "Explorez Madagascar",
+    "subtitle": "Découvrez les paysages diversifiés et les écosystèmes uniques de la quatrième plus grande île du monde",
+    "viewTours": "Voir les Circuits",
+    "customItinerary": "Itinéraire Personnalisé"
+  },
+  "toursIntro": {
+    "title": "Catalogue Circuits & Tours",
+    "description": "Découvrez Madagascar à travers nos circuits expertement conçus. Chaque itinéraire peut être entièrement personnalisé selon vos besoins et préférences.",
+    "customizable": "Tous les itinéraires sont entièrement personnalisables",
+    "stats": {
+      "tours": {
+        "label": "Circuits Uniques",
+        "description": "Itinéraires soigneusement élaborés"
+      },
+      "regions": {
+        "label": "Régions",
+        "description": "À travers Madagascar"
+      },
+      "duration": {
+        "label": "Durée Moyenne",
+        "description": "Jours d'aventure"
+      },
+      "satisfaction": {
+        "label": "Satisfaction",
+        "description": "% de satisfaction client"
+      }
+    },
+    "features": {
+      "guides": {
+        "title": "Guides Experts",
+        "description": "Guides professionnels parlant anglais/français avec une connaissance locale approfondie"
+      },
+      "customizable": {
+        "title": "Entièrement Personnalisable",
+        "description": "Chaque itinéraire peut être adapté à vos préférences et votre emploi du temps"
+      },
+      "support": {
+        "title": "Support 24/7",
+        "description": "Assistance complète tout au long de votre aventure à Madagascar"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Prêt à commencer votre aventure à Madagascar ? Contactez notre équipe d'experts pour une assistance personnalisée.",
+    "form": {
+      "name": "Nom Complet",
+      "email": "Adresse Email",
+      "phone": "Numéro de Téléphone",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer le Message"
+    },
+    "info": {
+      "phone": "Téléphone",
+      "email": "Email",
+      "address": "Adresse",
+      "hours": "Heures d'Ouverture"
+    }
+  },
+  "tourDetail": {
+    "overview": "Aperçu du Circuit",
+    "nights": "Nuits",
+    "customizable": "100% Personnalisable",
+    "downloadPdf": "Télécharger l'Itinéraire PDF",
+    "detailedItinerary": "Itinéraire Détaillé",
+    "day": "Jour",
+    "overnight": "Nuitée",
+    "makeItYours": "Personnalisez-le",
+    "customizationNote": "Veuillez noter que l'itinéraire peut être entièrement personnalisé selon vos besoins. Vous voulez passer plus de temps dans des lieux spécifiques ? Vous préférez le luxe aux lodges de milieu de gamme ? Dites-le nous et nous adapterons le voyage à vos préférences exactes.",
+    "startingFrom": "À partir de",
+    "perPerson": "par personne",
+    "soloTraveler": "Voyageur Solo",
+    "group": "Groupe (2+ personnes)",
+    "secureSpot": "Réservez votre place avec un acompte de 20%",
+    "included": "Inclus",
+    "notIncluded": "Non Inclus",
+    "needMoreInfo": "Besoin de plus d'infos ?",
+    "speakToExpert": "Parler à un expert"
+  },
+  "destinationDetail": {
+    "about": "À propos de",
+    "highlights": "Points Forts & Expériences",
+    "planYourVisit": "Planifiez Votre Visite",
+    "duration": "Durée",
+    "bestTime": "Meilleure Période",
+    "difficulty": "Difficulté",
+    "region": "Région",
+    "viewRelatedTours": "Voir les Circuits Associés",
+    "customItinerary": "Itinéraire Personnalisé",
+    "backToDestinations": "Retour à Toutes les Destinations",
+    "notFound": {
+      "title": "Destination Non Trouvée",
+      "description": "La destination que vous recherchez n'existe pas.",
+      "backButton": "Retour aux Destinations"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "ELMADAGASCAR",
+      "description": "Votre porte d'entrée pour découvrir les merveilles de Madagascar. Guides experts, expériences authentiques, souvenirs inoubliables."
+    },
+    "quickLinks": "Liens Rapides",
+    "destinations": "Destinations",
+    "contact": "Contact",
+    "followUs": "Suivez-nous",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Abonnez-vous pour recevoir des offres spéciales, des cadeaux gratuits et des mises à jour.",
+      "placeholder": "Entrez votre email",
+      "subscribe": "S'abonner"
+    },
+    "copyright": "© 2024 ELMADAGASCAR. Tous droits réservés.",
+    "whatsapp": "Discuter sur WhatsApp"
+  },
+  "topDestinations": {
+    "title": "Destinations Phares",
+    "subtitle": "Découvrez les lieux les plus spectaculaires de Madagascar, chacun offrant des expériences uniques et des souvenirs inoubliables.",
+    "bestSeller": "Meilleure Vente",
+    "seeAll": "Voir Toutes les Destinations",
+    "viewDetails": "Voir les Détails"
+  },
+  "aboutUs": {
+    "title": "Pourquoi Choisir Notre Agence ?",
+    "subtitle": "Expériences Authentiques",
+    "quote": "Nous ne vous montrons pas seulement Madagascar ; nous vous le faisons vivre à travers les yeux de ceux qui l'appellent chez eux.",
+    "features": {
+      "guides": {
+        "title": "Guides Locaux Experts",
+        "description": "Nos guides certifiés connaissent chaque sentier caché, habitat de lémuriens et plage secrète de la Grande Île."
+      },
+      "tailored": {
+        "title": "Voyages Sur Mesure",
+        "description": "Que vous soyez photographe, randonneur ou à la recherche du luxe, nous créons des itinéraires à votre rythme."
+      },
+      "sustainable": {
+        "title": "Tourisme Durable",
+        "description": "Nous nous engageons à protéger la flore et la faune uniques de notre île grâce à des pratiques de voyage responsables."
+      }
+    }
+  },
+  "toursData": {
+    "eastMadagascar": {
+      "title": "Circuit Madagascar Est",
+      "subtitle": "Découverte Forêt Tropicale & Faune",
+      "description": "Veuillez noter que l'itinéraire peut être entièrement personnalisé selon vos besoins. Un voyage légendaire de 11 jours à travers les forêts tropicales verdoyantes d'Andasibe, découvrant des espèces d'orchidées rares et observant les lémuriens Indri emblématiques dans leur habitat naturel.",
+      "region": "Côte Est",
+      "category": "Nature & Faune",
+      "label": "Meilleure Vente"
+    },
+    "southMadagascar": {
+      "title": "Circuit Madagascar Sud",
+      "subtitle": "La Route RN7",
+      "description": "Veuillez noter que l'itinéraire peut être entièrement personnalisé selon vos besoins. Un voyage légendaire de 9 jours de la capitale animée aux sables blancs du Canal de Mozambique, traversant l'âme de l'Île Rouge.",
+      "region": "Hautes Terres du Sud",
+      "category": "Nature & Aventure"
+    },
+    "westMadagascar": {
+      "title": "Circuit Madagascar Ouest",
+      "subtitle": "Aventure Baobabs & Tsingy",
+      "description": "Veuillez noter que l'itinéraire peut être entièrement personnalisé selon vos besoins. Le rêve d'un photographe. Admirez l'Avenue des Baobabs au coucher du soleil et randonnez dans les labyrinthes calcaires surréalistes des Tsingy de Bemaraha.",
+      "region": "Côte Ouest",
+      "category": "Aventure & Photographie",
+      "label": "Aventure"
+    },
+    "northMadagascar": {
+      "title": "Circuit Madagascar Nord",
+      "subtitle": "Forêt Tropicale & Paradis Insulaire",
+      "description": "Veuillez noter que l'itinéraire peut être entièrement personnalisé selon vos besoins. Découvrez l'appel de l'Indri dans la forêt tropicale d'Andasibe, puis évadez-vous vers le paradis tropical de Nosy Be avec ses plages immaculées et ses réserves marines.",
+      "region": "Madagascar Nord",
+      "category": "Nature & Plage",
+      "label": "Populaire"
+    }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "tryAgain": "Réessayer",
+    "close": "Fermer",
+    "open": "Ouvrir",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "clear": "Effacer",
+    "apply": "Appliquer",
+    "reset": "Réinitialiser"
+  }
+}

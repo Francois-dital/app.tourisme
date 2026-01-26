@@ -1,3 +1,5 @@
+'use client'
+
 import HeaderApp from '@/components/layout/HeaderApp'
 import HeroSection from '@/components/feature/home/HeroSection'
 import AboutsUs from '@/components/feature/home/AboutsUs'
@@ -8,7 +10,7 @@ export default function HomePage() {
   return (
     <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300">
       <HeaderApp />
-      <main>
+      <main className="w-full">
         <HeroSection />
         <AboutsUs />
         <TopDestinations />

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 import HeaderApp from '@/components/layout/HeaderApp'
 import FooterApp from '@/components/layout/FooterApp'
 import DestinationsFilters from '@/components/feature/destinations/DestinationsFilters'
@@ -31,6 +32,7 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 export default function DestinationsPage() {
+  const { t } = useTranslation()
   const isClient = useIsClient()
   
   // Mélanger les destinations uniquement côté client
@@ -68,11 +70,10 @@ export default function DestinationsPage() {
           <div className="py-24 px-6 md:px-20 lg:px-24 xl:px-32">
             <div className="text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Discover Madagascar&apos;s Destinations
+                {t('destinations.title')}
               </h1>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-                From pristine rainforests to dramatic landscapes, explore the unique biodiversity and endemic species 
-                that make Madagascar the world&apos;s eighth continent.
+                {t('destinations.subtitle')}
               </p>
               <div className="flex justify-center">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>

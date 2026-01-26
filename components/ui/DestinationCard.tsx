@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 
@@ -14,6 +17,8 @@ interface DestinationCardProps {
 }
 
 export default function DestinationCard({ title, duration, region, description, image, label, labelColor = 'primary', slug }: DestinationCardProps) {
+  const { t } = useTranslation()
+
   const getLabelStyles = () => {
     switch (labelColor) {
       case 'secondary':
@@ -67,7 +72,7 @@ export default function DestinationCard({ title, duration, region, description, 
         <div className="flex items-center justify-end pt-4 border-t border-gray-100 dark:border-white/10 mt-auto">
           <Link href={`/destinations/${slug}`}>
             <Button variant="ghost" size="sm" className="bg-[#f0f4f0] dark:bg-white/10 hover:bg-primary hover:text-[#111811]">
-              View Details
+              {t('topDestinations.viewDetails')}
             </Button>
           </Link>
         </div>

@@ -3,20 +3,22 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/Button'
 import { Icon } from '@/components/ui/Icon'
 import LanguageSelector from '@/components/ui/LanguageSelector'
 
-const navigation = [
-  { name: 'Home', href: '/home' },
-  { name: 'About', href: '/about' },
-  { name: 'Tours', href: '/tours' },
-  { name: 'Destinations', href: '/destinations' },
-]
-
 export default function HeaderApp() {
+  const { t } = useTranslation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
+
+  const navigation = [
+    { name: t('nav.home'), href: '/home' },
+    { name: t('nav.about'), href: '/about' },
+    { name: t('nav.tours'), href: '/tours' },
+    { name: t('nav.destinations'), href: '/destinations' },
+  ]
 
   const isActive = (href: string) => {
     if (href === '/tours') {
@@ -62,7 +64,7 @@ export default function HeaderApp() {
           <nav className="hidden lg:flex items-center gap-10">
             {navigation.map((item) => (
               <Link
-                key={item.name}
+                key={item.href}
                 href={item.href}
                 className={`font-semibold text-sm transition-all hover:scale-105 ${
                   isActive(item.href) 
@@ -86,7 +88,7 @@ export default function HeaderApp() {
                     : 'bg-transparent text-primary border-primary hover:bg-primary hover:text-white'
                 }`}
               >
-                Inquire Now
+                {t('nav.contact')}
               </Button>
             </Link>
             <button 
@@ -97,6 +99,37 @@ export default function HeaderApp() {
             </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="lg:hidden mt-4 pb-4 border-t border-gray-200 dark:border-white/10 pt-4">
+            <nav className="flex flex-col gap-4">
+              {navigation.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`font-semibold text-sm transition-all ${
+                    isActive(item.href) 
+                      ? 'text-primary' 
+                      : 'hover:text-primary'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+                <Button 
+                  variant="primary"
+                  size="sm" 
+                  className="w-full"
+                >
+                  {t('nav.contact')}
+                </Button>
+              </Link>
+            </nav>
+          </div>
+        )}
       </header>
     </>
   )
