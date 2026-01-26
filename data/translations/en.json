@@ -857,6 +857,24 @@
     "apply": "Apply",
     "reset": "Reset",
     "from": "From",
-    "viewDetails": "View Details"
+    "viewDetails": "View Details",
+    "months": {
+      "aprilNovember": "April - November",
+      "mayOctober": "May - October",
+      "marchNovember": "March - November",
+      "yearRound": "Year-round",
+      "drySeason": "Dry season",
+      "rainySeason": "Rainy season"
+    },
+    "duration": {
+      "oneDay": "1 Day",
+      "twoDays": "2 Days",
+      "threeDays": "3 Days",
+      "oneTwoDays": "1-2 Days",
+      "twoThreeDays": "2-3 Days",
+      "threeFourDays": "3-4 Days",
+      "fourFiveDays": "4-5 Days",
+      "oneWeek": "1 Week"
+    }
   }
 }

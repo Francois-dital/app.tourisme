@@ -64,7 +64,10 @@ export function translateDestinationData(destination: Destination, t: (key: stri
       t(`destinations.data.${destinationKey}.highlights.${index}`)
     ),
     category: translateCategory(destination.category, t),
-    region: translateRegion(destination.region, t)
+    region: translateRegion(destination.region, t),
+    bestTime: translateBestTime(destination.bestTime, t),
+    difficulty: translateDifficulty(destination.difficulty, t) as 'Easy' | 'Moderate' | 'Challenging',
+    duration: translateDuration(destination.duration, t)
   }
 }
 
@@ -94,6 +97,46 @@ function translateRegion(region: string, t: (key: string) => string): string {
   }
   
   return regionMap[region] ? t(regionMap[region]) : region
+}
+
+function translateBestTime(bestTime: string, t: (key: string) => string): string {
+  // Map common time periods to translation keys
+  const timeMap: Record<string, string> = {
+    'April - November': 'common.months.aprilNovember',
+    'May - October': 'common.months.mayOctober',
+    'March - November': 'common.months.marchNovember',
+    'Year-round': 'common.months.yearRound',
+    'Dry season': 'common.months.drySeason',
+    'Rainy season': 'common.months.rainySeason'
+  }
+  
+  return timeMap[bestTime] ? t(timeMap[bestTime]) : bestTime
+}
+
+function translateDifficulty(difficulty: string, t: (key: string) => string): string {
+  const difficultyMap: Record<string, string> = {
+    'Easy': 'destinations.grid.difficulty.easy',
+    'Moderate': 'destinations.grid.difficulty.moderate',
+    'Challenging': 'destinations.grid.difficulty.challenging'
+  }
+  
+  return difficultyMap[difficulty] ? t(difficultyMap[difficulty]) : difficulty
+}
+
+function translateDuration(duration: string, t: (key: string) => string): string {
+  // Map common durations to translation keys
+  const durationMap: Record<string, string> = {
+    '1-2 Days': 'common.duration.oneTwoDays',
+    '2-3 Days': 'common.duration.twoThreeDays',
+    '3-4 Days': 'common.duration.threeFourDays',
+    '4-5 Days': 'common.duration.fourFiveDays',
+    '1 Day': 'common.duration.oneDay',
+    '2 Days': 'common.duration.twoDays',
+    '3 Days': 'common.duration.threeDays',
+    '1 Week': 'common.duration.oneWeek'
+  }
+  
+  return durationMap[duration] ? t(durationMap[duration]) : duration
 }
 
 function getTourTranslationKey(slug: string): string | null {
