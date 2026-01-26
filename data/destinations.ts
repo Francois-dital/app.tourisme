@@ -117,7 +117,7 @@ export const destinationsData: Destination[] = [
     description: 'Untouched white sand beaches with crystal clear waters, perfect for snorkeling and experiencing Vezo fishing culture.',
     region: 'Southern Highlands',
     category: 'Coastal',
-    image: '/images/destinations/anakao.jpg',
+    image: '/images/destinations/anakao.jpeg',
     highlights: [
       'Pristine white sand beaches',
       'Vezo fishing village culture',
@@ -136,7 +136,7 @@ export const destinationsData: Destination[] = [
     description: 'Lush rainforest sanctuary famous for its natural hot springs and the rare golden bamboo lemur discovery.',
     region: 'Southern Highlands',
     category: 'Rainforest',
-    image: '/images/destinations/ranomafana.jpg',
+    image: '/images/destinations/ranomafana.jpeg',
     highlights: [
       'Golden bamboo lemur spotting',
       'Natural hot springs',
@@ -155,7 +155,7 @@ export const destinationsData: Destination[] = [
     description: 'Explore Madagascar\'s cultural heart with royal palaces, traditional markets, and stunning highland landscapes.',
     region: 'Central Highlands',
     category: 'Cultural',
-    image: '/images/destinations/tana.jpg',
+    image: '/images/destinations/antananarivo.jpg',
     highlights: [
       'Rova Palace complex',
       'Ambohimanga sacred hill',
@@ -174,7 +174,7 @@ export const destinationsData: Destination[] = [
     description: 'Tropical island paradise with pirate history, pristine beaches, and spectacular humpback whale watching from July to September.',
     region: 'East Coast',
     category: 'Coastal',
-    image: '/images/destinations/nosy-be.jpg', // Utilise la même image que Nosy Be (archipel côtier similaire)
+    image: '/images/destinations/sainte-marie.jpeg',
     highlights: [
       'Humpback whale watching (July-September)',
       'World\'s only official pirate cemetery',
@@ -193,7 +193,7 @@ export const destinationsData: Destination[] = [
     description: 'A network of natural and man-made waterways connecting lakes, rivers, and coastal lagoons along Madagascar\'s east coast.',
     region: 'East Coast',
     category: 'Cultural',
-    image: '/images/destinations/andasibe.jpg', // Utilise la même image que Andasibe (région Est similaire)
+    image: '/images/destinations/canal des pangalanes-nosy varika-mahanoro.jpeg',
     highlights: [
       'Boat journeys through traditional villages',
       'Ankanin\'ny Nofy peninsula',
@@ -212,7 +212,7 @@ export const destinationsData: Destination[] = [
     description: 'Madagascar\'s thermal city known for its volcanic crater lakes, "Pousse-Pousse" rickshaws, and gemstone markets.',
     region: 'Central Highlands',
     category: 'Cultural',
-    image: '/images/destinations/tana.jpg', // Utilise la même image que Tana (hautes terres centrales)
+    image: '/images/destinations/antsirabe.jpg',
     highlights: [
       'Pousse-pousse (rickshaw) rides',
       'Thermal springs and crater lakes',
@@ -231,7 +231,7 @@ export const destinationsData: Destination[] = [
     description: 'Coastal town serving as the gateway to the Avenue of Baobabs and Tsingy de Bemaraha, with beautiful beaches and Vezo culture.',
     region: 'West Coast',
     category: 'Coastal',
-    image: '/images/destinations/baobabs.jpg', // Utilise la même image que Baobabs (même région Ouest)
+    image: '/images/destinations/morondava.jpg',
     highlights: [
       'Gateway to Avenue of Baobabs',
       'Betania Fishing Village visits',
@@ -250,7 +250,7 @@ export const destinationsData: Destination[] = [
     description: 'Madagascar\'s main seaport with vibrant markets, colonial architecture, and access to the Pangalanes Canal.',
     region: 'East Coast',
     category: 'Cultural',
-    image: '/images/destinations/andasibe.jpg', // Utilise la même image que Andasibe (région Est similaire)
+    image: '/images/destinations/tamatave.jpeg',
     highlights: [
       'Bazar Be market for spices and vanilla',
       'Colonial architecture',
@@ -269,7 +269,7 @@ export const destinationsData: Destination[] = [
     description: 'Peaceful lakeside village on the shores of Lake Rasoabe, serving as a departure point for Pangalanes Canal journeys.',
     region: 'East Coast',
     category: 'Nature',
-    image: '/images/destinations/andasibe.jpg', // Utilise la même image que Andasibe (région Est similaire)
+    image: '/images/destinations/manambato.jpeg',
     highlights: [
       'Tranquil lakeside setting',
       'Gateway to Pangalanes Canal',
@@ -288,7 +288,7 @@ export const destinationsData: Destination[] = [
     description: 'Peninsula in the Pangalanes Canal known as the "Nest of Dreams," home to the Palmarium Private Park and rare wildlife.',
     region: 'East Coast',
     category: 'Nature & Wildlife',
-    image: '/images/destinations/andasibe.jpg', // Utilise la même image que Andasibe (région Est similaire)
+    image: '/images/destinations/akanin-ny-nofy.jpg',
     highlights: [
       'Palmarium Private Park with close lemur encounters',
       'Aye-Aye nocturnal lemur sightings',
@@ -307,7 +307,7 @@ export const destinationsData: Destination[] = [
     description: 'Hot, lively town on the banks of the Tsiribihina River, known as a starting point for river expeditions.',
     region: 'West Coast',
     category: 'Adventure',
-    image: '/images/destinations/tsingy.jpg', // Utilise la même image que Tsingy (région Ouest similaire)
+    image: '/images/destinations/miandrivazo.jpg',
     highlights: [
       'Tsiribihina River access',
       'Local cuisine at Princesse de la Tsiribihina',
@@ -326,7 +326,7 @@ export const destinationsData: Destination[] = [
     description: 'Small village serving as the base camp for exploring both the Grand and Petit Tsingy de Bemaraha.',
     region: 'West Coast',
     category: 'Adventure',
-    image: '/images/destinations/tsingy.jpg', // Utilise la même image que Tsingy (même région)
+    image: '/images/destinations/bekopaka-tsingy.jpeg',
     highlights: [
       'Access to Grand and Petit Tsingy',
       'Manambolo River pirogue trips',
@@ -345,7 +345,7 @@ export const destinationsData: Destination[] = [
     description: 'Town famous for its traditional aluminum pot craftsmanship, where artisans forge pots by hand using recycled materials.',
     region: 'Central Highlands',
     category: 'Cultural',
-    image: '/images/destinations/tana.jpg', // Utilise la même image que Tana (hautes terres centrales)
+    image: '/images/destinations/ambatolampy.jpg',
     highlights: [
       'Traditional aluminum pot workshops',
       'Handcraft demonstrations',
@@ -364,7 +364,7 @@ export const destinationsData: Destination[] = [
     description: 'Heart of Madagascar\'s woodcraft industry, home to the Zafimaniry people and their UNESCO-recognized woodcarving traditions.',
     region: 'Central Highlands',
     category: 'Cultural',
-    image: '/images/destinations/tana.jpg', // Utilise la même image que Tana (hautes terres centrales)
+    image: '/images/destinations/ambositra.jpg',
     highlights: [
       'Zafimaniry woodcraft workshops',
       'UNESCO intangible cultural heritage',
@@ -383,7 +383,7 @@ export const destinationsData: Destination[] = [
     description: 'Vibrant coastal city in southern Madagascar, gateway to Anakao beach and the spiny desert region.',
     region: 'Southern Highlands',
     category: 'Coastal',
-    image: '/images/destinations/anakao.jpg', // Utilise la même image que Anakao (région Sud similaire)
+    image: '/images/destinations/tulear.jpg',
     highlights: [
       'Gateway to Anakao and southern beaches',
       'Local markets and culture',
@@ -402,7 +402,7 @@ export const destinationsData: Destination[] = [
     description: 'Community-run reserve where ring-tailed lemurs are easily spotted among impressive granite rock formations.',
     region: 'Southern Highlands',
     category: 'Nature & Wildlife',
-    image: '/images/destinations/isalo.jpg', // Utilise la même image que Isalo (région Sud similaire)
+    image: '/images/destinations/anja-reserve.jpeg',
     highlights: [
       'Close encounters with ring-tailed lemurs',
       'Community-run conservation project',
@@ -421,7 +421,7 @@ export const destinationsData: Destination[] = [
     description: 'Two small islands connected by a spectacular white sandbank that appears at low tide, known as "Turtle Island".',
     region: 'Northern Madagascar',
     category: 'Coastal',
-    image: '/images/destinations/nosy-be.jpg', // Utilise la même image que Nosy Be (même région Nord)
+    image: '/images/destinations/nosy-iranja.jpg',
     highlights: [
       'Iconic white sandbank walk',
       'Sea turtle nesting sites',
@@ -440,7 +440,7 @@ export const destinationsData: Destination[] = [
     description: 'Protected marine reserve with exceptional snorkeling opportunities among coral reefs, sea turtles, and tropical fish.',
     region: 'Northern Madagascar',
     category: 'Coastal',
-    image: '/images/destinations/nosy-be.jpg', // Utilise la même image que Nosy Be (même région Nord)
+    image: '/images/destinations/nosy-tanikely.jpg',
     highlights: [
       'World-class snorkeling and diving',
       'Sea turtle encounters',
@@ -459,7 +459,7 @@ export const destinationsData: Destination[] = [
     description: 'Volcanic island known for its black lemurs, traditional woodcarving villages, and relaxed atmosphere.',
     region: 'Northern Madagascar',
     category: 'Nature & Cultural',
-    image: '/images/destinations/nosy-be.jpg', // Utilise la même image que Nosy Be (même région Nord)
+    image: '/images/destinations/nosy-komba.jpg',
     highlights: [
       'Black lemur encounters',
       'Traditional woodcarving villages',
@@ -478,7 +478,7 @@ export const destinationsData: Destination[] = [
     description: 'Peaceful island known as the "Orchid Island" for its rich flora, with opportunities to snorkel with giant green sea turtles.',
     region: 'Northern Madagascar',
     category: 'Nature & Coastal',
-    image: '/images/destinations/nosy-be.jpg', // Utilise la même image que Nosy Be (même région Nord)
+    image: '/images/destinations/nosy-sakatia.jpeg',
     highlights: [
       'Snorkeling with giant green sea turtles',
       'Orchid and botanical trails',
@@ -497,7 +497,7 @@ export const destinationsData: Destination[] = [
     description: 'Highest point on Nosy Be offering 360-degree panoramic views of the island\'s volcanic crater lakes and the Mozambique Channel.',
     region: 'Northern Madagascar',
     category: 'Nature',
-    image: '/images/destinations/nosy-be.jpg', // Utilise la même image que Nosy Be (même région Nord)
+    image: '/images/destinations/mont-passot.jpg',
     highlights: [
       'Spectacular sunset viewpoints',
       '360-degree island panoramas',
@@ -516,7 +516,7 @@ export const destinationsData: Destination[] = [
     description: 'Main town of Nosy Be, known for its vibrant market selling spices, vanilla, and ylang-ylang essential oils.',
     region: 'Northern Madagascar',
     category: 'Cultural',
-    image: '/images/destinations/nosy-be.jpg', // Utilise la même image que Nosy Be (même région Nord)
+    image: '/images/destinations/hell-ville-andoany.jpg',
     highlights: [
       'Spice and vanilla markets',
       'Ylang-ylang essential oil',
