@@ -9,11 +9,11 @@ export default function ContactSidebar() {
   const { t } = useTranslation()
 
   const contactInfo = [
-    {
-      icon: 'location_on',
-      title: t('contact.info.office'),
-      content: t('contact.info.officeAddress')
-    },
+    // {
+    //   icon: 'location_on',
+    //   title: t('contact.info.office'),
+    //   content: t('contact.info.officeAddress')
+    // },
     {
       icon: 'call',
       title: t('contact.info.callUs'),
@@ -76,7 +76,7 @@ export default function ContactSidebar() {
         </div>
       </ScrollAnimation>
 
-      <ScrollAnimation animation="card" delay={300}>
+      {/* <ScrollAnimation animation="card" delay={300}>
         <div className="bg-white dark:bg-background-dark rounded-xl shadow-sm border border-gray-100 dark:border-white/10 p-2 overflow-hidden">
           <div className="h-[300px] w-full rounded-lg overflow-hidden relative">
             <iframe
@@ -91,7 +91,7 @@ export default function ContactSidebar() {
             </div>
           </div>
         </div>
-      </ScrollAnimation>
+      </ScrollAnimation> */}
 
       <ScrollAnimation animation="scale" delay={400}>
         <div className="bg-primary/5 rounded-xl p-6 border border-primary/20">

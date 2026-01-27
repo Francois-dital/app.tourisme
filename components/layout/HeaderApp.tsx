@@ -40,7 +40,7 @@ export default function HeaderApp() {
           </div>
           <div className="hidden md:flex items-center gap-2 hover:scale-105 transition-transform">
             <Icon name="mail" className="text-primary" />
-            <span>contact@elmadagascar-tours.mg</span>
+            <span>elmadagascar1@gmail.com</span>
           </div>
         </div>
         <div className="flex items-center gap-4">
