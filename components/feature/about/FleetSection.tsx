@@ -27,10 +27,10 @@ export default function FleetSection() {
       image: '/images/4x4-1.jpeg',
       badge: t('about.fleet.landCruiser.badge'),
       features: [
-        { icon: 'ac_unit', text: 'Full Air Conditioning' },
-        { icon: 'groups', text: 'Up to 5 Passengers' },
-        { icon: 'battery_charging_full', text: 'Charging Ports' },
-        { icon: 'construction', text: 'Rescue Equipment' }
+        { icon: 'ac_unit', text: t('about.fleet.features.airConditioning') },
+        { icon: 'groups', text: t('about.fleet.features.passengers') },
+        { icon: 'battery_charging_full', text: t('about.fleet.features.chargingPorts') },
+        { icon: 'construction', text: t('about.fleet.features.rescueEquipment') }
       ]
     },
     {
@@ -39,10 +39,10 @@ export default function FleetSection() {
       image: '/images/4x4-3.jpeg',
       badge: t('about.fleet.pajero.badge'),
       features: [
-        { icon: 'auto_fix_high', text: 'Smooth Suspension' },
-        { icon: 'luggage', text: 'Spacious Cargo' },
-        { icon: 'visibility', text: 'Panoramic Views' },
-        { icon: 'rule', text: 'Regular Inspection' }
+        { icon: 'auto_fix_high', text: t('about.fleet.features.smoothSuspension') },
+        { icon: 'luggage', text: t('about.fleet.features.spaciousCargo') },
+        { icon: 'visibility', text: t('about.fleet.features.panoramicViews') },
+        { icon: 'rule', text: t('about.fleet.features.regularInspection') }
       ],
       reverse: true
     }

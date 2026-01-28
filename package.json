@@ -12,6 +12,7 @@
     "clsx": "^2.1.1",
     "i18next": "^25.8.0",
     "next": "16.1.4",
+    "nodemailer": "^6.9.8",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-i18next": "^16.5.3",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.14",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

@@ -23,7 +23,7 @@ export default function AboutCTA() {
         </ScrollAnimation>
         <ScrollAnimation animation="scale" delay={300}>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
+            <Link href="/booking">
               <Button
                 variant="outline"
                 size="lg"

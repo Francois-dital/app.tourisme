@@ -1,6 +1,7 @@
 'use client'
 
 import { useTranslation } from 'react-i18next'
+import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/Button'
 import { Icon } from '@/components/ui/Icon'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
@@ -12,6 +13,12 @@ interface TourDetailContentProps {
 
 export default function TourDetailContent({ tour }: TourDetailContentProps) {
   const { t } = useTranslation()
+  const router = useRouter()
+
+  const handleBookNow = () => {
+    const bookingUrl = `/booking?tour=${encodeURIComponent(tour.title)}&price=${encodeURIComponent(tour.price.group)}&duration=${encodeURIComponent(tour.duration)}`
+    router.push(bookingUrl)
+  }
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-6 md:px-20 lg:px-24 xl:px-32 mt-6">
@@ -96,6 +103,18 @@ export default function TourDetailContent({ tour }: TourDetailContentProps) {
                   </div>
                 </ScrollAnimation>
               </div>
+              
+              <ScrollAnimation animation="scale" delay={280}>
+                <Button
+                  onClick={handleBookNow}
+                  variant="primary"
+                  size="lg"
+                  className="w-full py-4 text-lg font-bold shadow-lg hover:shadow-primary/20 transition-all flex items-center justify-center gap-2 mb-4"
+                >
+                  <Icon name="confirmation_number" size="sm" />
+                  {t('tourDetail.bookNow')}
+                </Button>
+              </ScrollAnimation>
               
               <ScrollAnimation animation="scale" delay={300}>
                 <p className="text-center text-xs text-[#618961] dark:text-[#a0c0a0] mt-4">

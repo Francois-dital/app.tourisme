@@ -4,7 +4,8 @@
     "tours": "Tours",
     "destinations": "Destinations",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Book Now",
+    "booking": "Book Now"
   },
   "hero": {
     "badge": "Discover Madagascar",
@@ -63,12 +64,22 @@
         "name": "Mitsubishi Pajero",
         "description": "Agile and comfortable, perfect for the highland routes and visiting National Parks. Offers excellent visibility for photography through large panoramic windows.",
         "badge": "Premium Comfort"
+      },
+      "features": {
+        "airConditioning": "Full Air Conditioning",
+        "passengers": "Up to 5 Passengers",
+        "chargingPorts": "Charging Ports",
+        "rescueEquipment": "Rescue Equipment",
+        "smoothSuspension": "Smooth Suspension",
+        "spaciousCargo": "Spacious Cargo",
+        "panoramicViews": "Panoramic Views",
+        "regularInspection": "Regular Inspection"
       }
     },
     "cta": {
       "title": "Ready for your Malagasy journey?",
       "subtitle": "Join us for an unforgettable experience with the best guides and vehicles on the island.",
-      "button": "Contact Us"
+      "button": "Book Now"
     }
   },
   "tours": {
@@ -82,7 +93,7 @@
         "flexible": "Flexible dates & duration",
         "interests": "Special interests welcome"
       },
-      "cta": "Contact"
+      "cta": "Book Now"
     },
     "noToursFound": {
       "title": "No tours found",
@@ -475,10 +486,10 @@
     }
   },
   "contact": {
-    "title": "Get in Touch",
-    "subtitle": "Ready to start your Madagascar adventure? Contact our expert team for personalized assistance.",
+    "title": "Book Your Journey",
+    "subtitle": "Ready to start your Madagascar adventure? Complete the form below to book or contact us.",
     "form": {
-      "title": "Booking Inquiry",
+      "title": "Booking Form",
       "name": "Full Name",
       "namePlaceholder": "John Doe",
       "email": "Email Address",
@@ -487,8 +498,16 @@
       "phonePlaceholder": "+261 34 00 000 00",
       "nationality": "Nationality",
       "nationalityPlaceholder": "e.g. French",
+      "selectionType": "Selection Type",
+      "selectionTypePlaceholder": "Choose type",
+      "selectionTypeOptions": {
+        "tours": "Tours",
+        "destinations": "Destinations"
+      },
       "selectedCircuit": "Selected Circuit",
-      "circuitPlaceholder": "Choose a tour package",
+      "selectedDestination": "Selected Destination",
+      "circuitPlaceholder": "Choose a tour",
+      "destinationPlaceholder": "Choose a destination",
       "circuitOptions": {
         "east": "East Madagascar Tour",
         "south": "South Madagascar Tour",
@@ -503,10 +522,10 @@
       "message": "Your Message & Requirements",
       "messagePlaceholder": "Tell us more about your interests, preferred activities, or any special needs...",
       "guarantee": "Response guaranteed within 24 hours",
-      "send": "Send Inquiry"
+      "send": "Send Booking"
     },
     "info": {
-      "title": "Contact Information",
+      "title": "Booking Information",
       "office": "Antsirabe Office",
       "officeAddress": "\nAntsirabe, Madagascar",
       "callUs": "Call Us Direct",
@@ -517,6 +536,15 @@
       "callAgent": "Call Agent",
       "certified": "Certified Local Guide",
       "certifiedDescription": "Official license issued by the Ministry of Tourism Madagascar. Your safety and satisfaction are our priorities."
+    }
+  },
+  "booking": {
+    "title": "Book Your Tour",
+    "subtitle": "Complete the form below to book your Madagascar adventure. Our team will contact you within 24 hours.",
+    "form": {
+      "title": "Booking Form",
+      "tourSelected": "Selected Tour",
+      "send": "Confirm Booking"
     }
   },
   "tourDetail": {
@@ -533,6 +561,7 @@
     "perPerson": "per person",
     "soloTraveler": "Solo Traveler",
     "group": "Group (2+ people)",
+    "bookNow": "Book Now",
     "secureSpot": "Secure your spot with 20% deposit",
     "included": "Included",
     "notIncluded": "Not Included",
@@ -566,7 +595,7 @@
     },
     "quickLinks": "Quick Links",
     "destinations": "Destinations",
-    "contact": "Contact",
+    "contact": "Book Now",
     "followUs": "Follow Us",
     "newsletter": {
       "title": "Newsletter",

@@ -15,7 +15,7 @@ export default function FooterApp() {
     { name: t('nav.destinations'), href: '/destinations' },
     { name: 'Travel Tips', href: '#' },
     { name: 'Eco-responsibility', href: '#' },
-    { name: t('nav.contact'), href: '/contact' },
+    { name: t('nav.booking'), href: '/booking' },
   ]
 
   const socialLinks = [

@@ -167,17 +167,17 @@ export default function DestinationDetailPage() {
 
                   <div className="space-y-2 sm:space-y-3">
                     <ScrollAnimation animation="scale" delay={600}>
-                      <Link href="/tours">
+                      <Link href={`/booking?destination=${encodeURIComponent(destination.name)}&region=${encodeURIComponent(destination.region)}&category=${encodeURIComponent(destination.category)}&duration=${encodeURIComponent(destination.duration)}&difficulty=${encodeURIComponent(destination.difficulty)}&bestTime=${encodeURIComponent(destination.bestTime)}`}>
                         <button className="w-full bg-primary hover:bg-primary/90 text-white py-2 sm:py-3 rounded-lg font-bold transition-all text-sm sm:text-base">
                           {t('destinationDetail.viewRelatedTours')}
                         </button>
                       </Link>
                     </ScrollAnimation>
-                    <ScrollAnimation animation="scale" delay={650}>
+                    {/* <ScrollAnimation animation="scale" delay={650}>
                       <button className="w-full border border-primary text-primary hover:bg-primary hover:text-white py-2 sm:py-3 rounded-lg font-bold transition-all text-sm sm:text-base">
                         {t('destinationDetail.customItinerary')}
                       </button>
-                    </ScrollAnimation>
+                    </ScrollAnimation> */}
                   </div>
                 </div>
               </ScrollAnimation>

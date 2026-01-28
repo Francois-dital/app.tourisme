@@ -78,17 +78,17 @@ export default function HeaderApp() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <Link href="/contact">
+            <Link href="/booking">
               <Button 
-                variant={pathname === '/contact' ? 'primary' : 'outline'}
+                variant={pathname === '/booking' ? 'primary' : 'outline'}
                 size="sm" 
                 className={`hidden md:flex hover:scale-105 transition-all ${
-                  pathname === '/contact' 
+                  pathname === '/booking' 
                     ? 'bg-primary text-white hover:bg-primary/90' 
                     : 'bg-transparent text-primary border-primary hover:bg-primary hover:text-white'
                 }`}
               >
-                {t('nav.contact')}
+                {t('nav.booking')}
               </Button>
             </Link>
             <button 
@@ -118,13 +118,13 @@ export default function HeaderApp() {
                   {item.name}
                 </Link>
               ))}
-              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/booking" onClick={() => setIsMenuOpen(false)}>
                 <Button 
                   variant="primary"
                   size="sm" 
                   className="w-full"
                 >
-                  {t('nav.contact')}
+                  {t('nav.booking')}
                 </Button>
               </Link>
             </nav>

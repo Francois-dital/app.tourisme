@@ -83,7 +83,7 @@ export default function ToursGrid({ tours }: ToursGridProps) {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
+              <Link href="/booking">
                 <Button variant="outline" size="lg" className="px-8">
                   <Icon name="phone" size="sm" className="mr-2" />
                   {t('tours.customItinerary.cta')}

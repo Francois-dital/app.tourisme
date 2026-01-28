@@ -4,7 +4,8 @@
     "tours": "Circuits",
     "destinations": "Destinations",
     "about": "À propos",
-    "contact": "Contact"
+    "contact": "Réserver",
+    "booking": "Réserver"
   },
   "hero": {
     "badge": "Découvrez Madagascar",
@@ -63,12 +64,22 @@
         "name": "Mitsubishi Pajero",
         "description": "Agile et confortable, parfait pour les routes des hautes terres et la visite des Parcs Nationaux. Offre une excellente visibilité pour la photographie grâce à de grandes fenêtres panoramiques.",
         "badge": "Confort Premium"
+      },
+      "features": {
+        "airConditioning": "Climatisation Complète",
+        "passengers": "Jusqu'à 5 Passagers",
+        "chargingPorts": "Ports de Recharge",
+        "rescueEquipment": "Équipement de Secours",
+        "smoothSuspension": "Suspension Douce",
+        "spaciousCargo": "Cargo Spacieux",
+        "panoramicViews": "Vues Panoramiques",
+        "regularInspection": "Inspection Régulière"
       }
     },
     "cta": {
       "title": "Prêt pour votre voyage malgache ?",
       "subtitle": "Rejoignez-nous pour une expérience inoubliable avec les meilleurs guides et véhicules de l'île.",
-      "button": "Contactez-nous"
+      "button": "Réservez Maintenant"
     }
   },
   "tours": {
@@ -82,7 +93,7 @@
         "flexible": "Dates et durée flexibles",
         "interests": "Intérêts spéciaux bienvenus"
       },
-      "cta": "Contact"
+      "cta": "Réserver"
     },
     "noToursFound": {
       "title": "Aucun circuit trouvé",
@@ -475,10 +486,10 @@
     }
   },
   "contact": {
-    "title": "Contactez-nous",
-    "subtitle": "Prêt à commencer votre aventure à Madagascar ? Contactez notre équipe d'experts pour une assistance personnalisée.",
+    "title": "Réserver Votre Voyage",
+    "subtitle": "Prêt à commencer votre aventure à Madagascar ? Complétez le formulaire ci-dessous pour réserver ou nous contacter.",
     "form": {
-      "title": "Demande de Réservation",
+      "title": "Formulaire de Réservation",
       "name": "Nom Complet",
       "namePlaceholder": "Jean Dupont",
       "email": "Adresse Email",
@@ -487,8 +498,16 @@
       "phonePlaceholder": "+261 34 00 000 00",
       "nationality": "Nationalité",
       "nationalityPlaceholder": "ex. Française",
+      "selectionType": "Type de Sélection",
+      "selectionTypePlaceholder": "Choisissez le type",
+      "selectionTypeOptions": {
+        "tours": "Circuits",
+        "destinations": "Destinations"
+      },
       "selectedCircuit": "Circuit Sélectionné",
-      "circuitPlaceholder": "Choisissez un forfait circuit",
+      "selectedDestination": "Destination Sélectionnée",
+      "circuitPlaceholder": "Choisissez un circuit",
+      "destinationPlaceholder": "Choisissez une destination",
       "circuitOptions": {
         "east": "Circuit Madagascar Est",
         "south": "Circuit Madagascar Sud",
@@ -503,10 +522,10 @@
       "message": "Votre Message & Exigences",
       "messagePlaceholder": "Parlez-nous de vos intérêts, activités préférées ou besoins spéciaux...",
       "guarantee": "Réponse garantie sous 24 heures",
-      "send": "Envoyer la Demande"
+      "send": "Envoyer la Réservation"
     },
     "info": {
-      "title": "Informations de Contact",
+      "title": "Informations de Réservation",
       "office": "Bureau d'Antsirabe",
       "officeAddress": "\nAntsirabe, Madagascar",
       "callUs": "Appelez-nous Directement",
@@ -517,6 +536,15 @@
       "callAgent": "Appeler l'Agent",
       "certified": "Guide Local Certifié",
       "certifiedDescription": "Licence officielle délivrée par le Ministère du Tourisme de Madagascar. Votre sécurité et satisfaction sont nos priorités."
+    }
+  },
+  "booking": {
+    "title": "Réserver Votre Circuit",
+    "subtitle": "Complétez le formulaire ci-dessous pour réserver votre aventure à Madagascar. Notre équipe vous contactera dans les 24 heures.",
+    "form": {
+      "title": "Formulaire de Réservation",
+      "tourSelected": "Circuit Sélectionné",
+      "send": "Confirmer la Réservation"
     }
   },
   "tourDetail": {
@@ -533,6 +561,7 @@
     "perPerson": "par personne",
     "soloTraveler": "Voyageur Solo",
     "group": "Groupe (2+ personnes)",
+    "bookNow": "Réserver Maintenant",
     "secureSpot": "Réservez votre place avec un acompte de 20%",
     "included": "Inclus",
     "notIncluded": "Non Inclus",
@@ -566,7 +595,7 @@
     },
     "quickLinks": "Liens Rapides",
     "destinations": "Destinations",
-    "contact": "Contact",
+    "contact": "Réserver",
     "followUs": "Suivez-nous",
     "newsletter": {
       "title": "Newsletter",

@@ -100,7 +100,7 @@ export default function HeroSection() {
         
         <ScrollAnimation animation="scale" delay={400}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Link href="/contact">
+            <Link href="/booking">
               <Button variant="primary" size="lg" fullWidth className="sm:w-auto">
                 {t('hero.bookTrip')}
               </Button>
