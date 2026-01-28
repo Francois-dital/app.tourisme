@@ -24,7 +24,7 @@ export default function FleetSection() {
     {
       name: t('about.fleet.landCruiser.name'),
       description: t('about.fleet.landCruiser.description'),
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDsboWDtlMVl5Cht08fQiDWfb80nhAc4nGYktF5pPLlaeQLHORbg4NVO1aYqrLOXZZEz2tBm9r5OkEnLi0cjn9cR1fiVgiG_HQnZ6rqmy-LWsgekHQNcn75LWoDdV-xxsG1a1OLpOMGTTo-1_qiTwrOr9RRpCyW4Ah1enPoI4kQ0iM1hl4HeexZd-pEVPDMMZjR2PZJ_xrXtznKyriYJ5cr9jCeIBaQZUDSOh9efNS_2mfRl_2KctvZPf2lYzxHwJNkMwE_rWc5sIAE',
+      image: '/images/4x4-1.jpeg',
       badge: t('about.fleet.landCruiser.badge'),
       features: [
         { icon: 'ac_unit', text: 'Full Air Conditioning' },
@@ -36,7 +36,7 @@ export default function FleetSection() {
     {
       name: t('about.fleet.pajero.name'),
       description: t('about.fleet.pajero.description'),
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDjVsCxnv28a25fRORRa9IS9va_8ABs1qu-z3vXMoEERVIT91onR6ZRVfwurJyFO7p8-1ctoECLGiWFdsgYgssLFVgFa9N681Ds2QRAVhooID90IowoFq8XWpHNny5SIDZAwm-bdehCQV8t0WA0xjuWZNhDd5tTVygHG1oZm4fNVo2aEi7SPlH7yg8iLDnCF-jGuCqnCV-T4Xauk57D6cqxQ-yr0J_eFES5SfGl7bWViBkdMjk-zZFCOaOjDt9Y5tJqC0LHMJMw5Wdz',
+      image: '/images/4x4-3.jpeg',
       badge: t('about.fleet.pajero.badge'),
       features: [
         { icon: 'auto_fix_high', text: 'Smooth Suspension' },
