@@ -79,7 +79,7 @@ export const toursData: TourData[] = [
         description: 'Land at Ivato International Airport, Tana. We will greet you at Ivato Airport and transfer you to your hotel. Meet your guide and transfer to hotel. Optional city tour: Independence Avenue, Rova Palace, lemur\'s park, the Queen\'s staircase and d\'Andohalo Cathedrale. Dinner at a local restaurant.',
         accommodation: {
           name: 'Hotel in Tana',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/antananarivo-2.jpg'
         }
       },
       {
@@ -89,7 +89,7 @@ export const toursData: TourData[] = [
         description: 'Depart from the capital city, Antananarivo, heading east along the winding National Road 2. Stop at the Peyrieras Reptile Reserve in Marozevo to observe dozens of species of chameleons, leaf-tailed geckos, and butterflies. Upon reaching Andasibe, you will head out for a guided night walk to catch the reflective eyes of tiny mouse lemurs, sleeping chameleons, and endemic frogs.',
         accommodation: {
           name: 'Hotel in Andasibe',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/andasibe.jpg'
         }
       },
       {
@@ -99,7 +99,7 @@ export const toursData: TourData[] = [
         description: 'Morning: Hike in the Analamazaotra National Park to find the Indri-Indri, the largest living lemur, known for its haunting, whale-like song. Afternoon: Drive further east to Manambato, located on the shores of Lake Rasoabe.',
         accommodation: {
           name: 'Lakeside hotel at Manambato',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/manambato.jpeg'
         }
       },
       {
@@ -109,7 +109,7 @@ export const toursData: TourData[] = [
         description: 'Morning: Board a boat for a scenic transfer on the Pangalanes Canal to the Ankanin\'ny Nofy peninsula (the "Nest of Dreams"). Afternoon: Relax by the white sand lake beaches or walk through local fishing villages. Evening: Night boat excursion to see the Aye-Aye, Madagascar\'s rarest and most bizarre nocturnal primate.',
         accommodation: {
           name: 'Palmarium Hotel',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/akanin-ny-nofy.jpg'
         }
       },
       {
@@ -119,7 +119,7 @@ export const toursData: TourData[] = [
         description: 'Morning: Visit the Palmarium Private Park. This is one of the few places where you can get very close to various lemur species (Macacos, Coronatus, Indri). Afternoon: Discover the local flora, including carnivorous Pitcher plants and rare orchids.',
         accommodation: {
           name: 'Palmarium Hotel',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/akanin-ny-nofy-palmarium-tamatave.jpg'
         }
       },
       {
@@ -129,7 +129,7 @@ export const toursData: TourData[] = [
         description: 'Morning: A long, peaceful boat ride north along the Pangalanes Canal. Observe life along the riverbanks: bamboo rafts, local commuters, and washing stations. Afternoon: Arrival at the river port of Tamatave. Take a Pousse-Pousse (rickshaw) tour of the city and visit the "Bazar Be" market for spices and vanilla.',
         accommodation: {
           name: 'Hotel in Tamatave',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/akanin-ny-nofy-palmarium.jpg'
         }
       },
       {
@@ -139,7 +139,7 @@ export const toursData: TourData[] = [
         description: 'Morning: Drive north along the coast to the village of Mahambo. Midday: Board the ferry (e.g., El Condor) for a 2.5-hour crossing to the island of Sainte-Marie (Nosy Boraha). Evening: Arrival on the island and transfer to your beachfront bungalow.',
         accommodation: {
           name: 'Hotel in Sainte Marie',
-          image: '/images/tours/nosy-be.jpg'
+          image: '/images/tours/sainte-marie.jpeg'
         }
       },
       {
@@ -149,7 +149,7 @@ export const toursData: TourData[] = [
         description: 'Activities to choose from: Île aux Nattes (take a traditional pirogue to this tiny, car-free island), Pirate Cemetery (visit the world\'s only official pirate cemetery), Whale Watching (if traveling between July and September), Exploration (rent a scooter or bicycle to explore the lush interior and hidden coves).',
         accommodation: {
           name: 'Hotel in Sainte Marie',
-          image: '/images/tours/nosy-be.jpg'
+          image: '/images/tours/sainte-marie-island-paradise.jpg'
         }
       },
       {
@@ -159,7 +159,7 @@ export const toursData: TourData[] = [
         description: 'Continue exploring Sainte-Marie with more activities: snorkeling, beach relaxation, cultural visits, or adventure excursions around the island.',
         accommodation: {
           name: 'Hotel in Sainte Marie',
-          image: '/images/tours/nosy-be.jpg'
+          image: '/images/tours/sainte-marie-island-paradise-2.jpg'
         }
       },
       {
@@ -169,7 +169,7 @@ export const toursData: TourData[] = [
         description: 'Morning: Enjoy a final tropical breakfast or a swim in the lagoon. Afternoon: Transfer to the airport for your domestic flight (Tsaradia) back to Antananarivo. Evening: Farewell dinner at a restaurant in the upper city of Tana.',
         accommodation: {
           name: 'Hotel in Tana',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/sainte-marie-sky.jpg'
         }
       },
       {
@@ -224,7 +224,7 @@ export const toursData: TourData[] = [
         description: 'Land at Ivato International Airport, Tana. We will greet you at Ivato Airport and transfer you to your hotel. Meet your guide and transfer to hotel. Optional city tour: Independence Avenue, Rova Palace, lemur\'s park, the Queen\'s staircase and d\'Andohalo Cathedrale. Dinner at a local restaurant.',
         accommodation: {
           name: 'Hotel in Tana',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/antananarivo-2.jpg'
         }
       },
       {
@@ -234,7 +234,7 @@ export const toursData: TourData[] = [
         description: 'Leave the capital early in the morning and head south. Stop at Ambatolampy to see local artisans forge aluminum pots by hand. Continue to Antsirabe, a city known for its "Pousse-Pousse" (rickshaws) and gemstones. We can accompany you to the Ranch du Bonheur in Antsirabe for a horseback ride if you are interested. Visit local crafts markets (miniatures, gemstones). Optional pousse-pousse (rickshaw) tour in the city.',
         accommodation: {
           name: 'Hotel in Antsirabe',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/antsirabe.jpg'
         }
       },
       {
@@ -244,7 +244,7 @@ export const toursData: TourData[] = [
         description: 'Leave Antsirabe in the morning and go to Ranomafana. Transition from the red-clay houses of the highlands to the dense tropical rainforest of Ranomafana. Stop in Ambositra for Zafimaniry woodcraft visit. Evening relaxation at lodge.',
         accommodation: {
           name: 'Lodge near Ranomafana National Park',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/ranomafana.jpeg'
         }
       },
       {
@@ -254,7 +254,7 @@ export const toursData: TourData[] = [
         description: 'Guided hike in Ranomafana National Park. Spot endemic wildlife: golden bamboo lemurs, sifakas, and exotic birds. Visit natural hot springs after hiking.',
         accommodation: {
           name: 'Same lodge near Ranomafana',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/ranomafana-2.jpg'
         }
       },
       {
@@ -264,7 +264,7 @@ export const toursData: TourData[] = [
         description: 'Leave Ranomafana and go to Isalo. Anja Reserve: A community-run park where Ring-tailed lemurs (King Julien!) are extremely easy to spot. Scenic drive through the highlands and small villages. Evening: Sunset over Isalo\'s sandstone formations.',
         accommodation: {
           name: 'Lodge near Isalo',
-          image: '/images/tours/isalo-lodge.jpg'
+          image: '/images/tours/isao-lodge.jpg'
         }
       },
       {
@@ -274,7 +274,7 @@ export const toursData: TourData[] = [
         description: 'Morning visit at Isalo National Park which is a majestic landscape of eroded Jurassic sandstone, deep canyons, and hidden oases. Morning hike in Isalo (optional: Canyon des Singes & Natural Pools). Then Drive to Tuléar.',
         accommodation: {
           name: 'Hotel in Tuléar',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/tulear-hotel.jpg'
         }
       },
       {
@@ -284,7 +284,7 @@ export const toursData: TourData[] = [
         description: 'Breakfast in hotel; transfer to the port and boarding on a moto-boat and navigation to Anakao for about 1h30; at the arrival set up in hotel (standard room) or similar; rest of the day at your disposal for swimming in the reef clear water and individual visits; full-board in hotel.',
         accommodation: {
           name: 'Lodge in Anakao',
-          image: '/images/tours/nosy-be.jpg'
+          image: '/images/tours/anakao-hotel.jpg'
         }
       },
       {
@@ -294,7 +294,7 @@ export const toursData: TourData[] = [
         description: 'Snorkeling or diving in coral reefs. Visit local Vezo fishing village. Optional boat trip to Nosy Ve for birdwatching. Sunset on the beach.',
         accommodation: {
           name: 'Same lodge in Anakao',
-          image: '/images/tours/nosy-be.jpg'
+          image: '/images/tours/anakao.jpeg'
         }
       },
       {
@@ -347,7 +347,7 @@ export const toursData: TourData[] = [
         description: 'Land at Ivato International Airport, Tana. We will greet you at Ivato Airport and transfer you to your hotel. Meet your guide and transfer to hotel. Optional city tour: Independence Avenue, Rova Palace, lemur\'s park, the Queen\'s staircase and d\'Andohalo Cathedrale. Dinner at a local restaurant.',
         accommodation: {
           name: 'Hotel in Tana',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/antananarivo-2.jpg'
         }
       },
       {
@@ -357,7 +357,7 @@ export const toursData: TourData[] = [
         description: 'Leave the capital early in the morning and head south. Stop at Ambatolampy to see local artisans forge aluminum pots by hand. Continue to Antsirabe, a city known for its "Pousse-Pousse" (rickshaws) and gemstones. We can accompany you to the Ranch du Bonheur in Antsirabe for a horseback ride if you are interested. Visit local crafts markets (miniatures, gemstones). Optional pousse-pousse (rickshaw) tour in the city.',
         accommodation: {
           name: 'Hotel in Antsirabe',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/antsirabe.jpg'
         }
       },
       {
@@ -367,7 +367,7 @@ export const toursData: TourData[] = [
         description: 'After breakfast, drive to Morondava. A long but scenic transition from the green highlands to the dry western plains. Stop 1: Miandrivazo: A hot, lively town perfect for a lunch break at Princesse de la Tsiribihina. Evening: Arrival in Morondava. Enjoy the sea breeze.',
         accommodation: {
           name: 'Hotel in Morondava',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/morondava.jpg'
         }
       },
       {
@@ -377,7 +377,7 @@ export const toursData: TourData[] = [
         description: 'Take breakfast and then go to the Tsingy. Stop 1: Belo-sur-Tsiribihina: After crossing the river by ferry, stop for lunch at the famous Mad Zebu—unexpected high-end cuisine in a remote village. Stop 2: Manambolo River Crossing: The second ferry crossing as you approach the village of Bekopaka.',
         accommodation: {
           name: 'Hotel at Tsingy de Bemaraha',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/tsingy-de-bemaraha.jpeg'
         }
       },
       {
@@ -387,7 +387,7 @@ export const toursData: TourData[] = [
         description: 'Main Activity: 1-hour drive to the Grand Tsingy. You will wear a climbing harness to navigate limestone needles, narrow canyons, and the famous suspension bridge over the razor-sharp rocks. Wildlife: Look for the Decken\'s Sifaka (white lemur) and the Giant Coua bird.',
         accommodation: {
           name: 'Same hotel at Tsingy de Bemaraha',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/tsingy.jpg'
         }
       },
       {
@@ -397,7 +397,7 @@ export const toursData: TourData[] = [
         description: 'Morning: A traditional pirogue (dugout canoe) trip on the Manambolo River to see ancient Vazimba tombs and river caves. Afternoon: Explore the Petit Tsingy, which offers a different perspective on the rock formations with less intense climbing.',
         accommodation: {
           name: 'Same hotel at Tsingy de Bemaraha',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/tsingy-de-bemaraha.jpeg'
         }
       },
       {
@@ -407,7 +407,7 @@ export const toursData: TourData[] = [
         description: 'Stop 1: Baobab Amoureux: Two ancient baobabs twisted together in a permanent "hug." Stop 2: Kirindy Forest (Optional): If you leave Bekopaka very early, you can squeeze in a quick walk here to look for the Fossa (Madagascar\'s top predator).',
         accommodation: {
           name: 'Hotel in Morondava',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/morondava-hotel.jpg'
         }
       },
       {
@@ -417,7 +417,7 @@ export const toursData: TourData[] = [
         description: 'Morning: Visit the Betania Fishing Village by pirogue to see the traditional Vezo way of life. Then, leave Morondava and go to the airport of Morondava to take the domestic flight back to Tana.',
         accommodation: {
           name: 'Hotel in Morondava',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/morondava-betania.jpg'
         }
       },
       {
@@ -476,7 +476,7 @@ export const toursData: TourData[] = [
         description: 'Meet at the airport and transfer to your hotel. Relax or take a short walk in the capital to adjust to the local rhythm.',
         accommodation: {
           name: 'Hotel in Antananarivo',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/antananarivo-2.jpg'
         }
       },
       {
@@ -486,7 +486,7 @@ export const toursData: TourData[] = [
         description: 'Morning: Drive East (approx. 4 hours) through highland scenery and local villages. Afternoon: Visit the Vakona Private Reserve (Lemur Island) where you can interact closely with several lemur species. Evening: Enjoy a night walk along the park boundaries to spot nocturnal lemurs (mouse lemurs) and sleeping chameleons.',
         accommodation: {
           name: 'Hotel in Andasibe',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/andasibe.jpg'
         }
       },
       {
@@ -496,7 +496,7 @@ export const toursData: TourData[] = [
         description: 'Morning: Guided hike in Analamazaotra National Park to find the Indri-Indri, the largest lemur in the world, known for its haunting whale-like song. Afternoon: Drive back to Antananarivo (approx. 4 hours).',
         accommodation: {
           name: 'Hotel in Antananarivo',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/analamazaotra.jpg'
         }
       },
       {
@@ -516,7 +516,7 @@ export const toursData: TourData[] = [
         description: 'Nosy Komba: Visit the "Island of Lemurs" to see the black lemurs and local woodcarvings. Nosy Tanikely: Head to this marine reserve for world-class snorkeling. The water is crystal clear with turtles and coral reefs.',
         accommodation: {
           name: 'Hotel in Nosy Be',
-          image: '/images/tours/nosy-be.jpg'
+          image: '/images/tours/nosy-komba.jpg'
         }
       },
       {
@@ -526,7 +526,7 @@ export const toursData: TourData[] = [
         description: 'Day Trip: A scenic boat ride to the "Turtle Island." Highlight: Walk the famous white sandbank connecting the two islets. It is the most photographed spot in Madagascar.',
         accommodation: {
           name: 'Hotel in Nosy Be',
-          image: '/images/tours/nosy-be.jpg'
+          image: '/images/tours/nosy-iranja.jpg'
         }
       },
       {
@@ -536,7 +536,7 @@ export const toursData: TourData[] = [
         description: 'Activity: A peaceful day on Sakatia. Explore the botanical trails and snorkel with giant green sea turtles in their natural feeding grounds.',
         accommodation: {
           name: 'Hotel in Nosy Be',
-          image: '/images/tours/nosy-be.jpg'
+          image: '/images/tours/nosy-sakatia.jpeg'
         }
       },
       {
@@ -546,7 +546,7 @@ export const toursData: TourData[] = [
         description: 'Morning: Leisure time on the beach. Late Afternoon: Drive to Mont Passot, the island\'s highest point. The View: Enjoy a 360-degree sunset over the volcanic lakes and the Mozambique Channel.',
         accommodation: {
           name: 'Hotel in Nosy Be',
-          image: '/images/tours/nosy-be.jpg'
+          image: '/images/tours/mont-passot.jpg'
         }
       },
       {
@@ -556,7 +556,7 @@ export const toursData: TourData[] = [
         description: 'Morning: Last swim or souvenir shopping. Afternoon: Flight back to Antananarivo. Evening: Farewell dinner at a local restaurant like Le Carré or La Varangue.',
         accommodation: {
           name: 'Hotel in Antananarivo',
-          image: '/images/tours/hotel-tana.jpg'
+          image: '/images/tours/antananarivo.jpg'
         }
       },
       {

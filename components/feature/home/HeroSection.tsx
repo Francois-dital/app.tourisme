@@ -54,7 +54,7 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide()
-    }, 6000) // Change d'image toutes les 6 secondes
+    }, 5000) // Change d'image toutes les 6 secondes
 
     return () => clearInterval(interval)
   }, [nextSlide])

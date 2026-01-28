@@ -91,14 +91,14 @@ export default function FooterApp() {
             <div>
               <h5 className="text-lg font-bold mb-6">{t('contact.info.address')}</h5>
               <ul className="flex flex-col gap-4 text-gray-400 text-sm">
-                {/* <li>
+                <li>
                   <ScrollAnimation animation="slide-right" delay={250}>
                     <div className="flex items-center gap-3">
                       <Icon name="location_on" className="text-primary" />
-                      <span>IVH 45 Bis Ankorondrano, Antananarivo, Madagascar</span>
+                      <span>Antsirabe, Madagascar</span>
                     </div>
                   </ScrollAnimation>
-                </li> */}
+                </li>
                 <li>
                   <ScrollAnimation animation="slide-right" delay={300}>
                     <div className="flex items-center gap-3">

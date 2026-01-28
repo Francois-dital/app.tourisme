@@ -16,12 +16,12 @@ export default function TeamGuides() {
 
   const guides: Guide[] = [
     {
-      name: 'Andry Rakoto',
+      name: 'Elie',
       role: t('about.teamGuides.roles.senior'),
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAtIVBraKfOJEd-BzGS0wGJ3OjYTU7Tqs-qoYKpQbWFN01g2YlOn_mBxtSSHfjjThiVcrgcjLl8ipHhOc7W4y7lGCjW52HFO4dwjtWfPrhvadfJOzJ1yi7b-wE_ukk0i-fKd2VWoVqXCeGtTYch7NhGN5X9Nr0GolYR-67FL8sPRQ7bKDqizj8F_xE5ewCOPHWOEs7oaHiHK9jIDshsLuDIht-gEgk-QVW1o-50h4445a34uxnZANnjnqQesxCU5tl2t31xdo4WL8xO',
+      image: '/images/about/guide-elie.jpeg',
       languages: [
-        { name: 'English', color: 'primary' },
-        { name: 'French', color: 'secondary' }
+        { name: 'French', color: 'primary' },
+        { name: 'English', color: 'secondary' }
       ]
     },
     {
