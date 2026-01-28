@@ -7,6 +7,7 @@ import { Icon } from '@/components/ui/Icon'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
 import { toursData } from '@/data/tours'
 import { destinationsData } from '@/data/destinations'
+import { validateForm, getFieldError, type ValidationError, type FormData } from '@/utils/validation'
 
 interface BookingFormProps {
   prefilledTour?: string
@@ -37,7 +38,8 @@ export default function BookingForm({
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [submitMessage, setSubmitMessage] = useState('')
-  const [formData, setFormData] = useState({
+  const [validationErrors, setValidationErrors] = useState<ValidationError[]>([])
+  const [formData, setFormData] = useState<FormData>({
     fullName: '',
     email: '',
     phone: '',
@@ -70,8 +72,27 @@ export default function BookingForm({
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
+    
+    // Restrictions de saisie en temps réel
+    let filteredValue = value
+    
+    if (name === 'fullName' || name === 'nationality') {
+      // Autoriser seulement lettres, espaces, apostrophes et tirets
+      filteredValue = value.replace(/[^a-zA-ZÀ-ÿ\s'-]/g, '')
+    } else if (name === 'phone') {
+      // Autoriser seulement +, chiffres, espaces et tirets
+      filteredValue = value.replace(/[^+\d\s-]/g, '')
+    } else if (name === 'numberOfTravelers') {
+      // Autoriser seulement les chiffres
+      filteredValue = value.replace(/[^0-9]/g, '')
+      // Limiter à 20 maximum
+      if (parseInt(filteredValue) > 20) {
+        filteredValue = '20'
+      }
+    }
+    
     setFormData(prev => {
-      const newData = { ...prev, [name]: value }
+      const newData = { ...prev, [name]: filteredValue }
       
       // Reset selection when type changes
       if (name === 'selectionType') {
@@ -81,13 +102,29 @@ export default function BookingForm({
       
       return newData
     })
+    
+    // Clear validation errors for this field
+    if (validationErrors.length > 0) {
+      setValidationErrors(prev => prev.filter(error => error.field !== name))
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Validation du formulaire
+    const errors = validateForm(formData)
+    if (errors.length > 0) {
+      setValidationErrors(errors)
+      setSubmitStatus('error')
+      setSubmitMessage('Veuillez corriger les erreurs dans le formulaire')
+      return
+    }
+    
     setIsSubmitting(true)
     setSubmitStatus('idle')
     setSubmitMessage('')
+    setValidationErrors([])
 
     try {
       const response = await fetch('/api/booking', {
@@ -131,6 +168,7 @@ export default function BookingForm({
           })
           setSubmitStatus('idle')
           setSubmitMessage('')
+          setValidationErrors([])
         }, 5000)
       } else {
         throw new Error('Erreur lors de l\'envoi')
@@ -177,11 +215,19 @@ export default function BookingForm({
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleInputChange}
-                className="rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                className={`rounded-lg border ${getFieldError(validationErrors, 'fullName') ? 'border-red-500' : 'border-gray-200 dark:border-white/20'} bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all`}
                 placeholder={t('contact.form.namePlaceholder')}
                 type="text"
+                pattern="[a-zA-ZÀ-ÿ\s'-]+"
+                title="Seules les lettres, espaces, apostrophes et tirets sont autorisés"
                 required
               />
+              {getFieldError(validationErrors, 'fullName') && (
+                <span className="text-red-500 text-xs flex items-center gap-1">
+                  <Icon name="error" size="sm" />
+                  {getFieldError(validationErrors, 'fullName')}
+                </span>
+              )}
             </label>
           </ScrollAnimation>
           
@@ -192,11 +238,19 @@ export default function BookingForm({
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                className={`rounded-lg border ${getFieldError(validationErrors, 'email') ? 'border-red-500' : 'border-gray-200 dark:border-white/20'} bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all`}
                 placeholder={t('contact.form.emailPlaceholder')}
                 type="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                title="Veuillez saisir une adresse email valide"
                 required
               />
+              {getFieldError(validationErrors, 'email') && (
+                <span className="text-red-500 text-xs flex items-center gap-1">
+                  <Icon name="error" size="sm" />
+                  {getFieldError(validationErrors, 'email')}
+                </span>
+              )}
             </label>
           </ScrollAnimation>
         </div>
@@ -209,10 +263,21 @@ export default function BookingForm({
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                className={`rounded-lg border ${getFieldError(validationErrors, 'phone') ? 'border-red-500' : 'border-gray-200 dark:border-white/20'} bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all`}
                 placeholder={t('contact.form.phonePlaceholder')}
                 type="tel"
+                pattern="^\+\d{1,4}[\s\-]?[\d\s\-]{6,15}$"
+                title="Format: +XXX XXXXXXXXX (avec indicatif international)"
               />
+              <span className="text-xs text-gray-500 dark:text-gray-400">
+                {t('contact.form.phoneHelper')}
+              </span>
+              {getFieldError(validationErrors, 'phone') && (
+                <span className="text-red-500 text-xs flex items-center gap-1">
+                  <Icon name="error" size="sm" />
+                  {getFieldError(validationErrors, 'phone')}
+                </span>
+              )}
             </label>
           </ScrollAnimation>
           
@@ -223,10 +288,18 @@ export default function BookingForm({
                 name="nationality"
                 value={formData.nationality}
                 onChange={handleInputChange}
-                className="rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                className={`rounded-lg border ${getFieldError(validationErrors, 'nationality') ? 'border-red-500' : 'border-gray-200 dark:border-white/20'} bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all`}
                 placeholder={t('contact.form.nationalityPlaceholder')}
                 type="text"
+                pattern="[a-zA-ZÀ-ÿ\s'-]+"
+                title="Seules les lettres, espaces, apostrophes et tirets sont autorisés"
               />
+              {getFieldError(validationErrors, 'nationality') && (
+                <span className="text-red-500 text-xs flex items-center gap-1">
+                  <Icon name="error" size="sm" />
+                  {getFieldError(validationErrors, 'nationality')}
+                </span>
+              )}
             </label>
           </ScrollAnimation>
         </div>
@@ -240,13 +313,19 @@ export default function BookingForm({
                   name="selectionType"
                   value={formData.selectionType}
                   onChange={handleInputChange}
-                  className="rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  className={`rounded-lg border ${getFieldError(validationErrors, 'selectionType') ? 'border-red-500' : 'border-gray-200 dark:border-white/20'} bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all`}
                   required
                 >
                   <option value="">{t('contact.form.selectionTypePlaceholder')}</option>
                   <option value="tours">{t('contact.form.selectionTypeOptions.tours')}</option>
                   <option value="destinations">{t('contact.form.selectionTypeOptions.destinations')}</option>
                 </select>
+                {getFieldError(validationErrors, 'selectionType') && (
+                  <span className="text-red-500 text-xs flex items-center gap-1">
+                    <Icon name="error" size="sm" />
+                    {getFieldError(validationErrors, 'selectionType')}
+                  </span>
+                )}
               </label>
             </ScrollAnimation>
           )}
@@ -264,7 +343,7 @@ export default function BookingForm({
                   name={formData.selectionType === 'tours' ? 'selectedCircuit' : 'selectedDestination'}
                   value={formData.selectionType === 'tours' ? formData.selectedCircuit : formData.selectedDestination}
                   onChange={handleInputChange}
-                  className="rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  className={`rounded-lg border ${getFieldError(validationErrors, formData.selectionType === 'tours' ? 'selectedCircuit' : 'selectedDestination') ? 'border-red-500' : 'border-gray-200 dark:border-white/20'} bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all`}
                   required
                   disabled={!!(prefilledTour || prefilledDestination)}
                 >
@@ -287,6 +366,12 @@ export default function BookingForm({
                       ))
                   }
                 </select>
+                {getFieldError(validationErrors, formData.selectionType === 'tours' ? 'selectedCircuit' : 'selectedDestination') && (
+                  <span className="text-red-500 text-xs flex items-center gap-1">
+                    <Icon name="error" size="sm" />
+                    {getFieldError(validationErrors, formData.selectionType === 'tours' ? 'selectedCircuit' : 'selectedDestination')}
+                  </span>
+                )}
               </label>
             </ScrollAnimation>
           )}
@@ -300,13 +385,21 @@ export default function BookingForm({
                     name="travelDates"
                     value={formData.travelDates}
                     onChange={handleInputChange}
-                    className="w-full rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 pl-10 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                    className={`w-full rounded-lg border ${getFieldError(validationErrors, 'travelDates') ? 'border-red-500' : 'border-gray-200 dark:border-white/20'} bg-white dark:bg-background-dark h-12 px-4 pl-10 focus:ring-2 focus:ring-primary focus:border-transparent transition-all`}
                     placeholder="YYYY-MM-DD"
                     type="date"
+                    min={new Date().toISOString().split('T')[0]}
+                    title="La date ne peut pas être dans le passé"
                     required
                   />
                   <Icon name="calendar_month" className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" size="sm" />
                 </div>
+                {getFieldError(validationErrors, 'travelDates') && (
+                  <span className="text-red-500 text-xs flex items-center gap-1">
+                    <Icon name="error" size="sm" />
+                    {getFieldError(validationErrors, 'travelDates')}
+                  </span>
+                )}
               </label>
             </ScrollAnimation>
             
@@ -317,12 +410,21 @@ export default function BookingForm({
                   name="numberOfTravelers"
                   value={formData.numberOfTravelers}
                   onChange={handleInputChange}
-                  className="rounded-lg border border-gray-200 dark:border-white/20 bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  className={`rounded-lg border ${getFieldError(validationErrors, 'numberOfTravelers') ? 'border-red-500' : 'border-gray-200 dark:border-white/20'} bg-white dark:bg-background-dark h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all`}
                   min="1"
+                  max="20"
                   placeholder={t('contact.form.numberOfTravelersPlaceholder')}
                   type="number"
+                  pattern="[1-9]|1[0-9]|20"
+                  title="Nombre entre 1 et 20"
                   required
                 />
+                {getFieldError(validationErrors, 'numberOfTravelers') && (
+                  <span className="text-red-500 text-xs flex items-center gap-1">
+                    <Icon name="error" size="sm" />
+                    {getFieldError(validationErrors, 'numberOfTravelers')}
+                  </span>
+                )}
               </label>
             </ScrollAnimation>
           </div>

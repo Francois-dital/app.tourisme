@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useLanguage } from '@/hooks/useLanguage'
 import { Icon } from '@/components/ui/Icon'
 
@@ -46,13 +46,34 @@ function FlagIcon({ country }: { country: 'us' | 'fr' }) {
 export default function LanguageSelector() {
   const { currentLanguage, changeLanguage } = useLanguage()
   const [isOpen, setIsOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  // Éviter les problèmes d'hydratation
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const languages = [
     { code: 'en', name: 'English', country: 'us' as const },
     { code: 'fr', name: 'Français', country: 'fr' as const }
   ]
 
-  const currentLang = languages.find(lang => lang.code === currentLanguage) || languages[0]
+  // Utiliser une valeur par défaut pendant l'hydratation
+  const currentLang = mounted 
+    ? languages.find(lang => lang.code === currentLanguage) || languages[0]
+    : languages[0]
+
+  if (!mounted) {
+    // Rendu initial identique côté serveur et client
+    return (
+      <div className="relative">
+        <button className="flex items-center gap-2 px-3 py-1 rounded-md border border-white/20 hover:bg-white/10 hover:border-white/40 transition-colors">
+          <FlagIcon country="fr" />
+          <span className="text-sm font-medium">FR</span>
+        </button>
+      </div>
+    )
+  }
 
   return (
     <div className="relative">

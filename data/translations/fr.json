@@ -496,6 +496,7 @@
       "emailPlaceholder": "jean@exemple.com",
       "phone": "Numéro de Téléphone",
       "phonePlaceholder": "+261 34 00 000 00",
+      "phoneHelper": "Incluez l'indicatif international (ex: +261 pour Madagascar)",
       "nationality": "Nationalité",
       "nationalityPlaceholder": "ex. Française",
       "selectionType": "Type de Sélection",
