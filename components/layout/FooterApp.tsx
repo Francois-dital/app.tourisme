@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Link from 'next/link'
 import { Icon } from '@/components/ui/Icon'
 import { Button } from '@/components/ui/Button'
@@ -6,7 +7,8 @@ import { useTranslation } from 'react-i18next'
 
 export default function FooterApp() {
   const { t } = useTranslation()
-
+  const [isOpen, setIsOpen] = useState(false);
+  
   const quickLinks = [
     { name: t('about.title'), href: '/about' },
     { name: t('nav.tours'), href: '/tours' },
@@ -45,6 +47,7 @@ export default function FooterApp() {
                     src="/images/qr-code.jpeg" 
                     alt="QR Code - Contact ELMADAGASCAR" 
                     className="w-12 h-12 rounded border border-white/20"
+                    onClick={() => setIsOpen(true)}
                   />
                   <p className="text-xs text-gray-500 mt-1">Scan to contact</p>
                 </div>
@@ -143,7 +146,29 @@ export default function FooterApp() {
             </div>
           </ScrollAnimation>
         </div>
+      
+        {isOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
+            <div className="relative bg-white p-4 rounded-lg shadow-lg">
+              
+              {/* Bouton fermer */}
+              <button
+                className="absolute top-2 right-2 text-black text-xl"
+                onClick={() => setIsOpen(false)}
+              >
+                ✕
+              </button>
 
+              {/* QR en grand */}
+              <img
+                src="/images/qr-code.jpeg"
+                alt="QR Code - Contact ELMADAGASCAR"
+                className="w-64 h-64"
+              />
+            </div>
+          </div>
+        )}
+        
         <ScrollAnimation animation="fade" delay={400}>
           <div className="pt-10 border-t border-white/5 text-center text-gray-500 text-xs">
             <p>{t('footer.copyright')}</p>
