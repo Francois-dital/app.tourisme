@@ -21,6 +21,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://elmadagascar-tours.com'),
   title: {
     default: 'ELMADAGASCAR - Circuits Authentiques',
     template: '%s | ELMADAGASCAR'

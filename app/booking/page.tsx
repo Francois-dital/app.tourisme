@@ -8,17 +8,6 @@ import BookingForm from '@/components/feature/booking/BookingForm'
 import ContactSidebar from '@/components/feature/contact/ContactSidebar'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
 import FooterApp from '@/components/layout/FooterApp'
-
-'use client'
-
-import { useTranslation } from 'react-i18next'
-import { useSearchParams } from 'next/navigation'
-import { Suspense } from 'react'
-import HeaderApp from '@/components/layout/HeaderApp'
-import BookingForm from '@/components/feature/booking/BookingForm'
-import ContactSidebar from '@/components/feature/contact/ContactSidebar'
-import ScrollAnimation from '@/components/ui/ScrollAnimation'
-import FooterApp from '@/components/layout/FooterApp'
 import { usePageTitle } from '@/hooks/usePageTitle'
 
 function BookingContent() {
