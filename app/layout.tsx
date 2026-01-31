@@ -1,35 +1,190 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
-import { generateMetadata } from '@/utils/metadata.utils'
-import I18nProvider from '@/components/providers/I18nProvider'
 import './globals.css'
+import Script from 'next/script'
+import I18nProvider from '@/components/providers/I18nProvider'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: '--font-plus-jakarta-sans',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
 })
 
-export const metadata: Metadata = generateMetadata(
-  'Discover Madagascar',
-  'Experience the Magic of Madagascar with expert local guides. From the Avenue of Baobabs to unique lemurs, explore the world\'s eighth continent.'
-)
-
-interface RootLayoutProps {
-  children: React.ReactNode
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#111811',
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export const metadata: Metadata = {
+  title: {
+    default: 'Madagascar 4x4 Adventure Tours - Circuits Authentiques',
+    template: '%s | Madagascar Adventure Tours'
+  },
+  description: 'Explorez Madagascar avec nos circuits 4x4 aventure. Guides locaux, véhicules équipés, expériences authentiques. Réservez votre aventure dès maintenant!',
+  keywords: [
+    'Madagascar', 
+    'tourisme Madagascar', 
+    'circuit 4x4 Madagascar', 
+    'voyage aventure', 
+    'guide local Madagascar',
+    'baobabs', 
+    'lémuriens'
+  ],
+  authors: [{ name: 'Madagascar Adventure Tours' }],
+  robots: 'index, follow',
+  
+  openGraph: {
+    type: 'website',
+    locale: 'fr_FR',
+    title: 'Madagascar 4x4 Adventure Tours - Circuits Authentiques',
+    description: 'Explorez Madagascar avec nos circuits 4x4 aventure. Guides locaux, véhicules équipés, expériences authentiques.',
+    siteName: 'Madagascar Adventure Tours',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Madagascar Adventure Tours - Circuit 4x4',
+      },
+    ],
+  },
+  
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Madagascar 4x4 Adventure Tours - Circuits Authentiques',
+    description: 'Explorez Madagascar avec nos circuits 4x4 aventure.',
+    images: ['/og-image.jpg'],
+  },
+  
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  
+  manifest: '/site.webmanifest',
+}
+
+// Structured Data pour l'agence
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TravelAgency',
+  'name': 'Madagascar Adventure Tours',
+  'description': 'Agence de voyage spécialisée dans les circuits 4x4 à Madagascar avec guides locaux francophones.',
+  'url': 'https://madagascar-4x4-tours.com',
+  'logo': 'https://madagascar-4x4-tours.com/logo.png',
+  'address': {
+    '@type': 'PostalAddress',
+    'addressLocality': 'Antananarivo',
+    'addressRegion': 'Analamanga',
+    'addressCountry': 'MG'
+  },
+  'contactPoint': {
+    '@type': 'ContactPoint',
+    'telephone': '+261-34-31-416-49',
+    'contactType': 'customer service',
+    'availableLanguage': ['French', 'English']
+  },
+  'sameAs': [
+    'https://www.facebook.com/madagascar4x4tours',
+    'https://www.instagram.com/madagascar4x4tours',
+  ],
+  'priceRange': '€€',
+  'currenciesAccepted': 'EUR, USD, MGA'
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en" className="light">
+    <html lang="fr" className="light">
       <head>
+        {/* Preconnect for critical domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Google Fonts */}
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
-        <link rel="shortcut icon" href="/public/image/logo.png" type="image/x-icon" />
+        
+        {/* Favicon */}
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#111811" />
+        
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema)
+          }}
+        />
+        
+        {/* Google Analytics */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
+        
+        {/* Facebook Pixel */}
+        {process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID && (
+          <Script id="facebook-pixel" strategy="afterInteractive">
+            {`
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f.fbq)f.fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}');
+              fbq('track', 'PageView');
+            `}
+          </Script>
+        )}
       </head>
-      <body className={`${plusJakartaSans.variable} antialiased`}>
+      <body className={`${plusJakartaSans.variable} font-sans antialiased`}>
+        {/* Facebook Pixel noscript fallback */}
+        {process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID && (
+          <noscript>
+            <img
+              height="1"
+              width="1"
+              style={{ display: 'none' }}
+              src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}&ev=PageView&noscript=1`}
+              alt=""
+            />
+          </noscript>
+        )}
+        
         <I18nProvider>
           {children}
         </I18nProvider>
