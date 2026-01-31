@@ -8,8 +8,9 @@ import Image from 'next/image'
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: '--font-plus-jakarta-sans',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '500', '600', '700'], // Réduit de 5 à 4 weights
   display: 'swap',
+  preload: true,
 })
 
 export const viewport: Viewport = {
@@ -114,9 +115,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
-        {/* Google Fonts */}
+        {/* DNS Prefetch for analytics */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        
+        {/* Google Fonts - Optimized */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
           rel="stylesheet"
         />
         
@@ -136,27 +141,30 @@ export default function RootLayout({
           }}
         />
         
-        {/* Google Analytics */}
+        {/* Google Analytics - Optimized loading */}
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <Script
-              strategy="afterInteractive"
+              strategy="lazyOnload"
               src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
             />
-            <Script id="google-analytics" strategy="afterInteractive">
+            <Script id="google-analytics" strategy="lazyOnload">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                  page_title: document.title,
+                  page_location: window.location.href,
+                });
               `}
             </Script>
           </>
         )}
         
-        {/* Facebook Pixel */}
+        {/* Facebook Pixel - Optimized loading */}
         {process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID && (
-          <Script id="facebook-pixel" strategy="afterInteractive">
+          <Script id="facebook-pixel" strategy="lazyOnload">
             {`
               !function(f,b,e,v,n,t,s)
               {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -172,7 +180,15 @@ export default function RootLayout({
           </Script>
         )}
       </head>
-      <body className={`${plusJakartaSans.variable} font-sans antialiased`}>
+      <body 
+        className={`${plusJakartaSans.variable} font-sans antialiased`}
+        suppressHydrationWarning={true}
+      >
+        {/* Skip to content link for accessibility */}
+        <a href="#main-content" className="skip-to-content">
+          Aller au contenu principal
+        </a>
+        
         {/* Facebook Pixel noscript fallback */}
         {process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID && (
           <noscript>

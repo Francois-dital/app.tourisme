@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000, // 1 year cache
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: 'https',
@@ -17,20 +20,29 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '**.fbcdn.net', // CDN de Facebook pour les images
+        hostname: '**.fbcdn.net',
       },
       {
         protocol: 'https',
-        hostname: '**.facebook.com', // Tous les sous-domaines de Facebook
+        hostname: '**.facebook.com',
       },
       {
         protocol: 'https',
-        hostname: '**.instagram.com', // Pour les images Instagram si besoin
+        hostname: '**.instagram.com',
       },
     ],
   },
   
-  // Headers for security
+  // Performance optimizations
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['react-i18next', '@heroicons/react'],
+  },
+  
+  // Compression
+  compress: true,
+  
+  // Headers for security and performance
   async headers() {
     return [
       {
@@ -56,20 +68,27 @@ const nextConfig: NextConfig = {
             key: 'X-XSS-Protection',
             value: '1; mode=block'
           },
-          // Ajout des headers CSP pour Facebook
           {
-            key: 'Content-Security-Policy',
-            value: [
-              "default-src 'self'",
-              "img-src 'self' data: https://*.fbcdn.net https://*.facebook.com https://*.googleusercontent.com https://images.unsplash.com",
-              "script-src 'self' 'unsafe-inline' https://connect.facebook.net",
-              "frame-src https://www.facebook.com",
-              "style-src 'self' 'unsafe-inline'",
-              "connect-src 'self' https://www.facebook.com"
-            ].join('; ')
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin'
+          },
+          // Cache headers for static assets
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
           }
         ],
       },
+      // Specific cache headers for images
+      {
+        source: '/images/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      }
     ]
   },
   

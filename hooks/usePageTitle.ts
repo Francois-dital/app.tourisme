@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 interface PageTitleTranslations {
@@ -43,12 +43,19 @@ const pageTitles: PageTitleTranslations = {
 
 export function usePageTitle(pageKey: keyof typeof pageTitles, customTitle?: string) {
   const { i18n } = useTranslation()
+  const [isClient, setIsClient] = useState(false)
   const currentLanguage = i18n.language as 'fr' | 'en'
 
   useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isClient) return
+    
     const title = customTitle || pageTitles[pageKey]?.[currentLanguage] || pageTitles[pageKey]?.fr
-    if (title) {
+    if (title && typeof document !== 'undefined') {
       document.title = `${title} | ELMADAGASCAR`
     }
-  }, [pageKey, customTitle, currentLanguage])
+  }, [pageKey, customTitle, currentLanguage, isClient])
 }

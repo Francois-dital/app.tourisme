@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
       <HeaderApp />
-      <main className="w-full flex-grow">
+      <main id="main-content" className="w-full flex-grow">
         <HeroSection />
         <AboutsUs />
         <TopDestinations />
