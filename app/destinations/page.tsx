@@ -1,22 +1,12 @@
 'use client'
 
-import { useState, useCallback, useMemo } from 'react'
+import { useState, useCallback, useMemo, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import HeaderApp from '@/components/layout/HeaderApp'
 import FooterApp from '@/components/layout/FooterApp'
 import DestinationsFilters from '@/components/feature/destinations/DestinationsFilters'
 import DestinationsGrid from '@/components/feature/destinations/DestinationsGrid'
 import { destinationsData, Destination } from '@/data/destinations'
-
-function useIsClient() {
-  const [isClient, setIsClient] = useState(false)
-  
-  if (typeof window !== 'undefined' && !isClient) {
-    setTimeout(() => setIsClient(true), 0)
-  }
-  
-  return isClient
-}
 
 function shuffleArray<T>(array: T[]): T[] {
   const shuffled = [...array]
@@ -29,8 +19,12 @@ function shuffleArray<T>(array: T[]): T[] {
 
 export default function DestinationsPage() {
   const { t } = useTranslation()
-  const isClient = useIsClient()
+  const [isClient, setIsClient] = useState(false)
   
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   const shuffledDestinations = useMemo(() => {
     if (!isClient) return []
     return shuffleArray(destinationsData)
