@@ -12,12 +12,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         className={cn(
-          'inline-flex items-center justify-center font-bold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed',
+          'inline-flex items-center justify-center font-bold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2',
           {
-            'bg-primary text-background-dark hover:scale-105 shadow-xl shadow-primary/20': variant === 'primary',
-            'bg-white/10 backdrop-blur-md text-white border border-white/30 hover:bg-white/20': variant === 'secondary',
-            'border border-primary text-primary hover:bg-primary hover:text-background-dark': variant === 'outline',
-            'text-primary hover:bg-primary/10': variant === 'ghost',
+            'bg-primary text-background-dark hover:scale-105 shadow-xl shadow-primary/20 focus:ring-primary': variant === 'primary',
+            'bg-white/10 backdrop-blur-md text-white border border-white/30 hover:bg-white/20 focus:ring-white': variant === 'secondary',
+            'border border-primary text-primary hover:bg-primary hover:text-background-dark focus:ring-primary': variant === 'outline',
+            'text-primary hover:bg-primary/10 focus:ring-primary': variant === 'ghost',
           },
           {
             'px-4 py-2 text-sm rounded-lg': size === 'sm',

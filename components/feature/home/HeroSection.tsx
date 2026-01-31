@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
+import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { Icon } from '@/components/ui/Icon'
@@ -68,14 +69,20 @@ export default function HeroSection() {
       {HERO_IMAGES.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+          className={`absolute inset-0 transition-opacity duration-1000 ${
             index === currentIndex ? 'opacity-100' : 'opacity-0'
-          } ${isTransitioning && index === currentIndex ? 'scale-105' : 'scale-100'} transition-transform duration-[10000ms]`}
-          style={{
-            backgroundImage: `url('${image}')`,
-          }}
-          aria-label={`Madagascar landscape ${index + 1}`}
-        />
+          }`}
+        >
+          <Image
+            src={image}
+            alt={`Madagascar landscape ${index + 1}`}
+            fill
+            className={`object-cover ${isTransitioning && index === currentIndex ? 'scale-105' : 'scale-100'} transition-transform duration-[10000ms]`}
+            priority={index === 0}
+            sizes="100vw"
+            quality={85}
+          />
+        </div>
       ))}
       
       {/* Contenu du hero */}
@@ -117,32 +124,37 @@ export default function HeroSection() {
       {/* Boutons de navigation */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 transition-all duration-300 group"
-        aria-label={t('hero.navigation.previous')}
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        aria-label="Image précédente du carousel"
+        type="button"
       >
         <Icon name="chevron_left" size="lg" className="text-white group-hover:scale-110 transition-transform" />
       </button>
       
       <button
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 transition-all duration-300 group"
-        aria-label={t('hero.navigation.next')}
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        aria-label="Image suivante du carousel"
+        type="button"
       >
         <Icon name="chevron_right" size="lg" className="text-white group-hover:scale-110 transition-transform" />
       </button>
 
       {/* Indicateurs de pagination */}
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-20 flex gap-3" role="tablist" aria-label="Images du carousel">
         {HERO_IMAGES.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
               index === currentIndex 
                 ? 'bg-primary w-8' 
                 : 'bg-white/50 hover:bg-white/80'
             }`}
-            aria-label={t('hero.navigation.goToSlide', { number: index + 1 })}
+            aria-label={`Aller à l'image ${index + 1}`}
+            aria-selected={index === currentIndex}
+            role="tab"
+            type="button"
           />
         ))}
       </div>

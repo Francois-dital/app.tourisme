@@ -58,6 +58,8 @@ export default function HeaderApp() {
               width={40}
               height={40}
               className="h-10 w-auto"
+              priority
+              sizes="40px"
             />
             <h2 className="text-xl font-extrabold tracking-tighter uppercase hidden md:inline">
               <span>ELMADAGASCAR </span><span className="text-primary">Tours</span>
@@ -95,8 +97,11 @@ export default function HeaderApp() {
               </Button>
             </Link>
             <button 
-              className="lg:hidden hover:scale-110 transition-transform"
+              className="lg:hidden hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md p-1"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Ouvrir le menu de navigation"
+              aria-expanded={isMenuOpen}
+              type="button"
             >
               <Icon name="menu" size="xl" />
             </button>
