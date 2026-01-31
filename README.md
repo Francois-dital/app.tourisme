@@ -1,4 +1,4 @@
-# MadaTours - Madagascar Tourism Landing Page
+# ELMADAGASCAR - Madagascar Tourism Landing Page
 
 Une landing page moderne et responsive pour une agence de tourisme à Madagascar, construite avec Next.js 14, TypeScript et Tailwind CSS.
 
@@ -141,4 +141,4 @@ Les données des tours et véhicules sont centralisées dans `services/tours.ser
 
 ## 📄 Licence
 
-Ce projet est développé pour MadaTours Madagascar.
+Ce projet est développé pour ELMADAGASCAR Madagascar.

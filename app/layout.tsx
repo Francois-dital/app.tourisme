@@ -21,8 +21,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Madagascar 4x4 Adventure Tours - Circuits Authentiques',
-    template: '%s | Madagascar Adventure Tours'
+    default: 'ELMADAGASCAR - Circuits Authentiques',
+    template: '%s | ELMADAGASCAR'
   },
   description: 'Explorez Madagascar avec nos circuits 4x4 aventure. Guides locaux, véhicules équipés, expériences authentiques. Réservez votre aventure dès maintenant!',
   keywords: [
@@ -34,28 +34,28 @@ export const metadata: Metadata = {
     'baobabs', 
     'lémuriens'
   ],
-  authors: [{ name: 'Madagascar Adventure Tours' }],
+  authors: [{ name: 'ELMADAGASCAR' }],
   robots: 'index, follow',
   
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    title: 'Madagascar 4x4 Adventure Tours - Circuits Authentiques',
+    title: 'ELMADAGASCAR - Circuits Authentiques',
     description: 'Explorez Madagascar avec nos circuits 4x4 aventure. Guides locaux, véhicules équipés, expériences authentiques.',
-    siteName: 'Madagascar Adventure Tours',
+    siteName: 'ELMADAGASCAR',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Madagascar Adventure Tours - Circuit 4x4',
+        alt: 'ELMADAGASCAR - Circuit 4x4',
       },
     ],
   },
   
   twitter: {
     card: 'summary_large_image',
-    title: 'Madagascar 4x4 Adventure Tours - Circuits Authentiques',
+    title: 'ELMADAGASCAR - Circuits Authentiques',
     description: 'Explorez Madagascar avec nos circuits 4x4 aventure.',
     images: ['/og-image.jpg'],
   },
@@ -78,10 +78,10 @@ export const metadata: Metadata = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'TravelAgency',
-  'name': 'Madagascar Adventure Tours',
+  'name': 'ELMADAGASCAR',
   'description': 'Agence de voyage spécialisée dans les circuits 4x4 à Madagascar avec guides locaux francophones.',
-  'url': 'https://madagascar-4x4-tours.com',
-  'logo': 'https://madagascar-4x4-tours.com/logo.png',
+  'url': 'https://elmadagascar.com',
+  'logo': 'https://elmadagascar.com/logo.png',
   'address': {
     '@type': 'PostalAddress',
     'addressLocality': 'Antananarivo',
@@ -95,8 +95,8 @@ const organizationSchema = {
     'availableLanguage': ['French', 'English']
   },
   'sameAs': [
-    'https://www.facebook.com/madagascar4x4tours',
-    'https://www.instagram.com/madagascar4x4tours',
+    'https://www.facebook.com/elmadagascar',
+    'https://www.instagram.com/elmadagascar',
   ],
   'priceRange': '€€',
   'currenciesAccepted': 'EUR, USD, MGA'

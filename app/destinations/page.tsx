@@ -7,6 +7,7 @@ import FooterApp from '@/components/layout/FooterApp'
 import DestinationsFilters from '@/components/feature/destinations/DestinationsFilters'
 import DestinationsGrid from '@/components/feature/destinations/DestinationsGrid'
 import { destinationsData, Destination } from '@/data/destinations'
+import { usePageTitle } from '@/hooks/usePageTitle'
 
 function shuffleArray<T>(array: T[]): T[] {
   const shuffled = [...array]
@@ -20,6 +21,8 @@ function shuffleArray<T>(array: T[]): T[] {
 export default function DestinationsPage() {
   const { t } = useTranslation()
   const [isClient, setIsClient] = useState(false)
+  
+  usePageTitle('destinations')
   
   useEffect(() => {
     setIsClient(true)

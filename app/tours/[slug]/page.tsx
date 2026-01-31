@@ -11,12 +11,15 @@ import TourDetailOverview from '@/components/feature/tour-detail/TourDetailOverv
 import TourDetailContent from '@/components/feature/tour-detail/TourDetailContent'
 import { getTourBySlug } from '@/data/tours'
 import { translateTourData } from '@/utils/translation.utils'
+import { usePageTitle } from '@/hooks/usePageTitle'
 
 export default function TourDetailPage() {
   const { t } = useTranslation()
   const params = useParams()
   const slug = params.slug as string
   const tour = getTourBySlug(slug)
+
+  usePageTitle('tourDetail', tour?.title)
 
   if (!tour) {
     notFound()

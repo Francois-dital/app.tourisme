@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://madatours.mg/sitemap.xml
+Sitemap: https://elmadagascar.mg/sitemap.xml
 
 # Disallow admin and API routes
 Disallow: /api/

@@ -28,7 +28,7 @@ export default function FooterApp() {
               <Link href="/home" className="flex items-center mb-6 hover:scale-105 transition-transform inline-block">
                 <Image 
                   src="/logo.png" 
-                  alt="ELMADAGASCAR Tours Logo" 
+                  alt="ELMADAGASCAR Logo" 
                   width={32}
                   height={32}
                   className="h-8 w-auto"

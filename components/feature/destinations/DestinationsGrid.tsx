@@ -47,7 +47,7 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
         "@type": "TouristAttraction",
         "name": dest.name,
         "description": dest.description,
-        "url": `https://madagascar-4x4-tours.com/destinations/${dest.slug}`,
+        "url": `https://elmadagascar.com/destinations/${dest.slug}`,
         "address": {
           "@type": "Place",
           "name": dest.region

@@ -5,8 +5,11 @@ import FooterApp from '@/components/layout/FooterApp'
 import ToursIntro from '@/components/feature/tours/ToursIntro'
 import ToursGrid from '@/components/feature/tours/ToursGrid'
 import { toursData } from '@/data/tours'
+import { usePageTitle } from '@/hooks/usePageTitle'
 
 export default function ToursPage() {
+  usePageTitle('tours')
+
   return (
     <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
       <HeaderApp />

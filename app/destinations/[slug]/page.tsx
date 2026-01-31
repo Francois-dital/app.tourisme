@@ -9,12 +9,15 @@ import ScrollAnimation from '@/components/ui/ScrollAnimation'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { translateDestinationData } from '@/utils/translation.utils'
+import { usePageTitle } from '@/hooks/usePageTitle'
 
 export default function DestinationDetailPage() {
   const { t } = useTranslation()
   const params = useParams()
   const slug = params.slug as string
   const destination = getDestinationBySlug(slug)
+
+  usePageTitle('destinationDetail', destination?.name)
 
   if (!destination) {
     return (

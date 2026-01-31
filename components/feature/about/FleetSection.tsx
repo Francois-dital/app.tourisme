@@ -53,7 +53,7 @@ export default function FleetSection() {
   const fleetStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Flotte 4x4 Madagascar Adventure Tours",
+    "name": "Flotte 4x4 ELMADAGASCAR",
     "description": "Véhicules 4x4 équipés pour les circuits aventure à Madagascar",
     "itemListElement": fleetItems.map((item, index) => ({
       "@type": "ListItem",

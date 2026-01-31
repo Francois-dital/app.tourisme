@@ -6,8 +6,11 @@ import CoreValues from '@/components/feature/about/CoreValues'
 import TeamGuides from '@/components/feature/about/TeamGuides'
 import FleetSection from '@/components/feature/about/FleetSection'
 import AboutCTA from '@/components/feature/about/AboutCTA'
+import { usePageTitle } from '@/hooks/usePageTitle'
 
 export default function AboutPage() {
+  usePageTitle('about')
+
   return (
     <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
       <HeaderApp />

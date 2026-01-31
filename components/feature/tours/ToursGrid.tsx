@@ -26,7 +26,7 @@ export default function ToursGrid({ tours }: ToursGridProps) {
         "@type": "TouristTrip",
         "name": tour.title,
         "description": tour.description,
-        "url": `https://madagascar-4x4-tours.com/tours/${tour.slug}`,
+        "url": `https://elmadagascar.com/tours/${tour.slug}`,
         "duration": tour.duration,
         "offers": {
           "@type": "Offer",
