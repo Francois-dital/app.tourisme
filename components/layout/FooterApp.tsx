@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Link from 'next/link'
 import { Icon } from '@/components/ui/Icon'
 import { Button } from '@/components/ui/Button'
@@ -7,21 +6,14 @@ import { useTranslation } from 'react-i18next'
 
 export default function FooterApp() {
   const { t } = useTranslation()
-  const [isOpen, setIsOpen] = useState(false);
-  
+
   const quickLinks = [
     { name: t('about.title'), href: '/about' },
     { name: t('nav.tours'), href: '/tours' },
     { name: t('nav.destinations'), href: '/destinations' },
     { name: 'Travel Tips', href: '#' },
     { name: 'Eco-responsibility', href: '#' },
-    { name: t('nav.booking'), href: '/booking' },
-  ]
-
-  const socialLinks = [
-    { name: 'Facebook', icon: 'social_leaderboard', href: '#' },
-    { name: 'Instagram', icon: 'photo_camera', href: '#' },
-    { name: 'YouTube', icon: 'smart_display', href: '#' },
+    { name: t('nav.contact'), href: '/contact' },
   ]
 
   return (
@@ -47,7 +39,6 @@ export default function FooterApp() {
                     src="/images/qr-code.jpeg" 
                     alt="QR Code - Contact ELMADAGASCAR" 
                     className="w-12 h-12 rounded border border-white/20"
-                    onClick={() => setIsOpen(true)}
                   />
                   <p className="text-xs text-gray-500 mt-1">Scan to contact</p>
                 </div>
@@ -58,17 +49,25 @@ export default function FooterApp() {
               </div>
               
               <div className="flex items-center gap-4">
-                {socialLinks.map((social, index) => (
-                  <ScrollAnimation key={social.name} animation="scale" delay={200 + (index * 100)}>
-                    <Link
-                      href={social.href}
-                      className="size-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-background-dark hover:scale-110 transition-all"
-                      aria-label={social.name}
+                <ScrollAnimation animation="scale" delay={200}>
+                  <Link
+                    href="https://www.facebook.com/61587278189321"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="size-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#1877F2] hover:border-[#1877F2] hover:scale-110 transition-all duration-300 group"
+                    aria-label="Suivez-nous sur Facebook"
+                    title="Visitez notre page Facebook"
+                  >
+                    <svg 
+                      className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" 
+                      fill="currentColor" 
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
                     >
-                      <Icon name={social.icon} />
-                    </Link>
-                  </ScrollAnimation>
-                ))}
+                      <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                  </Link>
+                </ScrollAnimation>
               </div>
             </div>
           </ScrollAnimation>
@@ -146,29 +145,7 @@ export default function FooterApp() {
             </div>
           </ScrollAnimation>
         </div>
-      
-        {isOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
-            <div className="relative bg-white p-4 rounded-lg shadow-lg">
-              
-              {/* Bouton fermer */}
-              <button
-                className="absolute top-2 right-2 text-black text-xl"
-                onClick={() => setIsOpen(false)}
-              >
-                ✕
-              </button>
 
-              {/* QR en grand */}
-              <img
-                src="/images/qr-code.jpeg"
-                alt="QR Code - Contact ELMADAGASCAR"
-                className="w-64 h-64"
-              />
-            </div>
-          </div>
-        )}
-        
         <ScrollAnimation animation="fade" delay={400}>
           <div className="pt-10 border-t border-white/5 text-center text-gray-500 text-xs">
             <p>{t('footer.copyright')}</p>
