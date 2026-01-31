@@ -32,6 +32,14 @@ export function generateMetadata(
     authors: [{ name: "MadaTours Team" }],
     creator: "MadaTours",
     publisher: "MadaTours",
+    icons: {
+      icon: [
+        { url: "/logo.png", sizes: "32x32", type: "image/png" },
+        { url: "/logo.png", sizes: "16x16", type: "image/png" }
+      ],
+      shortcut: "/logo.png",
+      apple: "/logo.png",
+    },
     formatDetection: {
       email: false,
       address: false,

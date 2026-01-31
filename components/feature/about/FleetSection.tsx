@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Icon } from '@/components/ui/Icon'
 import { Badge } from '@/components/ui/Badge'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
@@ -69,10 +70,13 @@ export default function FleetSection() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div className={`rounded-2xl overflow-hidden aspect-video relative shadow-2xl group ${item.reverse ? 'order-1 lg:order-2' : ''}`}>
-                  <img
+                  <Image
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     src={item.image}
                     alt={item.name}
+                    width={600}
+                    height={338}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                   <div className={`absolute bottom-4 ${item.reverse ? 'right-4' : 'left-4'}`}>
                     <Badge variant="primary" className="bg-primary text-[#111811] px-4 py-1 text-xs font-bold uppercase tracking-wider">

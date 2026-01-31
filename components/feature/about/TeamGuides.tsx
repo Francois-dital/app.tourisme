@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Badge } from '@/components/ui/Badge'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
 import { useTranslation } from 'react-i18next'
@@ -74,10 +75,13 @@ export default function TeamGuides() {
           >
             <div className="flex flex-col gap-3 group">
               <div className="aspect-[4/5] overflow-hidden rounded-xl bg-gray-200 shadow-sm relative">
-                <img
+                <Image
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   src={guide.image}
                   alt={`Portrait of ${guide.name}`}
+                  width={300}
+                  height={375}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
                 <div className="absolute top-3 left-3 flex gap-1">
                   {guide.languages.map((lang, langIndex) => (

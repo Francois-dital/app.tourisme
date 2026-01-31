@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Icon } from '@/components/ui/Icon'
 import { Button } from '@/components/ui/Button'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
@@ -31,9 +32,11 @@ export default function FooterApp() {
           <ScrollAnimation animation="fade" delay={100}>
             <div>
               <Link href="/home" className="flex items-center mb-6 hover:scale-105 transition-transform inline-block">
-                <img 
+                <Image 
                   src="/logo.png" 
                   alt="ELMADAGASCAR Tours Logo" 
+                  width={32}
+                  height={32}
                   className="h-8 w-auto"
                 />
               </Link>
@@ -43,42 +46,41 @@ export default function FooterApp() {
 
               <div className="flex items-center gap-4 mb-6">
                 <div className="text-center">
-                  <img 
+                  <Image 
                     src="/images/qr-code.jpeg" 
                     alt="QR Code - Contact ELMADAGASCAR" 
-                    className="w-12 h-12 rounded border border-white/20"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 rounded border border-white/20 cursor-pointer"
                     onClick={() => setIsOpen(true)}
                   />
-                  <p className="text-xs text-gray-500 mt-1">Scan to contact</p>
                 </div>
-                <div className="text-xs text-gray-400">
-                  <p>Quick contact via</p>
-                  <p>QR code scan</p>
+                
+                <div className="flex items-center gap-4">
+                  {/* Lien Facebook avec SVG direct */}
+                  <ScrollAnimation animation="scale" delay={200}>
+                    <Link
+                      href="https://www.facebook.com/61587278189321"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="size-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#1877F2] hover:text-white hover:scale-110 transition-all"
+                      aria-label="Facebook"
+                    >
+                      {/* SVG Facebook direct */}
+                      <svg 
+                        className="w-5 h-5" 
+                        fill="currentColor" 
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                      </svg>
+                    </Link>
+                  </ScrollAnimation>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4">
-                {/* Lien Facebook avec SVG direct */}
-                <ScrollAnimation animation="scale" delay={200}>
-                  <Link
-                    href="https://www.facebook.com/61587278189321"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="size-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#1877F2] hover:text-white hover:scale-110 transition-all"
-                    aria-label="Facebook"
-                  >
-                    {/* SVG Facebook direct */}
-                    <svg 
-                      className="w-5 h-5" 
-                      fill="currentColor" 
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
-                  </Link>
-                </ScrollAnimation>
-              </div>
+
             </div>
           </ScrollAnimation>
 
@@ -101,7 +103,7 @@ export default function FooterApp() {
 
           <ScrollAnimation animation="fade" delay={200}>
             <div>
-              <h5 className="text-lg font-bold mb-6">{t('contact.info.address')}</h5>
+              <h5 className="text-lg font-bold mb-6">{t('footer.contact')}</h5>
               <ul className="flex flex-col gap-4 text-gray-400 text-sm">
                 <li>
                   <ScrollAnimation animation="slide-right" delay={250}>
@@ -169,9 +171,11 @@ export default function FooterApp() {
               </button>
 
               {/* QR en grand */}
-              <img
+              <Image
                 src="/images/qr-code.jpeg"
                 alt="QR Code - Contact ELMADAGASCAR"
+                width={256}
+                height={256}
                 className="w-64 h-64"
               />
             </div>

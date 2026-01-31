@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -51,13 +52,15 @@ export default function HeaderApp() {
       <header className="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-[#dbe6db] dark:border-white/10 px-6 md:px-20 lg:px-24 xl:px-32 py-4">
         <div className="w-full flex items-center justify-between">
           <Link href="/home" className="flex items-center gap-3 hover:scale-105 transition-transform">
-            <img 
+            <Image 
               src="/logo.png" 
               alt="ELMADAGASCAR Tours Logo" 
+              width={40}
+              height={40}
               className="h-10 w-auto"
             />
-            <h2 className="text-xl font-extrabold tracking-tighter uppercase">
-              ELMADAGASCAR <span className="text-primary">Tours</span>
+            <h2 className="text-xl font-extrabold tracking-tighter uppercase hidden md:inline">
+              <span>ELMADAGASCAR </span><span className="text-primary">Tours</span>
             </h2>
           </Link>
 
