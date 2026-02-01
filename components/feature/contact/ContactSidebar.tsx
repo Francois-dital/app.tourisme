@@ -9,11 +9,6 @@ export default function ContactSidebar() {
   const { t } = useTranslation()
 
   const contactInfo = [
-    // {
-    //   icon: 'location_on',
-    //   title: t('contact.info.office'),
-    //   content: t('contact.info.officeAddress')
-    // },
     {
       icon: 'call',
       title: t('contact.info.callUs'),
@@ -75,23 +70,6 @@ export default function ContactSidebar() {
           </div>
         </div>
       </ScrollAnimation>
-
-      {/* <ScrollAnimation animation="card" delay={300}>
-        <div className="bg-white dark:bg-background-dark rounded-xl shadow-sm border border-gray-100 dark:border-white/10 p-2 overflow-hidden">
-          <div className="h-[300px] w-full rounded-lg overflow-hidden relative">
-            <iframe
-              className="w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
-              loading="lazy"
-              allowFullScreen
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120760.33408013233!2d47.4587843!3d-18.8791902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07e155c6563bb%3A0xc0747443f1146747!2sAntananarivo!5e0!3m2!1sen!2smg!4v1620000000000!5m2!1sen!2smg"
-              style={{ border: 0 }}
-            />
-            <div className="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-background-dark/90 backdrop-blur px-4 py-2 rounded-lg text-xs font-bold shadow-sm">
-              IVH 45 Bis Ankorondrano, Antananarivo
-            </div>
-          </div>
-        </div>
-      </ScrollAnimation> */}
 
       <ScrollAnimation animation="scale" delay={400}>
         <div className="bg-primary/5 rounded-xl p-6 border border-primary/20">

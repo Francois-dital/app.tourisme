@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import { useLanguage } from '@/hooks/useLanguage'
 import { Icon } from '@/components/ui/Icon'
 
-// Composants de drapeaux SVG
 function USFlag() {
   return (
     <svg width="20" height="15" viewBox="0 0 20 15" className="rounded-sm border border-gray-300">
@@ -38,7 +37,6 @@ function FrenchFlag() {
   )
 }
 
-// Composant pour afficher les drapeaux
 function FlagIcon({ country }: { country: 'us' | 'fr' }) {
   return country === 'us' ? <USFlag /> : <FrenchFlag />
 }
@@ -48,7 +46,6 @@ export default function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
 
-  // Éviter les problèmes d'hydratation
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -58,13 +55,11 @@ export default function LanguageSelector() {
     { code: 'fr', name: 'Français', country: 'fr' as const }
   ]
 
-  // Utiliser une valeur par défaut pendant l'hydratation
   const currentLang = mounted 
     ? languages.find(lang => lang.code === currentLanguage) || languages[0]
     : languages[0]
 
   if (!mounted) {
-    // Rendu initial identique côté serveur et client
     return (
       <div className="relative">
         <button className="flex items-center gap-2 px-3 py-1 rounded-md border border-white/20 hover:bg-white/10 hover:border-white/40 transition-colors">
@@ -87,13 +82,11 @@ export default function LanguageSelector() {
 
       {isOpen && (
         <>
-          {/* Backdrop */}
           <div 
             className="fixed inset-0 z-[60]" 
             onClick={() => setIsOpen(false)}
           />
           
-          {/* Dropdown */}
           <div className="absolute right-0 top-full mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-1 z-[70] min-w-[120px]">
             {languages.map((language) => (
               <button

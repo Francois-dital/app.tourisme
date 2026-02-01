@@ -109,7 +109,6 @@ export default function HeaderApp() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-gray-200 dark:border-white/10 pt-4">
             <nav className="flex flex-col gap-4">

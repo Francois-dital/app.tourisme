@@ -33,24 +33,7 @@ export default function TeamGuides() {
         { name: 'French', color: 'primary' },
         { name: 'English', color: 'secondary' }
       ]
-    },
-    // {
-    //   name: 'Lova Tiana',
-    //   role: t('about.teamGuides.roles.driving'),
-    //   image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCOXpFqnQ5_38TW9O4NhoYp_C1S3cBvqQMF4rwTYbH14-2fJGLLQJmvqKM7TWoX7yA1QKzDDlGx9jMuHo4sfSce9aeQv0CbUV1Iv15QUfc_vv255fLm2adYtKFl230KYq0TdyDdsdki5cYGq_nTNskOq3mrgZZjX2PcaqJb3ivJBAZpSIZhByxuJ2Tqc9AcBTdt6EPsEiTwkJiDZfQ-Dm-tiSNaKvpey3xdgQptJFFotMzDjq7RM8zEl2dFjOgl8-uNl-WVTDdPTlgj',
-    //   languages: [
-    //     { name: 'English', color: 'primary' }
-    //   ]
-    // },
-    // {
-    //   name: 'Heritiana Solo',
-    //   role: t('about.teamGuides.roles.cultural'),
-    //   image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBtFJV47vZRDXo7szu_0jhbTthK3Y0ZJILCm1z2jq6mTXxv5n0u8zU3h2ySd3ruh8Zs50LVMzbOQvXvo57cU3Vo8xCMzhKhSVnjdw1nWHbsOOfGJ3Sjwq6eB6275M5SRkEZjGfEoF1_h2Cstzh5SB0K-OT_ryzl60cEHhO9MUwbc8E9uPbOhDT07T9krd0CiI1cFgx22uMGfFn0N7XprskMBpCmCeIPC0xOczjERvizPuyL_mFyTzAWPW0oYC-QSP8ZB4wv2uGo5igK',
-    //   languages: [
-    //     { name: 'French', color: 'secondary' },
-    //     { name: 'Italian', color: 'primary' }
-    //   ]
-    // }
+    }
   ]
 
   return (

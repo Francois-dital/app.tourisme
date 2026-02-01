@@ -1,10 +1,6 @@
 import { MetadataRoute } from 'next'
 
-// Fonction pour récupérer les données (simulée ici)
-// Vous devrez adapter cette fonction pour récupérer vos vraies données
 async function getToursData() {
-  // Simulez le chargement de vos données
-  // En production, vous pourriez faire une requête à votre API
   return [
     { slug: 'circuit-sud-madagascar' },
     { slug: 'aventure-nord' },
@@ -13,7 +9,6 @@ async function getToursData() {
 }
 
 async function getDestinationsData() {
-  // Simulez le chargement de vos données
   return [
     { slug: 'allee-des-baobabs' },
     { slug: 'parc-national-isalo' },
@@ -25,11 +20,9 @@ async function getDestinationsData() {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://elmadagascar-tours.com'
   
-  // Récupérer les données
   const toursData = await getToursData()
   const destinationsData = await getDestinationsData()
   
-  // Routes statiques
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -69,7 +62,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
   
-  // Routes dynamiques pour les tours
   const tourRoutes: MetadataRoute.Sitemap = toursData.map(tour => ({
     url: `${baseUrl}/tours/${tour.slug}`,
     lastModified: new Date(),
@@ -77,7 +69,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }))
   
-  // Routes dynamiques pour les destinations
   const destinationRoutes: MetadataRoute.Sitemap = destinationsData.map(destination => ({
     url: `${baseUrl}/destinations/${destination.slug}`,
     lastModified: new Date(),
@@ -85,6 +76,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }))
   
-  // Retourner toutes les routes combinées
   return [...staticRoutes, ...tourRoutes, ...destinationRoutes]
 }

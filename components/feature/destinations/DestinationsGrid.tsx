@@ -26,7 +26,6 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
     }
   }
 
-  // Structured Data pour les destinations
   const destinationsStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -78,10 +77,8 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
                         className="object-cover transform group-hover:scale-110 transition-transform duration-700"
                       />
 
-                      {/* Dégradé pour améliorer la lisibilité */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-all duration-300" aria-hidden="true"></div>
                       
-                      {/* Dégradé supplémentaire en bas pour le texte */}
                       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/90 to-transparent" aria-hidden="true"></div>
 
                       <div className="absolute top-4 left-4">
@@ -107,7 +104,6 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
                               +{destination.types.length - 2}
                             </Badge>
                             
-                            {/* Tooltip avec badges colorés - utilise peer-hover */}
                             <div className="absolute left-0 top-full mt-2 p-2 bg-white/95 dark:bg-gray-800/95 backdrop-blur-md rounded-lg shadow-xl opacity-0 peer-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-20 border border-gray-200/20 dark:border-gray-600/20">
                               <div className="flex flex-wrap gap-1 max-w-[150px]">
                                 {destination.types.slice(2).map((type, idx) => (

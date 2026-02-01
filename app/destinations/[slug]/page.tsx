@@ -162,11 +162,13 @@ export default function DestinationDetailPage() {
 
         <main className="w-full py-8 sm:py-12 md:py-16 lg:py-20 flex-grow px-6 md:px-20 lg:px-24 xl:px-32">
           <div className="w-full">
-            <div className="grid lg:grid-cols-3 gap-8 md:gap-12 lg:items-start">
-              {/* Main Content - Combined About and Highlights */}
-              <div className="lg:col-span-2">
-                <ScrollAnimation animation="fade" delay={100}>
-                  <div className="bg-white dark:bg-background-dark rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-white/10 h-full flex flex-col">
+            <div className="grid lg:grid-cols-3 gap-8 md:gap-12 items-stretch">
+
+              {/* Left Content */}
+              <div className="lg:col-span-2 flex">
+                <ScrollAnimation animation="fade" delay={100} className="w-full">
+                  <div className="bg-white dark:bg-background-dark rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-white/10 w-full flex flex-col">
+
                     {/* About Section */}
                     <div className="mb-8">
                       <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
@@ -184,75 +186,109 @@ export default function DestinationDetailPage() {
                         <Icon name="star" className="text-primary" />
                         {t('destinationDetail.highlights')}
                       </h3>
+
                       <div className="grid sm:grid-cols-2 gap-4">
                         {translatedDestination.highlights.map((highlight, index) => (
-                          <ScrollAnimation key={index} animation="card" delay={250 + (index * 100)}>
+                          <ScrollAnimation
+                            key={index}
+                            animation="card"
+                            delay={250 + index * 100}
+                          >
                             <div className="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-white/10 hover:border-primary/20 transition-all h-full">
-                              <Icon name="check_circle" size="sm" className="text-primary flex-shrink-0 mt-1" />
-                              <span className="text-sm md:text-base text-gray-700 dark:text-gray-300">{highlight}</span>
+                              <Icon
+                                name="check_circle"
+                                size="sm"
+                                className="text-primary flex-shrink-0 mt-1"
+                              />
+                              <span className="text-sm md:text-base text-gray-700 dark:text-gray-300">
+                                {highlight}
+                              </span>
                             </div>
                           </ScrollAnimation>
                         ))}
                       </div>
                     </div>
+
                   </div>
                 </ScrollAnimation>
               </div>
 
               {/* Sidebar */}
-              <div className="lg:col-span-1">
-                <ScrollAnimation animation="scale" delay={300}>
-                  <div className="bg-white dark:bg-background-dark rounded-2xl p-6 border border-gray-100 dark:border-white/10 lg:sticky lg:top-24 h-full flex flex-col">
+              <div className="lg:col-span-1 flex">
+                <ScrollAnimation animation="scale" delay={300} className="w-full">
+                  <div className="bg-white dark:bg-background-dark rounded-2xl p-6 border border-gray-100 dark:border-white/10 w-full flex flex-col lg:sticky lg:top-24">
+
                     <ScrollAnimation animation="fade" delay={350}>
                       <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
                         <Icon name="event_note" className="text-primary" />
                         {t('destinationDetail.planYourVisit')}
                       </h3>
                     </ScrollAnimation>
-                    
+
                     <div className="space-y-4 mb-6">
+
                       <ScrollAnimation animation="slide-right" delay={400}>
                         <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
                           <div className="flex items-center gap-2">
                             <Icon name="schedule" size="sm" className="text-primary" />
-                            <span className="text-sm font-medium text-gray-600 dark:text-gray-400">{t('destinationDetail.duration')}</span>
+                            <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                              {t('destinationDetail.duration')}
+                            </span>
                           </div>
-                          <span className="font-semibold text-sm">{translatedDestination.duration}</span>
+                          <span className="font-semibold text-sm">
+                            {translatedDestination.duration}
+                          </span>
                         </div>
                       </ScrollAnimation>
-                      
+
                       <ScrollAnimation animation="slide-right" delay={450}>
                         <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
                           <div className="flex items-center gap-2">
                             <Icon name="wb_sunny" size="sm" className="text-primary" />
-                            <span className="text-sm font-medium text-gray-600 dark:text-gray-400">{t('destinationDetail.bestTime')}</span>
+                            <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                              {t('destinationDetail.bestTime')}
+                            </span>
                           </div>
-                          <span className="font-semibold text-sm">{translatedDestination.bestTime}</span>
+                          <span className="font-semibold text-sm">
+                            {translatedDestination.bestTime}
+                          </span>
                         </div>
                       </ScrollAnimation>
-                      
+
                       <ScrollAnimation animation="slide-right" delay={500}>
                         <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
                           <div className="flex items-center gap-2">
                             <Icon name="trending_up" size="sm" className="text-primary" />
-                            <span className="text-sm font-medium text-gray-600 dark:text-gray-400">{t('destinationDetail.difficulty')}</span>
+                            <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                              {t('destinationDetail.difficulty')}
+                            </span>
                           </div>
-                          <Badge 
-                            variant={translatedDestination.difficulty === 'Easy' ? 'success' : translatedDestination.difficulty === 'Moderate' ? 'warning' : 'default'}
+                          <Badge
+                            variant={
+                              translatedDestination.difficulty === 'Easy'
+                                ? 'success'
+                                : translatedDestination.difficulty === 'Moderate'
+                                ? 'warning'
+                                : 'default'
+                            }
                             size="sm"
                           >
                             {getDifficultyTranslation(translatedDestination.difficulty)}
                           </Badge>
                         </div>
                       </ScrollAnimation>
-                      
+
                       <ScrollAnimation animation="slide-right" delay={550}>
                         <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
                           <div className="flex items-center gap-2">
                             <Icon name="location_on" size="sm" className="text-primary" />
-                            <span className="text-sm font-medium text-gray-600 dark:text-gray-400">{t('destinationDetail.region')}</span>
+                            <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                              {t('destinationDetail.region')}
+                            </span>
                           </div>
-                          <span className="font-semibold text-sm">{translatedDestination.region}</span>
+                          <span className="font-semibold text-sm">
+                            {translatedDestination.region}
+                          </span>
                         </div>
                       </ScrollAnimation>
 
@@ -260,53 +296,39 @@ export default function DestinationDetailPage() {
                         <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
                           <div className="flex items-center gap-2">
                             <Icon name="category" size="sm" className="text-primary" />
-                            <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Catégorie</span>
+                            <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                              Catégorie
+                            </span>
                           </div>
-                          <span className="font-semibold text-sm">{translatedDestination.category}</span>
+                          <span className="font-semibold text-sm">
+                            {translatedDestination.category}
+                          </span>
                         </div>
                       </ScrollAnimation>
+
                     </div>
 
                     <div className="flex-grow flex flex-col justify-end">
-                      <div className="space-y-3">
-                        <ScrollAnimation animation="scale" delay={650}>
-                          <Link href={`/booking?destination=${encodeURIComponent(destination.name)}&region=${encodeURIComponent(destination.region)}&category=${encodeURIComponent(destination.category)}&duration=${encodeURIComponent(destination.duration)}&difficulty=${encodeURIComponent(destination.difficulty)}&bestTime=${encodeURIComponent(destination.bestTime)}`}>
-                            <button className="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-lg font-bold transition-all text-sm sm:text-base flex items-center justify-center gap-2">
-                              <Icon name="favorite" size="sm" />
-                              {t('destinationDetail.interested')}
-                            </button>
-                          </Link>
-                        </ScrollAnimation>
-                        
-                        <ScrollAnimation animation="scale" delay={700}>
-                          <Link href="/tours">
-                            <button className="w-full border border-primary text-primary hover:bg-primary hover:text-white py-3 rounded-lg font-bold transition-all text-sm sm:text-base flex items-center justify-center gap-2">
-                              <Icon name="explore" size="sm" />
-                              {t('destinationDetail.viewAllTours')}
-                            </button>
-                          </Link>
-                        </ScrollAnimation>
-                      </div>
+                      <ScrollAnimation animation="scale" delay={650}>
+                        <Link
+                          href={`/booking?destination=${encodeURIComponent(destination.name)}&region=${encodeURIComponent(destination.region)}&category=${encodeURIComponent(destination.category)}&duration=${encodeURIComponent(destination.duration)}&difficulty=${encodeURIComponent(destination.difficulty)}&bestTime=${encodeURIComponent(destination.bestTime)}`}
+                        >
+                          <button className="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-lg font-bold transition-all text-sm sm:text-base flex items-center justify-center gap-2">
+                            <Icon name="favorite" size="sm" />
+                            {t('destinationDetail.interested')}
+                          </button>
+                        </Link>
+                      </ScrollAnimation>
                     </div>
+
                   </div>
                 </ScrollAnimation>
               </div>
-            </div>
 
-            {/* Back to destinations */}
-            <ScrollAnimation animation="fade" delay={400}>
-              <div className="mt-12 text-center">
-                <Link href="/destinations">
-                  <button className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold text-sm sm:text-base hover:scale-105 transition-all">
-                    <Icon name="arrow_back" size="sm" />
-                    {t('destinationDetail.backToDestinations')}
-                  </button>
-                </Link>
-              </div>
-            </ScrollAnimation>
+            </div>
           </div>
         </main>
-        
+
         <FooterApp />
       </div>
     </>

@@ -25,7 +25,6 @@ export default function TourDetailPage() {
     notFound()
   }
 
-  // Translate tour data
   const translatedTour = translateTourData(tour, t)
 
   return (

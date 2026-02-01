@@ -49,7 +49,6 @@ export default function FleetSection() {
     }
   ]
 
-  // Structured Data pour la flotte
   const fleetStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
