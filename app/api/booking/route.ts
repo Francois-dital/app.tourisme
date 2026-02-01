@@ -117,7 +117,7 @@ export async function POST(request: NextRequest) {
             <h1 style="color: #2d5a2d; margin: 0; font-size: 24px;">
               ${isBooking ? '🎯 NOUVELLE RÉSERVATION' : '📧 NOUVELLE DEMANDE'}
             </h1>
-            <p style="color: #666; margin: 10px 0 0 0;">ELMADAGASCAR Tours</p>
+            <p style="color: #666; margin: 10px 0 0 0;">ELMADAGASCAR</p>
           </div>
 
           <div style="background-color: #f0f8f0; padding: 20px; border-radius: 8px; margin-bottom: 25px;">

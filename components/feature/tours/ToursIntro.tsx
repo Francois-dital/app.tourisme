@@ -70,18 +70,22 @@ export default function ToursIntro() {
             animation="scale" 
             delay={400 + (index * 100)}
           >
-            <div className="text-center p-6 bg-white dark:bg-background-dark rounded-2xl border border-gray-100 dark:border-white/10 hover:border-primary/20 transition-all stat-card">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 text-primary rounded-xl mb-4 icon-bounce">
-                <Icon name={stat.icon} size="md" />
+            <div className="text-center p-6 bg-white dark:bg-background-dark rounded-2xl border border-gray-100 dark:border-white/10 hover:border-primary/20 transition-all stat-card h-full flex flex-col justify-between min-h-[200px]">
+              <div className="flex flex-col items-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 text-primary rounded-xl mb-4 icon-bounce">
+                  <Icon name={stat.icon} size="md" />
+                </div>
+                <div className="text-2xl font-bold text-primary mb-1 counter-animation">
+                  {stat.number}{stat.label === t('toursIntro.stats.satisfaction.label') ? '%' : ''}
+                </div>
               </div>
-              <div className="text-2xl font-bold text-primary mb-1 counter-animation">
-                {stat.number}{stat.label === t('toursIntro.stats.satisfaction.label') ? '%' : ''}
-              </div>
-              <div className="font-semibold text-gray-900 dark:text-white mb-1">
-                {stat.label}
-              </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">
-                {stat.description}
+              <div className="flex flex-col">
+                <div className="font-semibold text-gray-900 dark:text-white mb-1">
+                  {stat.label}
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">
+                  {stat.description}
+                </div>
               </div>
             </div>
           </ScrollAnimation>
@@ -90,37 +94,37 @@ export default function ToursIntro() {
 
       <ScrollAnimation animation="fade" delay={800}>
         <div className="w-full grid md:grid-cols-3 gap-6">
-          <div className="flex items-start gap-4 p-6 bg-green-50 dark:bg-green-900/20 rounded-2xl">
+          <div className="flex items-start gap-4 p-6 bg-green-50 dark:bg-green-900/20 rounded-2xl h-full min-h-[120px]">
             <div className="flex-shrink-0 w-10 h-10 bg-green-100 dark:bg-green-800 text-green-600 dark:text-green-400 rounded-xl flex items-center justify-center">
               <Icon name="verified" size="sm" />
             </div>
-            <div>
+            <div className="flex flex-col">
               <h3 className="font-semibold mb-2">{t('toursIntro.features.guides.title')}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-sm text-gray-600 dark:text-gray-400 flex-grow">
                 {t('toursIntro.features.guides.description')}
               </p>
             </div>
           </div>
 
-          <div className="flex items-start gap-4 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-2xl">
+          <div className="flex items-start gap-4 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-2xl h-full min-h-[120px]">
             <div className="flex-shrink-0 w-10 h-10 bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-400 rounded-xl flex items-center justify-center">
               <Icon name="settings" size="sm" />
             </div>
-            <div>
+            <div className="flex flex-col">
               <h3 className="font-semibold mb-2">{t('toursIntro.features.customizable.title')}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-sm text-gray-600 dark:text-gray-400 flex-grow">
                 {t('toursIntro.features.customizable.description')}
               </p>
             </div>
           </div>
 
-          <div className="flex items-start gap-4 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-2xl">
+          <div className="flex items-start gap-4 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-2xl h-full min-h-[120px]">
             <div className="flex-shrink-0 w-10 h-10 bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-400 rounded-xl flex items-center justify-center">
               <Icon name="support_agent" size="sm" />
             </div>
-            <div>
+            <div className="flex flex-col">
               <h3 className="font-semibold mb-2">{t('toursIntro.features.support.title')}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-sm text-gray-600 dark:text-gray-400 flex-grow">
                 {t('toursIntro.features.support.description')}
               </p>
             </div>

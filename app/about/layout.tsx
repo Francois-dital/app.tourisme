@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import { generatePageMetadata } from '@/utils/server-translations'
 
 export function generateMetadata(): Metadata {
-  return generatePageMetadata('tours')
+  return generatePageMetadata('about')
 }
 
-export default function ToursLayout({
+export default function AboutLayout({
   children,
 }: {
   children: React.ReactNode

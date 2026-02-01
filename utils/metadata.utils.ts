@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const siteConfig = {
-  name: "MadaTours",
+  name: "ELMADAGASCAR",
   description: "Experience the Magic of Madagascar with expert local guides. From the Avenue of Baobabs to unique lemurs, explore the world's eighth continent.",
-  url: "https://madatours.mg",
+  url: "https://elmadagascar.mg",
   ogImage: "/images/hero-background-1.jpg",
   keywords: [
     "Madagascar",
@@ -29,9 +29,17 @@ export function generateMetadata(
     title: title ? `${title} | ${siteConfig.name}` : siteConfig.name,
     description: description || siteConfig.description,
     keywords: siteConfig.keywords,
-    authors: [{ name: "MadaTours Team" }],
-    creator: "MadaTours",
-    publisher: "MadaTours",
+    authors: [{ name: "ELMADAGASCAR Team" }],
+    creator: "ELMADAGASCAR",
+    publisher: "ELMADAGASCAR",
+    icons: {
+      icon: [
+        { url: "/logo.png", sizes: "32x32", type: "image/png" },
+        { url: "/logo.png", sizes: "16x16", type: "image/png" }
+      ],
+      shortcut: "/logo.png",
+      apple: "/logo.png",
+    },
     formatDetection: {
       email: false,
       address: false,
@@ -58,7 +66,7 @@ export function generateMetadata(
       title: title || siteConfig.name,
       description: description || siteConfig.description,
       images: [image || siteConfig.ogImage],
-      creator: "@madatours",
+      creator: "@elmadagascar",
     },
     robots: {
       index: true,

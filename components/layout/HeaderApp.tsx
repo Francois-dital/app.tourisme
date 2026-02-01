@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -51,13 +52,17 @@ export default function HeaderApp() {
       <header className="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-[#dbe6db] dark:border-white/10 px-6 md:px-20 lg:px-24 xl:px-32 py-4">
         <div className="w-full flex items-center justify-between">
           <Link href="/home" className="flex items-center gap-3 hover:scale-105 transition-transform">
-            <img 
-              src="/logo.png" 
+            <Image 
+              src="/Logo.png"
               alt="ELMADAGASCAR Tours Logo"
-              className="h-10 w-auto"
+              className="w-12 h-12"
+              width={450}
+              height={450}
+              priority
+              sizes="40px"
             />
-            <h2 className="text-xl font-extrabold tracking-tighter uppercase">
-              ELMADAGASCAR <span className="text-primary">Tours</span>
+            <h2 className="text-xl font-extrabold tracking-tighter uppercase hidden md:inline">
+              <span>ELMADAGASCAR</span>
             </h2>
           </Link>
 
@@ -92,8 +97,11 @@ export default function HeaderApp() {
               </Button>
             </Link>
             <button 
-              className="lg:hidden hover:scale-110 transition-transform"
+              className="lg:hidden hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md p-1"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Ouvrir le menu de navigation"
+              aria-expanded={isMenuOpen}
+              type="button"
             >
               <Icon name="menu" size="xl" />
             </button>

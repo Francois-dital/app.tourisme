@@ -1,0 +1,63 @@
+{
+  "name": "ELMADAGASCAR",
+  "short_name": "ELMADAGASCAR",
+  "description": "Circuits 4x4 aventure à Madagascar avec guides locaux",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111811",
+  "theme_color": "#0df259",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "fr",
+  "categories": ["travel", "tourism", "adventure"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Voir les circuits",
+      "short_name": "Circuits",
+      "description": "Découvrez nos circuits 4x4",
+      "url": "/tours",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Réserver",
+      "short_name": "Réserver",
+      "description": "Réserver votre circuit",
+      "url": "/booking",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.jpg",
+      "sizes": "1920x1080",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-mobile.jpg",
+      "sizes": "1080x1920",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    }
+  ]
+}

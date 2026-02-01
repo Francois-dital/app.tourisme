@@ -8,10 +8,13 @@ import BookingForm from '@/components/feature/booking/BookingForm'
 import ContactSidebar from '@/components/feature/contact/ContactSidebar'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
 import FooterApp from '@/components/layout/FooterApp'
+import { usePageTitle } from '@/hooks/usePageTitle'
 
 function BookingContent() {
   const { t } = useTranslation()
   const searchParams = useSearchParams()
+  
+  usePageTitle('booking')
   
   const tourTitle = searchParams.get('tour') || ''
   const tourPrice = searchParams.get('price') || ''

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/Button'
@@ -47,10 +48,12 @@ export default function TourDetailContent({ tour }: TourDetailContentProps) {
                   
                   {item.accommodation && (
                     <div className="mt-3 p-4 bg-white dark:bg-white/5 rounded-lg border border-dashed border-[#ccc] dark:border-white/20 flex items-center gap-4 hover:shadow-lg transition-all">
-                      <img 
+                      <Image 
                         className="w-16 h-16 rounded object-cover shadow-sm" 
                         src={item.accommodation.image}
                         alt={item.accommodation.name}
+                        width={64}
+                        height={64}
                       />
                       <div>
                         <p className="text-xs uppercase text-primary font-bold">{t('tourDetail.overnight')}</p>
