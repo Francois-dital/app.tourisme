@@ -15,13 +15,16 @@ export default function HeaderApp() {
   const pathname = usePathname()
 
   const navigation = [
-    { name: t('nav.home'), href: '/home' },
+    { name: t('nav.home'), href: '/' },
     { name: t('nav.about'), href: '/about' },
     { name: t('nav.tours'), href: '/tours' },
     { name: t('nav.destinations'), href: '/destinations' },
   ]
 
   const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/' || pathname === '/home'
+    }
     if (href === '/tours') {
       return pathname === '/tours' || pathname.startsWith('/tours/')
     }
@@ -51,7 +54,7 @@ export default function HeaderApp() {
 
       <header className="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-[#dbe6db] dark:border-white/10 px-6 md:px-20 lg:px-24 xl:px-32 py-4">
         <div className="w-full flex items-center justify-between">
-          <Link href="/home" className="flex items-center gap-3 hover:scale-105 transition-transform">
+          <Link href="/" className="flex items-center gap-3 hover:scale-105 transition-transform">
             <Image 
               src="/logo.png" 
               alt="ELMADAGASCAR Logo" 

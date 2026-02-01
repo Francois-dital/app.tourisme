@@ -82,8 +82,8 @@ const organizationSchema = {
   '@type': 'TravelAgency',
   'name': 'ELMADAGASCAR',
   'description': 'Agence de voyage spécialisée dans les circuits 4x4 à Madagascar avec guides locaux francophones.',
-  'url': 'https://elmadagascar.com',
-  'logo': 'https://elmadagascar.com/logo.png',
+  'url': 'https://elmadagascar-tours.com',
+  'logo': 'https://elmadagascar-tours.com/logo.png',
   'address': {
     '@type': 'PostalAddress',
     'addressLocality': 'Antananarivo',

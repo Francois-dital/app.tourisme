@@ -118,7 +118,7 @@ const nextConfig: NextConfig = {
   
   // Environment variables
   env: {
-    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://elmadagascar.com',
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://elmadagascar-tours.com',
     NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID || '',
     NEXT_PUBLIC_FACEBOOK_PIXEL_ID: process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || '',
   },

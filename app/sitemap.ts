@@ -23,7 +23,7 @@ async function getDestinationsData() {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://elmadagascar.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://elmadagascar-tours.com'
   
   // Récupérer les données
   const toursData = await getToursData()

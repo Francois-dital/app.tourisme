@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -25,7 +27,7 @@ export default function FooterApp() {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <ScrollAnimation animation="fade" delay={100}>
             <div>
-              <Link href="/home" className="flex items-center mb-6 hover:scale-105 transition-transform inline-block">
+              <Link href="/" className="flex items-center mb-6 hover:scale-105 transition-transform inline-block">
                 <Image 
                   src="/logo.png" 
                   alt="ELMADAGASCAR Logo" 
