@@ -20,14 +20,12 @@ export default function I18nProvider({ children }: I18nProviderProps) {
     setIsInitialized(true)
   }, [])
 
-  // Always render with hidden visibility until initialized to prevent hydration mismatch
-  if (!isInitialized) {
-    return <div style={{ visibility: 'hidden' }}>{children}</div>
-  }
-
+  // Always render the same structure to prevent hydration mismatch
   return (
     <I18nextProvider i18n={i18n}>
-      {children}
+      <div style={{ visibility: isInitialized ? 'visible' : 'hidden' }}>
+        {children}
+      </div>
     </I18nextProvider>
   )
 }

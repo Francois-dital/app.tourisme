@@ -66,16 +66,8 @@ export default function ScrollAnimation({
     }
   }
 
-  if (!isMounted) {
-    return (
-      <div ref={elementRef} className={className}>
-        {children}
-      </div>
-    )
-  }
-
   const animationClass = getAnimationClass(animation)
-  const visibilityClass = isVisible ? 'visible' : 'animated'
+  const visibilityClass = isMounted && isVisible ? 'visible' : 'animated'
 
   return (
     <div 

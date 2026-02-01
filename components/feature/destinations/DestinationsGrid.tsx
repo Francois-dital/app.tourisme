@@ -69,8 +69,6 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
                 <article className="group cursor-pointer h-full">
                   <Link href={`/destinations/${destination.slug}`} className="block h-full">
                     <div className="relative aspect-[4/5] rounded-xl overflow-hidden mb-4 shadow-md">
-                      <div className="absolute inset-0 bg-black/60 opacity-60 group-hover:opacity-80 transition-opacity" aria-hidden="true"></div>
-                      
                       <Image
                         src={destination.image}
                         alt={`${destination.name} - ${destination.subtitle} - Madagascar`}
@@ -80,6 +78,12 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
                         className="object-cover transform group-hover:scale-110 transition-transform duration-700"
                       />
 
+                      {/* Dégradé pour améliorer la lisibilité */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-all duration-300" aria-hidden="true"></div>
+                      
+                      {/* Dégradé supplémentaire en bas pour le texte */}
+                      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/90 to-transparent" aria-hidden="true"></div>
+
                       <div className="absolute top-4 left-4">
                         <div className="flex gap-1 mb-1">
                           {destination.types.slice(0, 2).map((type, idx) => (
@@ -87,7 +91,7 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
                               key={idx}
                               variant={getTypeVariant(type)}
                               size="sm"
-                              className="capitalize"
+                              className="capitalize shadow-lg"
                             >
                               {type}
                             </Badge>
@@ -98,13 +102,13 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
                             <Badge 
                               variant="default" 
                               size="sm" 
-                              className="backdrop-blur-sm bg-white/90 dark:bg-black/90 cursor-help peer"
+                              className="backdrop-blur-sm bg-white/95 dark:bg-black/95 cursor-help peer shadow-lg"
                             >
                               +{destination.types.length - 2}
                             </Badge>
                             
                             {/* Tooltip avec badges colorés - utilise peer-hover */}
-                            <div className="absolute left-0 top-full mt-2 p-2 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md rounded-lg shadow-xl opacity-0 peer-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-20 border border-gray-200/10 dark:border-gray-600/10">
+                            <div className="absolute left-0 top-full mt-2 p-2 bg-white/95 dark:bg-gray-800/95 backdrop-blur-md rounded-lg shadow-xl opacity-0 peer-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-20 border border-gray-200/20 dark:border-gray-600/20">
                               <div className="flex flex-wrap gap-1 max-w-[150px]">
                                 {destination.types.slice(2).map((type, idx) => (
                                   <Badge 
@@ -126,22 +130,22 @@ export default function DestinationsGrid({ destinations }: DestinationsGridProps
                         <Badge 
                           variant={destination.difficulty === 'Easy' ? 'success' : destination.difficulty === 'Moderate' ? 'warning' : 'default'}
                           size="sm"
-                          className="backdrop-blur-sm bg-white/95 dark:bg-black/95 shadow-sm"
+                          className="backdrop-blur-sm bg-white/95 dark:bg-black/95 shadow-lg"
                         >
                           {getDifficultyTranslation(destination.difficulty)}
                         </Badge>
                       </div>
 
                       <div className="absolute bottom-6 left-6 right-6 text-white">
-                        <h3 className="text-xl font-bold mb-1">{destination.name}</h3>
-                        <p className="text-sm text-gray-300 mb-3">{destination.subtitle}</p>
+                        <h3 className="text-xl font-bold mb-1 drop-shadow-lg text-shadow">{destination.name}</h3>
+                        <p className="text-sm text-gray-100 mb-3 drop-shadow-md">{destination.subtitle}</p>
                         
-                        <div className="flex items-center justify-between text-xs">
-                          <div className="flex items-center gap-1">
+                        <div className="flex items-center justify-between text-xs text-gray-200">
+                          <div className="flex items-center gap-1 bg-black/30 backdrop-blur-sm px-2 py-1 rounded-md">
                             <Icon name="schedule" size="sm" aria-hidden="true" />
                             <span>{destination.duration}</span>
                           </div>
-                          <div className="flex items-center gap-1">
+                          <div className="flex items-center gap-1 bg-black/30 backdrop-blur-sm px-2 py-1 rounded-md">
                             <Icon name="wb_sunny" size="sm" aria-hidden="true" />
                             <span>{destination.bestTime}</span>
                           </div>
