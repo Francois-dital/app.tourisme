@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import HeaderApp from '@/components/layout/HeaderApp'
 import FooterApp from '@/components/layout/FooterApp'

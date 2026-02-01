@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
@@ -21,7 +23,7 @@ export default function HeaderApp() {
 
   const isActive = (href: string) => {
     if (href === '/') {
-      return pathname === '/' || pathname === '/home'
+      return pathname === '/'
     }
     if (href === '/tours') {
       return pathname === '/tours' || pathname.startsWith('/tours/')
@@ -54,11 +56,11 @@ export default function HeaderApp() {
         <div className="w-full flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 hover:scale-105 transition-transform">
             <Image 
-              src="/logo.png" 
-              alt="ELMADAGASCAR Logo" 
+              src="/logo.png"
+              alt="ELMADAGASCAR Tours Logo"
+              className="w-12 h-12"
               width={40}
               height={40}
-              className="h-10 w-auto"
               priority
               sizes="40px"
             />

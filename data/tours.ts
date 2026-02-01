@@ -569,6 +569,10 @@ export const toursData: TourData[] = [
   }
 ]
 
+export function getAllTours() {
+  return toursData
+}
+
 export function getTourBySlug(slug: string): TourData | undefined {
   return toursData.find(tour => tour.slug === slug)
 }

@@ -112,6 +112,10 @@ export default function RootLayout({
   return (
     <html lang="fr" className="light">
       <head>
+        {/* Preconnect for critical domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
         {/* DNS Prefetch for analytics */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
@@ -122,12 +126,6 @@ export default function RootLayout({
           rel="stylesheet"
         />
         
-        {/* Favicon */}
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#111811" />
         
         {/* Structured Data */}
