@@ -13,17 +13,15 @@ export default function I18nProvider({ children }: I18nProviderProps) {
 
   useEffect(() => {
     // Load saved language from localStorage only on client side
-    if (typeof window !== 'undefined') {
-      const savedLanguage = localStorage.getItem('language')
-      if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'fr')) {
-        i18n.changeLanguage(savedLanguage)
-      }
-      setIsInitialized(true)
+    const savedLanguage = localStorage.getItem('language')
+    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'fr')) {
+      i18n.changeLanguage(savedLanguage)
     }
+    setIsInitialized(true)
   }, [])
 
-  // Prevent hydration mismatch by not rendering until client-side initialization
-  if (!isInitialized && typeof window !== 'undefined') {
+  // Always render with hidden visibility until initialized to prevent hydration mismatch
+  if (!isInitialized) {
     return <div style={{ visibility: 'hidden' }}>{children}</div>
   }
 

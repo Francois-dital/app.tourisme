@@ -23,7 +23,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://elmadagascar-tours.com'),
   title: {
-    default: 'ELMADAGASCAR - Circuits Authentiques',
+    default: 'Accueil | ELMADAGASCAR',
     template: '%s | ELMADAGASCAR'
   },
   description: 'Explorez Madagascar avec nos circuits 4x4 aventure. Guides locaux, véhicules équipés, expériences authentiques. Réservez votre aventure dès maintenant!',

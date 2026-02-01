@@ -55,7 +55,12 @@ export function usePageTitle(pageKey: keyof typeof pageTitles, customTitle?: str
     
     const title = customTitle || pageTitles[pageKey]?.[currentLanguage] || pageTitles[pageKey]?.fr
     if (title && typeof document !== 'undefined') {
-      document.title = `${title} | ELMADAGASCAR`
+      // Pour la page d'accueil, on applique le même format que les autres pages
+      if (pageKey === 'home') {
+        document.title = `${title} | ELMADAGASCAR`
+      } else {
+        document.title = `${title} | ELMADAGASCAR`
+      }
     }
   }, [pageKey, customTitle, currentLanguage, isClient])
 }

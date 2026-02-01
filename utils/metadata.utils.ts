@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const siteConfig = {
   name: "ELMADAGASCAR",
   description: "Experience the Magic of Madagascar with expert local guides. From the Avenue of Baobabs to unique lemurs, explore the world's eighth continent.",
-  url: "https://elmadagascar.mg",
+  url: "https://elmadagascar-tours.com",
   ogImage: "/images/hero-background-1.jpg",
   keywords: [
     "Madagascar",
