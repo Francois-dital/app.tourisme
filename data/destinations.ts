@@ -6,11 +6,29 @@ export interface Destination {
   description: string
   region: string
   category: string
+  types: string[] // Types multiples simples
   image: string
   highlights: string[]
   bestTime: string
   difficulty: 'Easy' | 'Moderate' | 'Challenging'
   duration: string
+}
+
+// Fonction simple pour obtenir la couleur d'un type
+export function getTypeVariant(type: string): 'rainforest' | 'coastal' | 'adventure' | 'cultural' | 'wildlife' | 'nature' | 'historical' | 'relaxation' | 'photography' | 'marine' | 'default' {
+  const typeMap: Record<string, any> = {
+    'rainforest': 'rainforest',
+    'coastal': 'coastal', 
+    'adventure': 'adventure',
+    'cultural': 'cultural',
+    'wildlife': 'wildlife',
+    'nature': 'nature',
+    'historical': 'historical',
+    'relaxation': 'relaxation',
+    'photography': 'photography',
+    'marine': 'marine'
+  }
+  return typeMap[type] || 'default'
 }
 
 export const destinationsData: Destination[] = [
@@ -22,6 +40,7 @@ export const destinationsData: Destination[] = [
     description: 'Experience the haunting calls of Madagascar\'s largest lemur in this pristine rainforest reserve, just 3 hours from Antananarivo.',
     region: 'East Coast',
     category: 'Rainforest',
+    types: ['rainforest', 'wildlife', 'nature', 'photography'],
     image: '/images/destinations/andasibe.jpg',
     highlights: [
       'Indri Indri lemur encounters',
@@ -41,6 +60,7 @@ export const destinationsData: Destination[] = [
     description: 'The scented island paradise with pristine beaches, coral reefs, and the famous ylang-ylang plantations.',
     region: 'Northern Madagascar',
     category: 'Coastal',
+    types: ['coastal', 'marine', 'relaxation', 'cultural', 'photography'],
     image: '/images/destinations/nosy-be.jpg',
     highlights: [
       'Nosy Iranja white sandbank',
@@ -60,6 +80,7 @@ export const destinationsData: Destination[] = [
     description: 'Madagascar\'s most photographed location featuring ancient baobab trees creating magical silhouettes at sunset.',
     region: 'West Coast',
     category: 'Adventure',
+    types: ['nature', 'photography', 'cultural', 'historical'],
     image: '/images/destinations/baobabs.jpg',
     highlights: [
       'Sunset photography at Baobab Alley',
@@ -79,6 +100,7 @@ export const destinationsData: Destination[] = [
     description: 'Navigate through razor-sharp limestone pinnacles in this UNESCO World Heritage site, home to unique endemic species.',
     region: 'West Coast',
     category: 'Adventure',
+    types: ['adventure', 'nature', 'wildlife', 'photography', 'historical'],
     image: '/images/destinations/tsingy.jpg',
     highlights: [
       'Grand Tsingy climbing adventure',
@@ -98,6 +120,7 @@ export const destinationsData: Destination[] = [
     description: 'Dramatic sandstone formations, hidden oases, and natural swimming pools in Madagascar\'s most spectacular landscape.',
     region: 'Southern Highlands',
     category: 'Adventure',
+    types: ['adventure', 'nature', 'wildlife', 'photography', 'relaxation'],
     image: '/images/destinations/isalo.jpg',
     highlights: [
       'Canyon des Singes hiking',
@@ -117,6 +140,7 @@ export const destinationsData: Destination[] = [
     description: 'Untouched white sand beaches with crystal clear waters, perfect for snorkeling and experiencing Vezo fishing culture.',
     region: 'Southern Highlands',
     category: 'Coastal',
+    types: ['coastal', 'marine', 'cultural', 'relaxation', 'photography'],
     image: '/images/destinations/anakao.jpeg',
     highlights: [
       'Pristine white sand beaches',
@@ -136,6 +160,7 @@ export const destinationsData: Destination[] = [
     description: 'Lush rainforest sanctuary famous for its natural hot springs and the rare golden bamboo lemur discovery.',
     region: 'Southern Highlands',
     category: 'Rainforest',
+    types: ['rainforest', 'wildlife', 'nature', 'relaxation'],
     image: '/images/destinations/ranomafana.jpeg',
     highlights: [
       'Golden bamboo lemur spotting',
@@ -155,6 +180,7 @@ export const destinationsData: Destination[] = [
     description: 'Explore Madagascar\'s cultural heart with royal palaces, traditional markets, and stunning highland landscapes.',
     region: 'Central Highlands',
     category: 'Cultural',
+    types: ['cultural', 'historical', 'nature', 'photography'],
     image: '/images/destinations/antananarivo.jpg',
     highlights: [
       'Rova Palace complex',
@@ -174,6 +200,7 @@ export const destinationsData: Destination[] = [
     description: 'Tropical island paradise with pirate history, pristine beaches, and spectacular humpback whale watching from July to September.',
     region: 'East Coast',
     category: 'Coastal',
+    types: ['coastal', 'wildlife', 'historical', 'marine', 'relaxation'],
     image: '/images/destinations/sainte-marie.jpeg',
     highlights: [
       'Humpback whale watching (July-September)',
@@ -193,6 +220,7 @@ export const destinationsData: Destination[] = [
     description: 'A network of natural and man-made waterways connecting lakes, rivers, and coastal lagoons along Madagascar\'s east coast.',
     region: 'East Coast',
     category: 'Cultural',
+    types: ['cultural', 'nature', 'relaxation', 'photography'],
     image: '/images/destinations/canal des pangalanes-nosy varika-mahanoro.jpeg',
     highlights: [
       'Boat journeys through traditional villages',
@@ -212,6 +240,7 @@ export const destinationsData: Destination[] = [
     description: 'Madagascar\'s thermal city known for its volcanic crater lakes, "Pousse-Pousse" rickshaws, and gemstone markets.',
     region: 'Central Highlands',
     category: 'Cultural',
+    types: ['cultural', 'nature', 'relaxation', 'historical'],
     image: '/images/destinations/antsirabe.jpg',
     highlights: [
       'Pousse-pousse (rickshaw) rides',
@@ -231,6 +260,7 @@ export const destinationsData: Destination[] = [
     description: 'Coastal town serving as the gateway to the Avenue of Baobabs and Tsingy de Bemaraha, with beautiful beaches and Vezo culture.',
     region: 'West Coast',
     category: 'Coastal',
+    types: ['coastal', 'cultural', 'nature', 'photography'],
     image: '/images/destinations/morondava.jpg',
     highlights: [
       'Gateway to Avenue of Baobabs',
@@ -250,6 +280,7 @@ export const destinationsData: Destination[] = [
     description: 'Madagascar\'s main seaport with vibrant markets, colonial architecture, and access to the Pangalanes Canal.',
     region: 'East Coast',
     category: 'Cultural',
+    types: ['cultural', 'historical', 'nature'],
     image: '/images/destinations/tamatave.jpeg',
     highlights: [
       'Bazar Be market for spices and vanilla',
@@ -269,6 +300,7 @@ export const destinationsData: Destination[] = [
     description: 'Peaceful lakeside village on the shores of Lake Rasoabe, serving as a departure point for Pangalanes Canal journeys.',
     region: 'East Coast',
     category: 'Nature',
+    types: ['nature', 'relaxation', 'wildlife', 'photography'],
     image: '/images/destinations/manambato.jpeg',
     highlights: [
       'Tranquil lakeside setting',
@@ -288,6 +320,7 @@ export const destinationsData: Destination[] = [
     description: 'Peninsula in the Pangalanes Canal known as the "Nest of Dreams," home to the Palmarium Private Park and rare wildlife.',
     region: 'East Coast',
     category: 'Nature & Wildlife',
+    types: ['nature', 'wildlife', 'relaxation', 'photography'],
     image: '/images/destinations/akanin-ny-nofy.jpg',
     highlights: [
       'Palmarium Private Park with close lemur encounters',
@@ -307,6 +340,7 @@ export const destinationsData: Destination[] = [
     description: 'Hot, lively town on the banks of the Tsiribihina River, known as a starting point for river expeditions.',
     region: 'West Coast',
     category: 'Adventure',
+    types: ['adventure', 'cultural', 'nature'],
     image: '/images/destinations/miandrivazo.jpg',
     highlights: [
       'Tsiribihina River access',
@@ -326,6 +360,7 @@ export const destinationsData: Destination[] = [
     description: 'Small village serving as the base camp for exploring both the Grand and Petit Tsingy de Bemaraha.',
     region: 'West Coast',
     category: 'Adventure',
+    types: ['adventure', 'nature', 'cultural', 'photography'],
     image: '/images/destinations/bekopaka-tsingy.jpeg',
     highlights: [
       'Access to Grand and Petit Tsingy',
@@ -345,6 +380,7 @@ export const destinationsData: Destination[] = [
     description: 'Town famous for its traditional aluminum pot craftsmanship, where artisans forge pots by hand using recycled materials.',
     region: 'Central Highlands',
     category: 'Cultural',
+    types: ['cultural', 'historical'],
     image: '/images/destinations/ambatolampy.jpg',
     highlights: [
       'Traditional aluminum pot workshops',
@@ -364,6 +400,7 @@ export const destinationsData: Destination[] = [
     description: 'Heart of Madagascar\'s woodcraft industry, home to the Zafimaniry people and their UNESCO-recognized woodcarving traditions.',
     region: 'Central Highlands',
     category: 'Cultural',
+    types: ['cultural', 'historical'],
     image: '/images/destinations/ambositra.jpg',
     highlights: [
       'Zafimaniry woodcraft workshops',
@@ -383,6 +420,7 @@ export const destinationsData: Destination[] = [
     description: 'Vibrant coastal city in southern Madagascar, gateway to Anakao beach and the spiny desert region.',
     region: 'Southern Highlands',
     category: 'Coastal',
+    types: ['coastal', 'cultural', 'nature'],
     image: '/images/destinations/tulear.jpg',
     highlights: [
       'Gateway to Anakao and southern beaches',
@@ -402,6 +440,7 @@ export const destinationsData: Destination[] = [
     description: 'Community-run reserve where ring-tailed lemurs are easily spotted among impressive granite rock formations.',
     region: 'Southern Highlands',
     category: 'Nature & Wildlife',
+    types: ['wildlife', 'nature', 'cultural', 'photography'],
     image: '/images/destinations/anja-reserve.jpeg',
     highlights: [
       'Close encounters with ring-tailed lemurs',
@@ -421,6 +460,7 @@ export const destinationsData: Destination[] = [
     description: 'Two small islands connected by a spectacular white sandbank that appears at low tide, known as "Turtle Island".',
     region: 'Northern Madagascar',
     category: 'Coastal',
+    types: ['coastal', 'marine', 'wildlife', 'photography', 'relaxation'],
     image: '/images/destinations/nosy-iranja.jpg',
     highlights: [
       'Iconic white sandbank walk',
@@ -440,6 +480,7 @@ export const destinationsData: Destination[] = [
     description: 'Protected marine reserve with exceptional snorkeling opportunities among coral reefs, sea turtles, and tropical fish.',
     region: 'Northern Madagascar',
     category: 'Coastal',
+    types: ['marine', 'wildlife', 'nature', 'photography'],
     image: '/images/destinations/nosy-tanikely.jpg',
     highlights: [
       'World-class snorkeling and diving',
@@ -459,6 +500,7 @@ export const destinationsData: Destination[] = [
     description: 'Volcanic island known for its black lemurs, traditional woodcarving villages, and relaxed atmosphere.',
     region: 'Northern Madagascar',
     category: 'Nature & Cultural',
+    types: ['wildlife', 'cultural', 'nature', 'relaxation'],
     image: '/images/destinations/nosy-komba.jpg',
     highlights: [
       'Black lemur encounters',
@@ -478,6 +520,7 @@ export const destinationsData: Destination[] = [
     description: 'Peaceful island known as the "Orchid Island" for its rich flora, with opportunities to snorkel with giant green sea turtles.',
     region: 'Northern Madagascar',
     category: 'Nature & Coastal',
+    types: ['nature', 'marine', 'wildlife', 'relaxation', 'photography'],
     image: '/images/destinations/nosy-sakatia.jpeg',
     highlights: [
       'Snorkeling with giant green sea turtles',
@@ -497,6 +540,7 @@ export const destinationsData: Destination[] = [
     description: 'Highest point on Nosy Be offering 360-degree panoramic views of the island\'s volcanic crater lakes and the Mozambique Channel.',
     region: 'Northern Madagascar',
     category: 'Nature',
+    types: ['nature', 'photography', 'relaxation'],
     image: '/images/destinations/mont-passot.jpg',
     highlights: [
       'Spectacular sunset viewpoints',
@@ -516,6 +560,7 @@ export const destinationsData: Destination[] = [
     description: 'Main town of Nosy Be, known for its vibrant market selling spices, vanilla, and ylang-ylang essential oils.',
     region: 'Northern Madagascar',
     category: 'Cultural',
+    types: ['cultural', 'historical'],
     image: '/images/destinations/hell-ville-andoany.jpg',
     highlights: [
       'Spice and vanilla markets',
@@ -542,3 +587,23 @@ export function getDestinationsByCategory(category: string): Destination[] {
   if (category === 'All Categories') return destinationsData
   return destinationsData.filter(destination => destination.category === category)
 }
+
+// Nouvelles fonctions pour les types multiples
+export function getDestinationsByType(typeId: string): Destination[] {
+  if (typeId === 'all') return destinationsData
+  return destinationsData.filter(destination => destination.types.includes(typeId))
+}
+
+export function getDestinationsByTypes(typeIds: string[]): Destination[] {
+  if (typeIds.length === 0 || typeIds.includes('all')) return destinationsData
+  return destinationsData.filter(destination => 
+    typeIds.every(typeId => destination.types.includes(typeId))
+  )
+}
+
+// Liste des types disponibles
+export const availableTypes = [
+  'rainforest', 'coastal', 'adventure', 'cultural', 
+  'wildlife', 'nature', 'historical', 'relaxation', 
+  'photography', 'marine'
+]

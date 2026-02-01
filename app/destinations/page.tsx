@@ -34,15 +34,19 @@ export default function DestinationsPage() {
   }, [isClient])
 
   const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>([])
+  const [hasActiveFilters, setHasActiveFilters] = useState(false)
 
   const currentFilteredDestinations = useMemo(() => {
     if (!isClient) return []
-    if (filteredDestinations.length === 0) return shuffledDestinations
+    // Si aucun filtre n'est actif, montrer toutes les destinations
+    if (!hasActiveFilters) return shuffledDestinations
+    // Si des filtres sont actifs, montrer les résultats filtrés (même si vide)
     return filteredDestinations
-  }, [isClient, shuffledDestinations, filteredDestinations])
+  }, [isClient, shuffledDestinations, filteredDestinations, hasActiveFilters])
 
-  const handleFilterChange = useCallback((destinations: Destination[]) => {
+  const handleFilterChange = useCallback((destinations: Destination[], hasFilters: boolean) => {
     setFilteredDestinations(destinations)
+    setHasActiveFilters(hasFilters)
   }, [])
 
   return (
