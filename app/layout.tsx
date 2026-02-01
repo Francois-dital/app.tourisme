@@ -97,8 +97,8 @@ const organizationSchema = {
     'availableLanguage': ['French', 'English']
   },
   'sameAs': [
-    'https://www.facebook.com/elmadagascar',
-    'https://www.instagram.com/elmadagascar',
+    'https://www.facebook.com/61587278189321',
+    // 'https://www.instagram.com/elmadagascar',
   ],
   'priceRange': '€€',
   'currenciesAccepted': 'EUR, USD, MGA'

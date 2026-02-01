@@ -25,15 +25,15 @@ export default function TeamGuides() {
         { name: 'English', color: 'secondary' }
       ]
     },
-    // {
-    //   name: 'Mialy Sahondra',
-    //   role: t('about.teamGuides.roles.wildlife'),
-    //   image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAhUqWmPLQS7TyBeZtmCJAsNgVxtyTvDApeOjw-CFmsnsXrB_UoAj7VC61ScuBn41d54wlIf_TII1aRNRLCNEaEDa9LZicPuizG9rOZMmJdcCOa5C5SnSWVeJQa81PAj0H4wFJPKd9IEholPai1BkRLbb1XHb38798Sn-3ZVKV4vxcuF2xUKRluCTZ0il2Md4f1Jp5V1igc8ECT-1eJiGMRZqpsCke7FnrJLAtFUih2--0TnNspwKjl8BgQMtwyv4v_HIyTMFZYDvig',
-    //   languages: [
-    //     { name: 'English', color: 'primary' },
-    //     { name: 'French', color: 'secondary' }
-    //   ]
-    // },
+    {
+      name: 'Fabrice',
+      role: t('about.teamGuides.roles.wildlife'),
+      image: '/images/about/guide-fabrice.jpeg',
+      languages: [
+        { name: 'French', color: 'primary' },
+        { name: 'English', color: 'secondary' }
+      ]
+    },
     // {
     //   name: 'Lova Tiana',
     //   role: t('about.teamGuides.roles.driving'),
