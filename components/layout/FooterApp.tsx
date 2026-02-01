@@ -29,11 +29,13 @@ export default function FooterApp() {
             <div>
               <Link href="/" className="flex items-center mb-6 hover:scale-105 transition-transform inline-block">
                 <Image 
-                  src="/logo.png" 
-                  alt="ELMADAGASCAR Logo" 
-                  width={32}
-                  height={32}
-                  className="h-8 w-auto"
+                  src="/logo.png"
+                  alt="ELMADAGASCAR Tours Logo"
+                  className="w-12 h-12"
+                  width={40}
+                  height={40}
+                  priority
+                  sizes="40px"
                 />
               </Link>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">

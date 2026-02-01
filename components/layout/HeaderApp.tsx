@@ -25,6 +25,12 @@ export default function HeaderApp() {
     if (href === '/') {
       return pathname === '/'
     }
+    if (href === '/about') {
+      return pathname === '/about' || pathname.startsWith('/about/')
+    }
+    if (href === '/booking') {
+      return pathname === '/booking' || pathname.startsWith('/booking/')
+    }
     if (href === '/tours') {
       return pathname === '/tours' || pathname.startsWith('/tours/')
     }
@@ -92,7 +98,7 @@ export default function HeaderApp() {
                 size="sm" 
                 className={`hidden md:flex hover:scale-105 transition-all ${
                   pathname === '/booking' 
-                    ? 'bg-primary text-white hover:bg-primary/90' 
+                    ? 'bg-primary text-white hover:bg-primary/90 border-primary' 
                     : 'bg-transparent text-primary border-primary hover:bg-primary hover:text-white'
                 }`}
               >
@@ -130,9 +136,13 @@ export default function HeaderApp() {
               ))}
               <Link href="/booking" onClick={() => setIsMenuOpen(false)}>
                 <Button 
-                  variant="primary"
+                  variant={pathname === '/booking' ? 'primary' : 'primary'}
                   size="sm" 
-                  className="w-full"
+                  className={`w-full ${
+                    pathname === '/booking'
+                      ? 'bg-primary text-white hover:bg-primary/90 border-primary'
+                      : 'bg-primary text-white hover:bg-primary/90 border-primary'
+                  }`}
                 >
                   {t('nav.booking')}
                 </Button>
