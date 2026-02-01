@@ -865,6 +865,23 @@
       }
     }
   },
+  "destinationDetail": {
+    "about": "About",
+    "highlights": "Highlights & Experiences",
+    "planYourVisit": "Plan Your Visit",
+    "duration": "Duration",
+    "bestTime": "Best Time",
+    "difficulty": "Difficulty",
+    "region": "Region",
+    "interested": "Interested",
+    "viewAllTours": "View All Tours",
+    "backToDestinations": "Back to All Destinations",
+    "notFound": {
+      "title": "Destination Not Found",
+      "description": "The destination you're looking for doesn't exist.",
+      "backButton": "Back to Destinations"
+    }
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",
