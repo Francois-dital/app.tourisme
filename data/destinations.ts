@@ -601,6 +601,10 @@ export function getDestinationsByTypes(typeIds: string[]): Destination[] {
   )
 }
 
+export function getAllDestinations() {
+  return destinationsData
+}
+
 // Liste des types disponibles
 export const availableTypes = [
   'rainforest', 'coastal', 'adventure', 'cultural', 
