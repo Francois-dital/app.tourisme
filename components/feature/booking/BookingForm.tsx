@@ -73,19 +73,14 @@ export default function BookingForm({
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     
-    // Restrictions de saisie en temps réel
     let filteredValue = value
     
     if (name === 'fullName' || name === 'nationality') {
-      // Autoriser seulement lettres, espaces, apostrophes et tirets
       filteredValue = value.replace(/[^a-zA-ZÀ-ÿ\s'-]/g, '')
     } else if (name === 'phone') {
-      // Autoriser seulement +, chiffres, espaces et tirets
       filteredValue = value.replace(/[^+\d\s-]/g, '')
     } else if (name === 'numberOfTravelers') {
-      // Autoriser seulement les chiffres
       filteredValue = value.replace(/[^0-9]/g, '')
-      // Limiter à 20 maximum
       if (parseInt(filteredValue) > 20) {
         filteredValue = '20'
       }
@@ -94,7 +89,6 @@ export default function BookingForm({
     setFormData(prev => {
       const newData = { ...prev, [name]: filteredValue }
       
-      // Reset selection when type changes
       if (name === 'selectionType') {
         newData.selectedCircuit = ''
         newData.selectedDestination = ''
@@ -103,7 +97,6 @@ export default function BookingForm({
       return newData
     })
     
-    // Clear validation errors for this field
     if (validationErrors.length > 0) {
       setValidationErrors(prev => prev.filter(error => error.field !== name))
     }
@@ -112,7 +105,6 @@ export default function BookingForm({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    // Validation du formulaire
     const errors = validateForm(formData)
     if (errors.length > 0) {
       setValidationErrors(errors)
@@ -148,7 +140,6 @@ export default function BookingForm({
             : 'Votre message a été envoyé avec succès ! Nous vous contacterons dans les 24 heures.'
         )
         
-        // Reset form after success
         setTimeout(() => {
           setFormData({
             fullName: '',
@@ -206,7 +197,6 @@ export default function BookingForm({
       )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Personal Info Group */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ScrollAnimation animation="slide-right" delay={200}>
             <label className="flex flex-col gap-2">
@@ -472,7 +462,6 @@ export default function BookingForm({
           </div>
         </ScrollAnimation>
 
-        {/* Message de statut */}
         {submitStatus !== 'idle' && (
           <ScrollAnimation animation="fade" delay={100}>
             <div className={`mt-6 p-4 rounded-lg border ${

@@ -76,7 +76,6 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
 }
 
-// Structured Data pour l'agence
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'TravelAgency',
@@ -98,7 +97,6 @@ const organizationSchema = {
   },
   'sameAs': [
     'https://www.facebook.com/61587278189321',
-    // 'https://www.instagram.com/elmadagascar',
   ],
   'priceRange': '€€',
   'currenciesAccepted': 'EUR, USD, MGA'
@@ -120,7 +118,6 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
         
-        {/* Material Symbols - Optimized */}
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
           rel="stylesheet"
@@ -128,7 +125,6 @@ export default function RootLayout({
         
         <meta name="theme-color" content="#111811" />
         
-        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -136,7 +132,6 @@ export default function RootLayout({
           }}
         />
         
-        {/* Google Analytics - Optimized loading */}
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <Script
@@ -157,7 +152,6 @@ export default function RootLayout({
           </>
         )}
         
-        {/* Facebook Pixel - Optimized loading */}
         {process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID && (
           <Script id="facebook-pixel" strategy="lazyOnload">
             {`
@@ -179,12 +173,10 @@ export default function RootLayout({
         className={`${plusJakartaSans.variable} font-sans antialiased`}
         suppressHydrationWarning={true}
       >
-        {/* Skip to content link for accessibility */}
         <a href="#main-content" className="skip-to-content">
           Aller au contenu principal
         </a>
         
-        {/* Facebook Pixel noscript fallback */}
         {process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID && (
           <noscript>
             <Image

@@ -12,7 +12,6 @@ export default function I18nProvider({ children }: I18nProviderProps) {
   const [isInitialized, setIsInitialized] = useState(false)
 
   useEffect(() => {
-    // Load saved language from localStorage only on client side
     const savedLanguage = localStorage.getItem('language')
     if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'fr')) {
       i18n.changeLanguage(savedLanguage)
@@ -20,7 +19,6 @@ export default function I18nProvider({ children }: I18nProviderProps) {
     setIsInitialized(true)
   }, [])
 
-  // Always render the same structure to prevent hydration mismatch
   return (
     <I18nextProvider i18n={i18n}>
       <div style={{ visibility: isInitialized ? 'visible' : 'hidden' }}>

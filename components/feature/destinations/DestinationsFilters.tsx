@@ -16,10 +16,8 @@ export default function DestinationsFilters({ onFilterChange, baseDestinations }
   const [selectedRegion, setSelectedRegion] = useState('All Regions')
   const [selectedTypes, setSelectedTypes] = useState<string[]>([])
 
-  // Utiliser les destinations de base fournies ou les données par défaut
   const sourceDestinations = baseDestinations || destinationsData
 
-  // Définir les régions avec leurs clés de traduction
   const regions = [
     { key: 'all', value: 'All Regions' },
     { key: 'northern', value: 'Northern Madagascar' },
@@ -48,17 +46,14 @@ export default function DestinationsFilters({ onFilterChange, baseDestinations }
   useEffect(() => {
     let filteredDestinations = sourceDestinations
     
-    // Vérifier s'il y a des filtres actifs
     const hasFilters = selectedRegion !== 'All Regions' || selectedTypes.length > 0
     
-    // Filtrer par région
     if (selectedRegion !== 'All Regions') {
       filteredDestinations = filteredDestinations.filter(destination => 
         destination.region === selectedRegion
       )
     }
     
-    // Filtrer par types - la destination doit avoir TOUS les types sélectionnés
     if (selectedTypes.length > 0) {
       filteredDestinations = filteredDestinations.filter(destination => 
         selectedTypes.every(type => destination.types.includes(type))
@@ -86,7 +81,6 @@ export default function DestinationsFilters({ onFilterChange, baseDestinations }
       
       <ScrollAnimation animation="fade" delay={300}>
         <div className="w-full space-y-8 border-b border-[#e0e7e0] dark:border-white/10 pb-8">
-          {/* Filtre par région */}
           <div className="w-full">
             <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
               {t('destinations.filters.filterByRegion')}
@@ -111,7 +105,6 @@ export default function DestinationsFilters({ onFilterChange, baseDestinations }
             </div>
           </div>
 
-          {/* Filtre par types */}
           <div className="w-full">
             <div className="flex items-center justify-between mb-4">
               <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">

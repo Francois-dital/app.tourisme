@@ -32,7 +32,6 @@ export default function TourDetailHero({ tour }: TourDetailHeroProps) {
               {tour.description}
             </p>
             
-            {/* Structured Data pour le tour */}
             <script
               type="application/ld+json"
               dangerouslySetInnerHTML={{

@@ -39,7 +39,6 @@ export default function HeroSection() {
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0]))
   const [isClient, setIsClient] = useState(false)
 
-  // Prevent hydration mismatch
   useEffect(() => {
     setIsClient(true)
   }, [])
@@ -49,12 +48,11 @@ export default function HeroSection() {
     setTimeout(() => {
       const nextIndex = (currentIndex + 1) % HERO_IMAGES.length
       setCurrentIndex(nextIndex)
-      // Précharger l'image suivante
       if (!loadedImages.has(nextIndex)) {
         setLoadedImages(prev => new Set([...prev, nextIndex]))
       }
       setIsTransitioning(false)
-    }, 300) // Réduit de 500ms à 300ms
+    }, 300)
   }, [currentIndex, loadedImages])
 
   const prevSlide = useCallback(() => {
@@ -62,7 +60,6 @@ export default function HeroSection() {
     setTimeout(() => {
       const prevIndex = (currentIndex - 1 + HERO_IMAGES.length) % HERO_IMAGES.length
       setCurrentIndex(prevIndex)
-      // Précharger l'image précédente
       if (!loadedImages.has(prevIndex)) {
         setLoadedImages(prev => new Set([...prev, prevIndex]))
       }
@@ -75,7 +72,6 @@ export default function HeroSection() {
       setIsTransitioning(true)
       setTimeout(() => {
         setCurrentIndex(index)
-        // Précharger l'image sélectionnée
         if (!loadedImages.has(index)) {
           setLoadedImages(prev => new Set([...prev, index]))
         }
@@ -89,12 +85,11 @@ export default function HeroSection() {
     
     const interval = setInterval(() => {
       nextSlide()
-    }, 6000) // Augmenté de 5s à 6s pour réduire la fréquence
+    }, 6000)
 
     return () => clearInterval(interval)
   }, [nextSlide, isClient])
 
-  // Précharger les images adjacentes
   useEffect(() => {
     if (!isClient) return
     
@@ -109,7 +104,6 @@ export default function HeroSection() {
     return () => clearTimeout(timer)
   }, [currentIndex, loadedImages, isClient])
 
-  // Don't render carousel controls until client-side hydration
   if (!isClient) {
     return (
       <section className="relative w-full h-[600px] md:h-[750px] flex items-center justify-center overflow-hidden">
@@ -183,10 +177,10 @@ export default function HeroSection() {
               alt={image.alt}
               fill
               priority={index === 0}
-              quality={index === 0 ? 90 : 75} // Qualité réduite pour les images non-critiques
+              quality={index === 0 ? 90 : 75}
               sizes="100vw"
               className={`object-cover will-change-transform ${isTransitioning && index === currentIndex ? 'scale-105' : 'scale-100'}`}
-              style={{ transition: 'transform 8s ease-out' }} // Transition plus douce
+              style={{ transition: 'transform 8s ease-out' }}
               placeholder="blur"
               blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
             />

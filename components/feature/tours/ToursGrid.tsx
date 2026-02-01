@@ -15,7 +15,6 @@ export default function ToursGrid({ tours }: ToursGridProps) {
   const { t } = useTranslation()
   const translatedTours = tours.map(tour => translateTourData(tour, t))
 
-  // Structured Data pour la liste de tours
   const toursStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",

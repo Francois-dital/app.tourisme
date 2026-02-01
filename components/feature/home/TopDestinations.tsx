@@ -9,13 +9,11 @@ import Link from 'next/link'
 import { destinationsData } from '@/data/destinations'
 import { translateDestinationData } from '@/utils/translation.utils'
 
-// Sélectionner les 3 destinations les plus populaires (premières de la liste)
 const featuredDestinations = destinationsData.slice(0, 3)
 
 export default function TopDestinations() {
   const { t } = useTranslation()
 
-  // Translate destination data
   const translatedDestinations = featuredDestinations.map(destination => translateDestinationData(destination, t))
 
   return (
