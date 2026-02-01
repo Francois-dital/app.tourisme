@@ -41,7 +41,7 @@ export default function TourDetailHero({ tour }: TourDetailHeroProps) {
                   "@type": "TouristTrip",
                   "name": tour.title,
                   "description": tour.description,
-                  "url": `https://elmadagascar.com/tours/${tour.slug}`,
+                  "url": `https://elmadagascar-tours.com/tours/${tour.slug}`,
                   "duration": tour.duration,
                   "offers": {
                     "@type": "Offer",

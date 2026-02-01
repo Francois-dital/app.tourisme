@@ -9,10 +9,17 @@ import DestinationsGrid from '@/components/feature/destinations/DestinationsGrid
 import { destinationsData, Destination } from '@/data/destinations'
 import { usePageTitle } from '@/hooks/usePageTitle'
 
-function shuffleArray<T>(array: T[]): T[] {
+function shuffleArray<T>(array: T[], seed: number = 1): T[] {
   const shuffled = [...array]
+  // Use a seeded random function for consistent results
+  let random = seed
+  const seededRandom = () => {
+    random = (random * 9301 + 49297) % 233280
+    return random / 233280
+  }
+  
   for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(seededRandom() * (i + 1));
     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
   }
   return shuffled
@@ -28,44 +35,37 @@ export default function DestinationsPage() {
     setIsClient(true)
   }, [])
 
+  // Use a consistent seed for shuffling to avoid hydration mismatch
   const shuffledDestinations = useMemo(() => {
-    if (!isClient) return []
-    return shuffleArray(destinationsData)
-  }, [isClient])
+    return shuffleArray(destinationsData, 12345) // Fixed seed
+  }, [])
 
   const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>([])
+  const [hasActiveFilters, setHasActiveFilters] = useState(false)
 
   const currentFilteredDestinations = useMemo(() => {
-    if (!isClient) return []
-    if (filteredDestinations.length === 0) return shuffledDestinations
+    // Si aucun filtre n'est actif, montrer toutes les destinations
+    if (!hasActiveFilters) return shuffledDestinations
+    // Si des filtres sont actifs, montrer les résultats filtrés (même si vide)
     return filteredDestinations
-  }, [isClient, shuffledDestinations, filteredDestinations])
+  }, [shuffledDestinations, filteredDestinations, hasActiveFilters])
 
-  const handleFilterChange = useCallback((destinations: Destination[]) => {
+  const handleFilterChange = useCallback((destinations: Destination[], hasFilters: boolean) => {
     setFilteredDestinations(destinations)
+    setHasActiveFilters(hasFilters)
   }, [])
 
   return (
     <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
       <HeaderApp />
       <main className="w-full pb-12 sm:pb-20 flex-grow">
-        {isClient ? (
-          <div className="w-full">
-            <DestinationsFilters 
-              onFilterChange={handleFilterChange} 
-              baseDestinations={shuffledDestinations}
-            />
-            <DestinationsGrid destinations={currentFilteredDestinations} />
-          </div>
-        ) : (
-          <div className="py-12 sm:py-24 w-full">
-            <div className="text-center">
-              <div className="flex justify-center">
-                <div className="animate-spin rounded-full h-10 w-10 sm:h-12 sm:w-12 border-b-2 border-primary"></div>
-              </div>
-            </div>
-          </div>
-        )}
+        <div className="w-full" style={{ opacity: isClient ? 1 : 0.5 }}>
+          <DestinationsFilters 
+            onFilterChange={handleFilterChange} 
+            baseDestinations={shuffledDestinations}
+          />
+          <DestinationsGrid destinations={currentFilteredDestinations} />
+        </div>
       </main>
       <FooterApp />
     </div>

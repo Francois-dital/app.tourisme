@@ -865,6 +865,23 @@
       }
     }
   },
+  "destinationDetail": {
+    "about": "À propos de",
+    "highlights": "Points Forts & Expériences",
+    "planYourVisit": "Planifiez Votre Visite",
+    "duration": "Durée",
+    "bestTime": "Meilleure Période",
+    "difficulty": "Difficulté",
+    "region": "Région",
+    "interested": "Intéressé",
+    "viewAllTours": "Voir Tous les Circuits",
+    "backToDestinations": "Retour à Toutes les Destinations",
+    "notFound": {
+      "title": "Destination Non Trouvée",
+      "description": "La destination que vous recherchez n'existe pas.",
+      "backButton": "Retour aux Destinations"
+    }
+  },
   "common": {
     "loading": "Chargement...",
     "error": "Une erreur s'est produite",

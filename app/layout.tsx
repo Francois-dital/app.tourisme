@@ -23,7 +23,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://elmadagascar-tours.com'),
   title: {
-    default: 'ELMADAGASCAR - Circuits Authentiques',
+    default: 'Accueil | ELMADAGASCAR',
     template: '%s | ELMADAGASCAR'
   },
   description: 'Explorez Madagascar avec nos circuits 4x4 aventure. Guides locaux, véhicules équipés, expériences authentiques. Réservez votre aventure dès maintenant!',
@@ -82,8 +82,8 @@ const organizationSchema = {
   '@type': 'TravelAgency',
   'name': 'ELMADAGASCAR',
   'description': 'Agence de voyage spécialisée dans les circuits 4x4 à Madagascar avec guides locaux francophones.',
-  'url': 'https://elmadagascar.com',
-  'logo': 'https://elmadagascar.com/logo.png',
+  'url': 'https://elmadagascar-tours.com',
+  'logo': 'https://elmadagascar-tours.com/logo.png',
   'address': {
     '@type': 'PostalAddress',
     'addressLocality': 'Antananarivo',
@@ -97,8 +97,8 @@ const organizationSchema = {
     'availableLanguage': ['French', 'English']
   },
   'sameAs': [
-    'https://www.facebook.com/elmadagascar',
-    'https://www.instagram.com/elmadagascar',
+    'https://www.facebook.com/61587278189321',
+    // 'https://www.instagram.com/elmadagascar',
   ],
   'priceRange': '€€',
   'currenciesAccepted': 'EUR, USD, MGA'
