@@ -1,33 +1,25 @@
+'use client'
+
+import { useParams } from 'next/navigation'
 import { notFound } from 'next/navigation'
+import { useTranslation } from 'react-i18next'
 import HeaderApp from '@/components/layout/HeaderApp'
 import FooterApp from '@/components/layout/FooterApp'
 import TourDetailHero from '@/components/feature/tour-detail/TourDetailHero'
 import TourDetailBreadcrumb from '@/components/feature/tour-detail/TourDetailBreadcrumb'
 import TourDetailOverview from '@/components/feature/tour-detail/TourDetailOverview'
 import TourDetailContent from '@/components/feature/tour-detail/TourDetailContent'
-import { getAllTours, getTourBySlug } from '@/data/tours'
+import { getTourBySlug } from '@/data/tours'
 import { translateTourData } from '@/utils/translation.utils'
-import { generatePageMetadata } from '@/utils/server-translations'
-import { t } from 'i18next'
+import { usePageTitle } from '@/hooks/usePageTitle'
 
-export function generateStaticParams() {
-  const tours = getAllTours()
+export default function TourDetailPage() {
+  const { t } = useTranslation()
+  const params = useParams()
+  const slug = params.slug as string
+  const tour = getTourBySlug(slug)
 
-  return tours.map(tour => ({
-    slug: tour.slug,
-  }))
-}
-
-export function generateMetadata() {
-  return generatePageMetadata('tourDetail')
-}
-
-export default function TourDetailPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
-  const tour = getTourBySlug(params.slug)
+  usePageTitle('tourDetail', tour?.title)
 
   if (!tour) {
     notFound()
@@ -36,7 +28,7 @@ export default function TourDetailPage({
   const translatedTour = translateTourData(tour, t)
 
   return (
-    <div className="bg-background-light dark:bg-background-dark min-h-screen flex flex-col">
+    <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
       <HeaderApp />
       <main className="w-full pb-20">
         <TourDetailBreadcrumb tourTitle={translatedTour.title} />
