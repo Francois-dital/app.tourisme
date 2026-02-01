@@ -17,7 +17,6 @@ export default function HomePage() {
       <main id="main-content" className="w-full flex-grow">
         <HeroSection />
         <AboutsUs />
-        <ServicesUs />
         <TopDestinations />
       </main>
       <FooterApp />
