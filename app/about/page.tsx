@@ -1,5 +1,3 @@
-'use client'
-
 import HeaderApp from '@/components/layout/HeaderApp'
 import FooterApp from '@/components/layout/FooterApp'
 import CoreValues from '@/components/feature/about/CoreValues'

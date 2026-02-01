@@ -53,7 +53,7 @@ export default function HeaderApp() {
           <Link href="/home" className="flex items-center gap-3 hover:scale-105 transition-transform">
             <img 
               src="/logo.png" 
-              alt="ELMADAGASCAR Tours Logo" 
+              alt="ELMADAGASCAR Tours Logo"
               className="h-10 w-auto"
             />
             <h2 className="text-xl font-extrabold tracking-tighter uppercase">
