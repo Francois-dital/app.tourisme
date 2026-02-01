@@ -8,9 +8,9 @@ import Image from 'next/image'
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: '--font-plus-jakarta-sans',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'], // Réduit de 5 à 4 weights
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
-  preload: true,
+  fallback: ['system-ui', 'arial'],
 })
 
 export const viewport: Viewport = {
@@ -112,15 +112,11 @@ export default function RootLayout({
   return (
     <html lang="fr" className="light">
       <head>
-        {/* Preconnect for critical domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
         {/* DNS Prefetch for analytics */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
         
-        {/* Google Fonts - Optimized */}
+        {/* Material Symbols - Optimized */}
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
           rel="stylesheet"
