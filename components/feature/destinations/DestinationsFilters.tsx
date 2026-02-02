@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { Badge } from '@/components/ui/Badge'
 import ScrollAnimation from '@/components/ui/ScrollAnimation'
 import { destinationsData, Destination, availableTypes, getTypeVariant } from '@/data/destinations'
+import { Icon } from '@/components/ui'
 
 interface DestinationsFiltersProps {
   onFilterChange?: (filteredDestinations: Destination[], hasActiveFilters: boolean) => void
@@ -115,7 +116,7 @@ export default function DestinationsFilters({ onFilterChange, baseDestinations }
                   onClick={clearAllTypes}
                   className="text-sm text-primary hover:text-primary/80 font-medium transition-colors px-3 py-1 rounded-lg hover:bg-primary/10"
                 >
-                  Effacer tout
+                  <Icon name="close" size="sm" className="ml-auto text-primary" />
                 </button>
               )}
             </div>
