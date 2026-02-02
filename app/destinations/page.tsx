@@ -11,7 +11,6 @@ import { usePageTitle } from '@/hooks/usePageTitle'
 
 function shuffleArray<T>(array: T[], seed: number = 1): T[] {
   const shuffled = [...array]
-  // Use a seeded random function for consistent results
   let random = seed
   const seededRandom = () => {
     random = (random * 9301 + 49297) % 233280
@@ -35,18 +34,15 @@ export default function DestinationsPage() {
     setIsClient(true)
   }, [])
 
-  // Use a consistent seed for shuffling to avoid hydration mismatch
   const shuffledDestinations = useMemo(() => {
-    return shuffleArray(destinationsData, 12345) // Fixed seed
+    return shuffleArray(destinationsData, 12345)
   }, [])
 
   const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>([])
   const [hasActiveFilters, setHasActiveFilters] = useState(false)
 
   const currentFilteredDestinations = useMemo(() => {
-    // Si aucun filtre n'est actif, montrer toutes les destinations
     if (!hasActiveFilters) return shuffledDestinations
-    // Si des filtres sont actifs, montrer les résultats filtrés (même si vide)
     return filteredDestinations
   }, [shuffledDestinations, filteredDestinations, hasActiveFilters])
 

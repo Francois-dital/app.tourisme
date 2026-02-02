@@ -20,7 +20,6 @@ function BookingContent() {
   const tourPrice = searchParams.get('price') || ''
   const tourDuration = searchParams.get('duration') || ''
   
-  // Paramètres de destination
   const destinationName = searchParams.get('destination') || ''
   const destinationRegion = searchParams.get('region') || ''
   const destinationCategory = searchParams.get('category') || ''
@@ -28,7 +27,6 @@ function BookingContent() {
   const destinationDifficulty = searchParams.get('difficulty') || ''
   const destinationBestTime = searchParams.get('bestTime') || ''
   
-  // Déterminer le titre et sous-titre selon le contexte
   const isBooking = !!(tourTitle || destinationName)
   const pageTitle = isBooking ? t('booking.title') : t('contact.title')
   const pageSubtitle = isBooking ? t('booking.subtitle') : t('contact.subtitle')

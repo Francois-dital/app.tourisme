@@ -1,144 +1,317 @@
-# ELMADAGASCAR - Madagascar Tourism Landing Page
+# ELMADAGASCAR - Plateforme de Tourisme Madagascar
 
-Une landing page moderne et responsive pour une agence de tourisme à Madagascar, construite avec Next.js 14, TypeScript et Tailwind CSS.
+[![Next.js](https://img.shields.io/badge/Next.js-16.1.4-black?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![React](https://img.shields.io/badge/React-19.2.3-61DAFB?logo=react)](https://reactjs.org/)
 
-## 🚀 Technologies Utilisées
+Une plateforme web moderne et multilingue pour une agence de tourisme spécialisée dans les voyages à Madagascar. Développée avec Next.js 16, TypeScript et Tailwind CSS v4.
 
-- **Next.js 14** - Framework React avec App Router
-- **TypeScript** - Typage statique
-- **Tailwind CSS v4** - Framework CSS utilitaire
-- **Material Icons** - Icônes Google Material
-- **Plus Jakarta Sans** - Police Google Fonts
+## 📋 Table des Matières
 
-## 📁 Architecture du Projet
+- [Aperçu](#aperçu)
+- [Fonctionnalités](#fonctionnalités)
+- [Technologies](#technologies)
+- [Prérequis](#prérequis)
+- [Installation](#installation)
+- [Utilisation](#utilisation)
+- [Architecture](#architecture)
+- [Configuration](#configuration)
+- [Déploiement](#déploiement)
+- [Contribution](#contribution)
+- [Support](#support)
 
-```
-app.tourisme/
-├── app/                          # App Router de Next.js
-│   ├── layout.tsx               # Layout principal
-│   ├── page.tsx                 # Page d'accueil
-│   └── globals.css              # Styles globaux
-├── components/                   # Composants réutilisables
-│   ├── layout/                  # Composants de layout
-│   │   ├── header.app.tsx       # En-tête de navigation
-│   │   └── footer.app.tsx       # Pied de page
-│   ├── sections/                # Sections de la page
-│   │   ├── hero.section.tsx     # Section héro
-│   │   ├── about.section.tsx    # Section à propos
-│   │   ├── tours.section.tsx    # Section circuits
-│   │   ├── booking.section.tsx  # Section réservation
-│   │   ├── fleet.section.tsx    # Section flotte
-│   │   └── contact.section.tsx  # Section contact
-│   └── ui/                      # Composants UI
-│       ├── material.icon.tsx    # Composant icône Material
-│       └── whatsapp.button.tsx  # Bouton WhatsApp flottant
-├── hooks/                       # Hooks personnalisés
-│   └── use.calendar.ts          # Hook pour le calendrier
-├── services/                    # Services et logique métier
-│   └── tours.service.ts         # Service pour les données tours
-├── types/                       # Types TypeScript
-│   └── tour.types.ts            # Types pour les tours et véhicules
-├── utils/                       # Utilitaires
-│   └── image.utils.ts           # Utilitaires pour les images
-├── public/images/               # Images locales
-│   ├── hero-background.jpg      # Image de fond héro
-│   ├── about-image.jpg          # Image section à propos
-│   ├── tour-baobab.jpg          # Circuit Baobab
-│   ├── tour-nosy-be.jpg         # Circuit Nosy Be
-│   └── tour-isalo.jpg           # Circuit Isalo
-└── tailwind.config.ts           # Configuration Tailwind
-```
+## 🌟 Aperçu
 
-## 🎨 Nomenclature des Fichiers
+ELMADAGASCAR est une plateforme de réservation de voyages qui permet aux utilisateurs de découvrir et réserver des circuits touristiques à Madagascar. La plateforme offre une expérience utilisateur optimisée avec support multilingue, design responsive et fonctionnalités de réservation avancées.
 
-Le projet suit une nomenclature stricte en minuscules :
+### Démonstration
 
-- **Composants** : `nom.type.tsx` (ex: `header.app.tsx`, `hero.section.tsx`)
-- **Hooks** : `use.nom.ts` (ex: `use.calendar.ts`)
-- **Services** : `nom.service.ts` (ex: `tours.service.ts`)
-- **Types** : `nom.types.ts` (ex: `tour.types.ts`)
-- **Utilitaires** : `nom.utils.ts` (ex: `image.utils.ts`)
+🔗 **[Voir la démo en direct](https://votre-domaine.com)** *(remplacer par l'URL réelle)*
 
-## 🖼️ Images
+## ✨ Fonctionnalités
 
-Toutes les images sont stockées localement dans `public/images/` pour de meilleures performances :
+### 🌍 Fonctionnalités Principales
+- **Catalogue de destinations** - Exploration des destinations touristiques de Madagascar
+- **Système de réservation** - Réservation en ligne avec calendrier interactif
+- **Support multilingue** - Interface disponible en français et anglais
+- **Galerie de circuits** - Présentation détaillée des tours disponibles
+- **Contact intégré** - Formulaire de contact avec intégration email
 
-- `hero-background.jpg` - Image de fond de la section héro
-- `about-image.jpg` - Image de la section à propos
-- `tour-baobab.jpg` - Circuit Baobab Quest
-- `tour-nosy-be.jpg` - Circuit Turquoise Waters
-- `tour-isalo.jpg` - Circuit Great South
+### 🎨 Expérience Utilisateur
+- **Design responsive** - Optimisé pour mobile, tablette et desktop
+- **Animations fluides** - Transitions et effets visuels modernes
+- **Navigation intuitive** - Interface utilisateur claire et accessible
+- **Performance optimisée** - Chargement rapide et SEO-friendly
 
-### Optimisation des Images
-- Utilisation du composant `next/image` pour l'optimisation automatique
-- Images responsive avec `sizes` appropriées
-- Lazy loading par défaut (sauf image héro avec `priority`)
+### 🔧 Fonctionnalités Techniques
+- **Rendu côté serveur (SSR)** - Performance et SEO optimisés
+- **Optimisation d'images** - Compression et lazy loading automatiques
+- **Bundle analyzer** - Analyse de la taille des bundles
+- **Linting automatique** - Code quality avec ESLint et TypeScript
 
-## 🌟 Fonctionnalités
+## 🛠 Technologies
 
-### Sections Principales
-- **Hero** - Image de fond avec call-to-action
-- **About** - Présentation de l'agence avec avantages
-- **Tours** - Circuits touristiques avec prix et détails
-- **Booking** - Calendrier interactif et formulaire de réservation
-- **Fleet** - Présentation de la flotte de véhicules 4x4
-- **Contact** - Informations de contact avec carte intégrée
+### Frontend
+- **[Next.js 16.1.4](https://nextjs.org/)** - Framework React avec App Router
+- **[React 19.2.3](https://reactjs.org/)** - Bibliothèque UI
+- **[TypeScript 5](https://www.typescriptlang.org/)** - Typage statique
+- **[Tailwind CSS 4](https://tailwindcss.com/)** - Framework CSS utilitaire
 
-### Fonctionnalités Techniques
-- **Responsive Design** - Optimisé pour mobile, tablette et desktop
-- **Dark Mode** - Support du mode sombre
-- **Animations** - Transitions fluides et effets hover
-- **SEO Optimized** - Métadonnées et structure sémantique
-- **Performance** - Images optimisées avec Next.js Image
-- **Accessibilité** - Respect des standards WCAG
+### Internationalisation
+- **[i18next 25.8.0](https://www.i18next.com/)** - Framework d'internationalisation
+- **[react-i18next 16.5.3](https://react.i18next.com/)** - Intégration React pour i18next
 
-## 🚀 Installation et Démarrage
+### Outils de Développement
+- **[ESLint](https://eslint.org/)** - Linter JavaScript/TypeScript
+- **[Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer)** - Analyse des bundles
+- **[Nodemailer](https://nodemailer.com/)** - Envoi d'emails
+
+### Utilitaires
+- **[clsx](https://github.com/lukeed/clsx)** - Gestion conditionnelle des classes CSS
+- **[tailwind-merge](https://github.com/dcastil/tailwind-merge)** - Fusion intelligente des classes Tailwind
+
+## 📋 Prérequis
+
+Avant de commencer, assurez-vous d'avoir installé :
+
+- **Node.js** >= 18.0.0
+- **npm** >= 9.0.0 ou **yarn** >= 1.22.0
+- **Git** pour le contrôle de version
+
+## 🚀 Installation
+
+### 1. Cloner le repository
 
 ```bash
-# Installation des dépendances
+git clone https://github.com/Francois-dital/app.tourisme.git
+cd elmadagascar
+```
+
+### 2. Installer les dépendances
+
+```bash
 npm install
+# ou
+yarn install
+```
 
-# Démarrage en mode développement
+### 3. Configuration de l'environnement
+
+Créer un fichier `.env.local` à la racine du projet :
+
+```env
+# Configuration email (optionnel)
+SMTP_HOST=your-smtp-host
+SMTP_PORT=587
+SMTP_USER=your-email@domain.com
+SMTP_PASS=your-password
+
+# Configuration Next.js
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
+
+### 4. Démarrer le serveur de développement
+
+```bash
 npm run dev
+# ou
+yarn dev
+```
 
-# Build de production
+L'application sera accessible sur [http://localhost:3000](http://localhost:3000)
+
+## 💻 Utilisation
+
+### Scripts disponibles
+
+```bash
+# Développement
+npm run dev          # Démarrer le serveur de développement
+
+# Production
+npm run build        # Construire l'application pour la production
+npm run start        # Démarrer le serveur de production
+
+# Qualité du code
+npm run lint         # Vérifier le code avec ESLint
+
+# Analyse
+npm run analyze      # Analyser la taille des bundles (si configuré)
+```
+
+### Structure des URLs
+
+- `/` - Page d'accueil
+- `/about` - À propos de l'agence
+- `/destinations` - Catalogue des destinations
+- `/destinations/[slug]` - Détail d'une destination
+- `/tours/[slug]` - Détail d'un circuit
+- `/booking` - Page de réservation
+
+## 🏗 Architecture
+
+### Structure du projet
+
+```
+elmadagascar/
+├── app/                          # App Router Next.js
+│   ├── (routes)/                 # Routes groupées
+│   │   ├── about/               # Page à propos
+│   │   ├── destinations/        # Pages destinations
+│   │   ├── tours/               # Pages circuits
+│   │   └── booking/             # Page réservation
+│   ├── api/                     # API Routes
+│   ├── globals.css              # Styles globaux
+│   ├── layout.tsx               # Layout racine
+│   └── page.tsx                 # Page d'accueil
+├── components/                   # Composants réutilisables
+│   ├── feature/                 # Composants métier
+│   │   ├── about/              # Composants page à propos
+│   │   ├── booking/            # Composants réservation
+│   │   ├── destinations/       # Composants destinations
+│   │   └── home/               # Composants page d'accueil
+│   ├── layout/                  # Composants de layout
+│   │   ├── HeaderApp.tsx       # En-tête navigation
+│   │   └── FooterApp.tsx       # Pied de page
+│   ├── providers/               # Providers React
+│   └── ui/                      # Composants UI génériques
+├── data/                        # Données statiques
+├── hooks/                       # Hooks personnalisés
+├── lib/                         # Bibliothèques et configurations
+├── services/                    # Services et API
+├── types/                       # Types TypeScript
+├── utils/                       # Fonctions utilitaires
+└── public/                      # Assets statiques
+```
+
+### Conventions de nommage
+
+- **Composants** : PascalCase (`HeaderApp.tsx`)
+- **Hooks** : camelCase avec préfixe `use` (`usePageTitle.ts`)
+- **Utilitaires** : camelCase avec suffixe `.utils` (`metadata.utils.ts`)
+- **Types** : PascalCase avec suffixe `Type` ou `Interface`
+- **Constantes** : UPPER_SNAKE_CASE
+
+## ⚙️ Configuration
+
+### Tailwind CSS
+
+La configuration Tailwind est dans `tailwind.config.ts` avec :
+- Thème personnalisé pour Madagascar
+- Variables CSS pour le mode sombre
+- Breakpoints responsive optimisés
+
+### Internationalisation
+
+Configuration i18n dans `lib/i18n.ts` :
+- Support français/anglais
+- Détection automatique de la langue
+- Traductions organisées par namespace
+
+### TypeScript
+
+Configuration stricte dans `tsconfig.json` :
+- Mode strict activé
+- Path mapping configuré
+- Types Next.js inclus
+
+## 🚀 Déploiement
+
+### Vercel (Recommandé)
+
+```bash
+# Installation de Vercel CLI
+npm i -g vercel
+
+# Déploiement
+vercel --prod
+```
+
+### Build manuel
+
+```bash
+# Construire l'application
 npm run build
 
-# Démarrage en production
-npm start
+# Les fichiers de production sont dans le dossier .next/
 ```
 
-## 🎨 Personnalisation
+### Variables d'environnement de production
 
-### Couleurs
-Les couleurs sont définies dans `tailwind.config.ts` et `globals.css` :
+Configurer les variables suivantes sur votre plateforme de déploiement :
 
-```css
-:root {
-  --primary: #0df259;      /* Vert principal */
-  --secondary: #ff9800;    /* Orange secondaire */
-  --accent: #f5f5dc;       /* Beige accent */
-  --background-light: #f5f8f6;  /* Fond clair */
-  --background-dark: #102216;   /* Fond sombre */
-}
+```env
+NEXT_PUBLIC_SITE_URL=https://elmadagascar-tours.com/
+SMTP_HOST=your-production-smtp
+SMTP_USER=your-production-email
+SMTP_PASS=your-production-password
 ```
 
-### Données
-Les données des tours et véhicules sont centralisées dans `services/tours.service.ts` pour faciliter la maintenance.
+## 🤝 Contribution
 
-## 📱 Responsive Breakpoints
+### Workflow de contribution
 
-- **Mobile** : < 768px
-- **Tablet** : 768px - 1024px
-- **Desktop** : > 1024px
+1. **Fork** le projet
+2. **Créer** une branche feature (`git checkout -b feature/nouvelle-fonctionnalite`)
+3. **Commit** les changements (`git commit -m 'Ajout nouvelle fonctionnalité'`)
+4. **Push** vers la branche (`git push origin feature/nouvelle-fonctionnalite`)
+5. **Ouvrir** une Pull Request
 
-## 🔧 Scripts Disponibles
+### Standards de code
 
-- `npm run dev` - Démarrage en mode développement
-- `npm run build` - Build de production
-- `npm run start` - Démarrage du serveur de production
-- `npm run lint` - Vérification du code avec ESLint
+- Utiliser TypeScript pour tous les nouveaux fichiers
+- Suivre les règles ESLint configurées
+- Ajouter des tests pour les nouvelles fonctionnalités
+- Documenter les composants complexes
+
+### Commits conventionnels
+
+```
+feat: ajout d'une nouvelle fonctionnalité
+fix: correction d'un bug
+docs: mise à jour de la documentation
+style: changements de formatage
+refactor: refactorisation du code
+test: ajout ou modification de tests
+```
+
+## 📞 Support
+
+### Problèmes courants
+
+**Erreur de build TypeScript**
+```bash
+# Nettoyer le cache TypeScript
+rm -rf .next
+npm run build
+```
+
+**Problèmes de dépendances**
+```bash
+# Réinstaller les dépendances
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### Contact
+
+- **Email** : [email]@elmadagascar1@gmail.com
+- **Issues** : [GitHub Issues](https://github.com/Francois-dital/app.tourisme/issues)
+- **Documentation** : [Wiki du projet](https://github.com/Francois-dital/app.tourisme/wiki)
+
+---
 
 ## 📄 Licence
 
-Ce projet est développé pour ELMADAGASCAR Madagascar.
+Ce projet est la propriété de **ELMADAGASCAR**. Tous droits réservés.
+
+---
+
+<div align="center">
+
+**[⬆ Retour en haut](#elmadagascar---plateforme-de-tourisme-madagascar)**
+
+Développé avec ❤️ pour Madagascar
+
+</div>

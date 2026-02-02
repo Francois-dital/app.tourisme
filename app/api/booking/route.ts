@@ -22,7 +22,6 @@ export async function POST(request: NextRequest) {
       type
     } = body
 
-    // Récupérer les détails complets du tour ou de la destination
     let selectedItem = null
     let itemDetails = ''
     
@@ -90,7 +89,6 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Configuration du transporteur SMTP
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtp.gmail.com',
       port: parseInt(process.env.SMTP_PORT || '587'),
@@ -104,7 +102,6 @@ export async function POST(request: NextRequest) {
       }
     })
 
-    // Contenu de l'email
     const isBooking = type === 'booking'
     const subject = isBooking 
       ? `🎯 NOUVELLE RÉSERVATION - ${selectedCircuit || 'Circuit personnalisé'}`
@@ -177,7 +174,6 @@ export async function POST(request: NextRequest) {
       </div>
     `
 
-    // Envoi de l'email à ELMADAGASCAR
     await transporter.sendMail({
       from: `"ELMADAGASCAR Tours" <${process.env.SMTP_USER}>`,
       to: 'elmadagascar1@gmail.com',
@@ -186,7 +182,6 @@ export async function POST(request: NextRequest) {
       replyTo: email
     })
 
-    // Email de confirmation pour le client
     const clientSubject = isBooking 
       ? `✅ Confirmation de réservation - ELMADAGASCAR Tours`
       : `✅ Confirmation de votre demande - ELMADAGASCAR Tours`
@@ -244,7 +239,6 @@ export async function POST(request: NextRequest) {
       </div>
     `
 
-    // Envoi de l'email de confirmation au client
     await transporter.sendMail({
       from: `"ELMADAGASCAR Tours" <${process.env.SMTP_USER}>`,
       to: email,
