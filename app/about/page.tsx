@@ -12,7 +12,7 @@ export default function AboutPage() {
   usePageTitle('about')
 
   return (
-    <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
+    <div className="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white transition-colors duration-300 min-h-screen flex flex-col" suppressHydrationWarning={true}>
       <HeaderApp />
       <main className="w-full flex-grow">
         <div className="w-full">

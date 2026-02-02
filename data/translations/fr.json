@@ -26,6 +26,12 @@
     "title": "À propos de ELMADAGASCAR",
     "subtitle": "Le Huitième Continent",
     "description": "Madagascar est une terre d'incroyable biodiversité et de culture unique. Avec plus de 90% de sa faune qu'on ne trouve nulle part ailleurs sur Terre, c'est vraiment un paradis pour les naturalistes.",
+    "hero": {
+      "badge": "Qui Nous Sommes",
+      "title": "Passionnés par Madagascar",
+      "subtitle": "Une équipe locale dédiée à offrir des expériences authentiques et inoubliables à travers l'île.",
+      "cta": "Explorez Nos Destinations"
+    },
     "coreValues": {
       "title": "La Différence ELMADAGASCAR",
       "subtitle": "Nous priorisons votre expérience à travers trois piliers principaux qui définissent chaque voyage que nous organisons.",
